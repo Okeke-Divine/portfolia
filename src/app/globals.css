@@ -12,6 +12,9 @@
     .app-text-primary{
         @apply text-green-500;
     }
+    .app-text-primary-dark{
+        @apply text-green-600;
+    }
     .app-bg-primary{
         @apply bg-green-500;
     }

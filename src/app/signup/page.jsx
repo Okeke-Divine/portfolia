@@ -11,7 +11,7 @@ export default function SignUp() {
       <div>
         <div className="grid grid-cols-1 md:grid-cols-2">
           <div className="min-h-[100vh] flex items-center justify-center bg-gray-100">
-            <div className="bg-white shadow-sm px-5 py-10 md:px-[50px] md:py-[50px]">
+            <div className="bg-white shadow-sm px-5 py-10 md:px-[50px] md:py-[50px]  rounded-md">
               <h1>
                 Hi, Welcome to{" "}
                 <Link href="/" className="app-text-primary">
@@ -99,7 +99,7 @@ export default function SignUp() {
                     </button>
                   </div>
                 </form>
-                <p>Already have an account? <Link href="/signin" className="app-text-primary">Sign In</Link></p>
+                <p className="my-2">Already have an account? <Link href="/signin" className="app-text-primary duration-300 hover:app-text-primary-dark">Sign In</Link></p>
               </div>
             </div>
           </div>
