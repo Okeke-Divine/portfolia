@@ -18,6 +18,6 @@ module.exports = {
     require('daisyui')
   ],
   daisyui: {
-    themes: [], // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
+    themes: ["light"], // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
   }
 };
