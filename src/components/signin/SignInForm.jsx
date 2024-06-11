@@ -3,7 +3,6 @@ import { useRef, useState } from "react";
 import Swal from "sweetalert2";
 import { signIn } from "next-auth/react";
 
-
 const SignInForm = () => {
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
@@ -16,7 +15,7 @@ const SignInForm = () => {
     setPswdVisible(!pswdVisible);
   }
 
-  function createUser(e) {
+  async function authenticateUser(e) {
     e.preventDefault();
 
     setError("");
@@ -30,11 +29,17 @@ const SignInForm = () => {
       setLoading(false);
       return;
     }
+
+    const login = await signIn("credentials", {
+      email,
+      password,
+    });
+    console.log(login);
   }
 
   return (
     <>
-      <form onSubmit={createUser}>
+      <form onSubmit={authenticateUser}>
         {/* email */}
         <div className="mb-3">
           <div>
