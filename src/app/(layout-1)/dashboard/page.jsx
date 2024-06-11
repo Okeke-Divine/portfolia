@@ -1,3 +1,5 @@
+import Layout1Loader from "../loading";
+
 export const metadata = {
   title: "Dashboard",
 };
