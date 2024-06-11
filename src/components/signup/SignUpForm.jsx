@@ -1,6 +1,6 @@
 "use client";
-
 import { useRef, useState } from "react";
+import axios from "axios";
 
 const SignUpForm = () => {
   const nameRef = useRef(null);
@@ -161,7 +161,13 @@ const SignUpForm = () => {
             className="w-full app-bg-primary duration-300 hover:app-bg-primary-dark btn btn-md text-white"
             type="submit"
           >
-            Get Started
+            {loading ? (
+              <>
+                <span className="loading loading-dots loading-xs"></span>
+              </>
+            ) : (
+              "Get Started"
+            )}
           </button>
         </div>
       </form>

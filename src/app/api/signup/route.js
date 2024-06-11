@@ -1,11 +1,11 @@
 export const POST = async  (req) => {
     const data = await req.json();
 
-    const name = data.name;
+    const fullname = data.fullname;
     const email = data.email;
     const username = data.username;
     const password = data.password;
 
-    console.log(name);
+    console.log(data);
     // const unameExist 
 }
