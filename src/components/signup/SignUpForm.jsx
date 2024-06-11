@@ -11,7 +11,7 @@ const SignUpForm = () => {
 
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  const [regIsSuccessful, setRegIsSuccessful] = useState(true);
+  const [regIsSuccessful, setRegIsSuccessful] = useState(false);
 
   const [pswdVisible, setPswdVisible] = useState(false);
   function togglePswdVisible() {
