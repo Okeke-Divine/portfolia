@@ -49,6 +49,24 @@ const SignUpForm = () => {
       setLoading(false);
       return;
     }
+
+    const formData = {
+      fullname,
+      email,
+      username,
+      password,
+    };
+
+    axios
+      .post("/api/signup", formData, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+      .then((result) => {})
+      .catch((e) => {
+        setError("An error occured. Please check your form and try again.");
+      });
   }
 
   return (
