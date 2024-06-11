@@ -68,7 +68,15 @@ const SignUpForm = () => {
       })
       .catch((e) => {
         setLoading(false);
-        setError("An error occured. Please check your form and try again.");
+        if (e.response && e.response.status) {
+            if (e.response.status.toString().startsWith('4')) {
+              setError(e.response.data.reason);
+            } else {
+              setError("An error occurred. Please check your form and try again.");
+            }
+          } else {
+            setError("An error occurred. Please check your form and try again.");
+          }
       });
     setLoading(false);
   }

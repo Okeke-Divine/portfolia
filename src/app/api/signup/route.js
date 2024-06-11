@@ -1,6 +1,6 @@
 import prisma from "@/app/db";
 import { hashPassword } from "@/utils/hashPassword";
-import { badRequest, internalServerError, resourceCreated } from "@/utils/prebuiltApiResponse";
+import { badRequest, conflict, internalServerError, resourceCreated } from "@/utils/prebuiltApiResponse";
 import { NextResponse } from "next/server";
 
 export const POST = async (req) => {
@@ -25,7 +25,7 @@ export const POST = async (req) => {
             }
         });
         if(usernameExists > 0){
-            return  badRequest("This user name has been taken");
+            return  conflict("This user name has been taken.");
         }
         // check if email exists
         const emailExists = await prisma.user.count({
@@ -34,7 +34,7 @@ export const POST = async (req) => {
             }
         });
         if(emailExists > 0){
-            return  badRequest("Email already exists");
+            return  conflict("Email already exists.");
         }
 
         const user = await prisma.user.create({
