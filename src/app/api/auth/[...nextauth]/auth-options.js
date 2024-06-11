@@ -1,6 +1,5 @@
 import prisma from "@/app/db";
 import { compare } from "bcrypt";
-import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 
 export const authOptions = {
@@ -46,5 +45,32 @@ export const authOptions = {
                 }
             }
         })
-    ]
+    ],
+    callbacks: {
+        async redirect({ url, baseUrl }) {
+            if (url !== baseUrl) {
+                return url;
+            }
+            return new URL("/dashboard", baseUrl).toString();
+        },
+        jwt: ({ token, user }) => {
+            if (user) {
+              const u = user;
+              return {
+                ...token,
+                id: u.id,
+              };
+            }
+            return token;
+          },
+          session: ({ session, token }) => {
+            return {
+              ...session,
+              user: {
+                ...session.user,
+                id: token.id,
+              },
+            };
+          },
+    }
 }
