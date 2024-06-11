@@ -1,6 +1,7 @@
 "use client";
 import { useRef, useState } from "react";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 const SignUpForm = () => {
   const nameRef = useRef(null);
@@ -10,6 +11,7 @@ const SignUpForm = () => {
 
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [regIsSuccessful, setRegIsSuccessful] = useState(false);
 
   const [pswdVisible, setPswdVisible] = useState(false);
   function togglePswdVisible() {
@@ -63,20 +65,30 @@ const SignUpForm = () => {
           "Content-Type": "application/json",
         },
       })
-      .then((result) => {
+      .then((response) => {
         setLoading(false);
+        if (response.status == 201) {
+          setRegIsSuccessful(true);
+          Swal.fire({
+            title: "Success",
+            icon: "success",
+            text: "Your account has been created successfully. You'll be logged in automatically...",
+          });
+        }
       })
       .catch((e) => {
         setLoading(false);
         if (e.response && e.response.status) {
-            if (e.response.status.toString().startsWith('4')) {
-              setError(e.response.data.reason);
-            } else {
-              setError("An error occurred. Please check your form and try again.");
-            }
+          if (e.response.status.toString().startsWith("4")) {
+            setError(e.response.data.reason);
           } else {
-            setError("An error occurred. Please check your form and try again.");
+            setError(
+              "An error occurred. Please check your form and try again."
+            );
           }
+        } else {
+          setError("An error occurred. Please check your form and try again.");
+        }
       });
     setLoading(false);
   }
