@@ -9,10 +9,10 @@ export const authOptions = {
     },
     providers: [
         CredentialsProvider({
-            name: "Signin",
+            name: "Login",
             credentials: {
-                email: { type: "email" },
-                password: { type: "password" }
+                email: { type: "email", label: "Email", placeholder: "Email" },
+                password: { type: "password", label: "password", placeholder: "password" }
             },
             async authorize(credentials) {
                 if (!credentials?.email || !credentials?.password) {

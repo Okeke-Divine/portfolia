@@ -1,7 +1,8 @@
 "use client";
 import { useRef, useState } from "react";
-import axios from "axios";
 import Swal from "sweetalert2";
+import { signIn } from "next-auth/react";
+
 
 const SignInForm = () => {
   const emailRef = useRef(null);
