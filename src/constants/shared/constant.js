@@ -1,0 +1,1 @@
+export const defaultImgUrl = "/images/avatar/"
