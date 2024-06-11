@@ -103,10 +103,10 @@ const SignUpForm = () => {
       {regIsSuccessful ? (
         <>
           <div className="py-5">
+          <p className="mb-2 text-center font-semibold">Logging in...</p>
             <div className="alert alert-success text-white">
               <p>Your account has been created successfully</p>
             </div>
-            <p className="mt-1 text-center">Logging in...</p>
           </div>
         </>
       ) : (
