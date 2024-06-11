@@ -1,1 +1,1 @@
-export const defaultImgUrl = "/images/avatar/"
+export const defaultImgUrl = "/images/avatar/avatar1.png"
