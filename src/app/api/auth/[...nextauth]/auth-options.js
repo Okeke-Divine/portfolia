@@ -55,22 +55,25 @@ export const authOptions = {
         },
         jwt: ({ token, user }) => {
             if (user) {
-              const u = user;
-              return {
-                ...token,
-                id: u.id,
-              };
+                const u = user;
+                return {
+                    ...token,
+                    id: u.id,
+                };
             }
             return token;
-          },
-          session: ({ session, token }) => {
+        },
+        session: ({ session, token }) => {
             return {
-              ...session,
-              user: {
-                ...session.user,
-                id: token.id,
-              },
+                ...session,
+                user: {
+                    ...session.user,
+                    id: token.id,
+                },
             };
-          },
-    }
+        },
+    },
+    pages: {
+        signIn: "/signin",
+    },
 }
