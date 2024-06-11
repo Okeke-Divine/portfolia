@@ -84,7 +84,7 @@ const SignUpForm = () => {
               className="grow"
               placeholder="Enter Your password"
             />
-            <i className={`${pswdVisible ? "fi fi-rs-crossed-eye" : "fi fi-rr-eye"} cursor-pointer flaticon-offset`}></i>
+            <i onClick={togglePswdVisible} className={`${pswdVisible ? "fi fi-rr-eye-crossed" : "fi fi-rr-eye"} cursor-pointer flaticon-offset`}></i>
           </div>
         </div>
         {/* submit button */}
