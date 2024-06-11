@@ -4,14 +4,11 @@ import axios from "axios";
 import Swal from "sweetalert2";
 
 const SignInForm = () => {
-  const nameRef = useRef(null);
   const emailRef = useRef(null);
-  const usernameRef = useRef(null);
   const passwordRef = useRef(null);
 
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  const [regIsSuccessful, setRegIsSuccessful] = useState(true);
 
   const [pswdVisible, setPswdVisible] = useState(false);
   function togglePswdVisible() {
@@ -24,12 +21,10 @@ const SignInForm = () => {
     setError("");
     setLoading(true);
 
-    const fullname = nameRef.current.value;
     const email = emailRef.current.value;
-    const username = usernameRef.current.value;
     const password = passwordRef.current.value;
 
-    if (fullname == "" || email == "" || username == "" || password == "") {
+    if ( email == "" || password == "") {
       setError("All fields are required");
       setLoading(false);
       return;
@@ -103,40 +98,8 @@ const SignInForm = () => {
 
   return (
     <>
-      {regIsSuccessful ? (
-        <>
-          <div className="py-5">
-            <div className="alert alert-success text-white">
-              <div>
-              <span className="mb-2 font-semibold">Logging in...</span><br />
-                <span>Your account has been created successfully</span>
-              </div>
-            </div>
-          </div>
-        </>
-      ) : (
-        <>
+   
           <form onSubmit={createUser}>
-            {/* name */}
-            <p className="my-2 text-red-500 font-semibold">{error}</p>
-            <div className="mb-3">
-              <div>
-                <label htmlFor="name" className="font-bold text-md">
-                  Your Name
-                </label>
-              </div>
-              <div className="input border-2 border-gray-100 flex items-center gap-2 mt-1">
-                <i className="fi fi-ts-circle-user flaticon-offset"></i>
-                <input
-                  type="text"
-                  name="name"
-                  ref={nameRef}
-                  required
-                  className="grow"
-                  placeholder="Enter Your Name"
-                />
-              </div>
-            </div>
             {/* email */}
             <div className="mb-3">
               <div>
@@ -156,25 +119,7 @@ const SignInForm = () => {
                 />
               </div>
             </div>
-            {/* username */}
-            <div className="mb-3">
-              <div>
-                <label htmlFor="username" className="font-bold text-md">
-                  Your Username
-                </label>
-              </div>
-              <div className="input border-2 border-gray-100 flex items-center gap-2 mt-1">
-                <i className="fi fi-tr-at flaticon-offset"></i>
-                <input
-                  type="text"
-                  name="username"
-                  required
-                  ref={usernameRef}
-                  className="grow"
-                  placeholder="Enter Your Username"
-                />
-              </div>
-            </div>
+
             {/* password */}
             <div className="mb-3">
               <div>
@@ -212,14 +157,12 @@ const SignInForm = () => {
                     <span className="loading loading-dots loading-xs"></span>
                   </>
                 ) : (
-                  "Get Started"
+                  "Login"
                 )}
               </button>
             </div>
           </form>
         </>
-      )}
-    </>
   );
 };
 
