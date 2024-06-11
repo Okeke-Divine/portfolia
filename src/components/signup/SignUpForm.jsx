@@ -106,7 +106,7 @@ const SignUpForm = () => {
             <div className="alert alert-success text-white">
               <p>Your account has been created successfully</p>
             </div>
-            <p>Logging in...</p>
+            <p className="mt-1 text-center">Logging in...</p>
           </div>
         </>
       ) : (
