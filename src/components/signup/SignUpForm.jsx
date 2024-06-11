@@ -63,10 +63,14 @@ const SignUpForm = () => {
           "Content-Type": "application/json",
         },
       })
-      .then((result) => {})
+      .then((result) => {
+        setLoading(false);
+      })
       .catch((e) => {
+        setLoading(false);
         setError("An error occured. Please check your form and try again.");
       });
+    setLoading(false);
   }
 
   return (

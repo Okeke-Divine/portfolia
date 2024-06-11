@@ -1,11 +1,22 @@
-export const POST = async  (req) => {
-    const data = await req.json();
+import { hashPassword } from "@/utils/hashPassword";
+import { internalServerError } from "@/utils/prebuiltApiResponse";
+import { NextResponse } from "next/server";
 
-    const fullname = data.fullname;
-    const email = data.email;
-    const username = data.username;
-    const password = data.password;
+export const POST = async (req) => {
+    try {
+        const data = await req.json();
 
-    console.log(data);
+        const fullname = data.fullname;
+        const email = data.email;
+        const username = data.username;
+        const password = data.password;
+
+        const hashedPassword = await hashPassword(password);
+        
+
+        return NextResponse.json({})
+    } catch (e) {
+        return internalServerError(e)
+    }
     // const unameExist 
 }
