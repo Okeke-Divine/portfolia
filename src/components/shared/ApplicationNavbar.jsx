@@ -1,3 +1,4 @@
+import { defaultImgUrl } from "@/constants/shared/constant";
 import config from "@/data/config.json"
 
 export default function ApplicationNavbar() {
@@ -9,7 +10,13 @@ export default function ApplicationNavbar() {
         <div className="navbar-center font-bold uppercase">
             {config.app_name}
         </div>
-        <div className="navbar-end"></div>
+        <div className="navbar-end">
+            <div className="avatar">
+                <div className="w-8 rounded-full">
+                    <img src={defaultImgUrl} alt="User profile picutre">
+                </div>
+            </div>
+        </div>
       </div>
     </>
   );
