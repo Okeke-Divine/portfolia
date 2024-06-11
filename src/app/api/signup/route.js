@@ -12,7 +12,30 @@ export const POST = async (req) => {
         const username = data.username;
         const password = data.password;
 
+        if(!fullname || !email || !username ||!password){
+            return badRequest("All fields are required");
+        }
+
         const hashedPassword = await hashPassword(password);
+
+        // check if username exists
+        const usernameExists = await prisma.user.count({
+            where: {
+                username
+            }
+        });
+        if(usernameExists > 0){
+            return  badRequest("This user name has been taken");
+        }
+        // check if email exists
+        const emailExists = await prisma.user.count({
+            where: {
+                email
+            }
+        });
+        if(emailExists > 0){
+            return  badRequest("Email already exists");
+        }
 
         const user = await prisma.user.create({
             data: {
@@ -23,7 +46,7 @@ export const POST = async (req) => {
         if (user){
             return resourceCreated(user);
         }else{
-            return badRequest("user was not created");
+            return badRequest("An error occured while trying to create the user. Please try again.");
         }
 
             return NextResponse.json({})
