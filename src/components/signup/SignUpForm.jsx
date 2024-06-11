@@ -196,8 +196,7 @@ const SignUpForm = () => {
               </>
             ) : (
               "Get Started"
-            )}{" "}
-            -{loading.toString()}
+            )}
           </button>
         </div>
       </form>
