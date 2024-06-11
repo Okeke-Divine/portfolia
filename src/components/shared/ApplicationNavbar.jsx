@@ -11,7 +11,7 @@ export default function ApplicationNavbar() {
             {config.app_name}
         </div>
         <div className="navbar-end">
-            <div className="avatar">
+            <div className="avatar cursor-pointer">
                 <div className="w-10 rounded-full ring ring-green-300">
                     <img src={defaultImgUrl} alt="User Profile Picture" />
                 </div>
