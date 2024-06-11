@@ -31,9 +31,15 @@ const SignInForm = () => {
     }
 
     const login = await signIn("credentials", {
+      redirect: false,
       email,
       password,
     });
+    if (login.error) {
+      setError("Email or Password is incorrect");
+    } else {
+      document.location = "/dashboard";
+    }
     console.log(login);
   }
 
