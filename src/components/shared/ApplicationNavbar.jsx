@@ -13,7 +13,7 @@ export default function ApplicationNavbar() {
         <div className="navbar-end">
             <div className="avatar">
                 <div className="w-8 rounded-full">
-                    <img src={defaultImgUrl} alt="User profile picutre">
+                    <img src={defaultImgUrl} alt="User Profile Picture" />
                 </div>
             </div>
         </div>
