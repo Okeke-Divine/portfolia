@@ -16,21 +16,23 @@ const SignUpForm = () => {
     setPswdVisible(!pswdVisible);
   }
 
-  function createUser() {
+  function createUser(e) {
+    e.preventDefault();
+    
     setError("");
     setLoading(true);
 
-    const name = nameRef.current.value;
+    const fullname = nameRef.current.value;
     const email = emailRef.current.value;
     const username = usernameRef.current.value;
     const password = passwordRef.current.value;
 
     if (
-      !name ||
+      !fullname ||
       !email ||
       !username ||
       !password ||
-      name == "" ||
+      fullname == "" ||
       email == "" ||
       username == "" ||
       password == ""
@@ -40,6 +42,12 @@ const SignUpForm = () => {
       return;
     }
   }
+
+//   if(username.length < 3){
+//     setError("Username must be at lest 3 charaters");
+//       setLoading(false);
+//       return;
+//   }
 
   return (
     <>
