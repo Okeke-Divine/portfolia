@@ -8,17 +8,44 @@ const SignUpForm = () => {
   const usernameRef = useRef(null);
   const passwordRef = useRef(null);
 
-    const [error,setError] = useState("");
-    
-    const [pswdVisible,setPswdVisible] = useState(false);
-    function togglePswdVisible(){
-        setPswdVisible(!pswdVisible)
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const [pswdVisible, setPswdVisible] = useState(false);
+  function togglePswdVisible() {
+    setPswdVisible(!pswdVisible);
+  }
+
+  function createUser() {
+    setError("");
+    setLoading(true);
+
+    const name = nameRef.current.value;
+    const email = emailRef.current.value;
+    const username = usernameRef.current.value;
+    const password = passwordRef.current.value;
+
+    if (
+      !name ||
+      !email ||
+      !username ||
+      !password ||
+      name == "" ||
+      email == "" ||
+      username == "" ||
+      password == ""
+    ) {
+      setError("All fields are required");
+      setLoading(false);
+      return;
     }
+  }
 
   return (
     <>
-      <form>
+      <form onSubmit={createUser}>
         {/* name */}
+        <p className="my-2 text-red-500 font-semibold">{error}</p>
         <div className="mb-3">
           <div>
             <label htmlFor="name" className="font-bold text-md">
@@ -84,7 +111,12 @@ const SignUpForm = () => {
               className="grow"
               placeholder="Enter Your password"
             />
-            <i onClick={togglePswdVisible} className={`${pswdVisible ? "fi fi-rr-eye-crossed" : "fi fi-rr-eye"} cursor-pointer flaticon-offset`}></i>
+            <i
+              onClick={togglePswdVisible}
+              className={`${
+                pswdVisible ? "fi fi-rr-eye-crossed" : "fi fi-rr-eye"
+              } cursor-pointer flaticon-offset`}
+            ></i>
           </div>
         </div>
         {/* submit button */}
