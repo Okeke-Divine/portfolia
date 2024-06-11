@@ -74,9 +74,9 @@ const SignUpForm = () => {
               icon: "success",
               text: "Your account has been created successfully. You'll be logged in automatically...",
             });
-            setTimeout(function(){
-                // signIn
-            },3000)
+            setTimeout(function () {
+              // signIn
+            }, 3000);
           }
           setLoading(false);
         }
@@ -106,9 +106,11 @@ const SignUpForm = () => {
       {regIsSuccessful ? (
         <>
           <div className="py-5">
-          <p className="mb-2 text-center font-semibold">Logging in...</p>
             <div className="alert alert-success text-white">
-              <p>Your account has been created successfully</p>
+              <div>
+              <span className="mb-2 font-semibold">Logging in...</span><br />
+                <span>Your account has been created successfully</span>
+              </div>
             </div>
           </div>
         </>
