@@ -37,10 +37,11 @@ const SignInForm = () => {
     });
     if (login.error) {
       setError("Email or Password is incorrect");
+      setLoading(false);
     } else {
       document.location = "/dashboard";
+      setLoading(false);
     }
-    console.log(login);
   }
 
   return (
