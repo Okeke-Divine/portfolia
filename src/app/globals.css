@@ -15,6 +15,9 @@
     .app-bg-primary{
         @apply bg-green-500;
     }
+    .app-bg-primary-dark{
+        @apply bg-green-600;
+    }
     .flaticon-offset{
         @apply relative top-[2px];
     }

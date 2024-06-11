@@ -91,7 +91,7 @@ export default function SignUp() {
                   {/* submit button */}
                   <div>
                     <button
-                      className="w-full app-bg-primary btn btn-md text-white"
+                      className="w-full app-bg-primary duration-300 hover:.app-bg-primary-dark btn btn-md text-white"
                       type="submit"
                     >
                       Get Started
