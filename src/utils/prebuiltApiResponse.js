@@ -1,14 +1,19 @@
+import { _console_log } from "./console";
+
 const { NextResponse } = require("next/server");
 
 export function internalServerError(e) {
+    _console_log(e);
     return NextResponse.json({ message: "internalServerError", error: e }, { status: 500 })
 }
 
 export function badRequest(reason) {
+    _console_log(reason);
     return NextResponse.json({ message: "badRequest", reason: reason }, { status: 400 })
 }
 
 export function conflict(reason) {
+    _console_log(reason);
     return NextResponse.json({ message: "conflict", reason: reason }, { status: 409 })
 }
 
