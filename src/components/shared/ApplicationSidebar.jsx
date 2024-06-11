@@ -5,13 +5,11 @@ import Swal from "sweetalert2";
 export default function ApplicationSidedar() {
   function confirmSignOut() {
     Swal.fire({
-      title: "Are you sure?",
-      text: "You won't be able to revert this!",
+      title: "Logout",
+      text: "Are you sure you want to logout?",
       icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, sign out!",
+      confirmButtonText: "Yes, logout!",
       cancelButtonText: "Cancel",
     }).then((result) => {
       if (result.isConfirmed) {
