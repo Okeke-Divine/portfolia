@@ -1,6 +1,8 @@
 export const metadata = {
-    title: "Dashboard"
-}
+  title: "Dashboard",
+};
+
+export const dynamic = "force-dynamic";
 
 const Dashboard = () => {
   return (
