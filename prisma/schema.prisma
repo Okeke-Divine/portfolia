@@ -7,9 +7,60 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User{
-  id Int @id @default(autoincrement())
-  username String
-  email String
-  password String
+model User {
+  id             Int              @id @default(autoincrement())
+  username       String           @unique
+  email          String           @unique
+  password       String
+  profilePicture_url String? @db.Text
+  dateJoined     DateTime         @default(now())
+  //realations
+  SocialLinks    SocialLinks[]
+  UserDetails    UserDetails[]
+  UserExpertise  UserExpertise[]
+  UserProjects   UserProjects[]
+  UserExperience UserExperience[]
+}
+
+model UserDetails {
+  id                Int     @id @default(autoincrement())
+  userId            Int @unique
+  user              User    @relation(fields: [userId], references: [id])
+  //
+  professionalTitle String?
+  bio               String? @db.Text
+  heroText          String?
+}
+
+model SocialLinks {
+  id     Int    @id @default(autoincrement())
+  userId Int
+  user   User   @relation(fields: [userId], references: [id])
+  //
+  name   String
+  url    String
+}
+
+model UserExpertise {
+  id          Int    @id @default(autoincrement())
+  userId      Int
+  user        User   @relation(fields: [userId], references: [id])
+  //
+  icon        String
+  name        String
+  description String
+}
+
+model UserProjects {
+  id     Int  @id @default(autoincrement())
+  userId Int
+  user   User @relation(fields: [userId], references: [id])
+  //
+}
+
+model UserExperience {
+  id     Int  @id @default(autoincrement())
+  userId Int
+  user   User @relation(fields: [userId], references: [id])
+  //
 }
