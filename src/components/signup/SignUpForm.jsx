@@ -66,31 +66,36 @@ const SignUpForm = () => {
         },
       })
       .then((response) => {
-        setLoading(false);
-        if (response.status == 201) {
-          setRegIsSuccessful(true);
-          Swal.fire({
-            title: "Success",
-            icon: "success",
-            text: "Your account has been created successfully. You'll be logged in automatically...",
-          });
+        if (response) {
+          if (response.status == 201) {
+            setRegIsSuccessful(true);
+            Swal.fire({
+              title: "Success",
+              icon: "success",
+              text: "Your account has been created successfully. You'll be logged in automatically...",
+            });
+          }
+          setLoading(false);
         }
       })
       .catch((e) => {
-        setLoading(false);
-        if (e.response && e.response.status) {
-          if (e.response.status.toString().startsWith("4")) {
-            setError(e.response.data.reason);
+        if (e) {
+          if (e.response && e.response.status) {
+            if (e.response.status.toString().startsWith("4")) {
+              setError(e.response.data.reason);
+            } else {
+              setError(
+                "An error occurred. Please check your form and try again."
+              );
+            }
           } else {
             setError(
               "An error occurred. Please check your form and try again."
             );
           }
-        } else {
-          setError("An error occurred. Please check your form and try again.");
+          setLoading(false);
         }
       });
-    setLoading(false);
   }
 
   return (
@@ -191,7 +196,8 @@ const SignUpForm = () => {
               </>
             ) : (
               "Get Started"
-            )}
+            )}{" "}
+            -{loading.toString()}
           </button>
         </div>
       </form>
