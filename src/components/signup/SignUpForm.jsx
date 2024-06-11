@@ -18,7 +18,7 @@ const SignUpForm = () => {
 
   function createUser(e) {
     e.preventDefault();
-    
+
     setError("");
     setLoading(true);
 
@@ -27,26 +27,20 @@ const SignUpForm = () => {
     const username = usernameRef.current.value;
     const password = passwordRef.current.value;
 
-    if (
-      !fullname ||
-      !email ||
-      !username ||
-      !password ||
-      fullname == "" ||
-      email == "" ||
-      username == "" ||
-      password == ""
-    ) {
+    if (fullname == "" || email == "" || username == "" || password == "") {
       setError("All fields are required");
       setLoading(false);
       return;
     }
-  }
 
-  if(username.length < 3){
-    setError("Username must be at lest 3 charaters");
+    console.log(username);
+    return;
+
+    if (username.length < 3) {
+      setError("Username must be at lest 3 charaters");
       setLoading(false);
       return;
+    }
   }
 
   return (
