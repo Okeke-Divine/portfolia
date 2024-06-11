@@ -33,11 +33,19 @@ const SignUpForm = () => {
       return;
     }
 
-    console.log(username);
-    return;
+    if (fullname.length < 3) {
+      setError("Name must be at lest 3 charaters");
+      setLoading(false);
+      return;
+    }
 
     if (username.length < 3) {
       setError("Username must be at lest 3 charaters");
+      setLoading(false);
+      return;
+    }
+    if (password.length < 6) {
+      setError("Password must be at lest 6 charaters");
       setLoading(false);
       return;
     }
@@ -60,6 +68,7 @@ const SignUpForm = () => {
               type="text"
               name="name"
               ref={nameRef}
+              required
               className="grow"
               placeholder="Enter Your Name"
             />
@@ -77,6 +86,7 @@ const SignUpForm = () => {
             <input
               type="email"
               name="email"
+              required
               ref={emailRef}
               className="grow"
               placeholder="Enter Your Email"
@@ -95,6 +105,7 @@ const SignUpForm = () => {
             <input
               type="text"
               name="username"
+              required
               ref={usernameRef}
               className="grow"
               placeholder="Enter Your Username"
@@ -113,6 +124,7 @@ const SignUpForm = () => {
             <input
               type={pswdVisible ? "text" : "password"}
               name="password"
+              required
               ref={passwordRef}
               className="grow"
               placeholder="Enter Your password"
