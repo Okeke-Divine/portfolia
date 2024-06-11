@@ -47,7 +47,7 @@ const SignInForm = () => {
   return (
     <>
       <form onSubmit={authenticateUser}>
-        <p className="my-2 text-red-500 font-semibold">{error}</p>
+        <p className="mb-2 text-red-500 font-semibold">{error}</p>
         {/* email */}
         <div className="mb-3">
           <div>

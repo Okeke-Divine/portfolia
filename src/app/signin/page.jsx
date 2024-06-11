@@ -15,7 +15,7 @@ const SignIn = () => {
                   <h1>
                     Welcome Back!
                   </h1>
-                  <div className="mt-5">
+                  <div className="mt-2">
                     <SignInForm />
                     <p className="my-2 text-center">
                       Don't have an account?{" "}
