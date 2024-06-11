@@ -74,6 +74,9 @@ const SignUpForm = () => {
               icon: "success",
               text: "Your account has been created successfully. You'll be logged in automatically...",
             });
+            setTimeout(function(){
+                // signIn
+            },3000)
           }
           setLoading(false);
         }
