@@ -4,6 +4,19 @@
 
 @layer base{
     h1{
-        @apply text-3xl font-bold;
+        @apply text-4xl font-bold;
     }
+}
+
+@layer components{
+    .app-text-primary{
+        @apply text-green-500;
+    }
+    .app-bg-primary{
+        @apply bg-green-500;
+    }
+    .flaticon-offset{
+        @apply relative top-[2px];
+    }
+
 }
