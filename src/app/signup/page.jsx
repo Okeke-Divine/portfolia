@@ -28,7 +28,7 @@ export default function SignUp() {
                       </label>
                     </div>
                     <div className="input border-2 border-gray-100 flex items-center gap-2 mt-1">
-                      <i className="fi fi-ts-circle-user font-bold text-md flaticon-offset"></i>
+                      <i className="fi fi-ts-circle-user flaticon-offset"></i>
                       <input
                         type="text"
                         name="name"
@@ -45,7 +45,7 @@ export default function SignUp() {
                       </label>
                     </div>
                     <div className="input border-2 border-gray-100 flex items-center gap-2 mt-1">
-                      <i className="fi fi-tr-envelopes font-bold text-md flaticon-offset"></i>
+                      <i className="fi fi-tr-envelopes flaticon-offset"></i>
                       <input
                         type="email"
                         name="email"
@@ -62,7 +62,7 @@ export default function SignUp() {
                       </label>
                     </div>
                     <div className="input border-2 border-gray-100 flex items-center gap-2 mt-1">
-                      <i className="fi fi-tr-at font-bold text-md flaticon-offset"></i>
+                      <i className="fi fi-tr-at flaticon-offset"></i>
                       <input
                         type="text"
                         name="username"
@@ -79,7 +79,7 @@ export default function SignUp() {
                       </label>
                     </div>
                     <div className="input border-2 border-gray-100 flex items-center gap-2 mt-1">
-                      <i className="fi fi-ts-circle-user font-bold text-md flaticon-offset"></i>
+                      <i className="fi fi-tr-padlock-check flaticon-offset"></i>
                       <input
                         type="password"
                         name="password"
