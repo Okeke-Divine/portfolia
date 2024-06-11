@@ -10,8 +10,8 @@ export default function SignUp() {
     <>
       <div>
         <div className="grid grid-cols-1 md:grid-cols-2">
-          <div>
-            <div className="px-5 py-10 md:px-[50px] md:py-[50px]">
+          <div className="min-h-[100vh] flex items-center justify-center bg-gray-100">
+            <div className="bg-white shadow-sm px-5 py-10 md:px-[50px] md:py-[50px]">
               <h1>
                 Hi, Welcome to{" "}
                 <Link href="/" className="app-text-primary">
@@ -45,7 +45,7 @@ export default function SignUp() {
                       </label>
                     </div>
                     <div className="input border-2 border-gray-100 flex items-center gap-2 mt-1">
-                      <i className="fi fi-ts-circle-user font-bold text-md flaticon-offset"></i>
+                      <i className="fi fi-tr-envelopes font-bold text-md flaticon-offset"></i>
                       <input
                         type="email"
                         name="email"
@@ -62,7 +62,7 @@ export default function SignUp() {
                       </label>
                     </div>
                     <div className="input border-2 border-gray-100 flex items-center gap-2 mt-1">
-                      <i className="fi fi-ts-circle-user font-bold text-md flaticon-offset"></i>
+                      <i className="fi fi-tr-at font-bold text-md flaticon-offset"></i>
                       <input
                         type="text"
                         name="username"
@@ -86,6 +86,7 @@ export default function SignUp() {
                         className="grow"
                         placeholder="Enter Your password"
                       />
+                      <i className="fi fi-ts-circle-user cursor-pointer flaticon-offset"></i>
                     </div>
                   </div>
                   {/* submit button */}
@@ -98,6 +99,7 @@ export default function SignUp() {
                     </button>
                   </div>
                 </form>
+                <p>Already have an account? <Link href="/signin" className="app-text-primary">Sign In</Link></p>
               </div>
             </div>
           </div>
