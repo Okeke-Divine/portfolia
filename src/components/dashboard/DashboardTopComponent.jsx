@@ -21,7 +21,7 @@ const DashboardTopComponent = async () => {
             <div className="join stats-vertical lg:stats-horizontal w-full stats shadow-md duration-100 hover:shadow-lg">
               <div className="join-item stat">
                 <div className="stat-figure">
-                <i className="fi fi-tr-overview text-4xl"></i>
+                  <i className="fi fi-tr-overview text-4xl"></i>
                 </div>
                 <div className="stat-title">Page Views</div>
                 <div className="stat-value">0k</div>
@@ -47,7 +47,7 @@ const DashboardTopComponent = async () => {
               </div>
               <div className="join-item stat">
                 <div className="stat-figure">
-                <i className="fi fi-tr-rotate-reverse text-4xl"></i>
+                  <i className="fi fi-tr-rotate-reverse text-4xl"></i>
                 </div>
                 <div className="stat-title">Coversion</div>
                 <div className="stat-value">0%</div>
@@ -60,7 +60,7 @@ const DashboardTopComponent = async () => {
               </div>
               <div className="join-item stat">
                 <div className="stat-figure">
-                <i className="fi fi-tr-rotate-reverse text-4xl"></i>
+                  <i className="fi fi-tr-diamond-turn-right text-4xl"></i>
                 </div>
                 <div className="stat-title">Bounce Rate</div>
                 <div className="stat-value">0%</div>
@@ -82,7 +82,7 @@ const DashboardTopComponent = async () => {
             <div className="join stats-vertical lg:stats-horizontal w-full stats shadow-md duration-100 hover:shadow-lg">
               <div className="join-item stat">
                 <div className="stat-figure">
-                <i className="fi fi-tr-overview text-4xl"></i>
+                  <i className="fi fi-tr-overview text-4xl"></i>
                 </div>
                 <div className="stat-title">Views</div>
                 <div className="stat-value">0k</div>
