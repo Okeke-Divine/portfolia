@@ -12,7 +12,7 @@ const MinorFooter = () => {
             </Link>
           </div>
           <div className="w-full text-center  text-[18px] font-semibold">
-            Built by{" "}
+            Designed, Built and Marketed by{" "}
             <Link
               href={""}
               target="_blank"
