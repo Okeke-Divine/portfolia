@@ -15,12 +15,17 @@ const DashboardTopComponent = async () => {
         </div>
         <div className="divider"></div>
         <div>
-            <h3>Portfolio</h3>
-            <div>
-                <div className="join">
-                    
-                </div>
+          <h3>Portfolio</h3>
+          <div>
+            <div className="join grid grid-cols-1 md:grid-cols-4 stats shadow">
+              <div className="join-item stat">
+                <div className="stat-figure">53.5k</div>
+                <div className="stat-title">Page Views</div>
+                <div className="stat-value">53.5k</div>
+                <div className="stat-desc">0% more than last month</div>
+              </div>
             </div>
+          </div>
         </div>
       </div>
     </>
