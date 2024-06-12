@@ -69,14 +69,22 @@ const PortfolioAbout = () => {
           {/* divider */}
           <div className="divider"></div>
           {/* skills */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-5 lg:grid-cols-6 xl:grid-cols-8">
-            {skills.map((skill, index) => (
-              <>
-                <div key={index} className="rounded-lg shadow-sm duration-300 hover:shadow-lg bg-white text-center p-5">
-                  <div className="capitalize font-bold">{skill.name}</div>
-                </div>
-              </>
-            ))}
+          <div>
+            <div className="app-text-light-2 uppercase text-sm font-semibold tracking-wide">
+              Skills
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-5 lg:grid-cols-6 xl:grid-cols-8">
+              {skills.map((skill, index) => (
+                <>
+                  <div
+                    key={index}
+                    className="rounded-lg shadow-sm duration-300 hover:shadow-lg bg-white text-center p-5"
+                  >
+                    <div className="capitalize font-bold">{skill.name}</div>
+                  </div>
+                </>
+              ))}
+            </div>
           </div>
         </div>
       </section>
