@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 const FeedBackForm = () => {
   const messageRef = useRef(null);
   const [rating, setRating] = useState(4);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(true);
 
   // sendFeedback
@@ -104,7 +104,13 @@ const FeedBackForm = () => {
             className="app-primary-button"
             disabled={loading}
           >
-            Send Feedback
+            {loading ? (
+              <>
+                <div className="loading loading-dots loading-sm"></div>
+              </>
+            ) : (
+              "Send Feedback"
+            )}
           </button>
         </div>
       </form>
