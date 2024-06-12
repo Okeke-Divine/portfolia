@@ -2,7 +2,7 @@ import Link from "next/link";
 import { defaultImgUrl } from "@/constants/shared/constant";
 import { getIconClass } from "@/utils/main";
 
-const PortfolioHero = () => {
+const PortfolioHero = ({user}) => {
   const social_link = [
     { name: "instagram", url: "https://google.com" },
     { name: "twitter", url: "https://google.com" },
@@ -21,7 +21,7 @@ const PortfolioHero = () => {
           {/* left */}
           <div className="flex items-center justify-end">
             <div className="w-full h-fit">
-              <h1 className="max-w-[500px] text-6xl">Hey, I'm John</h1>
+              <h1 className="max-w-[500px] text-6xl">Hey, I'm {user.email}</h1>
               <p className="app-text-light-2 py-2 max-w-[400px] font-semibold underline text-2xl">
                 Full Stack Web Developer @ Figma
               </p>

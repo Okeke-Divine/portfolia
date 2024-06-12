@@ -8,11 +8,11 @@ import PortfolioProjects from "@/components/i/portfolio/PortfolioProjects";
 
 export async function generateMetadata({ params }) {
   const username = params.username;
-  const user = await prisma.user.count({where: {username}})
-  if(!user){
+  const user = await prisma.user.count({ where: { username } });
+  if (!user) {
     return {
-      title: "404 | Not Found"
-    }
+      title: "404 | Not Found",
+    };
   }
   return {
     title: params.username,
@@ -21,20 +21,27 @@ export async function generateMetadata({ params }) {
 
 export default async function PortFolio({ params }) {
   const username = params.username;
-  const user = await prisma.user.count({where: {username}})
-  
-  if(!user){
-    return (
-      <>
-        404
-      </>
-    )
+  const user = await prisma.user.findFirst({
+    where: { username },
+    select: {
+      id: true,
+      fullname: true,
+      username: true,
+      email: true,
+      profilePicture_url: true,
+    },
+  });
+
+  if (!user) {
+    return <>404 not found</>;
   }
+
+  console.log(user);
 
   return (
     <>
       <PortfolioNavbar />
-      <PortfolioHero />
+      <PortfolioHero user={user} />
       <PortfolioAbout />
       <PortfolioProjects />
       <PortfolioFooter />
