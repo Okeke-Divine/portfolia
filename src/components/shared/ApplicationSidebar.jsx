@@ -13,21 +13,29 @@ function ComingSoonComponent() {
   );
 }
 
+function confirmSignOut() {
+  Swal.fire({
+    title: "Logout",
+    text: "Are you sure you want to logout?",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonText: "Yes, logout!",
+    cancelButtonText: "Cancel",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      signOut();
+    }
+  });
+}
+
 export default function ApplicationSidedar() {
-  function confirmSignOut() {
-    Swal.fire({
-      title: "Logout",
-      text: "Are you sure you want to logout?",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonText: "Yes, logout!",
-      cancelButtonText: "Cancel",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        signOut();
-      }
-    });
-  }
+  const links = [
+    {
+      name: "Dashboard",
+      url: "/dashboard",
+      icon: <i className="fi fi-tr-house-chimney"></i>,
+    },
+  ];
 
   return (
     <>
@@ -36,20 +44,22 @@ export default function ApplicationSidedar() {
           {config.app_name}
         </div>
         <div>
-        <button className="btn btn-ghost w-full mb-2 text-left justify-start">
-          <i className="fi fi-tr-house-chimney"></i>
-            Dashboard
-          </button>
+          {links.map((link,index) => {
+            <Link href={link.url} key={index} className="btn btn-ghost w-full mb-2 text-left justify-start">
+                {link.icon}
+                {link.name}
+            </Link>
+          })}
           <button className="btn btn-ghost w-full mb-2 text-left justify-start">
-          <i className="fi fi-ts-web-design"></i>
+            <i className="fi fi-ts-web-design"></i>
             Portfolio
           </button>
           <button className="btn btn-ghost w-full mb-2 text-left justify-start">
-          <i className="fi fi-ts-skill-user"></i>
+            <i className="fi fi-ts-skill-user"></i>
             Feedback
           </button>
           <button className="btn btn-ghost w-full mb-2 justify-start">
-          <i className="fi fi-tr-poll-h"></i>
+            <i className="fi fi-tr-poll-h"></i>
             Resume
             <ComingSoonComponent />
           </button>
