@@ -22,6 +22,9 @@
     .app-text-light{
         @apply text-gray-700;
     }
+    .app-text-light-2{
+        @apply text-gray-500;
+    }
     .app-bg-primary{
         @apply bg-green-500;
     }
