@@ -38,6 +38,7 @@ const PortfolioBuilderLayout1 = async ({ children }) => {
                 <Link href="#" className="font-semibold hover:app-text-primary-dark">{link.name}</Link>
               ))}
             </div>
+            {/* <div className="divider divider-vertical"></div> */}
             <div className="grow">{children}</div>
           </div>
         </div>
