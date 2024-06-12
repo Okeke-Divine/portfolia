@@ -37,6 +37,9 @@
     .app-portfolio-padding{
         @apply px-5 md:px-10 py-5 md:py-10;
     }
+    .app-portfolio-about-container > p{
+        @apply mb-2;
+    }
     .app-link-primary{
         @apply app-text-primary font-bold duration-300 hover:app-text-primary-dark;
     }
