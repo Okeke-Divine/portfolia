@@ -38,7 +38,7 @@ export default function ApplicationSidedar() {
       icon: <i className="fi fi-tr-house-chimney"></i>,
     },
     {
-      name: "Portfolio",
+      name: "Portfolio Builder",
       url: "#",
       icon: <i className="fi fi-ts-web-design"></i>,
     },
