@@ -6,7 +6,7 @@ const FeedBackForm = () => {
   const messageRef = useRef(null);
   const [rating, setRating] = useState(4);
   const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(true);
+  const [success, setSuccess] = useState(false);
 
   // sendFeedback
   function sendFeedback(e) {
