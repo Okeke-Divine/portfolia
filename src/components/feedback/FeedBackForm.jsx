@@ -1,6 +1,7 @@
 "use client";
 import { useState, useRef } from "react";
 import Swal from "sweetalert2";
+import axios from "axios";
 
 const FeedBackForm = () => {
   const messageRef = useRef(null);
@@ -23,6 +24,28 @@ const FeedBackForm = () => {
       setLoading(false);
       return;
     }
+
+    const formData = {
+      rating,
+      message,
+    };
+
+    axios
+      .post("/api/feedback", formData, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        Swal.fire({
+          title: "Error",
+          icon: "warning",
+          text: "An error occured. Please try again",
+        });
+      });
   }
 
   function _setRating(value) {
@@ -34,7 +57,9 @@ const FeedBackForm = () => {
       {success ? (
         <>
           <div>
-            <div className="alert alert-success text-white">Thank you for your feedback.</div>
+            <div className="alert alert-success text-white">
+              Thank you for your feedback.
+            </div>
           </div>
         </>
       ) : (
