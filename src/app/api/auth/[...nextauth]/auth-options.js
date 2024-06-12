@@ -22,7 +22,7 @@ export const authOptions = {
                     where: {
                         email: credentials.email,
                     }, select: {
-                        email: true, password: true, id: true, fullname: true
+                        email: true, password: true, id: true, fullname: true,username:true
                     }
                 });
 
@@ -42,6 +42,7 @@ export const authOptions = {
                     id: user.id,
                     email: user.email,
                     name: user.fullname,
+                    username: user.username
                 }
             }
         })
@@ -59,6 +60,7 @@ export const authOptions = {
                 return {
                     ...token,
                     id: u.id,
+                    username: u.username,
                 };
             }
             return token;
@@ -69,6 +71,7 @@ export const authOptions = {
                 user: {
                     ...session.user,
                     id: token.id,
+                    username: token.username,
                 },
             };
         },
