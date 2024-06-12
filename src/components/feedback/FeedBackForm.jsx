@@ -5,21 +5,24 @@ import Swal from "sweetalert2";
 const FeedBackForm = () => {
   const messageRef = useRef(null);
   const [rating, setRating] = useState(4);
+  const [loading, setLoading] = useState(true);
+  const [success, setSuccess] = useState(true);
 
   // sendFeedback
   function sendFeedback(e) {
     e.preventDefault();
+    setLoading(true);
     const message = messageRef.current.value;
 
-    if(!message || message.length < 5){
-        Swal.fire({
-            title: "Warning",
-            icon:"warning",
-            text: "Message has to be at least 5 characters"
-        })
-        return;
+    if (!message || message.length < 5) {
+      Swal.fire({
+        title: "Warning",
+        icon: "warning",
+        text: "Message has to be at least 5 characters",
+      });
+      setLoading(false);
+      return;
     }
-
   }
 
   function _setRating(value) {
@@ -41,6 +44,7 @@ const FeedBackForm = () => {
               className="mask mask-star"
               value={1}
               onClick={(self) => _setRating(self.target.value)}
+              disabled={loading}
             />
             <input
               type="radio"
@@ -48,6 +52,7 @@ const FeedBackForm = () => {
               className="mask mask-star"
               value={2}
               onClick={(self) => _setRating(self.target.value)}
+              disabled={loading}
             />
             <input
               type="radio"
@@ -55,6 +60,7 @@ const FeedBackForm = () => {
               className="mask mask-star"
               value={3}
               onClick={(self) => _setRating(self.target.value)}
+              disabled={loading}
             />
             <input
               type="radio"
@@ -63,6 +69,7 @@ const FeedBackForm = () => {
               defaultChecked={true}
               value={4}
               onClick={(self) => _setRating(self.target.value)}
+              disabled={loading}
             />
             <input
               type="radio"
@@ -70,6 +77,7 @@ const FeedBackForm = () => {
               className="mask mask-star"
               value={5}
               onClick={(self) => _setRating(self.target.value)}
+              disabled={loading}
             />
           </div>
         </div>
@@ -86,11 +94,16 @@ const FeedBackForm = () => {
             className="textarea textarea-bordered w-full"
             placeholder="Write your feedback..."
             required
+            disabled={loading}
           ></textarea>
         </div>
         {/* button */}
         <div className="mt-2">
-          <button type="submit" className="app-primary-button">
+          <button
+            type="submit"
+            className="app-primary-button"
+            disabled={loading}
+          >
             Send Feedback
           </button>
         </div>
