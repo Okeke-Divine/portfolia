@@ -41,7 +41,7 @@ export default function ApplicationSidedar() {
     },
     {
       name: "Portfolio Builder",
-      url: "#",
+      url: "/portfolio/builder",
       icon: <i className="fi fi-ts-web-design"></i>,
       blank: false,
     },
