@@ -34,6 +34,9 @@
     .app-primary-button{
         @apply w-full app-bg-primary duration-300 hover:app-bg-primary-dark btn btn-md text-white;
     }
+    .app-portfolio-padding{
+        @apply px-5 md:px-10 py-5 md:py-10;
+    }
     .app-link-primary{
         @apply app-text-primary font-bold duration-300 hover:app-text-primary-dark;
     }
