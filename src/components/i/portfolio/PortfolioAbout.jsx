@@ -24,6 +24,15 @@ const PortfolioAbout = () => {
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi
               beatae consequatur nisi obcaecati voluptas modi laudantium quo,
               maiores cum ipsam quam nostrum nulla neque, rerum dicta tempora
+              fugit, possimus illo. Lorem ipsum dolor sit amet, consectetur
+              adipisicing elit. Sequi beatae consequatur nisi obcaecati voluptas
+              modi laudantium quo, maiores cum ipsam quam nostrum nulla neque,
+              rerum dicta tempora fugit, possimus illo.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi
+              beatae consequatur nisi obcaecati voluptas modi laudantium quo,
+              maiores cum ipsam quam nostrum nulla neque, rerum dicta tempora
               fugit, possimus illo.
             </p>
           </div>
