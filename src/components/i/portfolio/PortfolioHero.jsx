@@ -35,6 +35,7 @@ const PortfolioHero = () => {
                   <i className="fi fi-rr-paper-plane-top flaticon-offset"></i>
                 </button>
               </div>
+              <div className="divider"></div>
               {/* social links */}
               <div className="mt-2 flex flex-wrap gap-2">
                 {social_link.map((link, index) => (
