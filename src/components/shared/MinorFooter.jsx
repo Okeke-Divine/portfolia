@@ -2,8 +2,12 @@ import React from 'react'
 
 const MinorFooter = () => {
   return (
-    <div>MinorFooter</div>
-  )
+    <>
+        <div className="footer bg-black">
+            Test
+        </div>
+    </>
+    )
 }
 
 export default MinorFooter

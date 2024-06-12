@@ -14,9 +14,9 @@ const Layout1 = ({ children }) => {
           <div>
             <ApplicationNavbar />
           </div>
-          <div className="p-5 md:p-6">
+          <div>
             <div className="flex min-h-[100vh] flex-col justify-between">
-              <div>{children}</div>
+              <div  className="p-5 md:p-6">{children}</div>
               <div><MinorFooter /></div>
             </div>
           </div>
