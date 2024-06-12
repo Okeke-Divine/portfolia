@@ -1,7 +1,13 @@
 import React from "react";
 
 const PortfolioProjects = () => {
-  const projects = [{}];
+  const projects = [
+    {},
+    {},
+    {},
+    {},
+    {},
+  ];
   return (
     <>
       <section className="app-portfolio-padding" id="projects">
