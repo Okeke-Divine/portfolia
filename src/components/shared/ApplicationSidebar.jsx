@@ -3,6 +3,16 @@ import { signOut } from "next-auth/react";
 import Swal from "sweetalert2";
 import config from "@/data/config.json";
 
+function ComingSoonComponent() {
+  return (
+    <>
+      <span className="badge app-bg-primary text-white border-none badge-sm">
+        <div className="loading loading-dots loading-xs"></div>
+      </span>
+    </>
+  );
+}
+
 export default function ApplicationSidedar() {
   function confirmSignOut() {
     Swal.fire({
@@ -34,21 +44,16 @@ export default function ApplicationSidedar() {
           </button>
           <button className="btn btn-ghost w-full mb-2 justify-start">
             Resume
-            <span className="badge app-bg-primary text-white border-none badge-sm">
-              coming soon
-            </span>
+            <ComingSoonComponent />
           </button>
           <button className="btn btn-ghost w-full mb-2 justify-start">
             Settings
-            <span className="badge  app-bg-primary text-white border-none badge-sm">
-              coming soon
-            </span>
+            <ComingSoonComponent />
           </button>
           <button className="btn btn-ghost w-full mb-2 justify-start">
+            <i className="fi fi-tr-analyse-alt"></i>
             Analytics
-            <span className="badge  app-bg-primary text-white border-none badge-sm">
-              coming soon
-            </span>
+            <ComingSoonComponent />
           </button>
         </div>
         <div className="">
