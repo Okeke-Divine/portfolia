@@ -10,6 +10,12 @@ const FeedBack = () => {
           </h1>
           <p>Shape your experience</p>
         </div>
+        {/* divider */}
+        <div className="divider"></div>
+        {/* feedback form */}
+        <div>
+          s
+        </div>
       </div>
     </>
   );
