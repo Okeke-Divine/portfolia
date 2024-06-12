@@ -66,7 +66,7 @@ export default function ApplicationSidedar() {
     {
       name: "Buy Me A Coffee",
       url: buyMeACoffeUrl,
-      icon: <i className="fi fi-rs-cup-togo"></i>,
+      icon: <i className="fi fi-rs-cup-togo flaticon-offset"></i>,
       blank: true,
     },
   ];
