@@ -32,7 +32,7 @@
         @apply w-full app-bg-primary duration-300 hover:app-bg-primary-dark btn btn-md text-white;
     }
     .app-link-primary{
-        @apply app-text-primary font-bold duration-300 hover:.app-text-primary-dark;
+        @apply app-text-primary font-bold duration-300 hover:app-text-primary-dark;
     }
     /* end app style */
     .flaticon-offset{
