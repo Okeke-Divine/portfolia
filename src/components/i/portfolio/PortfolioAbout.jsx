@@ -5,7 +5,7 @@ const PortfolioAbout = () => {
     <>
       <section className="app-portfolio-padding bg-base-100" id="about">
         <div>
-          <div className="app-text-light-2 uppercase text-sm font-semibold">
+          <div className="app-text-light-2 uppercase text-sm font-semibold tracking-wide">
             Nice to meet you.
           </div>
           <div>
