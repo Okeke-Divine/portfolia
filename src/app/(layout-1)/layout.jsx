@@ -1,5 +1,6 @@
 import ApplicationNavbar from "@/components/shared/ApplicationNavbar";
 import ApplicationSidedar from "@/components/shared/ApplicationSidebar";
+import MinorFooter from "@/components/shared/MinorFooter";
 import React from "react";
 
 const Layout1 = ({ children }) => {
@@ -13,7 +14,12 @@ const Layout1 = ({ children }) => {
           <div>
             <ApplicationNavbar />
           </div>
-          <div className="p-5 md:p-6">{children}</div>
+          <div className="p-5 md:p-6">
+            <div className="flex min-h-[100vh] flex-col justify-between">
+              <div>{children}</div>
+              <div><MinorFooter /></div>
+            </div>
+          </div>
         </div>
       </div>
     </>
