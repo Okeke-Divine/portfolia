@@ -13,7 +13,7 @@ const Layout1 = ({ children }) => {
           <div>
             <ApplicationNavbar />
           </div>
-          <div>{children}</div>
+          <div className="p-2">{children}</div>
         </div>
       </div>
     </>
