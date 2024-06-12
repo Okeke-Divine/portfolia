@@ -31,7 +31,7 @@ const FeedBackForm = () => {
               name="rating-1"
               className="mask mask-star"
               value={1}
-              onClick={(self) => _setRating(self)}
+              onClick={(self) => _setRating(self.target.value)}
             />
             <input
               type="radio"
