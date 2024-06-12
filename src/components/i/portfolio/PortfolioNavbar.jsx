@@ -67,7 +67,7 @@ const PortfolioNavbar = () => {
         </div>
         <div className="navbar-end flex gap-2">
           {social_link.map((link, index) => (
-            <Link href={link.url} className="block">
+            <Link href={link.url} className="app-portfolio-navbar-link">
               <i
                 className={`${getIconClass(
                   link.name
