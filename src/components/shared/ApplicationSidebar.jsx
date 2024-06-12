@@ -111,6 +111,7 @@ export default function ApplicationSidedar() {
           </button>
         </div>
         <div className="">
+          <div className="divider"></div>
           <button
             className="w-full btn text-white btn-ghost justify-start"
             onClick={confirmSignOut}
