@@ -24,5 +24,7 @@
     .flaticon-offset{
         @apply relative top-[2px];
     }
-
+    .titleIcon{
+        @apply relative top-[5px] text-[25px];
+    }
 }
