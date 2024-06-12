@@ -1,5 +1,6 @@
 "use client";
 import { useState, useRef } from "react";
+import Swal from "sweetalert2";
 
 const FeedBackForm = () => {
   const messageRef = useRef(null);
@@ -8,9 +9,17 @@ const FeedBackForm = () => {
   // sendFeedback
   function sendFeedback(e) {
     e.preventDefault();
+    const message = messageRef.current.value;
 
-    console.log(rating);
-    console.log(messageRef.current);
+    if(!message || message.length < 5){
+        Swal.fire({
+            title: "Warning",
+            icon:"warning",
+            text: "Message has to be at least 5 characters"
+        })
+        return;
+    }
+
   }
 
   function _setRating(value) {
