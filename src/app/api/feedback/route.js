@@ -21,7 +21,7 @@ export const POST = async (req) => {
                     userId,
                     rating,
                     message
-                }, select: {}
+                }
             })
             return resourceCreated({})
         } catch (e) {
