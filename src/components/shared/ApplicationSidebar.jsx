@@ -37,25 +37,25 @@ export default function ApplicationSidedar() {
       name: "Dashboard",
       url: "/dashboard",
       icon: <i className="fi fi-tr-house-chimney"></i>,
-      blank:false
+      blank: false,
     },
     {
       name: "Portfolio Builder",
       url: "#",
       icon: <i className="fi fi-ts-web-design"></i>,
-      blank:false
+      blank: false,
     },
     {
       name: "Feedback",
       url: "/feedback",
       icon: <i className="fi fi-ts-skill-user"></i>,
-      blank:false
+      blank: false,
     },
     {
       name: "Twitter",
       url: twitterAccUrl,
       icon: <i className="fi fi-brands-twitter-alt"></i>,
-      blank:true
+      blank: true,
     },
   ];
 
@@ -73,13 +73,25 @@ export default function ApplicationSidedar() {
               href={link.url}
               key={index}
               target={link.blank ? "_blank" : "_self"}
-              className={`btn btn-ghost w-full mb-2 text-left justify-start ${pathname === link.url ? 'app-bg-primary hover:app-bg-primary-dark':''}`}
+              className={`btn btn-ghost w-full mb-2 text-left justify-start ${
+                pathname === link.url
+                  ? "app-bg-primary hover:app-bg-primary-dark"
+                  : ""
+              }`}
             >
               {link.icon}
               {link.name}
-            <div className="grow flex justify-right bg-red-200">
-            {link.blank ? (<><span><i className="fi fi-tr-arrow-up-right-from-square text-[10px]"></i></span></>) : (<></>)}
-            </div>
+              <div className="grow flex justify-end">
+                {link.blank ? (
+                  <>
+                    <span>
+                      <i className="fi fi-tr-arrow-up-right-from-square text-[10px]"></i>
+                    </span>
+                  </>
+                ) : (
+                  <></>
+                )}
+              </div>
             </Link>
           ))}
           <button className="btn btn-ghost w-full mb-2 justify-start">
