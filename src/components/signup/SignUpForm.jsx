@@ -4,15 +4,14 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import { signIn } from "next-auth/react";
 
-async function _signIn(){
+async function _signIn(email,password){
   const login = await signIn("credentials", {
     redirect: false,
     email,
     password,
   });
   if (login.error) {
-    setError("Email or Password is incorrect");
-    setLoading(false);
+    document.location = "/signin";
   } else {
     document.location = "/dashboard";
     setLoading(false);
@@ -91,7 +90,7 @@ const SignUpForm = () => {
               text: "Your account has been created successfully. You'll be logged in automatically...",
             });
             setTimeout(function () {
-             _signIn()
+             _signIn(email,password)
             }, 3000);
           }
           setLoading(false);
