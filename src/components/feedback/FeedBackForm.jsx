@@ -8,7 +8,7 @@ const FeedBackForm = () => {
   // sendFeedback
   function sendFeedback(e) {
     e.preventDefault();
-    
+
     console.log(ratingRef.current);
     console.log(messageRef.current);
   }
@@ -27,18 +27,21 @@ const FeedBackForm = () => {
               name="rating-1"
               className="mask mask-star"
               ref={ratingRef}
+              value={1}
             />
             <input
               type="radio"
               name="rating-1"
               className="mask mask-star"
               ref={ratingRef}
+              value={2}
             />
             <input
               type="radio"
               name="rating-1"
               className="mask mask-star"
               ref={ratingRef}
+              value={3}
             />
             <input
               type="radio"
@@ -46,12 +49,14 @@ const FeedBackForm = () => {
               className="mask mask-star"
               ref={ratingRef}
               defaultChecked={true}
+              value={4}
             />
             <input
               type="radio"
               name="rating-1"
               className="mask mask-star"
               ref={ratingRef}
+              value={5}
             />
           </div>
         </div>
