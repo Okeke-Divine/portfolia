@@ -46,7 +46,7 @@ const PortfolioNavbar = () => {
             </div>
           </div>
         </div>
-        <div className="navbar-center">
+        <div className="hidden md:block navbar-center">
           <div className="flex gap-2 md:gap-5">
             <Link href="#about" className="app-portfolio-navbar-link">
               About
