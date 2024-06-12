@@ -11,6 +11,12 @@ function getIconClass(name) {
       return "fi fi-brands-twitter-alt";
     case "linkedin":
       return "fi fi-brands-linkedin";
+    case "github":
+      return "fi i-brands-github";
+    case "email":
+      return "fi fi-rr-envelope";
+    case "phone_number":
+      return "fi fi-rr-phone-call";
     default:
       return "fi fi-rr-link";
   }
