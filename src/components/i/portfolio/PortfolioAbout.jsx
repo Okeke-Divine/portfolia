@@ -66,12 +66,14 @@ const PortfolioAbout = () => {
               </div>
             </div>
           </div>
+          {/* divider */}
+          <div className="divider"></div>
           {/* skills */}
-          <div className="grid grid-cols-3 md:grid-cols-6">
+          <div className="grid grid-cols-3 gap-5 md:grid-cols-6">
             {skills.map((skill, index) => (
               <>
-                <div key={index} className="rounded shadow-md bg-white p-5">
-                  {skill.name}
+                <div key={index} className="rounded-lg shadow-sm duration-300 hover:shadow-lg bg-white text-center p-5">
+                  <div className="capitalize font-bold">{skill.name}</div>
                 </div>
               </>
             ))}
