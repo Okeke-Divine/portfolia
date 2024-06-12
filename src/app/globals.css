@@ -2,58 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-    h1{
-        @apply text-4xl font-bold;
-    }
-    h3{
-        @apply text-2xl font-bold;
-    }
+@layer base {
+  h1 {
+    @apply text-4xl font-bold;
+  }
+  h3 {
+    @apply text-2xl font-bold;
+  }
 }
 
-@layer components{
-    /* start app style */
-    .app-text-primary{
-        @apply text-green-500;
-    }
-    .app-text-primary-dark{
-        @apply text-green-600;
-    }
-    .app-text-light{
-        @apply text-gray-700;
-    }
-    .app-text-light-2{
-        @apply text-gray-500;
-    }
-    .app-bg-primary{
-        @apply bg-green-500;
-    }
-    .app-bg-primary-dark{
-        @apply bg-green-600;
-    }
-    .app-primary-button{
-        @apply w-full app-bg-primary duration-300 hover:app-bg-primary-dark btn btn-md text-white;
-    }
-    .app-portfolio-padding{
-        @apply px-5 md:px-10 py-5 md:py-10;
-    }
-    .app-portfolio-about-container > p{
-        @apply mb-2;
-    }
-    .app-link-primary{
-        @apply app-text-primary font-bold duration-300 hover:app-text-primary-dark;
-    }
-    .app-portfolio-navbar-icon{
-        @apply text-[20px];
-    }
-    .app-portfolio-navbar-link{
-        @apply block duration-300 hover:app-text-primary-dark;
-    }
-    /* end app style */
-    .flaticon-offset{
-        @apply relative top-[2px];
-    }
-    .titleIcon{
-        @apply relative top-[5px] text-[25px];
-    }
+@layer components {
+  /* start app style */
+  .app-text-primary {
+    @apply text-green-500;
+  }
+  .app-text-primary-dark {
+    @apply text-green-600;
+  }
+  .app-text-light {
+    @apply text-gray-700;
+  }
+  .app-text-light-2 {
+    @apply text-gray-500;
+  }
+  .app-bg-primary {
+    @apply bg-green-500;
+  }
+  .app-bg-primary-dark {
+    @apply bg-green-600;
+  }
+  .app-primary-button {
+    @apply w-full app-bg-primary duration-300 hover:app-bg-primary-dark btn btn-md text-white;
+  }
+  .app-portfolio-padding {
+    @apply px-5 md:px-10 py-5 md:py-10 lg:px-24;
+  }
+  .app-portfolio-about-container > p {
+    @apply mb-2 font-semibold;
+  }
+  .app-link-primary {
+    @apply app-text-primary font-bold duration-300 hover:app-text-primary-dark;
+  }
+  .app-portfolio-navbar-icon {
+    @apply text-[20px];
+  }
+  .app-portfolio-navbar-link {
+    @apply block duration-300 hover:app-text-primary-dark;
+  }
+  /* end app style */
+  .flaticon-offset {
+    @apply relative top-[2px];
+  }
+  .titleIcon {
+    @apply relative top-[5px] text-[25px];
+  }
 }
