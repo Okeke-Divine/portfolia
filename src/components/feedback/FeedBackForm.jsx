@@ -34,7 +34,7 @@ const FeedBackForm = () => {
       {success ? (
         <>
           <div>
-            <div className="alert alert-success text-white">Thanks for your feedback.</div>
+            <div className="alert alert-success text-white">Thank you for your feedback.</div>
           </div>
         </>
       ) : (
