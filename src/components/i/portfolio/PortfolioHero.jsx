@@ -1,4 +1,4 @@
-import React from "react";
+import { defaultImgUrl } from "@/constants/shared/constant";
 
 const PortfolioHero = () => {
   return (
@@ -6,8 +6,8 @@ const PortfolioHero = () => {
       <div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2 py-5 md:py-10 px-10 md:px-36 place-content-center min-h-[60vh]">
           <div>
-            <h1 className="max-w-[500px] text-5xl">Hey, I'm John</h1>
-            <p className="app-text-light-2 py-2 max-w-[400px] font-semibold underline text-xl">
+            <h1 className="max-w-[500px] text-6xl">Hey, I'm John</h1>
+            <p className="app-text-light-2 py-2 max-w-[400px] font-semibold underline text-2xl">
               Full Stack Web Developer @ Figma
             </p>
             <p className="app-text-light-2 py-2 max-w-[400px]">
@@ -21,7 +21,14 @@ const PortfolioHero = () => {
               </button>
             </div>
           </div>
-          <div></div>
+          {/* right content */}
+          <div>
+            <div className="avatar cursor-pointer">
+              <div className="rounded-full ring ring-green-300 w-60">
+                <img src={defaultImgUrl} alt="User Profile Picture" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>
