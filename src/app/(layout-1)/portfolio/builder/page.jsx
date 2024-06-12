@@ -13,7 +13,7 @@ const PortfolioBuilder = async () => {
           <div className="input text-center">{process.env.NEXTAUTH_URL}i/{session.user.username}</div>
         </div>
         <div className="">
-          <iframe className="w-full" src={"/i/"+session.user.username}></iframe>
+          <iframe className="w-full min-h-[50vh]" src={"/i/"+session.user.username}></iframe>
         </div>
       </div>
     </>
