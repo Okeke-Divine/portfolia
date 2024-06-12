@@ -16,8 +16,10 @@ const Layout1 = ({ children }) => {
           </div>
           <div>
             <div className="flex min-h-[100vh] flex-col justify-between">
-              <div  className="p-5 md:p-6">{children}</div>
-              <div><MinorFooter /></div>
+              <div className="p-5 md:p-6">{children}</div>
+              <div>
+                <MinorFooter />
+              </div>
             </div>
           </div>
         </div>
