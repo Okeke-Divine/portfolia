@@ -36,17 +36,25 @@ export default function ApplicationSidedar() {
           {config.app_name}
         </div>
         <div>
+        <button className="btn btn-ghost w-full mb-2 text-left justify-start">
+          <i className="fi fi-tr-house-chimney"></i>
+            Dashboard
+          </button>
           <button className="btn btn-ghost w-full mb-2 text-left justify-start">
+          <i className="fi fi-ts-web-design"></i>
             Portfolio
           </button>
           <button className="btn btn-ghost w-full mb-2 text-left justify-start">
+          <i className="fi fi-ts-skill-user"></i>
             Feedback
           </button>
           <button className="btn btn-ghost w-full mb-2 justify-start">
+          <i className="fi fi-tr-poll-h"></i>
             Resume
             <ComingSoonComponent />
           </button>
           <button className="btn btn-ghost w-full mb-2 justify-start">
+            <i className="fi fi-tr-customization-cogwheel"></i>
             Settings
             <ComingSoonComponent />
           </button>
