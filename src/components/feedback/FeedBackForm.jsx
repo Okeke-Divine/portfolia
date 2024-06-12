@@ -38,9 +38,11 @@ const FeedBackForm = () => {
       })
       .then((response) => {
         if(response){
+            if(response.status == 201){
+                setSuccess(true);
+            }
             setLoading(false);
         }
-        console.log(response);
       })
       .catch((error) => {
         if(error){
