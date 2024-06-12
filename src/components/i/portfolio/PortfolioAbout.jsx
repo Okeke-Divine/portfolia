@@ -4,7 +4,7 @@ const PortfolioAbout = () => {
   return (
     <>
         <section className="app-portfolio-padding bg-base-100" id="about">
-
+            .
         </section>
     </>
     )

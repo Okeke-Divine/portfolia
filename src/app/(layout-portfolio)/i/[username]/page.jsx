@@ -1,3 +1,4 @@
+import PortfolioAbout from "@/components/i/portfolio/PortfolioAbout";
 import PortfolioHero from "@/components/i/portfolio/PortfolioHero";
 import PortfolioNavbar from "@/components/i/portfolio/PortfolioNavbar";
 
@@ -12,6 +13,7 @@ export default function PortFolio({ params }) {
     <>
       <PortfolioNavbar />
       <PortfolioHero />
+      <PortfolioAbout />
     </>
   );
 }
