@@ -55,7 +55,7 @@ const FeedBackForm = () => {
   }
 
   function _setRating(value) {
-    setRating(parseInt(rating));
+    setRating(parseInt(value));
   }
 
   return (
