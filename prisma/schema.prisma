@@ -8,24 +8,25 @@ datasource db {
 }
 
 model User {
-  id             Int              @id @default(autoincrement())
-  fullname       String
-  username       String           @unique
-  email          String           @unique
-  password       String
-  profilePicture_url String? @db.Text
-  dateJoined     DateTime         @default(now())
+  id                 Int              @id @default(autoincrement())
+  fullname           String
+  username           String           @unique
+  email              String           @unique
+  password           String
+  profilePicture_url String?          @db.Text
+  dateJoined         DateTime         @default(now())
   //realations
-  SocialLinks    SocialLinks[]
-  UserDetails    UserDetails[]
-  UserExpertise  UserExpertise[]
-  UserProjects   UserProjects[]
-  UserExperience UserExperience[]
+  SocialLinks        SocialLinks[]
+  UserDetails        UserDetails[]
+  UserExpertise      UserExpertise[]
+  UserProjects       UserProjects[]
+  UserExperience     UserExperience[]
+  Feedback           Feedback[]
 }
 
 model UserDetails {
   id                Int     @id @default(autoincrement())
-  userId            Int @unique
+  userId            Int     @unique
   user              User    @relation(fields: [userId], references: [id])
   //
   professionalTitle String?
@@ -64,4 +65,13 @@ model UserExperience {
   userId Int
   user   User @relation(fields: [userId], references: [id])
   //
+}
+
+model Feedback {
+  id      Int    @id @default(autoincrement())
+  userId  Int
+  user    User   @relation(fields: [userId], references: [id])
+  //
+  rating Int @default(0)
+  message String @db.Text
 }
