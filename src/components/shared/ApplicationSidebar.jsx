@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 import config from "@/data/config.json";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { twitterAccUrl } from "@/constants/shared/constant";
+import { twitterAccUr,buyMeACoffeUrll } from "@/constants/shared/constant";
 
 function ComingSoonComponent() {
   return (
@@ -52,7 +52,19 @@ export default function ApplicationSidedar() {
       blank: false,
     },
     {
+      name: "Info",
+      url: "/info",
+      icon: <i className="fi fi-ts-skill-user"></i>,
+      blank: false,
+    },
+    {
       name: "Twitter",
+      url: twitterAccUrl,
+      icon: <i className="fi fi-brands-twitter-alt"></i>,
+      blank: true,
+    },
+    {
+      name: "Buy Me A Coffee",
       url: twitterAccUrl,
       icon: <i className="fi fi-brands-twitter-alt"></i>,
       blank: true,
