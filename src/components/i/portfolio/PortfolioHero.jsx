@@ -1,6 +1,18 @@
 import { defaultImgUrl } from "@/constants/shared/constant";
+import { getIconClass } from "@/utils/main";
 
 const PortfolioHero = () => {
+  const social_link = [
+    { name: "instagram", url: "https://google.com" },
+    { name: "twitter", url: "https://google.com" },
+    // { name: "facebook", url: "https://google.com" },
+    // { name: "dribble", url: "https://google.com" },
+    // { name: "linkedin", url: "https://google.com" },
+    { name: "github", url: "https://google.com" },
+    { name: "email", url: "https://google.com" },
+    // { name: "phone_number", url: "https://google.com" },
+  ];
+
   return (
     <>
       <div>
@@ -21,6 +33,18 @@ const PortfolioHero = () => {
                   Message
                   <i className="fi fi-rr-paper-plane-top flaticon-offset"></i>
                 </button>
+              </div>
+              {/* social links */}
+              <div className="mt-2 flex flex-wrap gap-2">
+                {social_link.map((link, index) => (
+                  <Link href={link.url} className="">
+                    <i
+                      className={`${getIconClass(
+                        link.name
+                      )} app-portfolio-navbar-icon`}
+                    ></i>
+                  </Link>
+                ))}
               </div>
             </div>
           </div>
