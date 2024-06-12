@@ -15,7 +15,12 @@ const DashboardTopComponent = async () => {
         </div>
         <div className="divider"></div>
         <div>
-            
+            <h3>Portfolio</h3>
+            <div>
+                <div className="join">
+                    
+                </div>
+            </div>
         </div>
       </div>
     </>
