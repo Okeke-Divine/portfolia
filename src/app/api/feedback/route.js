@@ -1,5 +1,5 @@
 import prisma from "@/app/db";
-import { badRequest, internalServerError } from "@/utils/prebuiltApiResponse";
+import {  badRequest, internalServerError, unAuthorized } from "@/utils/prebuiltApiResponse";
 import { NextResponse } from "next/server";
 import { getUserId } from "../../../utils/session";
 
@@ -14,9 +14,11 @@ export const POST = async (req) => {
 
         try{
             const userId = await getUserId();
-            console.log(userId);
-            return NextResponse.json({})
+            if(userId == null){
+                return unAuthorized();
+            }
             // const feedback = await prisma
+            return NextResponse.json({})
         }catch(e){
             return internalServerError(e);
         }

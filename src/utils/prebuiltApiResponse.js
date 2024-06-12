@@ -20,3 +20,11 @@ export function conflict(reason) {
 export function resourceCreated(data) {
     return NextResponse.json({ message: "success", data: data }, { status: 201 })
 }
+
+export function unAuthorized(){
+    return NextResponse.json({message:"unAuthorized"},{status:401})
+}
+
+export function accessDenied(){
+    return NextResponse.json({message:"accessDenied"},{status:200})
+}
