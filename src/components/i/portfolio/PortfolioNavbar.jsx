@@ -29,8 +29,8 @@ const PortfolioNavbar = () => {
             <Link href="#about" className="app-portfolio-navbar-link">
               About
             </Link>
-            <Link href="#projects" className="app-portfolio-navbar-link">
-              Project
+            <Link href="#expertise" className="app-portfolio-navbar-link">
+              Expertise
             </Link>
             <Link href="#experience" className="app-portfolio-navbar-link">
               Experience
