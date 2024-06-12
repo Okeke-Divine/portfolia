@@ -2,24 +2,16 @@ import { defaultImgUrl } from "@/constants/shared/constant";
 import Link from "next/link";
 
 const PortfolioNavbar = () => {
-  const social_link = {
-    name: "instagram",
-    url: "https://google.com",
-    name: "twitter",
-    url: "https://google.com",
-    name: "facebook",
-    url: "https://google.com",
-    name: "dribble",
-    url: "https://google.com",
-    name: "linkedin",
-    url: "https://google.com",
-    name: "github",
-    url: "https://google.com",
-    name: "email",
-    url: "https://google.com",
-    name: "phone_number",
-    url: "https://google.com",
-  };
+  const social_link = [
+    { name: "instagram", url: "https://google.com" },
+    { name: "twitter", url: "https://google.com" },
+    { name: "facebook", url: "https://google.com" },
+    { name: "dribble", url: "https://google.com" },
+    { name: "linkedin", url: "https://google.com" },
+    { name: "github", url: "https://google.com" },
+    { name: "email", url: "https://google.com" },
+    { name: "phone_number", url: "https://google.com" },
+  ];
 
   return (
     <>
