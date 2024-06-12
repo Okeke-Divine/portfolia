@@ -45,12 +45,12 @@ export default function ApplicationSidedar() {
           {config.app_name}
         </div>
         <div>
-          {links.map((link,index) => {
+          {links.map((link,index) => (
             <Link href={link.url} key={index} className="btn btn-ghost w-full mb-2 text-left justify-start">
-                {link.icon}
+                {/* {link.icon} */}
                 {link.name}
             </Link>
-          })}
+          ))}
           <button className="btn btn-ghost w-full mb-2 text-left justify-start">
             <i className="fi fi-ts-web-design"></i>
             Portfolio
