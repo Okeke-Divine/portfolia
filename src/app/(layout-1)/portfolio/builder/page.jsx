@@ -18,7 +18,7 @@ const PortfolioBuilder = async () => {
             No code Portfolio builder |{" "}
             <Link
               href={"/i/" + session.user.username}
-              target="_blanks"
+              target="_blank"
               className="app-link-primary font-bold"
             >
               Live Preview
