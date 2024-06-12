@@ -12,7 +12,6 @@ export default function PortFolio({ params }) {
     <>
       <PortfolioNavbar />
       <PortfolioHero />
-      {params.username}
     </>
   );
 }
