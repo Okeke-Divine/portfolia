@@ -1,6 +1,19 @@
 import { defaultImgUrl } from "@/constants/shared/constant";
 
 const PortfolioAbout = () => {
+  const skills = [
+    { name: "HTML" },
+    { name: "CSS" },
+    { name: "JavaScript" },
+    { name: "React" },
+    { name: "NextJs" },
+    { name: "Jquery" },
+    { name: "Bootstrap" },
+    { name: "DaisyUi" },
+    { name: "Prisma" },
+    { name: "MySQL" },
+  ];
+
   return (
     <>
       <section className="app-portfolio-padding bg-base-200" id="about">
@@ -52,6 +65,16 @@ const PortfolioAbout = () => {
                 Full Stack Web Developer @ Figma
               </div>
             </div>
+          </div>
+          {/* skills */}
+          <div className="grid grid-cols-3 md:grid-cols-6">
+            {skills.map((skill, index) => (
+              <>
+                <div key={index} className="rounded shadow-md bg-white p-5">
+                  {skill.name}
+                </div>
+              </>
+            ))}
           </div>
         </div>
       </section>
