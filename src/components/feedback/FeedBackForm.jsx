@@ -14,7 +14,7 @@ const FeedBackForm = () => {
   }
 
   function _setRating(value) {
-    console.log(value);
+    setRating(parseInt(rating));
   }
 
   return (
@@ -38,12 +38,14 @@ const FeedBackForm = () => {
               name="rating-1"
               className="mask mask-star"
               value={2}
+              onClick={(self) => _setRating(self.target.value)}
             />
             <input
               type="radio"
               name="rating-1"
               className="mask mask-star"
               value={3}
+              onClick={(self) => _setRating(self.target.value)}
             />
             <input
               type="radio"
@@ -51,12 +53,14 @@ const FeedBackForm = () => {
               className="mask mask-star"
               defaultChecked={true}
               value={4}
+              onClick={(self) => _setRating(self.target.value)}
             />
             <input
               type="radio"
               name="rating-1"
               className="mask mask-star"
               value={5}
+              onClick={(self) => _setRating(self.target.value)}
             />
           </div>
         </div>
