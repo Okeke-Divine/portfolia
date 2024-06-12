@@ -13,9 +13,13 @@ const PortfolioNavbar = () => {
           </div>
         </div>
         <div className="navbar-center">
-          <Link href="" className="">
-            About
-          </Link>
+          <div className="flex gap-2 md:gap-5">
+            <Link href="#about" className="block">About</Link>
+            <Link href="#about" className="block">Project</Link>
+            <Link href="#about" className="block">Experience</Link>
+            <Link href="#about" className="block">Services</Link>
+            <Link href="#about" className="block">Contact</Link>
+          </div>
         </div>
         <div className="navbar-end"></div>
       </div>
