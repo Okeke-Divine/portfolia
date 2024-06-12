@@ -70,7 +70,7 @@ const PortfolioAbout = () => {
           <div className="divider"></div>
           {/* skills */}
           <div>
-            <div className="app-text-light-2 uppercase text-sm font-semibold tracking-wide">
+            <div className="app-text-light-2 uppercase font-semibold tracking-wide text-xl">
               Skills
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-5 lg:grid-cols-6 xl:grid-cols-8">
