@@ -77,7 +77,9 @@ export default function ApplicationSidedar() {
             >
               {link.icon}
               {link.name}
-              {link.blank ? (<><span><i className="fi fi-tr-arrow-up-right-from-square"></i></span></>) : (<></>)}
+            <div className="grow flex justify-right bg-red-200">
+            {link.blank ? (<><span><i className="fi fi-tr-arrow-up-right-from-square text-[10px]"></i></span></>) : (<></>)}
+            </div>
             </Link>
           ))}
           <button className="btn btn-ghost w-full mb-2 justify-start">
