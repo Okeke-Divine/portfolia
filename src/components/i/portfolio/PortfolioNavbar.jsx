@@ -7,8 +7,12 @@ function getIconClass(name) {
       return "fi fi-brands-facebook";
     case "instagram":
       return "fi fi-brands-instagram";
+    case "twitter":
+      return "fi fi-brands-twitter-alt";
+    case "linkedin":
+      return "fi fi-brands-linkedin";
     default:
-      return null;
+      return "fi fi-rr-link";
   }
 }
 
