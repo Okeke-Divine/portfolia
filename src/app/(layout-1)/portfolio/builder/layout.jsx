@@ -1,6 +1,13 @@
 import { getCurrentSession } from "@/utils/session";
 import Link from "next/link";
 
+const links = [
+  { name: "Preview" },
+  { name: "Basic Details" },
+  { name: "Skills" },
+  { name: "Projects" },
+];
+
 const PortfolioBuilderLayout1 = async ({ children }) => {
   const session = await getCurrentSession();
 
@@ -26,7 +33,11 @@ const PortfolioBuilderLayout1 = async ({ children }) => {
         <div className="divider"></div>
         <div>
           <div className="flex flex-row gap-2">
-            <div className="w-[50px]">Link</div>
+            <div className="w-[100px] flex flex-col">
+              {links.map((link,index) => (
+                <Link href="#" className="hover:app-text-primary-dark">{link.name}</Link>
+              ))}
+            </div>
             <div className="grow">{children}</div>
           </div>
         </div>
