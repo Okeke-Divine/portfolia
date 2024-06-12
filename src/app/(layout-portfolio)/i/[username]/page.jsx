@@ -1,13 +1,16 @@
-export function generateMetadata({params}){
-    return {
-        title : params.username
-    }
+import PortfolioNavbar from "@/components/i/portfolio/PortfolioNavbar";
+
+export function generateMetadata({ params }) {
+  return {
+    title: params.username,
+  };
 }
 
-export default function PortFolio({params}) {
-    return (
-        <>
-            {params.username}
-        </>
-    )
+export default function PortFolio({ params }) {
+  return (
+    <>
+      <PortfolioNavbar />
+      {params.username}
+    </>
+  );
 }
