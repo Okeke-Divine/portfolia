@@ -26,16 +26,33 @@ export default function ApplicationSidedar() {
           {config.app_name}
         </div>
         <div>
+          <button className="btn btn-ghost w-full mb-2 text-left">
+            Portfolio
+          </button>
           <button className="btn btn-ghost w-full mb-2">
-            Analytics
-            <span className="badge badge-info badge-sm">coming soon</span>
+            Resume
+            <span className="badge app-bg-primary text-white border-none badge-sm">
+              coming soon
+            </span>
           </button>
           <button className="btn btn-ghost w-full mb-2">
             Settings
+            <span className="badge  app-bg-primary text-white border-none badge-sm">
+              coming soon
+            </span>
+          </button>
+          <button className="btn btn-ghost w-full mb-2">
+            Analytics
+            <span className="badge  app-bg-primary text-white border-none badge-sm">
+              coming soon
+            </span>
           </button>
         </div>
         <div className="">
-          <button className="w-full btn text-white btn-ghost" onClick={confirmSignOut}>
+          <button
+            className="w-full btn text-white btn-ghost"
+            onClick={confirmSignOut}
+          >
             <i className="fi fi-tr-sign-out-alt flaticon-offset"></i> Logout
           </button>
         </div>
