@@ -84,7 +84,9 @@ const DashboardTopComponent = async () => {
                 </div>
               </div>
               <div className="join-item stat">
-                <div className="stat-figure">53.5k</div>
+                <div className="stat-figure">
+                  <i className="fi fi-tr-bullseye-pointer text-4xl"></i>
+                </div>
                 <div className="stat-title">Clicks</div>
                 <div className="stat-value">0k</div>
                 <div className="stat-desc">0% more than last month</div>
@@ -96,7 +98,7 @@ const DashboardTopComponent = async () => {
               </div>
               <div className="join-item stat">
                 <div className="stat-figure">
-                <i className="fi fi-tr-cloud-download-alt text-xl"></i>
+                  <i className="fi fi-tr-cloud-download-alt text-4xl"></i>
                 </div>
                 <div className="stat-title">Downloads</div>
                 <div className="stat-value">0k</div>
