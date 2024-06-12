@@ -2,6 +2,18 @@ import { defaultImgUrl } from "@/constants/shared/constant";
 import Link from "next/link";
 
 const PortfolioNavbar = () => {
+
+    const social_link = {
+        name: "instagram",url:"https://google.com",
+        name: "twitter",url:"https://google.com",
+        name: "facebook",url:"https://google.com",
+        name: "dribble",url:"https://google.com",
+        name: "linkedin",url:"https://google.com",
+        name: "github",url:"https://google.com",
+        name: "email",url:"https://google.com",
+        name: "phone_number",url:"https://google.com",
+    }
+
   return (
     <>
       <div className="navbar px-5 md:px-10 py-2 md:py-5 bg-base-200">
@@ -21,7 +33,9 @@ const PortfolioNavbar = () => {
             <Link href="#about" className="block">Contact</Link>
           </div>
         </div>
-        <div className="navbar-end"></div>
+        <div className="navbar-end">
+
+        </div>
       </div>
     </>
   );
