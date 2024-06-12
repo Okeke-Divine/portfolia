@@ -20,7 +20,9 @@ const DashboardTopComponent = async () => {
           <div>
             <div className="join stats-vertical lg:stats-horizontal w-full stats shadow-md duration-100 hover:shadow-lg">
               <div className="join-item stat">
-                <div className="stat-figure">53.5k</div>
+                <div className="stat-figure">
+                <i className="fi fi-tr-overview text-4xl"></i>
+                </div>
                 <div className="stat-title">Page Views</div>
                 <div className="stat-value">0k</div>
                 <div className="stat-desc">0% more than last month</div>
@@ -31,7 +33,9 @@ const DashboardTopComponent = async () => {
                 </div>
               </div>
               <div className="join-item stat">
-                <div className="stat-figure">53.5k</div>
+                <div className="stat-figure">
+                  <i className="fi fi-tr-bullseye-pointer text-4xl"></i>
+                </div>
                 <div className="stat-title">Page Clicks</div>
                 <div className="stat-value">0k</div>
                 <div className="stat-desc">0% more than last month</div>
@@ -53,7 +57,9 @@ const DashboardTopComponent = async () => {
                 </div>
               </div>
               <div className="join-item stat">
-                <div className="stat-figure">53.5k</div>
+                <div className="stat-figure">
+                    
+                </div>
                 <div className="stat-title">Bounce Rate</div>
                 <div className="stat-value">0%</div>
                 <div className="stat-desc">0% more than last month</div>
@@ -73,7 +79,9 @@ const DashboardTopComponent = async () => {
           <div>
             <div className="join stats-vertical lg:stats-horizontal w-full stats shadow-md duration-100 hover:shadow-lg">
               <div className="join-item stat">
-                <div className="stat-figure">53.5k</div>
+                <div className="stat-figure">
+                <i className="fi fi-tr-overview text-4xl"></i>
+                </div>
                 <div className="stat-title">Views</div>
                 <div className="stat-value">0k</div>
                 <div className="stat-desc">0% more than last month</div>
