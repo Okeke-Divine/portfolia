@@ -5,6 +5,8 @@ function getIconClass(name) {
   switch (name) {
     case "facebook":
       return "fi fi-brands-facebook";
+    case "instagram":
+      return "fi fi-brands-instagram";
     default:
       return null;
   }
@@ -51,9 +53,9 @@ const PortfolioNavbar = () => {
             </Link>
           </div>
         </div>
-        <div className="navbar-end">
+        <div className="navbar-end flex gap-2">
           {social_link.map((link, index) => (
-            <Link href={link.url}>
+            <Link href={link.url} className="block">
               <i
                 className={`${getIconClass(
                   link.name
