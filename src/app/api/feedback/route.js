@@ -16,7 +16,7 @@ export const POST = async (req) => {
             if (userId == null) {
                 return unAuthorized();
             }
-            const new_feedback = await prisma.feedback.create({
+            const feedback = await prisma.feedback.create({
                 data: {
                     userId,
                     rating,
