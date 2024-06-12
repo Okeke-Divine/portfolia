@@ -16,7 +16,8 @@ const PortfolioBuilder = async () => {
             target="_blanks"
             className="app-link-primary font-bold"
           >
-            Live Preview <i className="fi fi-tr-arrow-up-right-from-square text-[15px] pl-1"></i>
+            Live Preview
+            <i className="fi fi-tr-arrow-up-right-from-square text-[15px] pl-1"></i>
           </Link>
         </p>
       </div>
