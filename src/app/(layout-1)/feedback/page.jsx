@@ -13,7 +13,7 @@ const FeedBack = () => {
             <i className="fi fi-tr-comment-alt-middle titleIcon"></i>Send
             Feedback
           </h1>
-          <p>Shape your experience</p>
+          <p className="app-text-light">Shape your experience</p>
         </div>
         {/* divider */}
         <div className="divider"></div>
