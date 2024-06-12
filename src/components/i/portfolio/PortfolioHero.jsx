@@ -12,10 +12,13 @@ const PortfolioHero = () => {
             </p>
             <p className="app-text-light-2 py-2 max-w-[400px]">
               Hi, i'm Jason a freelancer web designer from Nigeria. I help
-              brands turn their ideas into high quality products
+              brands turn their ideas into high quality products.
             </p>
             <div className="pt-2">
-              <button className="app-primary-button w-fit">Message</button>
+              <button className="app-primary-button w-fit flex items-center">
+                Message
+                <i className="fi fi-rr-paper-plane-top"></i>
+              </button>
             </div>
           </div>
           <div></div>
