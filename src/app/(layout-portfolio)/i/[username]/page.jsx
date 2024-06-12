@@ -36,8 +36,6 @@ export default async function PortFolio({ params }) {
     return <>404 not found</>;
   }
 
-  console.log(user);
-
   return (
     <>
       <PortfolioNavbar />
