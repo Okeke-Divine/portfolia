@@ -94,6 +94,7 @@ export default function ApplicationSidedar() {
               )}
             </Link>
           ))}
+          <div className="divider border-2"></div>
           <button className="btn btn-ghost w-full mb-2 justify-start">
             <i className="fi fi-tr-poll-h"></i>
             Resume
@@ -111,7 +112,7 @@ export default function ApplicationSidedar() {
           </button>
         </div>
         <div className="">
-          <div className="divider"></div>
+          <div className="divider border-2"></div>
           <button
             className="w-full btn text-white btn-ghost justify-start"
             onClick={confirmSignOut}
