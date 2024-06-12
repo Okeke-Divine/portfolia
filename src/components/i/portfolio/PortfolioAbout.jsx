@@ -9,7 +9,7 @@ const PortfolioAbout = () => {
             Nice to meet you.
           </div>
           <div>
-            <h1 className="max-w-[600px] text-4xl">Hey, I'm John - Full Stack Web Developer.</h1>
+            <h1 className="max-w-[80%] md:max-w-[600px] text-4xl">Hey, I'm John - Full Stack Web Developer.</h1>
           </div>
         </div>
       </section>
