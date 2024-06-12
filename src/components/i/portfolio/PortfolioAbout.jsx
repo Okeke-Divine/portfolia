@@ -69,7 +69,7 @@ const PortfolioAbout = () => {
           {/* divider */}
           <div className="divider"></div>
           {/* skills */}
-          <div className="grid grid-cols-3 gap-5 md:grid-cols-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-5 lg:grid-cols-6 xl:grid-cols-8">
             {skills.map((skill, index) => (
               <>
                 <div key={index} className="rounded-lg shadow-sm duration-300 hover:shadow-lg bg-white text-center p-5">
