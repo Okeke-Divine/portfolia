@@ -1,6 +1,10 @@
 import { defaultImgUrl } from "@/constants/shared/constant";
 import Link from "next/link";
 
+function getIconClass(iconName){
+    return "fi fi-brands-facebook",
+}
+
 const PortfolioNavbar = () => {
   const social_link = [
     { name: "instagram", url: "https://google.com" },
@@ -52,6 +56,7 @@ const PortfolioNavbar = () => {
               ) : (
                 ""
               )}
+                  <i className={`${getIconClass('facebook')} app-portfolio-navbar-icon`}></i>
             </Link>
           ))}
         </div>
