@@ -36,6 +36,16 @@ export default function ApplicationSidedar() {
       url: "/dashboard",
       icon: <i className="fi fi-tr-house-chimney"></i>,
     },
+    {
+      name: "Portfolio",
+      url: "#",
+      icon: <i className="fi fi-ts-web-design"></i>,
+    },
+    {
+      name: "Feedback",
+      url: "/feedback",
+      icon: <i className="fi fi-ts-skill-user"></i>,
+    },
   ];
 
   return (
@@ -45,20 +55,16 @@ export default function ApplicationSidedar() {
           {config.app_name}
         </div>
         <div>
-          {links.map((link,index) => (
-            <Link href={link.url} key={index} className="btn btn-ghost w-full mb-2 text-left justify-start">
-                {/* {link.icon} */}
-                {link.name}
+          {links.map((link, index) => (
+            <Link
+              href={link.url}
+              key={index}
+              className="btn btn-ghost w-full mb-2 text-left justify-start"
+            >
+              {link.icon}
+              {link.name}
             </Link>
           ))}
-          <button className="btn btn-ghost w-full mb-2 text-left justify-start">
-            <i className="fi fi-ts-web-design"></i>
-            Portfolio
-          </button>
-          <button className="btn btn-ghost w-full mb-2 text-left justify-start">
-            <i className="fi fi-ts-skill-user"></i>
-            Feedback
-          </button>
           <button className="btn btn-ghost w-full mb-2 justify-start">
             <i className="fi fi-tr-poll-h"></i>
             Resume
