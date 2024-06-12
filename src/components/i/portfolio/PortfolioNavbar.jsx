@@ -2,17 +2,24 @@ import { defaultImgUrl } from "@/constants/shared/constant";
 import Link from "next/link";
 
 const PortfolioNavbar = () => {
-
-    const social_link = {
-        name: "instagram",url:"https://google.com",
-        name: "twitter",url:"https://google.com",
-        name: "facebook",url:"https://google.com",
-        name: "dribble",url:"https://google.com",
-        name: "linkedin",url:"https://google.com",
-        name: "github",url:"https://google.com",
-        name: "email",url:"https://google.com",
-        name: "phone_number",url:"https://google.com",
-    }
+  const social_link = {
+    name: "instagram",
+    url: "https://google.com",
+    name: "twitter",
+    url: "https://google.com",
+    name: "facebook",
+    url: "https://google.com",
+    name: "dribble",
+    url: "https://google.com",
+    name: "linkedin",
+    url: "https://google.com",
+    name: "github",
+    url: "https://google.com",
+    name: "email",
+    url: "https://google.com",
+    name: "phone_number",
+    url: "https://google.com",
+  };
 
   return (
     <>
@@ -26,15 +33,35 @@ const PortfolioNavbar = () => {
         </div>
         <div className="navbar-center">
           <div className="flex gap-2 md:gap-5">
-            <Link href="#about" className="block">About</Link>
-            <Link href="#about" className="block">Project</Link>
-            <Link href="#about" className="block">Experience</Link>
-            <Link href="#about" className="block">Services</Link>
-            <Link href="#about" className="block">Contact</Link>
+            <Link href="#about" className="block">
+              About
+            </Link>
+            <Link href="#about" className="block">
+              Project
+            </Link>
+            <Link href="#about" className="block">
+              Experience
+            </Link>
+            <Link href="#about" className="block">
+              Services
+            </Link>
+            <Link href="#about" className="block">
+              Contact
+            </Link>
           </div>
         </div>
         <div className="navbar-end">
-
+          {social_link.map((link, index) => (
+            <Link href={link.url}>
+              {link.name == "facebook" ? (
+                <>
+                  <i className="fi fi-brands-facebook"></i>
+                </>
+              ) : (
+                ""
+              )}
+            </Link>
+          ))}
         </div>
       </div>
     </>
