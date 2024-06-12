@@ -4,6 +4,7 @@ import Swal from "sweetalert2";
 import config from "@/data/config.json";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { twitterAccUrl } from "@/constants/shared/constant";
 
 function ComingSoonComponent() {
   return (
@@ -36,16 +37,25 @@ export default function ApplicationSidedar() {
       name: "Dashboard",
       url: "/dashboard",
       icon: <i className="fi fi-tr-house-chimney"></i>,
+      blank:false
     },
     {
       name: "Portfolio Builder",
       url: "#",
       icon: <i className="fi fi-ts-web-design"></i>,
+      blank:false
     },
     {
       name: "Feedback",
       url: "/feedback",
       icon: <i className="fi fi-ts-skill-user"></i>,
+      blank:false
+    },
+    {
+      name: "Twitter",
+      url: twitterAccUrl,
+      icon: <i className="fi fi-ts-skill-user"></i>,
+      blank:true
     },
   ];
 
@@ -62,6 +72,7 @@ export default function ApplicationSidedar() {
             <Link
               href={link.url}
               key={index}
+              target={link.blank ? "_blank" : "_self"}
               className={`btn btn-ghost w-full mb-2 text-left justify-start ${pathname === link.url ? 'app-bg-primary hover:app-bg-primary-dark':''}`}
             >
               {link.icon}
