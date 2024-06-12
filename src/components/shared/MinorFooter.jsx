@@ -8,7 +8,7 @@ const MinorFooter = () => {
         <div className="w-full">
           <div className="w-full text-center text-[18px] font-semibold">
             A product of{" "}
-            <Link href={"#"} className="app-text-primary font-bold">
+            <Link href={"#"} className="app-link-primary font-bold">
               Skiyen
             </Link>
           </div>
@@ -17,7 +17,7 @@ const MinorFooter = () => {
             <Link
               href={twitterAccUrl}
               target="_blank"
-              className="app-text-primary font-bold"
+              className="app-link-primary font-bold"
             >
               Dev Divine
             </Link>
