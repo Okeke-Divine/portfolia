@@ -3,6 +3,9 @@ import { getCurrentSession } from "@/utils/session"
 const DashboardTopComponent = async () => {
 
     const session = await getCurrentSession();
+    for(let i = 0; i< 1000; i++){
+        console.log(i);
+    }
 
     return (
     <>
