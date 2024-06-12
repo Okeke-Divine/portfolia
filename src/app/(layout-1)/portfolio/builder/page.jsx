@@ -10,9 +10,11 @@ const PortfolioBuilder = async () => {
     <>
       <div className="mockup-browser border bg-base-300">
         <div className="mockup-browser-toolbar">
-          <div className="input text-center">{process.env.NEXTAUTH_URL}{session.user.username}</div>
+          <div className="input text-center">{process.env.NEXTAUTH_URL}i/{session.user.username}</div>
         </div>
-        <div className="flex justify-center px-4 py-16 bg-base-200">Hello!</div>
+        <div className="">
+          <iframe className="w-full" src={"/i/"+session.user.username}></iframe>
+        </div>
       </div>
     </>
   );
