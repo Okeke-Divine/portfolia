@@ -47,7 +47,7 @@ const PortfolioNavbar = () => {
             <Link href={link.url}>
               {link.name == "facebook" ? (
                 <>
-                  <i className="fi fi-brands-facebook"></i>
+                  <i className="fi fi-brands-facebook app-portfolio-navbar-icon"></i>
                 </>
               ) : (
                 ""
