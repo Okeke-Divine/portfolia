@@ -11,7 +11,7 @@ const DashboardTopComponent = async () => {
             <i className="fi fi-tr-house-chimney titleIcon"></i> Welcome,{" "}
             <span className="capitalize">{session.user.name}</span>
           </h1>
-          <p>No code Portfolio & Resume builder.</p>
+          <p>Summary of last 30 days</p>
         </div>
         {/* portfolio analytics */}
         <div className="divider"></div>
