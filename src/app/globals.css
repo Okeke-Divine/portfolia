@@ -38,7 +38,7 @@
         @apply text-[20px];
     }
     .app-portfolio-navbar-link{
-        @apply block hover:app-text-primary-dark;
+        @apply block duration-300 hover:app-text-primary-dark;
     }
     /* end app style */
     .flaticon-offset{
