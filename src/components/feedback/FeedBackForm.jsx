@@ -3,7 +3,7 @@ import { useState, useRef } from "react";
 
 const FeedBackForm = () => {
   const messageRef = useRef(null);
-  const [rating,setRating] = useState(4);
+  const [rating, setRating] = useState(4);
 
   // sendFeedback
   function sendFeedback(e) {
@@ -11,6 +11,10 @@ const FeedBackForm = () => {
 
     console.log(rating);
     console.log(messageRef.current);
+  }
+
+  function _setRating(value) {
+    console.log(value);
   }
 
   return (
@@ -27,7 +31,7 @@ const FeedBackForm = () => {
               name="rating-1"
               className="mask mask-star"
               value={1}
-              onClick={() => setRating(this.value)}
+              onClick={(self) => _setRating(self)}
             />
             <input
               type="radio"
