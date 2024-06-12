@@ -9,7 +9,7 @@ const Layout1 = ({ children }) => {
         <div>
           <ApplicationSidedar />
         </div>
-        <div className="pl-[250px] w-full">
+        <div className="pl-0 md:pl-[250px] w-full">
           <div>
             <ApplicationNavbar />
           </div>
