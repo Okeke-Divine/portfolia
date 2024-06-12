@@ -1,3 +1,4 @@
+import { twitterAccUrl } from "@/constants/shared/constant";
 import Link from "next/link";
 
 const MinorFooter = () => {
@@ -14,7 +15,7 @@ const MinorFooter = () => {
           <div className="w-full text-center  text-[18px] font-semibold">
             Designed, Built and Marketed by{" "}
             <Link
-              href={""}
+              href={twitterAccUrl}
               target="_blank"
               className="app-text-primary font-bold"
             >
