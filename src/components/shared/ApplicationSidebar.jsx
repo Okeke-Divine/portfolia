@@ -54,7 +54,7 @@ export default function ApplicationSidedar() {
     {
       name: "Twitter",
       url: twitterAccUrl,
-      icon: <i className="fi fi-ts-skill-user"></i>,
+      icon: <i className="fi fi-brands-twitter-alt"></i>,
       blank:true
     },
   ];
