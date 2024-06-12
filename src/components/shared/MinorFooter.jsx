@@ -12,7 +12,7 @@ const MinorFooter = () => {
               Skiyen
             </Link>
           </div>
-          <div className="w-full text-center  text-[18px] font-semibold">
+          {/* <div className="w-full text-center  text-[18px] font-semibold">
             Designed, Built and Marketed by{" "}
             <Link
               href={twitterAccUrl}
@@ -21,7 +21,7 @@ const MinorFooter = () => {
             >
               Dev Divine
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </>
