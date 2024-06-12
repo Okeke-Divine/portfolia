@@ -35,7 +35,7 @@ const PortfolioBuilderLayout1 = async ({ children }) => {
           <div className="flex flex-row gap-2">
             <div className="w-[100px] flex flex-col">
               {links.map((link,index) => (
-                <Link href="#" className="hover:app-text-primary-dark">{link.name}</Link>
+                <Link href="#" className="font-semibold hover:app-text-primary-dark">{link.name}</Link>
               ))}
             </div>
             <div className="grow">{children}</div>
