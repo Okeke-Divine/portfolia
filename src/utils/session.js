@@ -8,3 +8,12 @@ export async function getCurrentSession() {
   }
   return session;
 }
+
+export async function getUserId(){
+  const session = await getCurrentSession();
+  const userId = session.user.id;
+  if(!userId){
+    return null;
+  }
+  return userId;
+}
