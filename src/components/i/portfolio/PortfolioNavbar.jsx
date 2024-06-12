@@ -2,7 +2,7 @@ import { defaultImgUrl } from "@/constants/shared/constant";
 import Link from "next/link";
 
 function getIconClass(iconName){
-    return "fi fi-brands-facebook",
+    return "fi fi-brands-facebook";
 }
 
 const PortfolioNavbar = () => {
