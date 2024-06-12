@@ -1,8 +1,13 @@
 import { defaultImgUrl } from "@/constants/shared/constant";
 import Link from "next/link";
 
-function getIconClass(iconName){
-    return "fi fi-brands-facebook";
+function getIconClass(name) {
+  switch (name) {
+    case "facebook":
+      return "fi fi-brands-facebook";
+    default:
+      return null;
+  }
 }
 
 const PortfolioNavbar = () => {
@@ -49,14 +54,11 @@ const PortfolioNavbar = () => {
         <div className="navbar-end">
           {social_link.map((link, index) => (
             <Link href={link.url}>
-              {link.name == "facebook" ? (
-                <>
-                  <i className="fi fi-brands-facebook app-portfolio-navbar-icon"></i>
-                </>
-              ) : (
-                ""
-              )}
-                  <i className={`${getIconClass('facebook')} app-portfolio-navbar-icon`}></i>
+              <i
+                className={`${getIconClass(
+                  link.name
+                )} app-portfolio-navbar-icon`}
+              ></i>
             </Link>
           ))}
         </div>
