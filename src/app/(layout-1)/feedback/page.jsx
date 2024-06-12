@@ -1,5 +1,8 @@
 import FeedBackForm from "@/components/feedback/FeedBackForm";
-import React from "react";
+
+export const metadata = {
+  title: "Send Feedback",
+};
 
 const FeedBack = () => {
   return (
