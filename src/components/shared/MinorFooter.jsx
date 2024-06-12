@@ -1,4 +1,4 @@
-import { twitterAccUrl } from "@/constants/shared/constant";
+// import { twitterAccUrl } from "@/constants/shared/constant";
 import Link from "next/link";
 
 const MinorFooter = () => {
