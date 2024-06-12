@@ -1,5 +1,7 @@
+import prisma from "@/app/db";
 import { badRequest, internalServerError } from "@/utils/prebuiltApiResponse";
 import { NextResponse } from "next/server";
+import { getCurrentSession } from "../../../utils/session";
 
 export const POST = async (req) => {
     try {
@@ -10,7 +12,15 @@ export const POST = async (req) => {
             return badRequest("All fields are required");
         }
 
-        return NextResponse.json({})
+        try{
+            const session = await getCurrentSession();
+            console.log(session);
+            return NextResponse.json({})
+            // const feedback = await prisma
+        }catch(e){
+            return internalServerError(e);
+        }
+
     } catch (e) {
         return internalServerError(e);
     }
