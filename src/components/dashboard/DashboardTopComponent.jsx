@@ -21,8 +21,9 @@ const DashboardTopComponent = async () => {
               <div className="join-item stat">
                 <div className="stat-figure">53.5k</div>
                 <div className="stat-title">Page Views</div>
-                <div className="stat-value">53.5k</div>
+                <div className="stat-value">0k</div>
                 <div className="stat-desc">0% more than last month</div>
+                <div className="stat-desc mt-2"><span className="badge app-bg-primary border-none text-white">coming soon</span></div>
               </div>
               <div className="join-item stat">
                 <div className="stat-figure">53.5k</div>
