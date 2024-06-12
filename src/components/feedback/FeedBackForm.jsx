@@ -8,7 +8,7 @@ const FeedBackForm = () => {
           We read them all! How can we improve your experience?
         </h3>
         {/* rating */}
-        <div className="my-2">
+        <div className="mt-3">
           <div className="rating">
             <input type="radio" name="rating-1" className="mask mask-star" />
             <input
