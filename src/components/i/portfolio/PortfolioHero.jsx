@@ -4,7 +4,7 @@ const PortfolioHero = () => {
   return (
     <>
       <div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 py-5 md:py-10 px-10 md:px-36 place-content-center min-h-[60vh]">
+        <div className="flex gap-5 flex-col-reverse md:flex-row md:gap-12 py-5 md:py-10 px-10 md:px-36 place-content-center min-h-[60vh]">
           {/* left */}
           <div className="flex items-center justify-end">
             <div className="w-full h-fit">
