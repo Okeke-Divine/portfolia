@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 import config from "@/data/config.json";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { twitterAccUr,buyMeACoffeUrll } from "@/constants/shared/constant";
+import { twitterAccUrl,buyMeACoffeUrll } from "@/constants/shared/constant";
 
 function ComingSoonComponent() {
   return (
