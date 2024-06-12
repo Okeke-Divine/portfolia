@@ -9,6 +9,7 @@
 }
 
 @layer components{
+    /* start app style */
     .app-text-primary{
         @apply text-green-500;
     }
@@ -21,6 +22,10 @@
     .app-bg-primary-dark{
         @apply bg-green-600;
     }
+    .app-primary-button{
+        @apply w-full app-bg-primary duration-300 hover:app-bg-primary-dark btn btn-md text-white;
+    }
+    /* end app style */
     .flaticon-offset{
         @apply relative top-[2px];
     }
