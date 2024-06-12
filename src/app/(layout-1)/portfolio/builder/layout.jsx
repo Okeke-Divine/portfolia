@@ -27,7 +27,7 @@ const PortfolioBuilderLayout1 = async ({ children }) => {
         <div>
           <div className="flex flex-row gap-2">
             <div className="w-[50px]">Link</div>
-            <div className="grow"></div>
+            <div className="grow">{children}</div>
           </div>
         </div>
       </div>
