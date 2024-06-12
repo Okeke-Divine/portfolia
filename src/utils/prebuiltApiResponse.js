@@ -26,5 +26,5 @@ export function unAuthorized(){
 }
 
 export function accessDenied(){
-    return NextResponse.json({message:"accessDenied"},{status:200})
+    return NextResponse.json({message:"accessDenied"},{status:403})
 }
