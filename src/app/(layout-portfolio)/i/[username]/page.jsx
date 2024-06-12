@@ -1,4 +1,5 @@
 import PortfolioAbout from "@/components/i/portfolio/PortfolioAbout";
+import PortfolioFooter from "@/components/i/portfolio/PortfolioFooter";
 // import PortfolioExpertise from "@/components/i/portfolio/PortfolioExpertise";
 import PortfolioHero from "@/components/i/portfolio/PortfolioHero";
 import PortfolioNavbar from "@/components/i/portfolio/PortfolioNavbar";
@@ -17,6 +18,7 @@ export default function PortFolio({ params }) {
       <PortfolioHero />
       <PortfolioAbout />
       <PortfolioProjects />
+      <PortfolioFooter />
       {/* <PortfolioExpertise /> */}
     </>
   );
