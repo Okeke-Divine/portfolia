@@ -40,7 +40,7 @@ const PortfolioAbout = () => {
           {/* profile */}
           <div className="flex flex-wrap gap-2 items-center">
             <div className="avatar cursor-pointer">
-              <div className="ring ring-green-200 bg-opacity-20 w-12">
+              <div className="w-12 rounded-full ring ring-green-300">
                 <img src={defaultImgUrl} alt="User Profile Picture" />
               </div>
             </div>
