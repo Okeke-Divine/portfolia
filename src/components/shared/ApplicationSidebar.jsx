@@ -2,6 +2,7 @@
 import { signOut } from "next-auth/react";
 import Swal from "sweetalert2";
 import config from "@/data/config.json";
+import Link from "next/link";
 
 function ComingSoonComponent() {
   return (
