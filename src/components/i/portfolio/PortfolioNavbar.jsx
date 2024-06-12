@@ -1,26 +1,6 @@
 import { defaultImgUrl } from "@/constants/shared/constant";
 import Link from "next/link";
-
-function getIconClass(name) {
-  switch (name) {
-    case "facebook":
-      return "fi fi-brands-facebook";
-    case "instagram":
-      return "fi fi-brands-instagram";
-    case "twitter":
-      return "fi fi-brands-twitter-alt";
-    case "linkedin":
-        return "fi fi-brands-linkedin";
-    case "github":
-      return "fi fi-brands-github";
-    case "email":
-      return "fi fi-rr-envelope";
-    case "phone_number":
-      return "fi fi-rr-phone-call";
-    default:
-      return "fi fi-rr-link";
-  }
-}
+import { getIconClass } from "@/utils/main";
 
 const PortfolioNavbar = () => {
   const social_link = [
