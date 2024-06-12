@@ -9,10 +9,10 @@ const PortfolioHero = () => {
             <h1 className="max-w-[500px] text-5xl">
               Hey, I'm John
             </h1>
-            <p className="app-text-light-2 py-5 max-w-[400px]">
+            <p className="app-text-light-2 py-2 max-w-[400px] font-semibold underline text-xl">
               Full Stack Web Developer @ Figma
             </p>
-            <p className="app-text-light-2 py-5 max-w-[400px]">
+            <p className="app-text-light-2 py-2 max-w-[400px]">
               Hi, i'm Jason a freelancer web designer from Nigeria. I help
               brands turn their ideas into high quality products
             </p>
