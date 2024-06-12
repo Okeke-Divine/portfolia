@@ -23,15 +23,16 @@ const PortfolioProjects = () => {
                     />
                   </figure>
                   <div className="card-body">
-                    <h2 className="card-title">
-                Strender
-                    </h2>
-                    <p>Renowed social media platform with over <b>150k</b> users worldwide</p>
+                    <h2 className="card-title">Strender</h2>
+                    <p>
+                      Renowed social media platform with over <b>150k</b> users
+                      worldwide
+                    </p>
                     <div className="card-actions justify-end">
                       <button className="app-primary-button">Live Site</button>
                     </div>
-                    <hr/>
-                    <div className="card-actions justify-end">
+                    <hr />
+                    <div className="card-actions">
                       <div className="badge badge-outline">CSS</div>
                       <div className="badge badge-outline">HTML</div>
                     </div>
