@@ -3,7 +3,7 @@ import React from "react";
 const PortfolioAbout = () => {
   return (
     <>
-      <section className="app-portfolio-padding bg-base-100" id="about">
+      <section className="app-portfolio-padding bg-base-200" id="about">
         <div>
           <div className="app-text-light-2 uppercase text-sm font-semibold tracking-wide">
             Nice to meet you.
