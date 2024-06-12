@@ -6,8 +6,7 @@ const PortfolioBuilder = async () => {
     <>
       <div>
         <h1 className="flex items-center gap-2">
-          <i className="fi fi-tr-house-chimney titleIcon"></i> Welcome,{" "}
-          <span className="capitalize">{session.user.name}</span>
+          <i className="fi fi-ts-web-design titleIcon"></i> Portfolio Builder
         </h1>
         <p>No code Portfolio & Resume builder.</p>
       </div>
