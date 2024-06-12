@@ -75,7 +75,7 @@ export default function ApplicationSidedar() {
 
   return (
     <>
-      <div className="fixed top-0 -left-full md:left-0 h-[100%] max-h-[100vh] overflow-y-auto bg-black w-[250px] flex justify-between flex-col text-white px-5 md:p-10 py-5 md:py-10">
+      <div className="fixed top-0 -left-full md:left-0 h-[100%] max-h-[100vh] overflow-y-auto bg-black w-[250px] flex justify-between flex-col text-white px-5 md:px-7 py-5 md:py-10">
         <div className="text-2xl text-center font-bold uppercase">
           {config.app_name}
         </div>
