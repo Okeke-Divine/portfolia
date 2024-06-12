@@ -13,7 +13,6 @@ const Dashboard = async () => {
   return (
     <>
       <Suspense fallback={<DashboardTopSkeleton />}>
-        <DashboardTopSkeleton />
         <DashboardTopComponent />
       </Suspense>
     </>
