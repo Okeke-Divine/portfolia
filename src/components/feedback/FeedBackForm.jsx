@@ -6,7 +6,12 @@ const FeedBackForm = () => {
   const ratingRef = useRef(null);
 
   // sendFeedback
-  function sendFeedback() {}
+  function sendFeedback(e) {
+    e.preventDefault();
+    
+    console.log(ratingRef.current);
+    console.log(messageRef.current);
+  }
 
   return (
     <>
