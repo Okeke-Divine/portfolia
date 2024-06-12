@@ -48,19 +48,19 @@ const PortfolioNavbar = () => {
         </div>
         <div className="navbar-center">
           <div className="flex gap-2 md:gap-5">
-            <Link href="#about" className="block">
+            <Link href="#about" className="app-portfolio-navbar-link">
               About
             </Link>
-            <Link href="#about" className="block">
+            <Link href="#projects" className="app-portfolio-navbar-link">
               Project
             </Link>
-            <Link href="#about" className="block">
+            <Link href="#experience" className="app-portfolio-navbar-link">
               Experience
             </Link>
-            <Link href="#about" className="block">
+            <Link href="#services" className="app-portfolio-navbar-link">
               Services
             </Link>
-            <Link href="#about" className="block app-portfolio-navbar-link">
+            <Link href="#contact" className="app-portfolio-navbar-link">
               Contact
             </Link>
           </div>
