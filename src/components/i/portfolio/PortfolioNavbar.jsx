@@ -10,12 +10,10 @@ function getIconClass(name) {
     case "twitter":
       return "fi fi-brands-twitter-alt";
     case "linkedin":
-        // return null;
         return "fi fi-brands-linkedin";
     case "github":
-      return "fi i-brands-github";
+      return "fi fi-brands-github";
     case "email":
-        // return null;
       return "fi fi-rr-envelope";
     case "phone_number":
       return "fi fi-rr-phone-call";
@@ -28,12 +26,12 @@ const PortfolioNavbar = () => {
   const social_link = [
     { name: "instagram", url: "https://google.com" },
     { name: "twitter", url: "https://google.com" },
-    { name: "facebook", url: "https://google.com" },
-    { name: "dribble", url: "https://google.com" },
-    { name: "linkedin", url: "https://google.com" },
+    // { name: "facebook", url: "https://google.com" },
+    // { name: "dribble", url: "https://google.com" },
+    // { name: "linkedin", url: "https://google.com" },
     { name: "github", url: "https://google.com" },
     { name: "email", url: "https://google.com" },
-    { name: "phone_number", url: "https://google.com" },
+    // { name: "phone_number", url: "https://google.com" },
   ];
 
   return (
