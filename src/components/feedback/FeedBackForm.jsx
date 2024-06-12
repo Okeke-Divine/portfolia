@@ -3,13 +3,13 @@ import { useState, useRef } from "react";
 
 const FeedBackForm = () => {
   const messageRef = useRef(null);
-  const ratingRef = useRef(null);
+  const [rating,setRating] = useState(4);
 
   // sendFeedback
   function sendFeedback(e) {
     e.preventDefault();
 
-    console.log(ratingRef.current);
+    console.log(rating);
     console.log(messageRef.current);
   }
 
@@ -26,28 +26,25 @@ const FeedBackForm = () => {
               type="radio"
               name="rating-1"
               className="mask mask-star"
-              ref={ratingRef}
               value={1}
+              onClick={() => setRating(this.value)}
             />
             <input
               type="radio"
               name="rating-1"
               className="mask mask-star"
-              ref={ratingRef}
               value={2}
             />
             <input
               type="radio"
               name="rating-1"
               className="mask mask-star"
-              ref={ratingRef}
               value={3}
             />
             <input
               type="radio"
               name="rating-1"
               className="mask mask-star"
-              ref={ratingRef}
               defaultChecked={true}
               value={4}
             />
@@ -55,7 +52,6 @@ const FeedBackForm = () => {
               type="radio"
               name="rating-1"
               className="mask mask-star"
-              ref={ratingRef}
               value={5}
             />
           </div>
