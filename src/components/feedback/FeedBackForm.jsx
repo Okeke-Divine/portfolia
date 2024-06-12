@@ -37,9 +37,15 @@ const FeedBackForm = () => {
         },
       })
       .then((response) => {
+        if(response){
+            setLoading(false);
+        }
         console.log(response);
       })
       .catch((error) => {
+        if(error){
+            setLoading(false);
+        }
         Swal.fire({
           title: "Error",
           icon: "warning",
