@@ -1,7 +1,6 @@
-import prisma from "@/app/db";
 import { badRequest, internalServerError, resourceCreated, unAuthorized } from "@/utils/prebuiltApiResponse";
-import { NextResponse } from "next/server";
 import { getUserId } from "../../../utils/session";
+import prisma from "@/app/db";
 
 export const POST = async (req) => {
     try {
@@ -17,7 +16,13 @@ export const POST = async (req) => {
             if (userId == null) {
                 return unAuthorized();
             }
-            // const feedback = await prisma
+            const new_feedback = await prisma.feedback.create({
+                data: {
+                    userId,
+                    rating,
+                    message
+                }, select: {}
+            })
             return resourceCreated({})
         } catch (e) {
             return internalServerError(e);
