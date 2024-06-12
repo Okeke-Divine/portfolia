@@ -60,7 +60,7 @@ const PortfolioNavbar = () => {
             <Link href="#about" className="block">
               Services
             </Link>
-            <Link href="#about" className="block">
+            <Link href="#about" className="block app-portfolio-navbar-link">
               Contact
             </Link>
           </div>

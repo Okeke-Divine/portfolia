@@ -37,6 +37,9 @@
     .app-portfolio-navbar-icon{
         @apply text-[20px];
     }
+    .app-portfolio-navbar-link{
+        @apply hover:app-text-primary-dark;
+    }
     /* end app style */
     .flaticon-offset{
         @apply relative top-[2px];
