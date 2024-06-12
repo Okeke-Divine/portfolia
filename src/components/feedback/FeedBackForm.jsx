@@ -9,18 +9,16 @@ const FeedBackForm = () => {
         </h3>
         {/* rating */}
         <div className="my-2">
-          <div className="rating rating-lg">
-            <input type="radio" name="rating-9" className="rating-hidden" />
-            <input type="radio" name="rating-9" className="mask mask-star-2" />
-            <input type="radio" name="rating-9" className="mask mask-star-2" />
-            <input type="radio" name="rating-9" className="mask mask-star-2" />
+          <div className="rating">
+            <input type="radio" name="rating-1" className="mask mask-star" />
             <input
               type="radio"
-              name="rating-9"
-              className="mask mask-star-2"
-              defaultChecked={true}
+              name="rating-1"
+              className="mask mask-star"
             />
-            <input type="radio" name="rating-9" className="mask mask-star-2" />
+            <input type="radio" name="rating-1" className="mask mask-star" />
+            <input type="radio" name="rating-1" className="mask mask-star" defaultChecked={true} />
+            <input type="radio" name="rating-1" className="mask mask-star" />
           </div>
         </div>
         {/* message */}
