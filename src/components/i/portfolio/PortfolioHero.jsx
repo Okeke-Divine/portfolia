@@ -15,9 +15,9 @@ const PortfolioHero = () => {
               brands turn their ideas into high quality products.
             </p>
             <div className="pt-2">
-              <button className="app-primary-button w-fit flex items-center">
+              <button className="app-primary-button w-fit">
                 Message
-                <i className="fi fi-rr-paper-plane-top"></i>
+                <i className="fi fi-rr-paper-plane-top flaticon-offset"></i>
               </button>
             </div>
           </div>
