@@ -5,17 +5,18 @@ import PortfolioFooter from "@/components/i/portfolio/PortfolioFooter";
 import PortfolioHero from "@/components/i/portfolio/PortfolioHero";
 import PortfolioNavbar from "@/components/i/portfolio/PortfolioNavbar";
 import PortfolioProjects from "@/components/i/portfolio/PortfolioProjects";
+import { _ucfirst } from "@/utils/main";
 
 export async function generateMetadata({ params }) {
   const username = params.username;
-  const user = await prisma.user.count({ where: { username } });
+  const user = await prisma.user.findFirst({ where: { username },select:{fullname:true} });
   if (!user) {
     return {
       title: "404 | Not Found",
     };
   }
   return {
-    title: params.username,
+    title: _ucfirst(user.fullname),
   };
 }
 
