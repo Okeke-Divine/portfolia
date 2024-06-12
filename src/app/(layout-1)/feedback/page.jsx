@@ -5,8 +5,8 @@ const FeedBack = () => {
     <>
       <div>
         <div>
-          <h1 className="">
-            <i className="fi fi-tr-comment-alt-middle flaticon-offset text-[20px]"></i>Send Feedback
+          <h1 className="flex items-center gap-2">
+            <i className="fi fi-tr-comment-alt-middle flaticon-offset text-[25px]"></i>Send Feedback
           </h1>
           <p>Shape your experience</p>
         </div>
