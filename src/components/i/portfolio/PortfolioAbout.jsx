@@ -1,4 +1,4 @@
-import React from "react";
+import { defaultImgUrl } from "@/constants/shared/constant";
 
 const PortfolioAbout = () => {
   return (
@@ -38,6 +38,17 @@ const PortfolioAbout = () => {
             </p>
           </div>
           {/* profile */}
+          <div className="flex flex-wrap gap-2">
+          <div className="avatar cursor-pointer">
+                <div className="mask mask-squircle bg-green-200 bg-opacity-20 w-52 lg:w-96">
+                  <img src={defaultImgUrl} alt="User Profile Picture" />
+                </div>
+              </div>
+              <div className="grow">
+                <div className="font-bold">John Doe</div>
+                <div className="app-text-light-2">Full Stack Web Developer @ Figma</div>
+              </div>
+          </div>
         </div>
       </section>
     </>
