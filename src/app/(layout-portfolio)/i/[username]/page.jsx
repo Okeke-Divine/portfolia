@@ -15,7 +15,7 @@ export default function PortFolio({ params }) {
       <PortfolioNavbar />
       <PortfolioHero />
       <PortfolioAbout />
-      <PortfolioExpertise />
+      {/* <PortfolioExpertise /> */}
     </>
   );
 }

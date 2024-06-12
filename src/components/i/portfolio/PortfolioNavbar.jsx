@@ -29,7 +29,10 @@ const PortfolioNavbar = () => {
             <Link href="#about" className="app-portfolio-navbar-link">
               About
             </Link>
-            <Link href="#expertise" className="app-portfolio-navbar-link">
+            <Link href="#projects" className="app-portfolio-navbar-link">
+              Projects
+            </Link>
+            {/* <Link href="#expertise" className="app-portfolio-navbar-link">
               Expertise
             </Link>
             <Link href="#experience" className="app-portfolio-navbar-link">
@@ -40,7 +43,7 @@ const PortfolioNavbar = () => {
             </Link>
             <Link href="#contact" className="app-portfolio-navbar-link">
               Contact
-            </Link>
+            </Link> */}
           </div>
         </div>
         <div className="navbar-end flex gap-2">
