@@ -70,7 +70,7 @@ export default function ApplicationSidedar() {
           ))}
           <button className="btn btn-ghost w-full mb-2 justify-start">
             <i className="fi fi-tr-poll-h"></i>
-            Resume Builder
+            Resume
             <ComingSoonComponent />
           </button>
           <button className="btn btn-ghost w-full mb-2 justify-start">
