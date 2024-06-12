@@ -1,3 +1,4 @@
+import PortfolioHero from "@/components/i/portfolio/PortfolioHero";
 import PortfolioNavbar from "@/components/i/portfolio/PortfolioNavbar";
 
 export function generateMetadata({ params }) {
@@ -10,6 +11,7 @@ export default function PortFolio({ params }) {
   return (
     <>
       <PortfolioNavbar />
+      <PortfolioHero />
       {params.username}
     </>
   );
