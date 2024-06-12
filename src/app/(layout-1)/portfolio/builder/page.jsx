@@ -9,7 +9,7 @@ const PortfolioBuilder = async () => {
   const session = await getCurrentSession();
   return (
     <>
-      <PortfolioBuilderPreview username={session.user.} />
+      <PortfolioBuilderPreview username={session.user.username} />
     </>
   );
 };

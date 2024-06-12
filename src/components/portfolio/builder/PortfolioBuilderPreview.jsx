@@ -7,8 +7,8 @@ const PortfolioBuilderPreview = ({username}) => {
 
   return (
     <>
-    <button onClick={() => setPreview('desktop')}>Desktop</button>
-    <button onClick={() => setPreview('mobile')}>Mobile</button>
+    <button className={`btn btn-ghost hover:app-bg-primary-dark hover:text-white ${preview == "desktop" ? "app-bg-primary-dark text-white": ""}`} onClick={() => setPreview('desktop')}>Desktop</button>
+    <button className={`btn btn-ghost hover:app-bg-primary-dark hover:text-white ${preview == "mobile" ? "app-bg-primary-dark text-white": ""}`} onClick={() => setPreview('mobile')}>Mobile</button>
 
     <div className="divider"></div>
 
@@ -26,7 +26,7 @@ const PortfolioBuilderPreview = ({username}) => {
           ></iframe>
         </div>
       </div></>) : (<></>)}
-      {preview == "phone" ? (<>
+      {preview == "mobile" ? (<>
         <div className="mockup-phone">
         <div className="camera"></div>
         <div className="display">
