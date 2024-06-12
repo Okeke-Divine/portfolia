@@ -62,7 +62,7 @@ export default function ApplicationSidedar() {
             <Link
               href={link.url}
               key={index}
-              className={`btn btn-ghost w-full mb-2 text-left justify-start ${pathname === link.url ? 'bg-app-primary':''}`}
+              className={`btn btn-ghost w-full mb-2 text-left justify-start ${pathname === link.url ? 'app-bg-primary':''}`}
             >
               {link.icon}
               {link.name}
