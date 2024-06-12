@@ -26,13 +26,13 @@ const PortfolioHero = () => {
           </div>
           {/* right content */}
           <div>
-           <div className="flex justify-center md:justify-end items-center">
-           <div className="avatar cursor-pointer">
-              <div className="rounded-full ring ring-green-300 w-52 lg:w-96">
-                <img src={defaultImgUrl} alt="User Profile Picture" />
+            <div className="flex justify-center md:justify-end items-center">
+              <div className="avatar cursor-pointer">
+                <div className="mask mask-squircle bg-red-200 w-52 lg:w-96">
+                  <img src={defaultImgUrl} alt="User Profile Picture" />
+                </div>
               </div>
             </div>
-           </div>
           </div>
         </div>
       </div>

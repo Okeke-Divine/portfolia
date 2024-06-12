@@ -13,6 +13,7 @@ const PortfolioAbout = () => {
               Hey, I'm John - Full Stack Web Developer.
             </h1>
           </div>
+          {/* about */}
           <div className="mt-2 app-text-light-2 app-portfolio-about-container">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi
@@ -36,6 +37,7 @@ const PortfolioAbout = () => {
               fugit, possimus illo.
             </p>
           </div>
+          {/* profile */}
         </div>
       </section>
     </>
