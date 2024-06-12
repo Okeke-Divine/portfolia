@@ -77,6 +77,7 @@ export default function ApplicationSidedar() {
             >
               {link.icon}
               {link.name}
+              {link.blank ? (<><span><i className="fi fi-tr-arrow-up-right-from-square"></i></span></>) : (<></>)}
             </Link>
           ))}
           <button className="btn btn-ghost w-full mb-2 justify-start">
