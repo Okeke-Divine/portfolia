@@ -6,7 +6,9 @@ import { useEffect } from "react";
 const ListSkills = async () => {
   const [skills, setSkills] = useState([]);
 
-  function deleteSkill(id) {}
+  function deleteSkill(id) {
+    alert(id);
+  }
 
   useEffect(function () {
     axios.get("/api/skill/list").then((response) => {
