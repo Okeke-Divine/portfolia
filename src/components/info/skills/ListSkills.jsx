@@ -1,9 +1,12 @@
-import React from 'react'
+import prisma from "@/app/db";
+import { getUserId } from "@/utils/session";
 
-const ListSkills = () => {
-  return (
-    <div>ListSkills</div>
-  )
-}
+const ListSkills = async () => {
+  const userId = await getUserId();
+  const skills = await prisma.userSkills.findMany({ where: { userId } });
 
-export default ListSkills
+  console.log(skills);
+  return <div>ListSkills</div>;
+};
+
+export default ListSkills;

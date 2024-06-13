@@ -6,9 +6,10 @@ import axios from "axios";
 const AddSkill = () => {
   const skillRef = useRef(null);
 
-  function _addSkill() {
-    const skill = skillRef.current.value;
-    if (!skill || skill.length < 3) {
+  function _addSkill(e){
+    e.preventDefault();
+    const skill_name = skillRef.current.value;
+    if (!skill_name || skill_name.length < 3) {
       Swal.fire({
         title: "Error",
         icon: "error",
