@@ -5,6 +5,7 @@ import config from "@/data/config.json";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { twitterAccUrl, buyMeACoffeUrl } from "@/constants/shared/constant";
+import { app_color_primary } from "@/constants/shared/color";
 
 function ComingSoonComponent() {
   return (
@@ -23,6 +24,7 @@ function confirmSignOut() {
     icon: "warning",
     showCancelButton: true,
     confirmButtonText: "Yes, logout!",
+    confirmButtonColor: app_color_primary,
     cancelButtonText: "Cancel",
   }).then((result) => {
     if (result.isConfirmed) {

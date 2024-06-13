@@ -1,0 +1,1 @@
+export const app_color_primary = "rgb(34,197,94)";
