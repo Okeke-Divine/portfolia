@@ -3,7 +3,10 @@ import { getUserId } from "@/utils/session";
 
 const ListSkills = async () => {
   const userId = await getUserId();
-  const skills = await prisma.userSkills.findMany({ where: { userId } });
+  const skills = await prisma.userSkills.findMany({
+    where: { userId },
+    select: { skill_name: true },
+  });
 
   console.log(skills);
   return (
