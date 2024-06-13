@@ -10,7 +10,7 @@ export const POST = async (req) => {
         if (!rating || !message || message.lenght < 5) {
             return badRequest("All fields are required");
         }
-
+s
         try {
             const userId = await getUserId();
             if (userId == null) {

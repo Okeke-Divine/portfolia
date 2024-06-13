@@ -22,6 +22,7 @@ model User {
   UserProjects       UserProjects[]
   UserExperience     UserExperience[]
   Feedback           Feedback[]
+  UserSkills         UserSkills[]
 }
 
 model UserDetails {
@@ -72,6 +73,13 @@ model Feedback {
   userId  Int
   user    User   @relation(fields: [userId], references: [id])
   //
-  rating Int @default(0)
+  rating  Int    @default(0)
   message String @db.Text
+}
+
+model UserSkills {
+  id         Int    @id @default(autoincrement())
+  skill_name String
+  userId     Int
+  user       User   @relation(fields: [userId], references: [id])
 }
