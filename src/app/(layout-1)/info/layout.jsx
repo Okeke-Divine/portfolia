@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 const links = [
-  { name: "Basic Info" },
-  { name: "Skills" },
-  { name: "Projects" },
+  { name: "Basic Info", url: "/info" },
+  { name: "Skills", url: "/info/skills" },
+  { name: "Projects", url: "/info/projects" },
 ];
 
 export default function InfoLayout({ children }) {
@@ -23,7 +23,8 @@ export default function InfoLayout({ children }) {
               <div className="join join-horizontal md:join-vertical border-2 w-fit">
                 {links.map((link, index) => (
                   <Link
-                    href="#"
+                    key={index}
+                    href={link.url}
                     className="btn join-item font-semibold hover:app-bg-primary-dark app-bg-primary text-white"
                   >
                     {link.name}

@@ -1,9 +1,7 @@
 import { getCurrentSession } from "@/utils/session";
 import Link from "next/link";
 
-const links = [
-  { name: "Preview" },
-];
+const links = [{ name: "Preview" }];
 
 const PortfolioBuilderLayout1 = async ({ children }) => {
   const session = await getCurrentSession();
@@ -34,6 +32,7 @@ const PortfolioBuilderLayout1 = async ({ children }) => {
               <div className="join join-horizontal md:join-vertical border-2 w-fit">
                 {links.map((link, index) => (
                   <Link
+                    key={index}
                     href="#"
                     className="btn join-item font-semibold hover:app-bg-primary-dark app-bg-primary text-white"
                   >
