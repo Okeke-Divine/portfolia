@@ -7,6 +7,7 @@ const secret = process.env.NEXTAUTH_SECRET;
 export async function middleware(req) {
     // Get the token from the request
     const token = await getToken({ req, secret });
+    console.log(token)
 
     // If no token is found, redirect to the login page
     if (!token) {
@@ -21,5 +22,5 @@ export async function middleware(req) {
 
 // Specify the routes for which this middleware should run
 export const config = {
-    matcher: ['/dashboard', '/feedback', '/portfolio/builder'],
+    matcher: ['/dashboard', '/feedback', '/portfolio/:path*','/ingo/:path*'],
 };

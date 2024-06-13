@@ -32,9 +32,9 @@ const PortfolioBuilderLayout1 = async ({ children }) => {
         </div>
         <div className="divider"></div>
         <div>
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col md:flex-row gap-2">
             <div className="w-[100px">
-              <div className="join border-2 w-fit">
+              <div className="join join-horizontal md:join-vertical border-2 w-fit">
                 {links.map((link, index) => (
                   <Link
                     href="#"
