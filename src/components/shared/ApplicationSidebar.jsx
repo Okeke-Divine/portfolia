@@ -35,7 +35,7 @@ function confirmSignOut() {
         showConfirmButton: false,
         allowOutsideClick: false
       });
-      // signOut();
+      signOut();
     }
   });
 }
