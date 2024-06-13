@@ -1,5 +1,5 @@
 import prisma from "@/app/db";
-import { badRequest, conflict, internalServerError, resourceCreated } from "@/utils/prebuiltApiResponse"
+import { badRequest, internalServerError, resourceCreated } from "@/utils/prebuiltApiResponse"
 import { getUserId } from "@/utils/session";
 
 export const POST = async (req) => {
@@ -10,17 +10,6 @@ export const POST = async (req) => {
 
         if(!skill_name || skill_name.length < 3){
             return badRequest("invalid skill name format");
-        }
-
-        //check if skills exist
-        const skillExists = await prisma.userSkills.count({
-            where: {
-                userId,
-                skill_name
-            }
-        })
-        if(skillExists.length > 0){
-            return conflict("Skill already exist")
         }
 
         const new_skill = await prisma.userSkills.create({

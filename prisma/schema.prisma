@@ -79,7 +79,7 @@ model Feedback {
 
 model UserSkills {
   id         Int    @id @default(autoincrement())
-  skill_name String
+  skill_name String @unique
   userId     Int
   user       User   @relation(fields: [userId], references: [id])
 }

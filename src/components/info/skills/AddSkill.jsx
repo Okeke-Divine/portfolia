@@ -49,12 +49,12 @@ const AddSkill = () => {
       .catch((error) => {
         if (error) {
           setLoading(false);
+          Swal.fire({
+            title: "Error",
+            icon: "error",
+            text: "An error occured while trying to add your skill. Please try again",
+          });
         }
-        Swal.fire({
-          title: "Error",
-          icon: "error",
-          text: "An error occured while trying to add your skill. Please try again",
-        });
       });
   }
 
