@@ -1,10 +1,5 @@
-import Link from "next/link";
+import InfoSideNav from "@/components/info/InfoSideNav";
 
-const links = [
-  { name: "Basic Info", url: "/info" },
-  { name: "Skills", url: "/info/skills" },
-  { name: "Projects", url: "/info/projects" },
-];
 
 export default function InfoLayout({ children }) {
   return (
@@ -21,15 +16,7 @@ export default function InfoLayout({ children }) {
           <div className="flex flex-col md:flex-row gap-2">
             <div className="w-[100px">
               <div className="join join-horizontal md:join-vertical border-2 w-fit">
-                {links.map((link, index) => (
-                  <Link
-                    key={index}
-                    href={link.url}
-                    className="btn join-item font-semibold hover:app-bg-primary-dark app-bg-primary text-white"
-                  >
-                    {link.name}
-                  </Link>
-                ))}
+               <InfoSideNav />
               </div>
             </div>
             {/* <div className="divider divider-vertical"></div> */}
