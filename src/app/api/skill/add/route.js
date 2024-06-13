@@ -1,5 +1,5 @@
 import prisma from "@/app/db";
-import { badRequest, internalServerError } from "@/utils/prebuiltApiResponse"
+import { badRequest, internalServerError, resourceCreated } from "@/utils/prebuiltApiResponse"
 import { NextResponse } from "next/server"
 
 export const POST = async (req) => {
@@ -16,6 +16,10 @@ export const POST = async (req) => {
                 skill_name
             }
         })
+        if(new_skill){
+            return resourceCreated({})
+        }
+        return internalServerError("")
 
     }catch(e){
         return internalServerError(e);

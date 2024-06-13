@@ -19,7 +19,15 @@ const AddSkill = () => {
 
     //pass
 
-    axios.post().then().catch((error) => {
+    axios.post().then((response) => {
+        if(response.status == 201){
+            Swal.fire({
+                title: "Success",
+                icon: "success",
+                text: "Your skill has been added"
+            })
+        }
+    }).catch((error) => {
         Swal.fire({
             title: "Error",
             icon: "error",
