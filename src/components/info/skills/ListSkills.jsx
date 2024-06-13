@@ -6,9 +6,11 @@ import { useEffect } from "react";
 const ListSkills = async () => {
   const [skills, setSkills] = useState([]);
 
-  axios.get("/api/skill/list").then((response) => {
-    setSkills(response.data.data);
-  });
+  useEffect(function () {
+    axios.get("/api/skill/list").then((response) => {
+      setSkills(response.data.data);
+    });
+  }, []);
 
   return (
     <>
