@@ -52,7 +52,10 @@ const AddSkill = () => {
           Swal.fire({
             title: "Error",
             icon: "error",
-            text: "An error occured while trying to add your skill. Please try again",
+            text:
+              error.response.status == 409
+                ? "Skill already exist"
+                : "An error occured while trying to add your skill. Please try again",
           });
         }
       });
