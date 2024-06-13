@@ -11,9 +11,9 @@ export const POST = async (req) => {
             return badRequest("invalid skill name format");
         }
 
-        const new_skill = await prisma.skill.create({
+        const new_skill = await prisma.userSkills.create({
             data: {
-                name: skill_name
+                skill_name
             }
         })
 

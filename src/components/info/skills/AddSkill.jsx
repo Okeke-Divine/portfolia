@@ -18,6 +18,15 @@ const AddSkill = () => {
     }
 
     //pass
+
+    axios.post().then().catch((error) => {
+        Swal.fire({
+            title: "Error",
+            icon: "error",
+            text: "An error occured while trying to add your skill. Please try again"
+        })
+    })
+
   }
 
   return (
