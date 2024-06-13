@@ -27,7 +27,7 @@ const AddSkill = () => {
           <input
             ref={skillRef}
             type="text"
-            className="join-item grow input input-borderd"
+            className="join-item grow input input-bordered"
             placeholder="Skill Name"
           />
           <button className="join-item btn app-bg-primary text-white duration-300 hover:app-bg-primary-dark">
