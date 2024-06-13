@@ -26,7 +26,12 @@ function confirmSignOut() {
     cancelButtonText: "Cancel",
   }).then((result) => {
     if (result.isConfirmed) {
-      signOut();
+      Swal.fire({
+        title: "Loading",
+        icon: "info",
+        text: "Please wait...",
+      });
+      // signOut();
     }
   });
 }
