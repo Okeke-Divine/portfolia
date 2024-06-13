@@ -6,8 +6,9 @@ const PortfolioBuilderPreview = ({ username }) => {
 
   return (
     <>
+      <div className="join border-2">
       <button
-        className={`btn btn-ghost hover:app-bg-primary-dark hover:text-white ${
+        className={`btn btn-ghost hover:app-bg-primary-dark hover:text-white join-item ${
           preview == "desktop" ? "app-bg-primary-dark text-white" : ""
         }`}
         onClick={() => setPreview("desktop")}
@@ -15,13 +16,14 @@ const PortfolioBuilderPreview = ({ username }) => {
         Desktop
       </button>
       <button
-        className={`btn btn-ghost hover:app-bg-primary-dark hover:text-white ${
+        className={`btn btn-ghost hover:app-bg-primary-dark hover:text-white join-item ${
           preview == "mobile" ? "app-bg-primary-dark text-white" : ""
         }`}
         onClick={() => setPreview("mobile")}
       >
         Mobile
       </button>
+      </div>
 
       <div className="divider"></div>
 
