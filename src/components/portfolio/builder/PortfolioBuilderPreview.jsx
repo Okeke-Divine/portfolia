@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 
 const PortfolioBuilderPreview = ({ username }) => {
   const [preview, setPreview] = useState("desktop");
@@ -7,29 +8,34 @@ const PortfolioBuilderPreview = ({ username }) => {
   return (
     <>
       <div className="join border-2">
-      <button
-        className={`btn btn-ghost hover:app-bg-primary-dark hover:text-white join-item ${
-          preview == "desktop" ? "app-bg-primary-dark text-white" : ""
-        }`}
-        onClick={() => setPreview("desktop")}
-      >
-        Desktop
-      </button>
-      <button
-        className={`btn btn-ghost hover:app-bg-primary-dark hover:text-white join-item ${
-          preview == "mobile" ? "app-bg-primary-dark text-white" : ""
-        }`}
-        onClick={() => setPreview("mobile")}
-      >
-        Mobile
-      </button>
+        <Link
+          href="#desktop-preview"
+          className={`btn btn-ghost hover:app-bg-primary-dark hover:text-white join-item ${
+            preview == "desktop" ? "app-bg-primary-dark text-white" : ""
+          }`}
+          onClick={() => setPreview("desktop")}
+        >
+          Desktop
+        </Link>
+        <Link
+          href="#mobile-preview"
+          className={`btn btn-ghost hover:app-bg-primary-dark hover:text-white join-item ${
+            preview == "mobile" ? "app-bg-primary-dark text-white" : ""
+          }`}
+          onClick={() => setPreview("mobile")}
+        >
+          Mobile
+        </Link>
       </div>
 
       <div className="divider"></div>
 
       {preview == "desktop" ? (
         <>
-          <div className="mockup-browser border bg-base-300">
+          <div
+            id="desktop-preview"
+            className="mockup-browser border bg-base-300"
+          >
             <div className="mockup-browser-toolbar">
               <div className="input text-center">
                 {process.env.NEXT_PUBLIC_BASE_URL}i/{username}
@@ -48,7 +54,7 @@ const PortfolioBuilderPreview = ({ username }) => {
       )}
       {preview == "mobile" ? (
         <>
-          <div className="flex justify-center">
+          <div id="mobile-preview" className="flex justify-center">
             <div className="mockup-phone">
               <div className="camera"></div>
               <div className="display">
