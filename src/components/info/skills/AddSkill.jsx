@@ -19,7 +19,11 @@ const AddSkill = () => {
 
     //pass
 
-    axios.post().then((response) => {
+    axios.post("/api/skill/add",{skill_name},{
+        headers: {
+            "Content-Type": "application/json"
+        }
+    }).then((response) => {
         if(response.status == 201){
             Swal.fire({
                 title: "Success",
