@@ -3,9 +3,6 @@ import Link from "next/link";
 
 const links = [
   { name: "Preview" },
-  { name: "Basic Details" },
-  { name: "Skills" },
-  { name: "Projects" },
 ];
 
 const PortfolioBuilderLayout1 = async ({ children }) => {
@@ -38,7 +35,7 @@ const PortfolioBuilderLayout1 = async ({ children }) => {
                 {links.map((link, index) => (
                   <Link
                     href="#"
-                    className="btn join-item font-semibold hover:app-text-primary-dark"
+                    className="btn join-item font-semibold hover:app-bg-primary-dark app-bg-primary text-white"
                   >
                     {link.name}
                   </Link>
