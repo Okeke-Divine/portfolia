@@ -95,7 +95,7 @@ export default function ApplicationSidedar() {
               key={index}
               target={link.blank ? "_blank" : "_self"}
               className={`btn btn-ghost w-full mb-2 text-left justify-start ${
-                pathname === link.url
+                !pathname.toString().search(link.url)
                   ? "app-bg-primary hover:app-bg-primary-dark"
                   : ""
               }`}
