@@ -30,6 +30,8 @@ function confirmSignOut() {
         title: "Loading",
         icon: "info",
         text: "Please wait...",
+        showConfirmButton: false,
+        allowOutsideClick: false
       });
       // signOut();
     }
