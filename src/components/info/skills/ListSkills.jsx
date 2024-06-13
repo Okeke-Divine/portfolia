@@ -1,9 +1,15 @@
 "use client";
 import { useState } from "react";
 import axios from "axios";
+import { useEffect } from "react";
 
 const ListSkills = async () => {
   const [skills, setSkills] = useState([]);
+
+  axios.get("/api/skill/list").then((response) => {
+    setSkills(response.data.data);
+  });
+
   return (
     <>
       <div className="grid grid-cols-1 gap-2">
