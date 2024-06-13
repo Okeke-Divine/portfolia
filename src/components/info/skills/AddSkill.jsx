@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 import axios from "axios";
 
 const AddSkill = () => {
-  const [laading, setLoading] = useState(true);
+  const [laading, setLoading] = useState(false);
   const skillRef = useRef(null);
 
   function _addSkill(e) {
