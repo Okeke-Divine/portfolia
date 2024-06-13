@@ -59,7 +59,7 @@ const PortfolioBuilderPreview = ({ username }) => {
               <div className="camera"></div>
               <div className="display">
                 <iframe
-                  className="w-full min-h-[80vh]"
+                  className="w-full min-h-[90vh] md:min-h-[80vh]"
                   src={"/i/" + username}
                 ></iframe>
               </div>
