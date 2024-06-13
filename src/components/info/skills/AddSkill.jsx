@@ -1,5 +1,5 @@
 "use client";
-import { useRef,useState } from "react";
+import { useRef, useState } from "react";
 import Swal from "sweetalert2";
 import axios from "axios";
 
@@ -38,6 +38,7 @@ const AddSkill = () => {
           setLoading(false);
         }
         if (response.status == 201) {
+          skillRef.current.value = "";
           Swal.fire({
             title: "Success",
             icon: "success",
@@ -63,6 +64,7 @@ const AddSkill = () => {
         <div className="join flex">
           <input
             ref={skillRef}
+            disabled={laading}
             type="text"
             className="join-item grow input input-bordered"
             placeholder="Skill Name"
