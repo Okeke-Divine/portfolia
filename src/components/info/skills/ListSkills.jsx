@@ -6,6 +6,8 @@ import { useEffect } from "react";
 const ListSkills = async () => {
   const [skills, setSkills] = useState([]);
 
+  function deleteSkill(id) {}
+
   useEffect(function () {
     axios.get("/api/skill/list").then((response) => {
       setSkills(response.data.data);
@@ -19,7 +21,7 @@ const ListSkills = async () => {
           <div className="flex flex-wrap gap" key={index}>
             <div className="grow font-semibold">{skill.skill_name}</div>
             <div>
-              <button className="button" type="submit">
+              <button className="button" onclick={() => deleteSkill(skill.id)}>
                 [x]
               </button>
             </div>
