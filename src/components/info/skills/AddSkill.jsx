@@ -1,13 +1,15 @@
 "use client";
-import { useRef } from "react";
+import { useRef,useState } from "react";
 import Swal from "sweetalert2";
 import axios from "axios";
 
 const AddSkill = () => {
+  const [laading, setLoading] = useState(true);
   const skillRef = useRef(null);
 
   function _addSkill(e) {
     e.preventDefault();
+    setLoading(true);
     const skill_name = skillRef.current.value;
     if (!skill_name || skill_name.length < 3) {
       Swal.fire({
@@ -15,6 +17,7 @@ const AddSkill = () => {
         icon: "error",
         text: "Skill can not be less than three characters",
       });
+      setLoading(false);
       return;
     }
 
@@ -31,6 +34,9 @@ const AddSkill = () => {
         }
       )
       .then((response) => {
+        if (response) {
+          setLoading(false);
+        }
         if (response.status == 201) {
           Swal.fire({
             title: "Success",
@@ -40,6 +46,9 @@ const AddSkill = () => {
         }
       })
       .catch((error) => {
+        if (error) {
+          setLoading(false);
+        }
         Swal.fire({
           title: "Error",
           icon: "error",
@@ -58,8 +67,17 @@ const AddSkill = () => {
             className="join-item grow input input-bordered"
             placeholder="Skill Name"
           />
-          <button className="join-item btn app-bg-primary text-white duration-300 hover:app-bg-primary-dark">
-            Add
+          <button
+            disabled={laading}
+            className="join-item btn app-bg-primary text-white duration-300 hover:app-bg-primary-dark"
+          >
+            {laading ? (
+              <>
+                <span className="loading loading-dots loading-sm"></span>
+              </>
+            ) : (
+              "Add"
+            )}
           </button>
         </div>
       </form>
