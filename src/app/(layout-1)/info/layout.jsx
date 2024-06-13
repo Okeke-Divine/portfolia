@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const links = [
   { name: "Basic Info" },
   { name: "Skills" },
