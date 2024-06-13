@@ -27,7 +27,7 @@ function confirmSignOut() {
   }).then((result) => {
     if (result.isConfirmed) {
       Swal.fire({
-        title: "Loading",
+        title: "Processing",
         icon: "info",
         text: "Please wait...",
         showConfirmButton: false,
