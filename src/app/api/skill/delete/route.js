@@ -8,8 +8,6 @@ export const POST = async (req) => {
         const skill_id = data.skill_id;
         const userId = await getUserId();
 
-        console.log(skill_id);
-
         if (!skill_id) {
             return badRequest("invalid request");
         }
@@ -21,6 +19,7 @@ export const POST = async (req) => {
             }
         })
         if (delete_skill) {
+            console.log("skills deleted")
             return resourceDeleted()
         }
         return internalServerError("Unkown error on aprx line 22")
