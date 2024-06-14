@@ -1,9 +1,10 @@
 "use client";
 import { useRef, useState } from "react";
 import axios from "axios";
+import Swal from "sweetalert2";
+import { SweetAlertError } from "@/utils/customSweetAlertFunction";
 
 const BasicInfoForm = ({userDetails}) => {
-  const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   //refs
   const fullnameRef = useRef(null);
@@ -15,7 +16,6 @@ const BasicInfoForm = ({userDetails}) => {
   function updateDetails(e) {
     e.preventDefault();
     setLoading(true);
-    setError("");
 
     const fullname = fullnameRef.current.value;
     const heroTitle = heroTitleRef.current.value;
@@ -23,6 +23,12 @@ const BasicInfoForm = ({userDetails}) => {
     const bio = bioRef.current.value;
     const about = aboutRef.current.value;
 
+    if(!fullname || !heroTitle || !professionalTitle || !bio || !about){
+        SweetAlertError("lol");
+        return;
+    }
+
+    SweetAlertError("lol");
     console.log(fullname,heroTitle,professionalTitle,bio,about);
 
   }
@@ -30,7 +36,6 @@ const BasicInfoForm = ({userDetails}) => {
   return (
     <>
       <form onSubmit={updateDetails} className="form-contro">
-        <p className="my-2 text-red-500 font-semibold">{error}</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
           {/* name */}
           <div className="mb-3">
