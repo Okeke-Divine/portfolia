@@ -24,7 +24,7 @@ const ListSkills = async () => {
             <div className="grow font-semibold">{skill.skill_name}</div>
             <div>
               <button className="button" onclick={() => deleteSkill(skill.id)}>
-                [x]
+                <i className="fi fi-rr-trash flaticon-offset"></i>
               </button>
             </div>
           </div>
