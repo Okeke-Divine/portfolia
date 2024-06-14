@@ -18,6 +18,16 @@ const ListSkills = async () => {
       confirmButtonText: "Yes, delete!",
       confirmButtonColor: app_color_primary,
       cancelButtonText: "Cancel",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: "Processing",
+          icon: "info",
+          text: "Please wait...",
+          showConfirmButton: false,
+          allowOutsideClick: false,
+        });
+      }
     });
   }
 
