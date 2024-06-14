@@ -4,7 +4,7 @@ const { NextResponse } = require("next/server");
 
 export function internalServerError(e) {
     _console_log(e);
-    return NextResponse.json({ message: "internalServerError", error: e }, { status: 500 })
+    return NextResponse.json({ message: "internalServerError", error: "Internal Server Error" }, { status: 500 })
 }
 
 export function badRequest(reason) {

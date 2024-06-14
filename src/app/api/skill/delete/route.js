@@ -9,7 +9,7 @@ export const POST = async (req) => {
         const userId = await getUserId();
 
         if(!skill_name){
-            return badRequest("invalid skill name");
+            return badRequest("invalid request");
         }
 
         const delete_skill = await prisma.userSkills.delete_skill({
