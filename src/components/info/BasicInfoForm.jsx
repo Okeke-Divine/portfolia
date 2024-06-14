@@ -1,9 +1,15 @@
 "use client";
+import {useRef} from "react"
 import axios from "axios";
 
-const BasicInfoForm = () => {
+const BasicInfoForm = (props) => {
+
+
+
   return (
-    <div>BasicInfoForm</div>
+   <>
+    <form className="form-contro"></form>
+   </>
   )
 }
 
