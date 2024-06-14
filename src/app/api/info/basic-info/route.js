@@ -1,9 +1,9 @@
-import { internalServerError } from "@/utils/prebuiltApiResponse"
+import { internalServerError, resourceUpdated } from "@/utils/prebuiltApiResponse"
 
 export const POST = async (req) => {
 
     try {
-        return internalServerError("")
+        return resourceUpdated({})
     } catch (e) {
         return internalServerError(e)
     }
