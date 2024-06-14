@@ -1,7 +1,14 @@
+import prisma from "@/app/db";
 import { defaultImgUrl } from "@/constants/shared/constant";
 
-const PortfolioAbout = () => {
-  const skills = [
+const PortfolioAbout = async ({user}) => {
+
+  const userId = user.id;
+  const skills = await prisma.userSkills.findMany({
+    where: { userId },
+  });
+
+  const skills_ = [
     { name: "HTML" },
     { name: "CSS" },
     { name: "JavaScript" },

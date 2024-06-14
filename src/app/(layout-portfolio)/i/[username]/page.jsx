@@ -41,7 +41,7 @@ export default async function PortFolio({ params }) {
     <>
       <PortfolioNavbar />
       <PortfolioHero user={user} />
-      <PortfolioAbout />
+      <PortfolioAbout user={user} />
       <PortfolioProjects />
       <PortfolioFooter />
       {/* <PortfolioExpertise /> */}
