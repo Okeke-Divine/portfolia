@@ -18,32 +18,14 @@ const PortfolioAbout = async ({ user }) => {
           <div>
             <h1 className="max-w-[80%] md:max-w-[600px] text-4xl">
               {/* Hey, I'm John - Full Stack Web Developer. */}
-              {user?.userDetails?.heroTitle ? user?.userDetails?.heroTitle+ " - " : ""}
+              {user?.userDetails?.fullname ? user?.userDetails?.fullname+ " - " : ""}
               {user?.userDetails?.profession}
             </h1>
           </div>
           {/* about */}
           <div className="mt-2 app-text-light-2 app-portfolio-about-container">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi
-              beatae consequatur nisi obcaecati voluptas modi laudantium quo,
-              maiores cum ipsam quam nostrum nulla neque, rerum dicta tempora
-              fugit, possimus illo.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi
-              beatae consequatur nisi obcaecati voluptas modi laudantium quo,
-              maiores cum ipsam quam nostrum nulla neque, rerum dicta tempora
-              fugit, possimus illo. Lorem ipsum dolor sit amet, consectetur
-              adipisicing elit. Sequi beatae consequatur nisi obcaecati voluptas
-              modi laudantium quo, maiores cum ipsam quam nostrum nulla neque,
-              rerum dicta tempora fugit, possimus illo.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi
-              beatae consequatur nisi obcaecati voluptas modi laudantium quo,
-              maiores cum ipsam quam nostrum nulla neque, rerum dicta tempora
-              fugit, possimus illo.
+              {user?.userDetails?.about}
             </p>
           </div>
           {/* divider */}
