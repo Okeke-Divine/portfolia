@@ -86,14 +86,14 @@ const BasicInfoForm = ({ userDetails }) => {
                 Full Name
               </label>
             </div>
-            <div className="input input-bordered flex items-center gap-x-2 mt-1">
-              <i className="fi fi-ts-circle-user flaticon-offset"></i>
+            <div className="input input-bordered flex items-center gap-x-2 mt-1 bg-red-200">
+              <i className="fi fi-ts-circle-user flaticon-offset w-fit"></i>
               <input
                 type="text"
                 name="name"
                 ref={fullnameRef}
                 required
-                className="grow"
+                className="w-full"
                 placeholder="Enter Your Full Name"
               />
             </div>
