@@ -53,7 +53,7 @@ const BasicInfoForm = ({userDetails}) => {
         return;
     }
 
-    if(bio.length < 10){
+    if(about.length < 10){
         SweetAlertError("About cannot be less than 10 characters");
         setLoading(false);
         return;
