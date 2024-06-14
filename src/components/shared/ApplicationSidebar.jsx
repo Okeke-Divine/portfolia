@@ -54,7 +54,7 @@ export default function ApplicationSidedar() {
     {
       name: "Info",
       url: "/info",
-      icon: <i class="fi fi-rr-leaderboard-alt"></i>,
+      icon: <i className="fi fi-rr-leaderboard-alt"></i>,
       blank: false,
     },
     {
