@@ -9,7 +9,6 @@ const ListSkills = async () => {
   const [skills, setSkills] = useState([]);
 
   function deleteSkill(skill_name) {
-    alert(skill_name);
     Swal.fire({
       title: "Warning",
       icon: "warning",
@@ -27,6 +26,14 @@ const ListSkills = async () => {
           showConfirmButton: false,
           allowOutsideClick: false,
         });
+        setTimeout(function () {
+          Swal.fire({
+            title: "Success",
+            icon: "success",
+            text: "Delete success full",
+            confirmButtonColor: app_color_primary,
+          });
+        }, 200);
       }
     });
   }
