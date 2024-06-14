@@ -20,7 +20,12 @@ const ListSkills = async () => {
     <>
       <div className="grid grid-cols-1 gap-2">
         {skills.map((skill, index) => (
-          <div className="flex flex-wrap gap" key={index}>
+          <div
+            className={`flex flex-wrap gap ${
+              index % 2 === 0 ? "bg-white" : "bg-gray-200"
+            }`}
+            key={index}
+          >
             <div className="grow font-semibold">{skill.skill_name}</div>
             <div>
               <button className="button" onclick={() => deleteSkill(skill.id)}>
