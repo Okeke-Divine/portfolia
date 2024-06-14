@@ -12,7 +12,7 @@ const ListSkills = async () => {
     Swal.fire({
       title: "Warning",
       icon: "warning",
-      text: "Are you sure you want to remove this skill? NOTE: This cannot be reversed.",
+      text: "Are you certain you want to delete this skill? Please note: This action is irreversible. The skill will also be removed from any portfolios or resumes where it has been listed.",
       showCancelButton: true,
       confirmButtonText: "Yes, delete!",
       confirmButtonColor: app_color_primary,
