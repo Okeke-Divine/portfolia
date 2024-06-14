@@ -8,19 +8,6 @@ const PortfolioAbout = async ({user}) => {
     where: { userId },
   });
 
-  const skills_ = [
-    { name: "HTML" },
-    { name: "CSS" },
-    { name: "JavaScript" },
-    { name: "React" },
-    { name: "NextJs" },
-    { name: "Jquery" },
-    { name: "Bootstrap" },
-    { name: "DaisyUi" },
-    { name: "Prisma" },
-    { name: "MySQL" },
-  ];
-
   return (
     <>
       <section className="app-portfolio-padding bg-base-200" id="about">
@@ -87,7 +74,7 @@ const PortfolioAbout = async ({user}) => {
                     key={index}
                     className="rounded-lg shadow-sm duration-300 hover:shadow-lg bg-white text-center p-5"
                   >
-                    <div className="capitalize font-bold">{skill.name}</div>
+                    <div className="capitalize font-bold">{skill.skill_name}</div>
                   </div>
                 </>
               ))}
