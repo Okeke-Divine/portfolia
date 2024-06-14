@@ -24,8 +24,8 @@ const DashboardTopComponent = async () => {
                   <i className="fi fi-tr-overview text-4xl"></i>
                 </div>
                 <div className="stat-title">Page Views</div>
-                <div className="stat-value font-semibold">0k</div>
-                <div className="stat-desc">0% more than last month</div>
+                <div className="stat-value font-semibold">231</div>
+                <div className="stat-desc app-text-primary">10% more than last month</div>
                 <div className="stat-desc mt-2">
                   <span className="badge app-bg-primary border-none text-white">
                     coming soon
@@ -37,8 +37,8 @@ const DashboardTopComponent = async () => {
                   <i className="fi fi-tr-bullseye-pointer text-4xl"></i>
                 </div>
                 <div className="stat-title">Page Clicks</div>
-                <div className="stat-value font-semibold">0k</div>
-                <div className="stat-desc">0% more than last month</div>
+                <div className="stat-value font-semibold">24</div>
+                <div className="stat-desc app-text-primary">1% more than last month</div>
                 <div className="stat-desc mt-2">
                   <span className="badge app-bg-primary border-none text-white">
                     coming soon
@@ -50,8 +50,7 @@ const DashboardTopComponent = async () => {
                   <i className="fi fi-tr-rotate-reverse text-4xl"></i>
                 </div>
                 <div className="stat-title">Coversion</div>
-                <div className="stat-value font-semibold">0%</div>
-                <div className="stat-desc">0% more than last month</div>
+                <div className="stat-value font-semibold">3%</div>
                 <div className="stat-desc mt-2">
                   <span className="badge app-bg-primary border-none text-white">
                     coming soon
@@ -85,7 +84,7 @@ const DashboardTopComponent = async () => {
                   <i className="fi fi-tr-overview text-4xl"></i>
                 </div>
                 <div className="stat-title">Views</div>
-                <div className="stat-value font-semibold">0k</div>
+                <div className="stat-value font-semibold">16</div>
                 <div className="stat-desc">0% more than last month</div>
                 <div className="stat-desc mt-2">
                   <span className="badge app-bg-primary border-none text-white">
@@ -98,7 +97,7 @@ const DashboardTopComponent = async () => {
                   <i className="fi fi-tr-bullseye-pointer text-4xl"></i>
                 </div>
                 <div className="stat-title">Clicks</div>
-                <div className="stat-value font-semibold">0k</div>
+                <div className="stat-value font-semibold">3</div>
                 <div className="stat-desc">0% more than last month</div>
                 <div className="stat-desc mt-2">
                   <span className="badge app-bg-primary border-none text-white">
@@ -111,7 +110,7 @@ const DashboardTopComponent = async () => {
                   <i className="fi fi-tr-cloud-download-alt text-4xl"></i>
                 </div>
                 <div className="stat-title">Downloads</div>
-                <div className="stat-value font-semibold">0k</div>
+                <div className="stat-value font-semibold">72</div>
                 <div className="stat-desc">0% more than last month</div>
                 <div className="stat-desc mt-2">
                   <span className="badge app-bg-primary border-none text-white">
