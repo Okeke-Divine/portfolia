@@ -32,34 +32,36 @@ const BasicInfoForm = (props) => {
           {/* name */}
           <div className="mb-3">
             <div>
-              <label htmlFor="name" className="font-bold text-md">
-                Full Name
+              <label htmlFor="beroTitle" className="font-bold text-md">
+                Hero Title
               </label>
             </div>
             <div className="input input-bordered flex items-center gap-2 mt-1">
               <i className="fi fi-ts-circle-user flaticon-offset"></i>
               <input
                 type="text"
+                name="beroTitle"
+                placeholder="Hey there, i'm John"
                 required
                 className="grow"
-                placeholder="Enter Your Full Name"
               />
             </div>
           </div>
           {/* name */}
           <div className="mb-3">
             <div>
-              <label htmlFor="name" className="font-bold text-md">
-                Full Name
+              <label htmlFor="professionalTitle" className="font-bold text-md">
+                Professional Title
               </label>
             </div>
             <div className="input input-bordered flex items-center gap-2 mt-1">
               <i className="fi fi-ts-circle-user flaticon-offset"></i>
               <input
                 type="text"
+                name="professionalTitle"
                 required
                 className="grow"
-                placeholder="Enter Your Full Name"
+                placeholder="What your do."
               />
             </div>
           </div>
