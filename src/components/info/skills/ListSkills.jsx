@@ -13,8 +13,10 @@ const ListSkills = async () => {
 
   useEffect(() => {
     channel.onmessage = (event) => {
+      setLoading(true);
       const newSkill = event.data.data;
       setSkills((prevSkills) => [...prevSkills, newSkill]);
+      setLoading(false);
     };
 
     return () => {
