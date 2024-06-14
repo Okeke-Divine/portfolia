@@ -94,7 +94,7 @@ const BasicInfoForm = ({ userDetails }) => {
                 ref={fullnameRef}
                 required
                 className="w-full"
-                placeholder="Enter Your Full Name"
+                placeholder="John Doe"
               />
             </div>
           </div>
@@ -132,7 +132,7 @@ const BasicInfoForm = ({ userDetails }) => {
                 name="professionalTitle"
                 required
                 className="w-full"
-                placeholder="What your do."
+                placeholder="Full Stack Software Developer"
               />
             </div>
           </div>
