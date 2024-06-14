@@ -18,7 +18,7 @@ const BasicInfoForm = (props) => {
                 Full Name
               </label>
             </div>
-            <div className="input input-bordered flex items-center gap-2 mt-1">
+            <div className="input input-bordered flex items-center gap-x-2 mt-1">
               <i className="fi fi-ts-circle-user flaticon-offset"></i>
               <input
                 type="text"
