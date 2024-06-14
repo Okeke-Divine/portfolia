@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 export function SweetAlertSuccess(text) {
     return Swal.fire({
         title: "Success",
-        icon: "title",
+        icon: "success",
         text,
         confirmButtonColor: app_color_primary
     })
