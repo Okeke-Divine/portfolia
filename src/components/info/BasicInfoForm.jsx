@@ -72,7 +72,19 @@ const BasicInfoForm = ({ userDetails }) => {
       bio,
       about,
     };
-    setLoading(false);
+
+    axios
+      .post()
+      .then((response) => {
+        if (response) {
+          setLoading(false);
+        }
+      })
+      .catch((error) => {
+        if (error) {
+          setLoading(false);
+        }
+      });
   }
 
   return (
