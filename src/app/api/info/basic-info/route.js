@@ -10,7 +10,7 @@ export const POST = async (req) => {
         const { fullname, heroTitle, profession, bio, about } = data;
 
         //validation
-        if (!fullname || !heroTitle || !profession || !bio || !about || fullname.length < 3 || heroTitle.length < 5 || profession.length < 3 || bio.length < 3 || bio.length > 25 || about.length < 10) {
+        if (!fullname || !heroTitle || !profession || !bio || !about || fullname.length < 3 || heroTitle.length < 5 || profession.length < 3 || bio.length < 3 || bio.length > 50 || about.length < 10) {
             return badRequest("");
         }
 
