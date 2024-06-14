@@ -62,39 +62,36 @@ const BasicInfoForm = (props) => {
               />
             </div>
           </div>
-          {/* about */}
+          {/* name */}
           <div className="mb-3">
             <div>
-              <label htmlFor="about" className="font-bold text-md">
+              <label htmlFor="name" className="font-bold text-md">
                 Full Name
               </label>
             </div>
             <div className="input input-bordered flex items-center gap-2 mt-1">
               <i className="fi fi-ts-circle-user flaticon-offset"></i>
-              <textarea
-                name="about"
-                rows={5}
-                className="textaread textarea-bordered"
-              ></textarea>
+              <input
+                type="text"
+                required
+                className="grow"
+                placeholder="Enter Your Full Name"
+              />
             </div>
           </div>
         </div>
-        {/* name */}
+        {/* about */}
         <div className="mb-3">
           <div>
-            <label htmlFor="name" className="font-bold text-md">
-              Full Name
+            <label htmlFor="about" className="font-bold text-md">
+              About
             </label>
           </div>
-          <div className="input input-bordered flex items-center gap-2 mt-1">
-            <i className="fi fi-ts-circle-user flaticon-offset"></i>
-            <input
-              type="text"
-              required
-              className="grow"
-              placeholder="Enter Your Full Name"
-            />
-          </div>
+          <textarea
+            name="about"
+            rows={5}
+            className="textaread input-bordered w-full"
+          ></textarea>
         </div>
 
         {/* submit button */}
