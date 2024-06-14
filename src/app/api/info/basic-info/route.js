@@ -29,8 +29,13 @@ export const POST = async (req) => {
             }
         })
 
-        console.log(data);
-        return resourceUpdated({})
+        if(updated_details){
+            return resourceUpdated({})
+        }else{
+            return internalServerError("Upsert error")
+        }
+
+        console.log(updated_details);
     } catch (e) {
         return internalServerError(e)
     }
