@@ -33,6 +33,8 @@ const ListSkills = async () => {
             text: "Delete success full",
             confirmButtonColor: app_color_primary,
           });
+          const parent_container =document.getElementById("skill"+skill_name);
+          console.log(parent_container);
         }, 2000);
       }
     });
