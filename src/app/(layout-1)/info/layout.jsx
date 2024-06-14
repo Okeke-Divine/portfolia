@@ -1,6 +1,5 @@
 import InfoSideNav from "@/components/info/InfoSideNav";
 
-
 export default function InfoLayout({ children }) {
   return (
     <>
@@ -15,8 +14,10 @@ export default function InfoLayout({ children }) {
         <div>
           <div className="flex flex-col md:flex-row gap-2">
             <div className="w-[100px">
-              <div className="join join-horizontal md:join-vertical border-2 w-fit">
-               <InfoSideNav />
+              <div className="w-full overflow-x-auto">
+                <div className="join join-horizontal md:join-vertical border-2 w-fit">
+                  <InfoSideNav />
+                </div>
               </div>
             </div>
             {/* <div className="divider divider-vertical"></div> */}

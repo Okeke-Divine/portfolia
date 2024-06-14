@@ -46,7 +46,7 @@ const AddSkill = () => {
             icon: "success",
             text: "Your skill has been added",
           });
-          router.reload();
+          router.refresh();
         }
       })
       .catch((error) => {
