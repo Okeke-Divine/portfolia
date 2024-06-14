@@ -8,7 +8,7 @@ import SkillSkeleton from "@/components/skeleton/skills/SkillSkeleton";
 
 const ListSkills = async () => {
   const [skills, setSkills] = useState([]);
-  const [loading,setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
   const channel = new BroadcastChannel("user-skills-channel");
 
   useEffect(() => {
@@ -94,7 +94,13 @@ const ListSkills = async () => {
   return (
     <>
       <div className="grid grid-cols-1 gap-2">
-        <SkillSkeleton />
+        {loading ? (
+          <>
+            <SkillSkeleton />
+          </>
+        ) : (
+          ""
+        )}
         {skills.map((skill, index) => (
           <div
             id={"skill_" + skill.id}
