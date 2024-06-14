@@ -7,19 +7,18 @@ import { app_color_primary } from "@/constants/shared/color";
 
 const ListSkills = async () => {
   const [skills, setSkills] = useState([]);
-  const channel = new BroadcastChannel('my-channel');
+  const channel = new BroadcastChannel("user-skills-channel");
 
-
-  useEffect(() =>{
+  useEffect(() => {
     channel.onmessage = (event) => {
-      console.log(event.data);
-      console.log(event);
-    }
+      const newSkill = event.data.data;
+      setSkills((prevSkills) => [...prevSkills, newSkill]);
+    };
 
     return () => {
-      channel.close()
+      channel.close();
     };
-  },[channel])
+  }, [channel]);
 
   function deleteSkill(skill_id) {
     Swal.fire({

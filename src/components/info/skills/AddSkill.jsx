@@ -8,7 +8,7 @@ const AddSkill = () => {
   const skillRef = useRef(null);
 
   //broad cast channel
-  const channel = new BroadcastChannel("my-channel")
+  const channel = new BroadcastChannel("user-skills-channel")
 
   function _addSkill(e) {
     e.preventDefault();
