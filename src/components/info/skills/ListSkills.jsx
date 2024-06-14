@@ -34,9 +34,7 @@ const ListSkills = async () => {
             confirmButtonColor: app_color_primary,
           });
           const parent_container =document.getElementById("skill"+skill_name);
-          console.log(parent_container);
           parent_container.classList.add("hidden");
-          console.log(document.getElementById("skill"+skill_name));
         }, 20);
       }
     });
