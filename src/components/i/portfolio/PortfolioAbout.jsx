@@ -6,6 +6,7 @@ const PortfolioAbout = async ({ user }) => {
   const skills = await prisma.userSkills.findMany({
     where: { userId },
   });
+  
 
   return (
     <>
@@ -16,7 +17,9 @@ const PortfolioAbout = async ({ user }) => {
           </div>
           <div>
             <h1 className="max-w-[80%] md:max-w-[600px] text-4xl">
-              Hey, I'm John - Full Stack Web Developer.
+              {/* Hey, I'm John - Full Stack Web Developer. */}
+              {user?.userDetails?.heroTitle ? user?.userDetails?.heroTitle+ " - " : ""}
+              {user?.userDetails?.profession}
             </h1>
           </div>
           {/* about */}
