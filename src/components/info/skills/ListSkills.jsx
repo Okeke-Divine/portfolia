@@ -2,6 +2,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useEffect } from "react";
+import Swal from "sweetalert2";
 
 const ListSkills = async () => {
   const [skills, setSkills] = useState([]);
