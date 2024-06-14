@@ -18,7 +18,6 @@ const InfoSkills = async () => {
       userId
     }
   }) || {};
-  console.log(userDetails);
 
   return (
     <>
