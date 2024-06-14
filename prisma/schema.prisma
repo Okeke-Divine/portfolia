@@ -20,7 +20,7 @@ model User {
   UserExpertise      UserExpertise[]
   UserProjects       UserProjects[]
   //
-  userDetails        UserDetails[]
+  userDetails        UserDetails?
   //
   UserExperience     UserExperience[]
   Feedback           Feedback[]

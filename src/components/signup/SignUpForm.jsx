@@ -3,6 +3,7 @@ import { useRef, useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
 import { signIn } from "next-auth/react";
+import { app_color_primary } from "@/constants/shared/color";
 
 async function _signIn(email,password){
   const login = await signIn("credentials", {
@@ -88,6 +89,7 @@ const SignUpForm = () => {
               title: "Success",
               icon: "success",
               text: "Your account has been created successfully. You'll be logged in automatically...",
+              confirmButtonColor: app_color_primary
             });
             setTimeout(function () {
              _signIn(email,password)
