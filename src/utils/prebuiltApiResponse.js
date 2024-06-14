@@ -22,7 +22,7 @@ export function resourceCreated(data) {
 }
 
 export function resourceDeleted() {
-    return NextResponse.json({ message: "success" }, { status: 200 })
+    return NextResponse.json({ message: "success", data: {} }, { status: 200 })
 }
 
 export function unAuthorized(){

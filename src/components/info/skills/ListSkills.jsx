@@ -52,16 +52,19 @@ const ListSkills = async () => {
               Swal.fire({
                 title: "Error",
                 icon: "error",
-                text: "An error occured. Please try again",
+                text: "An error occured. Please try again 1",
               });
             }
           })
-          .catch(() => {
-            Swal.fire({
-              title: "Error",
-              icon: "error",
-              text: "An error occured. Please try again",
-            });
+          .catch((error) => {
+            if (error) {
+              Swal.fire({
+                title: "Error",
+                icon: "error",
+                text: "An error occured. Please try again 2",
+              });
+              console.log(error);
+            }
           });
       }
     });
