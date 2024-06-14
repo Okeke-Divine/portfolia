@@ -112,6 +112,7 @@ const BasicInfoForm = ({ userDetails }) => {
                 type="text"
                 name="heroTitle"
                 ref={heroTitleRef}
+                defaultValue={userDetails?.heroTitle}
                 placeholder="Hey there, i'm John"
                 required
                 className="w-full"
@@ -130,6 +131,7 @@ const BasicInfoForm = ({ userDetails }) => {
               <input
                 type="text"
                 ref={professionalTitleRef}
+                defaultValue={userDetails?.profession}
                 name="professionalTitle"
                 required
                 className="w-full"
@@ -151,6 +153,7 @@ const BasicInfoForm = ({ userDetails }) => {
                 name="bio"
                 ref={bioRef}
                 required
+                defaultValue={userDetails?.bio}
                 className="w-full"
                 placeholder="A one/two line summary of yourself."
               />
@@ -169,6 +172,7 @@ const BasicInfoForm = ({ userDetails }) => {
             rows={5}
             required
             ref={aboutRef}
+            defaultValue={userDetails?.about}
             placeholder="A more detailed summary of yourself and what you do."
             className="textarea input-bordered w-full"
           ></textarea>
