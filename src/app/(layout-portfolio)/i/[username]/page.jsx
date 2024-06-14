@@ -9,7 +9,10 @@ import { _ucfirst } from "@/utils/main";
 
 export async function generateMetadata({ params }) {
   const username = params.username;
-  const user = await prisma.user.findFirst({ where: { username },select:{fullname:true} });
+  const user = await prisma.user.findFirst({
+    where: { username },
+    select: { fullname: true },
+  });
   if (!user) {
     return {
       title: "404 | Not Found",
@@ -30,6 +33,15 @@ export default async function PortFolio({ params }) {
       username: true,
       email: true,
       profilePicture_url: true,
+      userDetails: {
+        select: {
+          fullname: true,
+          heroTitle: true,
+          profession: true,
+          bio: true,
+          about: true,
+        },
+      },
     },
   });
 
