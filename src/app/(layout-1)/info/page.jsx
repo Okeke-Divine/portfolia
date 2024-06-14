@@ -1,4 +1,5 @@
 import BasicInfoForm from "@/components/info/BasicInfoForm";
+import SignUpFormSkeleton from "@/components/skeleton/SignUpFormSkeleton";
 import { getUserId } from "@/utils/session";
 import { Suspense } from "react";
 
@@ -13,7 +14,7 @@ const InfoSkills = async () => {
   return (
     <>
       <div>
-        <Suspense fallback={<>...</>}>
+        <Suspense fallback={<SignUpFormSkeleton />}>
           <BasicInfoForm />
         </Suspense>
       </div>

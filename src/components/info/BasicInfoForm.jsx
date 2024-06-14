@@ -8,7 +8,9 @@ const BasicInfoForm = (props) => {
 
   return (
    <>
-    <form className="form-contro"></form>
+    <form className="form-contro">
+        
+    </form>
    </>
   )
 }
