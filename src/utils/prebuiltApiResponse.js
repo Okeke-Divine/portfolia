@@ -21,6 +21,10 @@ export function resourceCreated(data) {
     return NextResponse.json({ message: "success", data: data }, { status: 201 })
 }
 
+export function resourceUpdated(data) {
+    return NextResponse.json({ message: "success", data: data }, { status: 200 })
+}
+
 export function resourceDeleted() {
     return NextResponse.json({ message: "success", data: {} }, { status: 200 })
 }
