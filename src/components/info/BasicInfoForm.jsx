@@ -24,7 +24,37 @@ const BasicInfoForm = ({userDetails}) => {
     const about = aboutRef.current.value;
 
     if(!fullname || !heroTitle || !professionalTitle || !bio || !about){
-        SweetAlertError("All fields are required!");
+        SweetAlertError("All fields are required.");
+        setLoading(false);
+        return;
+    }
+
+    if(fullname.length < 3){
+        SweetAlertError("Full name cannot be less than 3 characters");
+        setLoading(false);
+        return;
+    }
+
+    if(heroTitle.length < 5){
+        SweetAlertError("Hero title cannot be less than 5 characters");
+        setLoading(false);
+        return;
+    }
+
+    if(professionalTitle.length < 3){
+        SweetAlertError("Profession cannot be less than 3 characters");
+        setLoading(false);
+        return;
+    }
+
+    if(bio.length < 5){
+        SweetAlertError("Bio cannot be less than 5 characters");
+        setLoading(false);
+        return;
+    }
+
+    if(bio.length < 10){
+        SweetAlertError("About cannot be less than 10 characters");
         setLoading(false);
         return;
     }

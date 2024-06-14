@@ -32,7 +32,7 @@ model UserDetails {
   //
   fullname String?
   heroTitle String?
-  professionalTitle String?
+  profession String?
   bio               String? @db.Text
   about String?
 }
