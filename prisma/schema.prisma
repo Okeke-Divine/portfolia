@@ -17,24 +17,26 @@ model User {
   dateJoined         DateTime         @default(now())
   //realations
   SocialLinks        SocialLinks[]
-  UserDetails        UserDetails[]
   UserExpertise      UserExpertise[]
   UserProjects       UserProjects[]
+  //
+  userDetails        UserDetails[]
+  //
   UserExperience     UserExperience[]
   Feedback           Feedback[]
   UserSkills         UserSkills[]
 }
 
 model UserDetails {
-  id                Int     @id @default(autoincrement())
-  userId            Int     @unique
-  user              User    @relation(fields: [userId], references: [id])
+  id         Int     @id @default(autoincrement())
+  userId     Int     @unique
+  user       User    @relation(fields: [userId], references: [id])
   //
-  fullname String?
-  heroTitle String?
+  fullname   String?
+  heroTitle  String?
   profession String?
-  bio               String? @db.Text
-  about String?
+  bio        String? @db.Text
+  about      String?
 }
 
 model SocialLinks {
