@@ -4,7 +4,7 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import { SweetAlertError } from "@/utils/customSweetAlertFunction";
 
-const BasicInfoForm = ({userDetails}) => {
+const BasicInfoForm = ({ userDetails }) => {
   const [loading, setLoading] = useState(false);
   //refs
   const fullnameRef = useRef(null);
@@ -23,49 +23,55 @@ const BasicInfoForm = ({userDetails}) => {
     const bio = bioRef.current.value;
     const about = aboutRef.current.value;
 
-    if(!fullname || !heroTitle || !professionalTitle || !bio || !about){
-        SweetAlertError("All fields are required.");
-        setLoading(false);
-        return;
+    if (!fullname || !heroTitle || !professionalTitle || !bio || !about) {
+      SweetAlertError("All fields are required.");
+      setLoading(false);
+      return;
     }
 
-    if(fullname.length < 3){
-        SweetAlertError("Full name cannot be less than 3 characters");
-        setLoading(false);
-        return;
+    if (fullname.length < 3) {
+      SweetAlertError("Full name cannot be less than 3 characters");
+      setLoading(false);
+      return;
     }
 
-    if(heroTitle.length < 5){
-        SweetAlertError("Hero title cannot be less than 5 characters");
-        setLoading(false);
-        return;
+    if (heroTitle.length < 5) {
+      SweetAlertError("Hero title cannot be less than 5 characters");
+      setLoading(false);
+      return;
     }
 
-    if(professionalTitle.length < 3){
-        SweetAlertError("Profession cannot be less than 3 characters");
-        setLoading(false);
-        return;
+    if (professionalTitle.length < 3) {
+      SweetAlertError("Profession cannot be less than 3 characters");
+      setLoading(false);
+      return;
     }
 
-    if(bio.length < 5){
-        SweetAlertError("Bio cannot be less than 5 characters");
-        setLoading(false);
-        return;
+    if (bio.length < 5) {
+      SweetAlertError("Bio cannot be less than 5 characters");
+      setLoading(false);
+      return;
     }
 
-    if(bio.length > 25){
-        SweetAlertError("Bio cannot be greater than 25 characters");
-        setLoading(false);
-        return;
+    if (bio.length > 25) {
+      SweetAlertError("Bio cannot be greater than 25 characters");
+      setLoading(false);
+      return;
     }
 
-    if(about.length < 10){
-        SweetAlertError("About cannot be less than 10 characters");
-        setLoading(false);
-        return;
+    if (about.length < 10) {
+      SweetAlertError("About cannot be less than 10 characters");
+      setLoading(false);
+      return;
     }
 
-    console.log(fullname,heroTitle,professionalTitle,bio,about);
+    const formData = {
+      fullname,
+      heroTitle,
+      profession: professionalTitle,
+      bio,
+      about,
+    };
     setLoading(false);
   }
 
