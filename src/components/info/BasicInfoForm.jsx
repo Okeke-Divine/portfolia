@@ -5,10 +5,20 @@ import axios from "axios";
 const BasicInfoForm = (props) => {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  //refs 
+  const fullnameRef = useRef(null);
+  const heroTitleRef = useRef(null);
+  const professionalTitleRef = useRef(null);
+  const bioRef = useRef(null);
+  const aboutRef = useRef(null);
+
+  function updateDetails(e){
+    e.preventDefault();
+}
 
   return (
     <>
-      <form className="form-contro">
+      <form onSubmit={updateDetails} className="form-contro">
         <p className="my-2 text-red-500 font-semibold">{error}</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
           {/* name */}
