@@ -113,7 +113,7 @@ const BasicInfoForm = ({ userDetails }) => {
                 ref={heroTitleRef}
                 placeholder="Hey there, i'm John"
                 required
-                className="grow"
+                className="w-full"
               />
             </div>
           </div>
@@ -131,7 +131,7 @@ const BasicInfoForm = ({ userDetails }) => {
                 ref={professionalTitleRef}
                 name="professionalTitle"
                 required
-                className="grow"
+                className="w-full"
                 placeholder="What your do."
               />
             </div>
@@ -150,7 +150,7 @@ const BasicInfoForm = ({ userDetails }) => {
                 name="bio"
                 ref={bioRef}
                 required
-                className="grow"
+                className="w-full"
                 placeholder="A one/two line summary of yourself."
               />
             </div>
