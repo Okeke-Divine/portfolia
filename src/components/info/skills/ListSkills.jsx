@@ -42,7 +42,7 @@ const ListSkills = async () => {
       <div className="grid grid-cols-1 gap-2">
         {skills.map((skill, index) => (
           <div
-            id={"skill" + skill_name}
+            id={"skill" + skill.skill_name}
             className={`flex flex-wrap items-center gap p-2 ${
               index % 2 === 0 ? "bg-white" : "bg-gray-200"
             }`}
