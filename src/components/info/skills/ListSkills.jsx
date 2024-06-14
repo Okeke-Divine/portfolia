@@ -8,6 +8,7 @@ const ListSkills = async () => {
   const [skills, setSkills] = useState([]);
 
   function deleteSkill(skill_name) {
+    alert(skill_name);
     Swal.fire({
       title: "Warning",
       icon: "warning",
@@ -33,7 +34,7 @@ const ListSkills = async () => {
           >
             <div className="grow font-semibold">{skill.skill_name}</div>
             <div>
-              <button className="btn btn-sm" onclick={() => deleteSkill(skill.skill_name)}>
+              <button className="btn btn-sm" onClick={() => deleteSkill(skill.skill_name)}>
                 <i className="fi fi-rr-trash flaticon-offset"></i>
               </button>
             </div>
