@@ -74,7 +74,11 @@ const BasicInfoForm = ({ userDetails }) => {
     };
 
     axios
-      .post()
+      .post("/api/info/basic-info", formData, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
       .then((response) => {
         if (response) {
           setLoading(false);
