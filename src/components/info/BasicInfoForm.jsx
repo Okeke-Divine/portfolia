@@ -92,7 +92,7 @@ const BasicInfoForm = ({ userDetails }) => {
       })
       .catch((error) => {
         if (error) {
-          SweetAlertError("An error occured. Please try again");
+          SweetAlertError("An error occured. Please check you form and try again");
           setLoading(false);
         }
       });
