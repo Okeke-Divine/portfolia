@@ -1,5 +1,5 @@
 import prisma from "@/app/db";
-import { badRequest, internalServerError, resourceCreated } from "@/utils/prebuiltApiResponse"
+import { badRequest, internalServerError, resourceDeleted } from "@/utils/prebuiltApiResponse"
 import { getUserId } from "@/utils/session";
 
 export const POST = async (req) => {
@@ -8,18 +8,18 @@ export const POST = async (req) => {
         const skill_name = data.skill_name;
         const userId = await getUserId();
 
-        if(!skill_name || skill_name.length < 3){
-            return badRequest("invalid skill name format");
+        if(!skill_name){
+            return badRequest("invalid skill name");
         }
 
-        const new_skill = await prisma.userSkills.create({
-            data: {
+        const delete_skill = await prisma.userSkills.delete_skill({
+            where: {
                 skill_name,
                 userId
             }
         })
-        if(new_skill){
-            return resourceCreated({})
+        if(delete_skill){
+            return resourceDeleted()
         }
         return internalServerError("Unkown error on aprx line 22")
 
