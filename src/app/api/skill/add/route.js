@@ -28,6 +28,10 @@ export const POST = async (req) => {
             data: {
                 skill_name,
                 userId
+            },
+            select: {
+                skill_name:true,
+                id:true
             }
         })
         if(new_skill){
