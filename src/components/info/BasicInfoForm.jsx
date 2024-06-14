@@ -4,6 +4,7 @@ import axios from "axios";
 
 const BasicInfoForm = (props) => {
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   return (
     <>
@@ -93,6 +94,23 @@ const BasicInfoForm = (props) => {
               placeholder="Enter Your Full Name"
             />
           </div>
+        </div>
+
+        {/* submit button */}
+        <div>
+          <button
+            className="w-full app-bg-primary duration-300 hover:app-bg-primary-dark btn btn-md text-white"
+            type="submit"
+            disabled={loading}
+          >
+            {loading ? (
+              <>
+                <span className="loading loading-dots loading-xs"></span>
+              </>
+            ) : (
+              "Save"
+            )}
+          </button>
         </div>
       </form>
     </>
