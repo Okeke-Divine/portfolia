@@ -2,10 +2,12 @@
 import { useRef, useState } from "react";
 import Swal from "sweetalert2";
 import axios from "axios";
+import { useRouter } from "next/navigation";
 
 const AddSkill = () => {
   const [laading, setLoading] = useState(false);
   const skillRef = useRef(null);
+  const router = useRouter()
 
   function _addSkill(e) {
     e.preventDefault();
@@ -44,6 +46,7 @@ const AddSkill = () => {
             icon: "success",
             text: "Your skill has been added",
           });
+          router.reload();
         }
       })
       .catch((error) => {
