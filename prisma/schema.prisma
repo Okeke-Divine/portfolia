@@ -30,9 +30,11 @@ model UserDetails {
   userId            Int     @unique
   user              User    @relation(fields: [userId], references: [id])
   //
+  fullname String?
+  heroTitle String?
   professionalTitle String?
   bio               String? @db.Text
-  heroText          String?
+  about String?
 }
 
 model SocialLinks {
