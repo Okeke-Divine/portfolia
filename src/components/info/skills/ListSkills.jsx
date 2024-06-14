@@ -45,7 +45,7 @@ const ListSkills = async () => {
                 confirmButtonColor: app_color_primary,
               });
               const parent_container = document.getElementById(
-                "skill" + skill_name
+                "skill_" + skill_id
               );
               parent_container.classList.add("hidden");
             } else {
@@ -58,12 +58,12 @@ const ListSkills = async () => {
           })
           .catch((error) => {
             if (error) {
+              console.log("Error: ",error)
               Swal.fire({
                 title: "Error",
-                icon: "error",
-                text: "An error occured. Please try again 2",
+                icon: "warning",
+                text: "An error occured. Please try again",
               });
-              console.log(error);
             }
           });
       }
@@ -81,7 +81,7 @@ const ListSkills = async () => {
       <div className="grid grid-cols-1 gap-2">
         {skills.map((skill, index) => (
           <div
-            id={"skill" + skill.skill_name}
+            id={"skill_" + skill.id}
             className={`flex flex-wrap items-center gap p-2 ${
               index % 2 === 0 ? "bg-white" : "bg-gray-200"
             }`}
