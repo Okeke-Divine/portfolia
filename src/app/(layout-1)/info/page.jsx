@@ -1,3 +1,4 @@
+import prisma from "@/app/db";
 import BasicInfoForm from "@/components/info/BasicInfoForm";
 import SignUpFormSkeleton from "@/components/skeleton/SignUpFormSkeleton";
 import { getUserId } from "@/utils/session";
@@ -11,11 +12,18 @@ const InfoSkills = async () => {
   const userId = await getUserId();
   if (userId == null) return <></>;
 
+
+  const userDetails = await prisma.userDetails.findUnique({
+    where: {
+      userId
+    }
+  });
+
   return (
     <>
       <div>
         <Suspense fallback={<SignUpFormSkeleton />}>
-          <BasicInfoForm />
+          <BasicInfoForm userDetails={userDetails} />
         </Suspense>
       </div>
     </>

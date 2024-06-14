@@ -2,19 +2,19 @@
 import { useRef, useState } from "react";
 import axios from "axios";
 
-const BasicInfoForm = (props) => {
+const BasicInfoForm = ({userDetails}) => {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  //refs 
+  //refs
   const fullnameRef = useRef(null);
   const heroTitleRef = useRef(null);
   const professionalTitleRef = useRef(null);
   const bioRef = useRef(null);
   const aboutRef = useRef(null);
 
-  function updateDetails(e){
+  function updateDetails(e) {
     e.preventDefault();
-}
+  }
 
   return (
     <>
