@@ -10,7 +10,7 @@ const ListSkills = async () => {
     Swal.fire({
       title: "Warning",
       icon: "warning",
-      text: "Are you sure you want to remove this skill? NOTE: This cannot be reversed."
+      text: "Are you sure you want to remove this skill? NOTE: This cannot be reversed.",
     })
   }
 
@@ -25,14 +25,14 @@ const ListSkills = async () => {
       <div className="grid grid-cols-1 gap-2">
         {skills.map((skill, index) => (
           <div
-            className={`flex flex-wrap gap p-2 ${
+            className={`flex flex-wrap items-center gap p-2 ${
               index % 2 === 0 ? "bg-white" : "bg-gray-200"
             }`}
             key={index}
           >
             <div className="grow font-semibold">{skill.skill_name}</div>
             <div>
-              <button className="button" onclick={() => deleteSkill(skill.skill_name)}>
+              <button className="btn btn-sm" onclick={() => deleteSkill(skill.skill_name)}>
                 <i className="fi fi-rr-trash flaticon-offset"></i>
               </button>
             </div>
