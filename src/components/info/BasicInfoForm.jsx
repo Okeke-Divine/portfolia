@@ -2,7 +2,10 @@
 import { useRef, useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
-import { SweetAlertError } from "@/utils/customSweetAlertFunction";
+import {
+  SweetAlertError,
+  SweetAlertSuccess,
+} from "@/utils/customSweetAlertFunction";
 
 const BasicInfoForm = ({ userDetails }) => {
   const [loading, setLoading] = useState(false);
@@ -81,6 +84,9 @@ const BasicInfoForm = ({ userDetails }) => {
       })
       .then((response) => {
         if (response) {
+          if (response.status == 200) {
+            SweetAlertSuccess("Your info has been updated successfully.");
+          }
           setLoading(false);
         }
       })
