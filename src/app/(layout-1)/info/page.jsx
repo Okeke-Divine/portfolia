@@ -1,9 +1,24 @@
+import BasicInfoForm from "@/components/info/BasicInfoForm";
+import { getUserId } from "@/utils/session";
+import { Suspense } from "react";
+
 export const metadata = {
-  title: "Your Info",
+  title: "Basic Info | Info",
 };
 
-const InfoPage = () => {
-  return <div>InfoPage</div>;
+const InfoSkills = async () => {
+  const userId = await getUserId();
+  if (userId == null) return <></>;
+
+  return (
+    <>
+      <div>
+        <Suspense fallback={<>...</>}>
+          <BasicInfoForm />
+        </Suspense>
+      </div>
+    </>
+  );
 };
 
-export default InfoPage;
+export default InfoSkills;
