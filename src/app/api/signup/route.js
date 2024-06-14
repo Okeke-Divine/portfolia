@@ -50,7 +50,7 @@ export const POST = async (req) => {
             select: { username: true, email: true, fullname: true }
         })
         if (user) {
-            return resourceCreated(user);
+            return resourceCreated({});
         } else {
             return badRequest("An error occured while trying to create the user. Please try again.");
         }
