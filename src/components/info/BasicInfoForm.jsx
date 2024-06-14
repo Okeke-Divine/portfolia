@@ -25,10 +25,10 @@ const BasicInfoForm = ({userDetails}) => {
 
     if(!fullname || !heroTitle || !professionalTitle || !bio || !about){
         SweetAlertError("All fields are required!");
+        setLoading(false);
         return;
     }
 
-    SweetAlertError("lol");
     console.log(fullname,heroTitle,professionalTitle,bio,about);
 
   }
@@ -124,6 +124,7 @@ const BasicInfoForm = ({userDetails}) => {
           <textarea
             name="about"
             rows={5}
+            required
             ref={aboutRef}
             placeholder="A more detailed summary of yourself and what you do."
             className="textarea input-bordered w-full"
