@@ -8,7 +8,7 @@ import { app_color_primary } from "@/constants/shared/color";
 const ListSkills = async () => {
   const [skills, setSkills] = useState([]);
 
-  function deleteSkill(skill_name) {
+  function deleteSkill(skill_id) {
     Swal.fire({
       title: "Warning",
       icon: "warning",
@@ -29,7 +29,7 @@ const ListSkills = async () => {
         axios
           .post(
             "/api/skill/delete",
-            { skill_name },
+            { skill_id },
             {
               headers: {
                 "Content-Type": "application/json",
@@ -88,7 +88,7 @@ const ListSkills = async () => {
             <div>
               <button
                 className="btn btn-sm"
-                onClick={() => deleteSkill(skill.skill_name)}
+                onClick={() => deleteSkill(skill.id)}
               >
                 <i className="fi fi-rr-trash flaticon-offset"></i>
               </button>
