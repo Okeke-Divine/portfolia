@@ -6,16 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { twitterAccUrl, buyMeACoffeUrl } from "@/constants/shared/constant";
 import { app_color_primary } from "@/constants/shared/color";
-
-function ComingSoonComponent() {
-  return (
-    <>
-      <span className="badge app-bg-primary text-white border-none badge-sm">
-        <div className="loading loading-dots loading-xs"></div>
-      </span>
-    </>
-  );
-}
+import ComingSoonComponent from "./ComingSoonComponent";
 
 function confirmSignOut() {
   Swal.fire({
