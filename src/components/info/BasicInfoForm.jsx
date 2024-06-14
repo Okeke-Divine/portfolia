@@ -86,7 +86,7 @@ const BasicInfoForm = ({ userDetails }) => {
                 Full Name
               </label>
             </div>
-            <div className="input input-bordered flex items-center gap-x-2 mt-1 bg-red-200">
+            <div className="input input-bordered flex items-center gap-x-2 mt-1">
               <i className="fi fi-ts-circle-user flaticon-offset w-fit"></i>
               <input
                 type="text"
