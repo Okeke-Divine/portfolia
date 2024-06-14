@@ -113,7 +113,7 @@ const BasicInfoForm = ({ userDetails }) => {
                 name="heroTitle"
                 ref={heroTitleRef}
                 defaultValue={userDetails?.heroTitle}
-                placeholder="Hey there, i'm John"
+                placeholder="Hey, i'm John"
                 required
                 className="w-full"
               />
