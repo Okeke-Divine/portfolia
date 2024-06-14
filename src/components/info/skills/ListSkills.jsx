@@ -37,7 +37,7 @@ const ListSkills = async () => {
             }
           )
           .then((response) => {
-            if (response.status == 204) {
+            if (response.status == 200) {
               Swal.fire({
                 title: "Success",
                 icon: "success",
@@ -60,7 +60,7 @@ const ListSkills = async () => {
             Swal.fire({
               title: "Error",
               icon: "error",
-              text: "An error occured while trying to add your skill. Please try again",
+              text: "An error occured. Please try again",
             });
           });
       }
