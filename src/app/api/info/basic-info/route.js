@@ -8,6 +8,8 @@ export const POST = async (req) => {
         const userId = await getUserId();
 
         const { fullname, heroTitle, profession, bio, about } = data;
+
+        //validation
         if (!fullname || !heroTitle || !profession || !bio || !about || fullname.length < 3 || heroTitle.length < 5 || profession.length < 3 || bio.length < 3 || bio.length > 25 || about.length < 10) {
             return badRequest("");
         }
