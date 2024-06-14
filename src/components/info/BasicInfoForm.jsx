@@ -14,6 +14,17 @@ const BasicInfoForm = ({userDetails}) => {
 
   function updateDetails(e) {
     e.preventDefault();
+    setLoading(true);
+    setError("");
+
+    const fullname = fullnameRef.current.value;
+    const heroTitle = heroTitleRef.current.value;
+    const professionalTitle = professionalTitleRef.current.value;
+    const bio = bioRef.current.value;
+    const about = aboutRef.current.value;
+
+    console.log(fullname,heroTitle,professionalTitle,bio,about);
+
   }
 
   return (
