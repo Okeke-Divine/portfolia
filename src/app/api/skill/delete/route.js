@@ -3,27 +3,27 @@ import { badRequest, internalServerError, resourceDeleted } from "@/utils/prebui
 import { getUserId } from "@/utils/session";
 
 export const POST = async (req) => {
-    try{
+    try {
         const data = await req.json();
         const skill_name = data.skill_name;
         const userId = await getUserId();
 
-        if(!skill_name){
+        if (!skill_name) {
             return badRequest("invalid request");
         }
 
-        const delete_skill = await prisma.userSkills.delete_skill({
+        const delete_skill = await prisma.userSkills.delete({
             where: {
                 skill_name,
                 userId
             }
         })
-        if(delete_skill){
+        if (delete_skill) {
             return resourceDeleted()
         }
         return internalServerError("Unkown error on aprx line 22")
 
-    }catch(e){
+    } catch (e) {
         return internalServerError(e);
     }
 }
