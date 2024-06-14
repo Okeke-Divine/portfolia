@@ -27,8 +27,35 @@ const ListSkills = async () => {
           allowOutsideClick: false,
         });
         axios
-          .post()
-          .then()
+          .post(
+            "/api/skill/delete",
+            { skill_name },
+            {
+              headers: {
+                "Content-Type": "application/json",
+              },
+            }
+          )
+          .then((response) => {
+            if (response.status == 204) {
+              Swal.fire({
+                title: "Success",
+                icon: "success",
+                text: "Delete success full",
+                confirmButtonColor: app_color_primary,
+              });
+              const parent_container = document.getElementById(
+                "skill" + skill_name
+              );
+              parent_container.classList.add("hidden");
+            } else {
+              Swal.fire({
+                title: "Error",
+                icon: "error",
+                text: "An error occured while trying to add your skill. Please try again",
+              });
+            }
+          })
           .catch(() => {
             Swal.fire({
               title: "Error",
@@ -36,18 +63,6 @@ const ListSkills = async () => {
               text: "An error occured while trying to add your skill. Please try again",
             });
           });
-        setTimeout(function () {
-          Swal.fire({
-            title: "Success",
-            icon: "success",
-            text: "Delete success full",
-            confirmButtonColor: app_color_primary,
-          });
-          const parent_container = document.getElementById(
-            "skill" + skill_name
-          );
-          parent_container.classList.add("hidden");
-        }, 20);
       }
     });
   }
