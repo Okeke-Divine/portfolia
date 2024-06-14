@@ -22,6 +22,7 @@ export default function InfoSideNav() {
       {links.map((link, index) => (
         <Link
           key={index}
+          disabled={!link.shipped}
           href={link.shipped ? link.url : "#"}
           className={`btn join-item font-semibold hover:app-bg-primary-dark hover:text-white duration-300 ${
             pathname == link.url ? "app-bg-primary text-white" : "text-black"
