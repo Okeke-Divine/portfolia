@@ -92,6 +92,7 @@ const BasicInfoForm = ({ userDetails }) => {
                 type="text"
                 name="name"
                 ref={fullnameRef}
+                defaultValue={userDetails?.fullname}
                 required
                 className="w-full"
                 placeholder="John Doe"
