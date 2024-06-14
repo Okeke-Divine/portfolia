@@ -17,7 +17,8 @@ const InfoSkills = async () => {
     where: {
       userId
     }
-  });
+  }) || {};
+  console.log(userDetails);
 
   return (
     <>

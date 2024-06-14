@@ -33,6 +33,7 @@ const BasicInfoForm = ({userDetails}) => {
               <input
                 type="text"
                 name="name"
+                ref={fullnameRef}
                 required
                 className="grow"
                 placeholder="Enter Your Full Name"
@@ -42,7 +43,7 @@ const BasicInfoForm = ({userDetails}) => {
           {/* name */}
           <div className="mb-3">
             <div>
-              <label htmlFor="beroTitle" className="font-bold text-md">
+              <label htmlFor="heroTitle" className="font-bold text-md">
                 Hero Title
               </label>
             </div>
@@ -50,7 +51,8 @@ const BasicInfoForm = ({userDetails}) => {
               <i className="fi fi-ts-circle-user flaticon-offset"></i>
               <input
                 type="text"
-                name="beroTitle"
+                name="heroTitle"
+                ref={heroTitleRef}
                 placeholder="Hey there, i'm John"
                 required
                 className="grow"
@@ -68,6 +70,7 @@ const BasicInfoForm = ({userDetails}) => {
               <i className="fi fi-ts-circle-user flaticon-offset"></i>
               <input
                 type="text"
+                ref={professionalTitleRef}
                 name="professionalTitle"
                 required
                 className="grow"
@@ -87,6 +90,7 @@ const BasicInfoForm = ({userDetails}) => {
               <input
                 type="text"
                 name="bio"
+                ref={bioRef}
                 required
                 className="grow"
                 placeholder="A one line summary of yourself."
@@ -104,6 +108,7 @@ const BasicInfoForm = ({userDetails}) => {
           <textarea
             name="about"
             rows={5}
+            ref={aboutRef}
             placeholder="A more detailed summary of yourself and what you do."
             className="textarea input-bordered w-full"
           ></textarea>
