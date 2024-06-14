@@ -6,7 +6,6 @@ const PortfolioAbout = async ({ user }) => {
   const skills = await prisma.userSkills.findMany({
     where: { userId },
   });
-  
 
   return (
     <>
@@ -18,15 +17,15 @@ const PortfolioAbout = async ({ user }) => {
           <div>
             <h1 className="max-w-[80%] md:max-w-[600px] text-4xl">
               {/* Hey, I'm John - Full Stack Web Developer. */}
-              {user?.userDetails?.fullname ? user?.userDetails?.fullname+ " - " : ""}
+              {user?.userDetails?.fullname
+                ? user?.userDetails?.fullname + " - "
+                : ""}
               {user?.userDetails?.profession}
             </h1>
           </div>
           {/* about */}
           <div className="mt-2 app-text-light-2 app-portfolio-about-container">
-            <p>
-              {user?.userDetails?.about}
-            </p>
+            <p>{user?.userDetails?.about}</p>
           </div>
           {/* divider */}
           <div className="divider"></div>
@@ -38,9 +37,9 @@ const PortfolioAbout = async ({ user }) => {
               </div>
             </div>
             <div className="grow">
-              <div className="font-bold">John Doe</div>
+              <div className="font-bold">{user?.userDetails?.fullname}</div>
               <div className="app-text-light-2">
-                Full Stack Web Developer @ Figma
+                {user?.userDetails?.profession}
               </div>
             </div>
           </div>
