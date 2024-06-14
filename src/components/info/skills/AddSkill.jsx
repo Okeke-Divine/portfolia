@@ -2,12 +2,13 @@
 import { useRef, useState } from "react";
 import Swal from "sweetalert2";
 import axios from "axios";
-import { useRouter } from "next/navigation";
 
 const AddSkill = () => {
   const [laading, setLoading] = useState(false);
   const skillRef = useRef(null);
-  const router = useRouter()
+
+  //broad cast channel
+  const channel = new BroadcastChannel("my-channel")
 
   function _addSkill(e) {
     e.preventDefault();
@@ -46,7 +47,13 @@ const AddSkill = () => {
             icon: "success",
             text: "Your skill has been added",
           });
-          router.refresh();
+
+          // send the new skill data to the list skill component
+          const broadcast_message = {
+            type: "NEW_SKILL",
+            data: response.data.data
+          }
+          channel.postMessage(broadcast_message);
         }
       })
       .catch((error) => {
