@@ -31,7 +31,7 @@ export const POST = async (req) => {
             }
         })
         if(new_skill){
-            return resourceCreated({})
+            return resourceCreated(new_skill)
         }
         return internalServerError("Unkown error on aprx line 22")
 

@@ -58,7 +58,6 @@ const ListSkills = async () => {
           })
           .catch((error) => {
             if (error) {
-              console.log("Error: ",error)
               Swal.fire({
                 title: "Error",
                 icon: "warning",
