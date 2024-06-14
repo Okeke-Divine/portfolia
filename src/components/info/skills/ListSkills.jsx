@@ -35,7 +35,9 @@ const ListSkills = async () => {
           });
           const parent_container =document.getElementById("skill"+skill_name);
           console.log(parent_container);
-        }, 2000);
+          parent_container.classList.add("hidden");
+          console.log(document.getElementById("skill"+skill_name););
+        }, 20);
       }
     });
   }
