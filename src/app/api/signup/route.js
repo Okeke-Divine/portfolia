@@ -12,7 +12,7 @@ export const POST = async (req) => {
         const username = data.username;
         const password = data.password;
 
-        if(!fullname || !email || !username ||!password){
+        if (!fullname || !email || !username || !password) {
             return badRequest("All fields are required");
         }
 
@@ -24,8 +24,8 @@ export const POST = async (req) => {
                 username
             }
         });
-        if(usernameExists > 0){
-            return  conflict("This user name has been taken.");
+        if (usernameExists > 0) {
+            return conflict("This user name has been taken.");
         }
         // check if email exists
         const emailExists = await prisma.user.count({
@@ -33,23 +33,29 @@ export const POST = async (req) => {
                 email
             }
         });
-        if(emailExists > 0){
-            return  conflict("Email already exists.");
+        if (emailExists > 0) {
+            return conflict("Email already exists.");
         }
 
         const user = await prisma.user.create({
             data: {
-                fullname, email, username, password: hashedPassword
+                fullname, email, username, password: hashedPassword,
+                userDetails: {
+                    create: {
+                        fullname,
+                        heroTitle: "Hey, I'm "+fullname
+                    }
+                }
             },
             select: { username: true, email: true, fullname: true }
         })
-        if (user){
+        if (user) {
             return resourceCreated(user);
-        }else{
+        } else {
             return badRequest("An error occured while trying to create the user. Please try again.");
         }
 
-            return NextResponse.json({})
+        return NextResponse.json({})
     } catch (e) {
         return internalServerError(e)
     }
