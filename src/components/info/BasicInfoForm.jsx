@@ -24,7 +24,7 @@ const BasicInfoForm = ({userDetails}) => {
     const about = aboutRef.current.value;
 
     if(!fullname || !heroTitle || !professionalTitle || !bio || !about){
-        SweetAlertError("lol");
+        SweetAlertError("All fields are required!");
         return;
     }
 
