@@ -33,7 +33,7 @@ const ListSkills = async () => {
             text: "Delete success full",
             confirmButtonColor: app_color_primary,
           });
-        }, 200);
+        }, 2000);
       }
     });
   }
