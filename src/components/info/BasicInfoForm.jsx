@@ -53,6 +53,12 @@ const BasicInfoForm = ({userDetails}) => {
         return;
     }
 
+    if(bio.length < 25){
+        SweetAlertError("Bio cannot be greater than 25 characters");
+        setLoading(false);
+        return;
+    }
+
     if(about.length < 10){
         SweetAlertError("About cannot be less than 10 characters");
         setLoading(false);
@@ -60,7 +66,7 @@ const BasicInfoForm = ({userDetails}) => {
     }
 
     console.log(fullname,heroTitle,professionalTitle,bio,about);
-
+    setLoading(false);
   }
 
   return (
@@ -109,7 +115,7 @@ const BasicInfoForm = ({userDetails}) => {
           <div className="mb-3">
             <div>
               <label htmlFor="professionalTitle" className="font-bold text-md">
-                Professional Title
+                Profession
               </label>
             </div>
             <div className="input input-bordered flex items-center gap-2 mt-1">
@@ -139,7 +145,7 @@ const BasicInfoForm = ({userDetails}) => {
                 ref={bioRef}
                 required
                 className="grow"
-                placeholder="A one line summary of yourself."
+                placeholder="A one/two line summary of yourself."
               />
             </div>
           </div>

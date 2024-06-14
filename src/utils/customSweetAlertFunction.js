@@ -1,9 +1,11 @@
+import { app_color_primary } from "@/constants/shared/color";
 import Swal from "sweetalert2";
 
 export function SweetAlertError(text){
     return Swal.fire({
         title: "Error",
         icon: "error",
-        text
+        text,
+        confirmButtonColor: app_color_primary
     })
 }
