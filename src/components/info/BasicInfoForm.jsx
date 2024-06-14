@@ -10,7 +10,7 @@ const BasicInfoForm = (props) => {
     <>
       <form className="form-contro">
         <p className="my-2 text-red-500 font-semibold">{error}</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap 2">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
           {/* name */}
           <div className="mb-3">
             <div>
@@ -22,6 +22,7 @@ const BasicInfoForm = (props) => {
               <i className="fi fi-ts-circle-user flaticon-offset"></i>
               <input
                 type="text"
+                name="name"
                 required
                 className="grow"
                 placeholder="Enter Your Full Name"
@@ -65,17 +66,18 @@ const BasicInfoForm = (props) => {
           {/* name */}
           <div className="mb-3">
             <div>
-              <label htmlFor="name" className="font-bold text-md">
-                Full Name
+              <label htmlFor="bio" className="font-bold text-md">
+                Bio
               </label>
             </div>
             <div className="input input-bordered flex items-center gap-2 mt-1">
               <i className="fi fi-ts-circle-user flaticon-offset"></i>
               <input
                 type="text"
+                name="bio"
                 required
                 className="grow"
-                placeholder="Enter Your Full Name"
+                placeholder="A one line summary of yourself."
               />
             </div>
           </div>
