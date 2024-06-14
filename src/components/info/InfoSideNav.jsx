@@ -3,9 +3,14 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const links = [
-  { name: "Basic Info", url: "/info" },
-  { name: "Skills", url: "/info/skills" },
-  { name: "Projects", url: "/info/projects" },
+  { name: "Basic Info", url: "/info",shipped:true },
+  { name: "Skills", url: "/info/skills",shipped:true },
+  { name: "Projects", url: "/info/projects",shipped:true },
+  { name: "Experience", url: "/info/experience",shipped:false },
+  { name: "Education", url: "/info/education",shipped:false },
+  { name: "Language", url: "/info/language",shipped:false },
+  { name: "Certificates", url: "/info/certificates",shipped:false },
+  { name: "Awards", url: "/info/awards",shipped:false },
 ];
 
 export default function InfoSideNav() {
