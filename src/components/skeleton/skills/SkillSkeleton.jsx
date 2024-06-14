@@ -1,7 +1,7 @@
 const SkillSkeleton = () => {
   return (
     <>
-    {[1,1,1,1,1,1,1,1,1,1].map((item,index) => (
+    {[1,1,1,1,1,1,1].map((item,index) => (
         <>
         <div key={index} className="skeleton w-full h-10 rounded-md mb-1"></div>
         </>
