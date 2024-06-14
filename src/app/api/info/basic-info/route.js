@@ -14,9 +14,18 @@ export const POST = async (req) => {
             return badRequest("");
         }
 
-        const updated_details = await prisma.userDetails.update({
-            data: {
-                fullname, heroTitle, profession, bio, about
+        const newData = {
+            fullname, heroTitle, profession, bio, about
+        }
+
+        const updated_details = await prisma.userDetails.upsert({
+            where: {
+                userId
+            },
+            update: newData,
+            create: {
+                userId,
+                ...newData
             }
         })
 
