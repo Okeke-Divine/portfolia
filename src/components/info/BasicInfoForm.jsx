@@ -56,8 +56,8 @@ const BasicInfoForm = ({ userDetails }) => {
       return;
     }
 
-    if (bio.length > 50) {
-      SweetAlertError("Bio cannot be greater than 50 characters");
+    if (bio.length > 250) {
+      SweetAlertError("Bio cannot be greater than 250 characters");
       setLoading(false);
       return;
     }
