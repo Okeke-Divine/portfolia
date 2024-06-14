@@ -90,7 +90,8 @@ const BasicInfoForm = (props) => {
           <textarea
             name="about"
             rows={5}
-            className="textaread input-bordered w-full"
+            placeholder="A more detailed summary of yourself and what you do."
+            className="textarea input-bordered w-full"
           ></textarea>
         </div>
 
