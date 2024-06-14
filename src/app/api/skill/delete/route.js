@@ -19,7 +19,6 @@ export const POST = async (req) => {
             }
         })
         if (delete_skill) {
-            console.log("skills deleted")
             return resourceDeleted()
         }
         return internalServerError("Unkown error on aprx line 22")

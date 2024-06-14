@@ -19,7 +19,6 @@ export const POST = async (req) => {
                 skill_name
             }
         })
-        console.log(skillExists);
         if(skillExists > 0){
             return conflict("Skill already exist")
         }

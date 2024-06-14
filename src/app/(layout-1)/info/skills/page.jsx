@@ -1,9 +1,11 @@
-import AddSkill from "@/components/info/skills/AddSkill"
-import ListSkills from "@/components/info/skills/ListSkills"
+import AddSkill from "@/components/info/skills/AddSkill";
+import ListSkills from "@/components/info/skills/ListSkills";
+import SkillSkeleton from "@/components/skeleton/skills/SkillSkeleton";
+import { Suspense } from "react";
 
 export const metadata = {
-    title: "Skills | Info"
-}
+  title: "Skills | Info",
+};
 
 const InfoSkills = () => {
   return (
@@ -11,10 +13,12 @@ const InfoSkills = () => {
       <div>
         <AddSkill />
         <div className="divider"></div>
-        <ListSkills />
+        <Suspense fallback={<SkillSkeleton />}>
+          <ListSkills />
+        </Suspense>
       </div>
     </>
-    )
-}
+  );
+};
 
-export default InfoSkills
+export default InfoSkills;
