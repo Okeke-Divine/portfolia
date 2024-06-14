@@ -26,6 +26,16 @@ const ListSkills = async () => {
           showConfirmButton: false,
           allowOutsideClick: false,
         });
+        axios
+          .post()
+          .then()
+          .catch(() => {
+            Swal.fire({
+              title: "Error",
+              icon: "error",
+              text: "An error occured while trying to add your skill. Please try again",
+            });
+          });
         setTimeout(function () {
           Swal.fire({
             title: "Success",
@@ -33,7 +43,9 @@ const ListSkills = async () => {
             text: "Delete success full",
             confirmButtonColor: app_color_primary,
           });
-          const parent_container =document.getElementById("skill"+skill_name);
+          const parent_container = document.getElementById(
+            "skill" + skill_name
+          );
           parent_container.classList.add("hidden");
         }, 20);
       }
