@@ -1,8 +1,11 @@
+import prisma from "@/app/db";
 import { getIconClass } from "@/utils/main";
+import { getUserId } from "@/utils/session";
 import Link from "next/link";
 
-const PortfolioSocialLink = () => {
-  const social_link = [
+const PortfolioSocialLink = async () => {
+  const userId = await getUserId();
+  const social_links = [
     { name: "instagram", url: "https://google.com" },
     { name: "twitter", url: "https://google.com" },
     // { name: "facebook", url: "https://google.com" },
@@ -12,6 +15,18 @@ const PortfolioSocialLink = () => {
     { name: "email", url: "https://google.com" },
     // { name: "phone_number", url: "https://google.com" },
   ];
+
+  const social_link =
+    (await prisma.userSocialInfo.findMany({
+      where: {
+        userId,
+      },
+      select: {
+        id: true,
+        name: true,
+        value: true,
+      },
+    })) || [];
 
   return (
     <>
