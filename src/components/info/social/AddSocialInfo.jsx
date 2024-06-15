@@ -36,7 +36,7 @@ const AddSocialInfo = () => {
             <div className="w-full md:w-fit join-item">
               <select
                 className="select input-bordered"
-                onChange={(e) => alert(e.target.value)}
+                onSelect={(e) => alert(e.target.value)}
               >
                 {socials.map((social, index) => (
                   <>
@@ -51,7 +51,13 @@ const AddSocialInfo = () => {
               <input
                 type="text"
                 className="input input-bordered w-full"
-                placeholder=""
+                placeholder={
+                  selected == "email"
+                    ? "Your Email"
+                    : selected == "phone_number"
+                    ? "Phone Number"
+                    : _ucfirst(selected) + " Url"
+                }
               />
             </div>
           </div>
