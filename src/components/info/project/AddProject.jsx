@@ -48,6 +48,11 @@ const AddProject = () => {
       .then((response) => {
         if (response) {
           setLoading(false);
+          projectTitleRef.current.value = "";
+          projectTagsRef.current.value = "";
+          projectUrlRef.current.value = "";
+          projectDescRef.current.value = "";
+          projectImageRef.current.files[0] = "";
         }
       })
       .catch((error) => {
@@ -60,7 +65,6 @@ const AddProject = () => {
           setLoading(false);
         }
       });
-
   }
 
   return (
