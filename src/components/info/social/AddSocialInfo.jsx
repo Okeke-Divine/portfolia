@@ -55,7 +55,7 @@ const AddSocialInfo = () => {
         { socialType, socialValue },
         { headers: { "Content-Type": "application/json" } }
       )
-      .then((resonse) => {
+      .then((response) => {
         if (response) {
           setLoading(false);
           if (response?.status == 201) {
