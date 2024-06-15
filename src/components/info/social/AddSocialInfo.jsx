@@ -24,10 +24,10 @@ const AddSocialInfo = () => {
   function AddSocialInfo(e) {
     e.preventDefault();
 
-    const socialType = socialTypeRef.current.value;
-    const socialValue = socialValueRef.current.value;
+    // const socialType = socialTypeRef.current.value;
+    // const socialValue = socialValueRef.current.value;
 
-    console.log(socialType, socialValue);
+    // console.log(socialType, socialValue);
   }
 
   return (
@@ -42,9 +42,9 @@ const AddSocialInfo = () => {
                 ref={socialTypeRef}
               >
                 {socials.map((social, index) => (
-                  <>
-                    <option value={social.type}>{_ucfirst(social.name)}</option>
-                  </>
+                  <option key={index} value={social.type}>
+                    {_ucfirst(social.name)}
+                  </option>
                 ))}
               </select>
             </div>
