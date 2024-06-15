@@ -117,7 +117,9 @@ const ViewSocialInfo = () => {
             <div className="w-fit">
               <i className={`${getIconClass(social.name)} flaticon-offset`}></i>
             </div>
-            <div className="grow">{social.value}</div>
+            <div className="w-full break-words whitespace-normal overflow-hidden">
+              <input disabled={true} defaultValue={social.value+social.value+social.value+social.value} className="input input-bordered" />
+            </div>
             <div className="w-fit flex gap-2">
               <button className="btn btn-sm">
                 <i className="fi fi-tr-pen-circle flaticon-offset"></i>
