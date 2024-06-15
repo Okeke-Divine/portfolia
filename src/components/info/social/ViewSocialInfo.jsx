@@ -118,9 +118,7 @@ const ViewSocialInfo = () => {
             <div className="w-full">
               <input
                 readOnly={true}
-                defaultValue={
-                  social.value + social.value + social.value + social.value
-                }
+                defaultValue={social.value}
                 className="input input-ghost w-full"
               />
             </div>
