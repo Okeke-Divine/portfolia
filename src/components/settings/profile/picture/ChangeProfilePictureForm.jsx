@@ -3,7 +3,9 @@
 const ChangeProfilePictureForm = () => {
   return (
     <>
-      <form>.</form>
+      <form>
+        <input type="text" accept="image/*" className="file-input" />
+      </form>
     </>
   );
 };
