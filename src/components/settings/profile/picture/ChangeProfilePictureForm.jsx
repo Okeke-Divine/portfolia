@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 import Swal from "sweetalert2";
 
 const ChangeProfilePictureForm = () => {
-  const [loading, setLoading] = useStae(true);
+  const [loading, setLoading] = useState(true);
   const profilePictureRef = useRef(null);
 
   return (
