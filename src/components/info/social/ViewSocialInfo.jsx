@@ -5,7 +5,7 @@ const ViewSocialInfo = async () => {
   const userId = await getUserId();
 
   const userExpertise =
-    (await prisma.userExpertise.findFirst({
+    (await prisma.userSocialInfo.findFirst({
       where: {
         userId,
       },

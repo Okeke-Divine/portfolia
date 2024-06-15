@@ -13,15 +13,17 @@ export const POST = async (req) => {
 
         const userId = await getUserId();
 
-        // check if social type already exists
-        const socialType_exists = await prisma.userSocialInfo.count({
-            where: {
-                userId
-            }
-        })
+        if (!socialType != "other") {
+            // check if social type already exists
+            const socialType_exists = await prisma.userSocialInfo.count({
+                where: {
+                    userId
+                }
+            })
 
-        if (socialType_exists > 0) {
-            return conflict("Social type already exits");
+            if (socialType_exists > 0) {
+                return conflict("Social type already exits");
+            }
         }
 
         // insert into the data base if social type doesn't exists
