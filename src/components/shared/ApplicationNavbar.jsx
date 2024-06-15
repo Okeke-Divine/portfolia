@@ -1,6 +1,9 @@
 import { defaultImgUrl } from "@/constants/shared/constant";
 import config from "@/data/config.json";
 import Link from "next/link";
+import UserProfilePictureComponent from "./UserProfilePictureComponent";
+
+
 
 export default function ApplicationNavbar() {
   return (
@@ -14,7 +17,7 @@ export default function ApplicationNavbar() {
           <Link href="/settings/profile/picture/change">
             <div className="avatar cursor-pointer">
               <div className="w-10 rounded-full ring ring-green-300">
-                <img src={defaultImgUrl} alt="User Profile Picture" />
+                <UserProfilePictureComponent />
               </div>
             </div>
           </Link>

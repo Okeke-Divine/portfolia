@@ -1,3 +1,5 @@
+import { defaultImgUrl } from "@/constants/shared/constant";
+
 export function getIconClass(name) {
   switch (name) {
     case "facebook":
@@ -31,4 +33,23 @@ export function _ucfirst(str) {
 export function validatePhoneNumber(phoneNumber) {
   const phoneRegex = /^\+?\d{1,14}$/;
   return phoneRegex.test(phoneNumber);
+}
+
+export function getCurrentUserProfilePicture() {
+  // Check if localStorage is available
+  if (typeof localStorage !== 'undefined') {
+      // Get the user profile picture URL from localStorage
+      let userImgUrl = localStorage.getItem('user_imgUrl');
+      
+      // If the URL does not exist, set it to an empty string
+      if (userImgUrl === null) {
+          userImgUrl = defaultImgUrl;
+          localStorage.setItem('user_imgUrl', userImgUrl);
+      }
+      
+      return userImgUrl;
+  } else {
+      // If localStorage is not available, return an empty string
+      return defaultImgUrl;
+  }
 }
