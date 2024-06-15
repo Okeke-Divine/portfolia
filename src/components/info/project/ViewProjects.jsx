@@ -15,6 +15,10 @@ const ViewProjects = () => {
     });
   }, []);
 
+  function deleteProject(project_id) {
+    alert(project_id);
+  }
+
   return (
     <>
       <div className="overflow-x-auto w-full">
@@ -51,6 +55,14 @@ const ViewProjects = () => {
                     )}
                     <div>{project.title}</div>
                   </div>
+                </td>
+                <td>
+                  <button
+                    className="btn btn-sm"
+                    onClick={() => deleteProject(project.id)}
+                  >
+                    <i className="fi fi-rr-trash flaticon-offset"></i>
+                  </button>
                 </td>
               </tr>
             ))}
