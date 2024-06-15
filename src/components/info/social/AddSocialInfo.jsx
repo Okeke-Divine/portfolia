@@ -32,8 +32,10 @@ const AddSocialInfo = () => {
     <>
       <form className="form-control" onSubmit={AddSocialInfo}>
         <p>
-          NOTE: You can not have more than one entry for each social info type.
+          <b>NOTE:</b> You can not have more than one entry for each social
+          info type.
         </p>
+        <br />
         <div className="">
           <div className="block md:flex join mb-2 gap-2">
             <div className="w-full md:w-fit join-item">
