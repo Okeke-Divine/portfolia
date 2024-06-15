@@ -1,4 +1,5 @@
 "use client";
+import { SweetAlertError } from "@/utils/customSweetAlertFunction";
 import { useRef, useState } from "react";
 import Swal from "sweetalert2";
 
@@ -10,6 +11,10 @@ const ChangeProfilePictureForm = () => {
     e.preventDefault();
 
     const picture = profilePictureRef.current.files[0];
+
+    if(!picture){
+        SweetAlertError("Picture is required.")
+    }
   }
 
   return (
@@ -18,7 +23,9 @@ const ChangeProfilePictureForm = () => {
         <div className="mb-2">
           <label className="font-bold text-md">Select a picture</label>
         </div>
-        <input type="file" accept="image/*" className="file-input w-full" required />
+        <input type="file" accept="image/*" className="file-input w-full" 
+        // required
+         />
         {/* submit button */}
         <div className="mt-2">
           <button
