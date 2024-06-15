@@ -23,8 +23,8 @@ export const POST = async (req) => {
             }
 
             // check if it's less than 500kb
-            const projectImage = 3 * 1024 * 1024; //3mb in bytes
-            if (picture.size > maxSize) {
+            const maxSize = 3 * 1024 * 1024; //3mb in bytes
+            if (projectImage.size > maxSize) {
                 return badRequest("Image must be less than 3 mb");
             }
         } else {
