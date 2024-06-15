@@ -29,8 +29,8 @@ export function resourceDeleted() {
     return NextResponse.json({ message: "success", data: {} }, { status: 200 })
 }
 
-export function resourceLoaded() {
-    return NextResponse.json({ message: "success", data: skills }, { status: 200 })
+export function resourceLoaded(data) {
+    return NextResponse.json({ message: "success", data: data }, { status: 200 })
 }
 
 export function unAuthorized() {

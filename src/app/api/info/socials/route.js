@@ -1,5 +1,5 @@
 import prisma from "@/app/db";
-import { badRequest, conflict, internalServerError, resourceCreated } from "@/utils/prebuiltApiResponse"
+import { badRequest, conflict, internalServerError, resourceCreated, resourceLoaded } from "@/utils/prebuiltApiResponse"
 import { getUserId } from "@/utils/session";
 
 export const GET = async () => {
@@ -10,7 +10,7 @@ export const GET = async () => {
                 userId,
             },
         }) || [];
-        return
+        return resourceLoaded(socials)
     } catch (e) {
         return internalServerError("")
     }
