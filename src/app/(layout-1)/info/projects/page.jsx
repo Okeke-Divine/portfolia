@@ -1,11 +1,18 @@
+import ViewProjects from "@/app/api/info/project/ViewProjects";
+import AddProject from "../../../api/info/project/AddProject";
+
 export const metadata = {
-    title: "My Projects | Info"
-}
+  title: "My Projects | Info",
+};
 
 const InfoProjects = () => {
   return (
-    <div>InfoProjects</div>
-  )
-}
+    <>
+      <AddProject />
+      <div className="divider"></div>
+      <ViewProjects />
+    </>
+  );
+};
 
-export default InfoProjects
+export default InfoProjects;
