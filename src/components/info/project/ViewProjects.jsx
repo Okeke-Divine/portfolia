@@ -13,7 +13,9 @@ const ViewProjects = () => {
 
   return (
     <>
-      <div>lol</div>
+      <table>
+        
+      </table>
     </>
   );
 };
