@@ -2,7 +2,7 @@ import { defaultImgUrl } from "@/constants/shared/constant";
 import Link from "next/link";
 import PortfolioSocialLink from "./PortfolioSocialLink";
 
-const PortfolioNavbar = ({userId}) => {
+const PortfolioNavbar = ({ userId }) => {
   return (
     <>
       <div className="navbar px-5 md:px-10 py-5 md:py-5 bg-base-200">
@@ -14,7 +14,7 @@ const PortfolioNavbar = ({userId}) => {
           </div>
         </div>
         <div className="hidden md:block navbar-center">
-          <div className="flex gap-2 md:gap-5">
+          <div className="hidden md:flex gap-2 md:gap-5">
             <Link href="#about" className="app-portfolio-navbar-link">
               About
             </Link>
