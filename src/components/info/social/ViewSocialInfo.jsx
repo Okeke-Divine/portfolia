@@ -123,9 +123,9 @@ const ViewSocialInfo = () => {
               />
             </div>
             <div className="w-fit flex gap-2">
-              <button className="btn btn-sm">
+              {/* <button className="btn btn-sm">
                 <i className="fi fi-tr-pen-circle flaticon-offset"></i>
-              </button>
+              </button> */}
               <button
                 className="btn btn-sm"
                 onClick={() => deleteSocialInfo(social.id)}
