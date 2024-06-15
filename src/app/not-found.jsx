@@ -16,7 +16,7 @@ const NotFound = () => {
           </p>
           <div className="flex justify-center mt-2">
             <Link href=".." className="btn btn-ghost">
-              Go to Home
+              Back
             </Link>
           </div>
         </div>
