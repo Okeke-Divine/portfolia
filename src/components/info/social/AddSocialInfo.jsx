@@ -1,4 +1,5 @@
 "use client";
+import { SweetAlertError } from "@/utils/customSweetAlertFunction";
 import { _ucfirst } from "@/utils/main";
 import { useRef, useState } from "react";
 
@@ -20,14 +21,20 @@ const AddSocialInfo = () => {
   const socialValueRef = useRef(null);
 
   const [selected, setSelected] = useState("email");
+  const [loading, setLoading] = useState(true);
 
   function AddSocialInfo(e) {
     e.preventDefault();
 
-    // const socialType = socialTypeRef.current.value;
-    // const socialValue = socialValueRef.current.value;
+    const socialType = socialTypeRef.current.value;
+    const socialValue = socialValueRef.current.value;
 
-    // console.log(socialType, socialValue);
+    if (!socialType || !socialValue) {
+      SweetAlertError("All fields are required");
+      return;
+    }
+
+    console.log(socialType, socialValue);
   }
 
   return (
@@ -71,10 +78,17 @@ const AddSocialInfo = () => {
             </div>
           </div>
           <button
+            disabled={loading}
             className="w-full app-bg-primary duration-300 hover:app-bg-primary-dark btn btn-md text-white"
             type="submit"
           >
-            Add
+            {loading ? (
+              <>
+                <span className="loading loading-dots loading-sm"></span>
+              </>
+            ) : (
+              "Add"
+            )}
           </button>
         </div>
       </form>
