@@ -55,6 +55,7 @@ const AddProject = () => {
                 <input
                   type="text"
                   required
+                  ref={projectTitleRef}
                   className="grow"
                   placeholder="Project Title"
                 />
@@ -70,6 +71,7 @@ const AddProject = () => {
               <div className="input input-bordered flex items-center gap-2 mt-1">
                 <input
                   type="text"
+                  ref={projectTagsRef}
                   className="grow"
                   placeholder="e.g. NextJs, Prisma, MySQL, Tailwind, .."
                 />
@@ -81,7 +83,12 @@ const AddProject = () => {
                 <label className="font-bold text-md">Preview Url</label>
               </div>
               <div className="input input-bordered flex items-center gap-2 mt-1">
-                <input type="url" className="grow" placeholder="https://..." />
+                <input
+                  type="url"
+                  className="grow"
+                  placeholder="https://..."
+                  ref={projectUrlRef}
+                />
               </div>
             </div>
             {/* image */}
@@ -92,6 +99,7 @@ const AddProject = () => {
               <input
                 type="file"
                 accept="image/*"
+                ref={projectImageRef}
                 className="file-input w-full mt-1 file-input-bordered"
               />
             </div>
@@ -105,6 +113,7 @@ const AddProject = () => {
               <div className="mt-1">
                 <textarea
                   rows={5}
+                  ref={projectDescRef}
                   className="textarea w-full input-bordered"
                 ></textarea>
               </div>
