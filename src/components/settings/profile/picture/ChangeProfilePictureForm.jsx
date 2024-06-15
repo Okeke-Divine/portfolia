@@ -3,18 +3,24 @@ import { useRef, useState } from "react";
 import Swal from "sweetalert2";
 
 const ChangeProfilePictureForm = () => {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const profilePictureRef = useRef(null);
+
+  function uploadProfilePicture(e) {
+    e.preventDefault();
+
+    const picture = profilePictureRef.current.files[0];
+  }
 
   return (
     <>
-      <form>
+      <form onSubmit={uploadProfilePicture}>
         <div className="mb-2">
           <label className="font-bold text-md">Select a picture</label>
         </div>
         <input type="file" accept="image/*" className="file-input" />
         {/* submit button */}
-        <div>
+        <div className="mt-2">
           <button
             className="w-full app-bg-primary duration-300 hover:app-bg-primary-dark btn btn-md text-white"
             type="submit"
