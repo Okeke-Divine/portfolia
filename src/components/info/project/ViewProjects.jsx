@@ -41,7 +41,7 @@ const ViewProjects = () => {
               <tr key={index} id={"project_" + project.id}>
                 <td>{index + 1}</td>
                 <td>
-                  <div className="flex gap-2">
+                  <div className="flex gap-2 items-center">
                     {project.imgUrl != "" ? (
                       <>
                         <div class="h-[50px] w-[50px] overflow-hidden">
@@ -55,7 +55,7 @@ const ViewProjects = () => {
                     ) : (
                       ""
                     )}
-                    <div>{project.title}</div>
+                    <div className="font-bold">{project.title}</div>
                   </div>
                 </td>
                 <td>
