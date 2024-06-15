@@ -2,33 +2,34 @@ import { _ucfirst } from "@/utils/main";
 import React from "react";
 
 const socials = [
-  { name: "Email" },
-  { name: "Instagram" },
-  { name: "Twitter" },
-  { name: "Facebook" },
-  { name: "Dribble" },
-  { name: "Linkedin" },
-  { name: "github" },
-  { name: "email" },
-  { name: "Phone Number" },
-  { name: "Other" },
-];
+    { type: "email", name: "email" },
+    { type: "instagram", name: "instagram" },
+    { type: "twitter", name: "twitter" },
+    { type: "facebook", name: "facebook" },
+    { type: "dribble", name: "dribble" },
+    { type: "linkedin", name: "linkedin" },
+    { type: "github", name: "github" },
+    { type: "email", name: "email" },
+    { type: "phone_number", name: "phone number" },
+    { type: "other", name: "other" },
+  ];
+  
 
 const AddSocialInfo = () => {
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-        <div className="flex">
-          <div className="w-fit">
+      <div className="">
+        <div className="join">
+          <div className="w-fit join-item">
             <select className="select">
               {socials.map((social, index) => (
                 <>
-                  <option>{_ucfirst(social.name)}</option>
+                  <option value={social.value}>{_ucfirst(social.name)}</option>
                 </>
               ))}
             </select>
           </div>
-          <div className="w-full">
+          <div className="w-full join-item">
             <input type="text" className="input input-bordered w-full" placeholder="Enter..." />
           </div>
         </div>
