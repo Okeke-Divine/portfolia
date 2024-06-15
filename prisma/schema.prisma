@@ -60,10 +60,16 @@ model UserExpertise {
 }
 
 model UserProjects {
-  id     Int  @id @default(autoincrement())
-  userId Int
-  user   User @relation(fields: [userId], references: [id])
+  id            Int     @id @default(autoincrement())
+  userId        Int
+  user          User    @relation(fields: [userId], references: [id])
   //
+  imageUrl      String?
+  imagePublicId String?
+  title         String
+  description   String?
+  tags          String?
+  url           String?
 }
 
 model UserExperience {
