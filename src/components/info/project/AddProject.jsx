@@ -52,6 +52,11 @@ const AddProject = () => {
       })
       .catch((error) => {
         if (error) {
+          if (error?.response?.status == 400) {
+            SweetAlertError(error.response.data.reason);
+          } else {
+            SweetAlertError("An error occured. Please try again");
+          }
           setLoading(false);
         }
       });
