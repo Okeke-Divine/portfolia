@@ -14,6 +14,13 @@ const AddProject = () => {
 
   function _addProject(e) {
     e.preventDefault();
+
+    const projectTitle = projectTitleRef.current.value;
+    const projectTags = projectTagsRef.current.value;
+    const projectUrl = projectUrlRef.current.value;
+    const projectDesc = projectDescRef.current.value;
+    const projectImage = projectImageRef.current.files[0];
+
   }
 
   return (
