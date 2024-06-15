@@ -1,5 +1,5 @@
-import ViewProjects from "@/app/api/info/project/ViewProjects";
-import AddProject from "../../../api/info/project/AddProject";
+import AddProject from "@/components/info/project/AddProject";
+import ViewProjects from "@/components/info/project/ViewProjects";
 
 export const metadata = {
   title: "My Projects | Info",
