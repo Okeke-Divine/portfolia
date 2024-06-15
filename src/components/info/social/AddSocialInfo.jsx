@@ -37,6 +37,7 @@ const AddSocialInfo = () => {
               <select
                 className="select input-bordered"
                 onChange={(e) => setSelected(e.target.value)}
+                ref={socialTypeRef}
               >
                 {socials.map((social, index) => (
                   <>
@@ -47,6 +48,7 @@ const AddSocialInfo = () => {
             </div>
             <div className="w-full join-item">
               <input
+                ref={socialTypeRef}
                 className="input input-bordered w-full"
                 type={
                   selected == "email"
@@ -65,7 +67,10 @@ const AddSocialInfo = () => {
               />
             </div>
           </div>
-          <button className="w-full app-bg-primary duration-300 hover:app-bg-primary-dark btn btn-md text-white">
+          <button
+            className="w-full app-bg-primary duration-300 hover:app-bg-primary-dark btn btn-md text-white"
+            type="submit"
+          >
             Add
           </button>
         </div>
