@@ -69,12 +69,15 @@ const PortfolioProjects = async ({ user }) => {
                   ) : (
                     ""
                   )}
-                  {project.tags != "" ? (
+                  {project.tags && project.tags !== "" ? (
                     <>
                       <div className="divider"></div>
                       <div className="card-actions">
-                        <div className="badge badge-outline">CSS</div>
-                        <div className="badge badge-outline">HTML</div>
+                        {project.tags.split(",").map((tag, index) => (
+                          <div key={index} className="badge badge-outline">
+                            {tag.trim()}
+                          </div>
+                        ))}
                       </div>
                     </>
                   ) : (
