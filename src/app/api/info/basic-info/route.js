@@ -15,8 +15,7 @@ export const POST = async (req) => {
         }
 
         const newData = {
-            fullname, heroTitle, profession, bio: Buffer.from(bio, "utf-8")
-            , about
+            fullname, heroTitle, profession, bio, about
         }
 
         const updated_details = await prisma.userDetails.upsert({
