@@ -57,7 +57,7 @@ const ListSkills = async () => {
               Swal.fire({
                 title: "Success",
                 icon: "success",
-                text: "Delete success full",
+                text: "Delete successfull",
                 confirmButtonColor: app_color_primary,
               });
               const parent_container = document.getElementById(

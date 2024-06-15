@@ -9,6 +9,67 @@ const ViewSocialInfo = () => {
   const [socials, setSocials] = useState([]);
   const [loading, setLoading] = useState(false);
 
+  function deleteSocialInfo(id) {
+    Swal.fire({
+      title: "Warning",
+      icon: "warning",
+      text: "Are you certain you want to delete this link? Please note: This action is irreversible. The link will also be removed from any portfolios or resumes where it has been listed.",
+      showCancelButton: true,
+      confirmButtonText: "Yes, delete!",
+      confirmButtonColor: app_color_primary,
+      cancelButtonText: "Cancel",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: "Processing",
+          icon: "info",
+          text: "Please wait...",
+          showConfirmButton: false,
+          allowOutsideClick: false,
+        });
+        axios
+          .post(
+            "/api/skill/delete",
+            { skill_id },
+            {
+              headers: {
+                "Content-Type": "application/json",
+              },
+            }
+          )
+          .then((response) => {
+            if (response.status == 200) {
+              Swal.fire({
+                title: "Success",
+                icon: "success",
+                text: "Delete successfull",
+                confirmButtonColor: app_color_primary,
+              });
+              const parent_container = document.getElementById(
+                "skill_" + skill_id
+              );
+              parent_container.classList.add("hidden");
+            } else {
+              Swal.fire({
+                title: "Error",
+                icon: "error",
+                text: "An error occured. Please try again 1",
+              });
+            }
+          })
+          .catch((error) => {
+            if (error) {
+              Swal.fire({
+                title: "Error",
+                icon: "warning",
+                text: "An error occured. Please try again",
+              });
+            }
+          });
+      }
+    });
+  }
+
   const channel = new BroadcastChannel("user-socials-channel");
 
   useEffect(() => {
@@ -49,7 +110,10 @@ const ViewSocialInfo = () => {
               <button className="btn btn-sm">
                 <i className="fi fi-tr-pen-circle flaticon-offset"></i>
               </button>
-              <button className="btn btn-sm">
+              <button
+                className="btn btn-sm"
+                onClick={() => deleteSocialInfo(social.id)}
+              >
                 <i className="fi fi-rr-trash flaticon-offset"></i>
               </button>
             </div>
