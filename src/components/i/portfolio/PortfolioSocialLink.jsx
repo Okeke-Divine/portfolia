@@ -1,3 +1,4 @@
+import { getIconClass } from "@/utils/main";
 import Link from "next/link";
 
 const PortfolioSocialLink = () => {
