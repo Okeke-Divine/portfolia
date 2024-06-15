@@ -113,6 +113,7 @@ const AddProject = () => {
               <div className="mt-1">
                 <textarea
                   rows={5}
+                  required
                   ref={projectDescRef}
                   className="textarea w-full input-bordered"
                 ></textarea>
