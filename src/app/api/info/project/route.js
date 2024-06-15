@@ -16,7 +16,17 @@ export const POST = async (req) => {
 
         // upload project image if it's exists
         if (projectImage != "undefined") {
+            const allowedTypes = ["image/jpeg", "image/png"];
 
+            if (!allowedTypes.includes(projectImage.type)) {
+                return badRequest("Image file type is not allowed");
+            }
+
+            // check if it's less than 500kb
+            const projectImage = 3 * 1024 * 1024; //3mb in bytes
+            if (picture.size > maxSize) {
+                return badRequest("Image must be less than 3 mb");
+            }
         } else {
             _console_log("Pic not exists")
         }
