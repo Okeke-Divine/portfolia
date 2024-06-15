@@ -9,12 +9,31 @@ const ChangeProfilePictureForm = () => {
 
   function uploadProfilePicture(e) {
     e.preventDefault();
+    setLoading(true);
 
     const picture = profilePictureRef.current.files[0];
 
     if (!picture) {
       SweetAlertError("Picture is required.");
+      setLoading(false);
+      return;
     }
+
+    const formData = new FormData();
+    formData.append("picture", picture);
+
+    axios
+      .post("/api", formData)
+      .then((response) => {
+        if (response) {
+          setLoading(false);
+        }
+      })
+      .catch((error) => {
+        if (error) {
+          setLoading(false);
+        }
+      });
   }
 
   return (
@@ -28,7 +47,7 @@ const ChangeProfilePictureForm = () => {
           accept="image/*"
           className="file-input w-full"
           ref={profilePictureRef}
-          // required
+          required
         />
         {/* submit button */}
         <div className="mt-2">
