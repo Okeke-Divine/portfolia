@@ -46,6 +46,33 @@ const AddProject = () => {
                 />
               </div>
             </div>
+              {/* url */}
+              <div className="mb-3">
+              <div>
+                <label className="font-bold text-md">
+                  Preview Url
+                </label>
+              </div>
+              <div className="input border-2 border-gray-100 flex items-center gap-2 mt-1">
+                <input
+                  type="url"
+                  className="grow"
+                  placeholder="https://..."
+                />
+              </div>
+            </div>
+              {/* description */}
+              <div className="mb-3">
+              <div>
+                <label className="font-bold text-md">
+                  Project Description
+                </label>
+              </div>
+            <div className="mt-1">
+                <textarea name="" id="" cols="30" rows="10" className="textarea"></textarea>
+            </div>
+            </div>
+            
             {/* submit button */}
             <div>
               <button
