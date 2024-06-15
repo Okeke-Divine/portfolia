@@ -2,7 +2,7 @@ import { defaultImgUrl } from "@/constants/shared/constant";
 import Link from "next/link";
 import PortfolioSocialLink from "./PortfolioSocialLink";
 
-const PortfolioNavbar = ({ userId }) => {
+const PortfolioNavbar = ({ userId, profilePicture_url }) => {
   return (
     <>
       <div className="navbar px-5 md:px-10 py-5 md:py-5 bg-base-200">
@@ -11,9 +11,7 @@ const PortfolioNavbar = ({ userId }) => {
             <div className="w-10 rounded-full ring ring-green-300">
               <img
                 src={
-                  profilePicture_url != ""
-                    ? profilePicture_url
-                    : defaultImgUrl
+                  profilePicture_url != "" ? profilePicture_url : defaultImgUrl
                 }
                 alt="User Profile Picture"
               />
