@@ -64,7 +64,6 @@ const AddSocialInfo = () => {
         }
       })
       .catch((error) => {
-        console.log(error);
         if (error) {
           setLoading(false);
           if (error.response?.status == 409) {
