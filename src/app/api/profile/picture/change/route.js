@@ -1,10 +1,14 @@
+import prisma from "@/app/db";
 import { badRequest, internalServerError, resourceUpdated } from "@/utils/prebuiltApiResponse"
+import { getUserId } from "@/utils/session";
 import { cloudinaryUpload } from "@/utils/uploadFile";
 
 export const POST = async (req) => {
     try {
         const data = await req.formData();
         const picture = data.get("picture");
+
+        const userId = await getUserId();
 
         const allowedTypes = ["image/jpeg", "image/png"];
 
@@ -18,6 +22,18 @@ export const POST = async (req) => {
             return badRequest("Image must be less than 3 mb");
         }
 
+        // check if user already has a profile picture
+        const profileVerify = await prisma.user.findFirst({
+            where: {
+                userId,
+                profilePicture_url: {
+                    not: "",
+                }
+            }
+        })
+
+        console.log(profileVerify);
+
         const uploadFile = await cloudinaryUpload(picture, [
             "picture",
             "portfolia-picture",
@@ -25,6 +41,19 @@ export const POST = async (req) => {
             "portfolia"
         ]);
 
+        const fileUrl = uploadFile.fileUrl;
+        const asset_id = uploadFile.options.asset_id;
+
+        // update the profile picture data
+        const saveFileDetails = await prisma.user.update({
+            where: {
+                userId
+            },
+            data: {
+                profilePicture_url: fileUrl,
+                profilePicture_assetId: asset_id
+            }
+        })
         console.log(uploadFile);
 
         console.log(data);
