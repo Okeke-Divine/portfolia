@@ -23,7 +23,7 @@ const ViewProjects = () => {
 
   return (
     <>
-      <div className="overflow-x-auto max-w-[40%]">
+      <div className="overflow-x-auto max-w-[100%]">
         <table className="table table-zebra w-full">
           <thead className="w-full">
             <tr>
@@ -58,19 +58,21 @@ const ViewProjects = () => {
                 </td>
                 <td>{project.tags != "" ? project.tags : "-"}</td>
                 <td>{project.description != "" ? project.description : "-"}</td>
-                <td className="flex gap-2 items-center">
-                  <button
-                    className="btn btn-sm"
-                    onClick={() => alert("Coming soon")}
-                  >
-                    <i className="fi fi-tr-pen-circle flaticon-offset"></i>
-                  </button>
-                  <button
-                    className="btn btn-sm"
-                    onClick={() => deleteProject(project.id)}
-                  >
-                    <i className="fi fi-rr-trash flaticon-offset"></i>
-                  </button>
+                <td className="">
+                  <div className="flex gap-2 items-center">
+                    <button
+                      className="btn btn-sm"
+                      onClick={() => alert("Coming soon")}
+                    >
+                      <i className="fi fi-tr-pen-circle flaticon-offset"></i>
+                    </button>
+                    <button
+                      className="btn btn-sm"
+                      onClick={() => deleteProject(project.id)}
+                    >
+                      <i className="fi fi-rr-trash flaticon-offset"></i>
+                    </button>
+                  </div>
                 </td>
               </tr>
             ))}

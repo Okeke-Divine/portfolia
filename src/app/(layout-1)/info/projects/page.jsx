@@ -8,8 +8,8 @@ export const metadata = {
 const InfoProjects = () => {
   return (
     <>
-      {/* <AddProject /> */}
-      {/* <div className="divider"></div> */}
+      <AddProject />
+      <div className="divider"></div>
       <ViewProjects />
     </>
   );
