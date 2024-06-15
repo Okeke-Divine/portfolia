@@ -18,8 +18,8 @@ const ViewProjects = () => {
   return (
     <>
       <div className="overflow-x-auto w-full">
-        <table className="table table-zebra">
-          <thead>
+        <table className="table table-zebra w-full">
+          <thead className="w-full">
             <tr>
               <th></th>
               <th>Image</th>
@@ -31,7 +31,7 @@ const ViewProjects = () => {
               <th></th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="w-full">
             {projects.map((project, index) => (
               <tr key={index}>
                 <td>{index + 1}</td>
