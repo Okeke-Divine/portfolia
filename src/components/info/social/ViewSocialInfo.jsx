@@ -10,8 +10,6 @@ const ViewSocialInfo = () => {
   const [socials, setSocials] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  console.log(loading);
-
   function deleteSocialInfo(social_id) {
     Swal.fire({
       title: "Warning",
