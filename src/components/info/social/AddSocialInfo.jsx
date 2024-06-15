@@ -26,6 +26,9 @@ const AddSocialInfo = () => {
 
     const socialType = socialTypeRef.current.value;
     const socialValue = socialValueRef.current.value;
+
+    console.log(socialType,socialValue);
+
   }
 
   return (

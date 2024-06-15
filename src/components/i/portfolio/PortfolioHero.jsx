@@ -21,7 +21,7 @@ const PortfolioHero = ({ user }) => {
           {/* left */}
           <div className="flex items-center justify-end">
             <div className="w-full h-fit">
-              <h1 className="max-w-[500px] text-6xl">
+              <h1 className="max-w-[500px] text-6xl break-words">
                 {user?.userDetails?.heroTitle}
               </h1>
               <p className="app-text-light-2 py-2 max-w-[400px] font-semibold underline text-2xl">
