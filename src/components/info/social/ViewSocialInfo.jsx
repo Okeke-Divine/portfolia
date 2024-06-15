@@ -35,18 +35,19 @@ const ViewSocialInfo = () => {
       {loading ? <SkillSkeleton /> : ""}
       <div>
         {socials.map((social, index) => (
-          <div key={index} className="flex gap-2 items-center mb-2">
+          <div
+            key={index}
+            className={`flex gap-2 items-center mb-2 ${
+              index % 2 === 0 ? "bg-white" : "bg-gray-200"
+            }`}
+          >
             <div className="w-fit">
-              <i
-                className={`${getIconClass(
-                  social.name
-                )} app-portfolio-navbar-icon`}
-              ></i>
+              <i className={`${getIconClass(social.name)} flaticon-offset`}></i>
             </div>
             <div className="grow">{social.value}</div>
             <div className="w-fit flex gap-2">
               <button className="btn btn sm">
-                <i className="fi fi-tr-pen-circle"></i>
+                <i className="fi fi-tr-pen-circle flaticon-offset"></i>
               </button>
               <button className="btn btn sm">
                 <i className="fi fi-rr-trash flaticon-offset"></i>
