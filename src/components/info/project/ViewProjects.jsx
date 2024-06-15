@@ -4,7 +4,7 @@ import axios from "axios";
 import SkillSkeleton from "@/components/skeleton/skills/SkillSkeleton";
 
 const ViewProjects = () => {
-  const [project, setProjects] = useState([]);
+  const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(function () {
