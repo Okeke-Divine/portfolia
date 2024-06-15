@@ -42,7 +42,7 @@ const AddSocialInfo = () => {
     }
 
     if (
-      socialType == "phone_number" &&
+      (socialType == "phone_number" || socialType == "whatsapp") &&
       validatePhoneNumber(socialValue) == false
     ) {
       SweetAlertError("Invalid phone number. E.g (080.....) or (+23480...)");
@@ -103,14 +103,14 @@ const AddSocialInfo = () => {
                 type={
                   selected == "email"
                     ? "email"
-                    : selected == "phone_number"
+                    : selected == "phone_number" || selected == "whatsapp"
                     ? "text"
                     : "url"
                 }
                 placeholder={
                   selected == "email"
                     ? "Your Email"
-                    : selected == "phone_number"
+                    : selected == "phone_number" || selected == "whatsapp"
                     ? "Your Phone Number"
                     : "Your " + selected + " Url"
                 }
