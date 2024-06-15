@@ -59,7 +59,6 @@ const AddProject = () => {
         }
       })
       .catch((error) => {
-        console.log(error);
         if (error) {
           if (error?.response?.status == 400) {
             SweetAlertError(error.response.data.reason);
