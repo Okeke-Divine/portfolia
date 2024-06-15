@@ -61,7 +61,6 @@ const AddProject = () => {
         }
       });
 
-    console.log(formData);
   }
 
   return (

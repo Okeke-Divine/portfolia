@@ -14,11 +14,16 @@ export const POST = async (req) => {
         }
 
         // upload project image if it's exists
-        
+
 
         console.log(data);
 
-        return resourceCreated({})
+        if (true) {
+            return resourceCreated({})
+        } else {
+            return internalServerError("Could not create project")
+        }
+
     } catch (e) {
         return internalServerError(e)
     }
