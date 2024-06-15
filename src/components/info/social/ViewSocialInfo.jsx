@@ -121,7 +121,7 @@ const ViewSocialInfo = () => {
                 defaultValue={
                   social.value + social.value + social.value + social.value
                 }
-                className="input input-bordered w-full"
+                className="input input-ghost w-full"
               />
             </div>
             <div className="w-fit flex gap-2">
