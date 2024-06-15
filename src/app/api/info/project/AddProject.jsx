@@ -55,6 +55,13 @@ const AddProject = () => {
                 <input type="url" className="grow" placeholder="https://..." />
               </div>
             </div>
+            {/* image */}
+            <div className="mb-3">
+              <div>
+                <label className="font-bold text-md">Project Image</label>
+              </div>
+              <input type="file" accept="image/*" className="input" placeholder="https://..." />
+            </div>
             {/* description */}
             <div className="mb-3">
               <div>
