@@ -117,11 +117,11 @@ export default function ApplicationSidedar() {
             Settings
             <ComingSoonComponent />
           </button>
-          <button className="btn btn-ghost w-full mb-2 justify-start">
+          {/* <button className="btn btn-ghost w-full mb-2 justify-start">
             <i className="fi fi-tr-analyse-alt"></i>
             Analytics
             <ComingSoonComponent />
-          </button>
+          </button> */}
         </div>
         <div className="">
           <button
