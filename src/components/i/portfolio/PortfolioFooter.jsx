@@ -9,10 +9,10 @@ const PortfolioFooter = ({ user }) => {
           <div className="w-full font-bold text-2xl text-center">
             {user?.userDetails?.fullname}
           </div>
-          <div className="w-full font-semibold text-xl text-center">
+          <div className="w-full font-semibold text-center">
             {user?.userDetails?.profession}
           </div>
-          <div className="w-full text-italics text-center">
+          <div className="w-full font-italics text-center">
             &copy; 2024 - {_ucfirst(config.app_name)}
           </div>
         </div>
