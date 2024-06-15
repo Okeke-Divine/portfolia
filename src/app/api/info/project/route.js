@@ -34,7 +34,7 @@ export const POST = async (req) => {
                 return badRequest("Image must be less than 3 mb");
             }
 
-            const uploadFile = await cloudinaryUpload(picture, [
+            const uploadFile = await cloudinaryUpload(projectImage, [
                 "picture",
                 "portfolia-picture",
                 "project-picture",
