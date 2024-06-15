@@ -25,12 +25,14 @@ const AddSocialInfo = () => {
 
   function AddSocialInfo(e) {
     e.preventDefault();
+    setLoading(true);
 
     const socialType = socialTypeRef.current.value;
     const socialValue = socialValueRef.current.value;
 
     if (!socialType || !socialValue) {
       SweetAlertError("All fields are required");
+      setLoading(false);
       return;
     }
 
@@ -39,6 +41,7 @@ const AddSocialInfo = () => {
       validatePhoneNumber(socialValue) == false
     ) {
       SweetAlertError("Invalid phone number. E.g (080.....) or (+23480...)");
+      setLoading(false);
       return;
     }
 
