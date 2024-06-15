@@ -1,8 +1,11 @@
 "use client";
 import { defaultImgUrl } from "@/constants/shared/constant";
 import axios from "axios";
+import { useState, useEffect } from "react";
 
 const UserProfilePictureComponent = () => {
+  const [imgUrl, setImgUrl] = useState(defaultImgUrl);
+
   if (
     typeof localStorage !== "undefined" &&
     localStorage.getItem("user_imgUrl") === null
@@ -10,21 +13,35 @@ const UserProfilePictureComponent = () => {
     axios
       .get("/api/profile/picture")
       .then((result) => {
-        if (result.data.data !== null) {
+        if (result.data.data.profilePicture_url !== "") {
           localStorage.setItem(
             "user_imgUrl",
             result.data.data.profilePicture_url
           );
+          setImgUrl(result.data.data.profilePicture_url);
+        } else {
+          setImgUrl(defaultImgUrl);
+          localStorage.setItem("user_imgUrl", defaultImgUrl);
         }
       })
       .catch((e) => _console_log("Error: " + e));
   }
 
-  // Retrieve imgUrl with fallback if localStorage is not available
-  const imgUrl =
-    typeof localStorage !== "undefined"
-      ? localStorage.getItem("user_imgUrl")
-      : defaultImgUrl;
+  if (typeof localStorage !== "undefined") {
+    setImgUrl(
+      typeof localStorage !== "undefined"
+        ? localStorage.getItem("user_imgUrl")
+        : defaultImgUrl
+    );
+  }
+
+  useEffect(function () {
+    // Retrieve imgUrl with fallback if localStorage is not available
+    const imgUrl =
+      typeof localStorage !== "undefined"
+        ? localStorage.getItem("user_imgUrl")
+        : defaultImgUrl;
+  }, []);
   console.log(imgUrl);
 
   return (
