@@ -36,7 +36,7 @@ export async function cloudinaryUpload(file, tags = []) {
         // });
 
         if (result && result.secure_url) {
-            return { fileUrl: result.secure_url, options: {} };
+            return { fileUrl: result.secure_url, options: result };
         } else {
             return null;
         }
