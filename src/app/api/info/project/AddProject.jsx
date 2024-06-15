@@ -7,7 +7,7 @@ const AddProject = () => {
 
   return (
     <>
-      <div className="collapse bg-base-200">
+      <div className="collapse collapse-arrow rounded-md bg-base-200">
         <input type="checkbox" />
         <div className="collapse-title text-xl font-medium">Add Project</div>
         <div className="collapse-content">
