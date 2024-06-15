@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { defaultImgUrl } from "@/constants/shared/constant";
-import { getIconClass } from "@/utils/main";
 import PortfolioSocialLink from "./PortfolioSocialLink";
 
 const PortfolioHero = ({ user }) => {
@@ -21,10 +20,10 @@ const PortfolioHero = ({ user }) => {
                 {user?.userDetails?.bio}
               </p>
               <div className="pt-2">
-                <button className="app-primary-button w-fit">
+                {/* <Link className="app-primary-button w-fit">
                   Message
                   <i className="fi fi-rr-paper-plane-top flaticon-offset"></i>
-                </button>
+                </Link> */}
               </div>
               <div className="divider"></div>
               {/* social links */}
