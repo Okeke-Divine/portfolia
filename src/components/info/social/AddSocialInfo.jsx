@@ -68,7 +68,7 @@ const AddSocialInfo = () => {
         if (error) {
           setLoading(false);
           if (error.response?.status == 409) {
-            SweetAlertError("Already exists");
+            SweetAlertError("Conflict - Already exists");
           } else {
             SweetAlertError("An error occured. Please try again");
           }
