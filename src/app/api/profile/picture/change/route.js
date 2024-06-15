@@ -9,13 +9,13 @@ export const POST = async (req) => {
         const allowedTypes = ["image/jpeg", "image/png"];
 
         if (!allowedTypes.includes(picture.type)) {
-            return badRequest("imageFileNotAllowed");
+            return badRequest("Image file type is not allowed");
         }
 
         // check if it's less than 500kb
         const maxSize = 3 * 1024 * 1024; //3mb in bytes
         if (picture.size > maxSize) {
-            return badRequest("imageFileSizeError");
+            return badRequest("Image must be less than 3 mb");
         }
 
         const uploadFile = await cloudinaryUpload(picture, [
