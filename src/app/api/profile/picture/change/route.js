@@ -52,13 +52,17 @@ export const POST = async (req) => {
             data: {
                 profilePicture_url: fileUrl,
                 profilePicture_assetId: asset_id
+            },
+            select: {
+                profilePicture_url: true,
             }
         })
-        console.log(uploadFile);
 
-        console.log(data);
-        console.log("test");
-        return resourceUpdated({})
+        if (saveFileDetails) {
+            return resourceUpdated(saveFileDetails)
+        } else {
+            return internalServerError("Profile picture was not uploaded")
+        }
     } catch (e) {
         return internalServerError(e)
     }
