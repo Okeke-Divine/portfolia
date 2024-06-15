@@ -51,7 +51,7 @@ const PortfolioProjects = async ({ user }) => {
                 )}
                 <div className="card-body">
                   <h2 className="card-title">{project.title}</h2>
-                  <p className="max-h-[80px] overflow-y-auto">
+                  <p className="max-h-[80px] overflow-y-auto whitespace-pre-line">
                     {project.description}
                   </p>
                   {project.url != "" ? (
