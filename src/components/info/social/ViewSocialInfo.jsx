@@ -43,9 +43,11 @@ const ViewSocialInfo = () => {
                 )} app-portfolio-navbar-icon`}
               ></i>
             </div>
-            <div className="w-full">{social.value}</div>
-            <div className="w-fit flex flex-wrap gap-2">
-              <button className="btn btn sm">e</button>
+            <div className="grow bg-red-200">{social.value}</div>
+            <div className="w-fit flex gap-2">
+              <button className="btn btn sm">
+              <i className="fi fi-tr-pen-circle"></i>
+              </button>
               <button className="btn btn sm">
                 <i className="fi fi-rr-trash flaticon-offset"></i>
               </button>
