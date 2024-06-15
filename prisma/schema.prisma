@@ -8,23 +8,24 @@ datasource db {
 }
 
 model User {
-  id                 Int              @id @default(autoincrement())
-  fullname           String
-  username           String           @unique
-  email              String           @unique
-  password           String
-  profilePicture_url String?          @db.Text
-  dateJoined         DateTime         @default(now())
+  id                     Int              @id @default(autoincrement())
+  fullname               String
+  username               String           @unique
+  email                  String           @unique
+  password               String
+  profilePicture_url     String?          @db.Text
+  profilePicture_assetId String?
+  dateJoined             DateTime         @default(now())
   //realations
-  UserSocialInfo     UserSocialInfo[]
-  UserExpertise      UserExpertise[]
-  UserProjects       UserProjects[]
+  UserSocialInfo         UserSocialInfo[]
+  UserExpertise          UserExpertise[]
+  UserProjects           UserProjects[]
   //
-  userDetails        UserDetails?
+  userDetails            UserDetails?
   //
-  UserExperience     UserExperience[]
-  Feedback           Feedback[]
-  UserSkills         UserSkills[]
+  UserExperience         UserExperience[]
+  Feedback               Feedback[]
+  UserSkills             UserSkills[]
 }
 
 model UserDetails {
