@@ -30,7 +30,7 @@ const PortfolioSocialLink = async () => {
   return (
     <>
       {social_link.map((link, index) => (
-        <Link href={link.value} className="app-portfolio-navbar-link">
+        <Link href={link.value} key={index} className="app-portfolio-navbar-link">
           <i
             className={`${getIconClass(link.name)} app-portfolio-navbar-icon`}
           ></i>
