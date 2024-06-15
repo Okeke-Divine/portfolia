@@ -1,3 +1,4 @@
+import { _ucfirst } from "@/utils/main";
 import React from "react";
 
 const socials = [
@@ -22,7 +23,7 @@ const AddSocialInfo = () => {
             <select name="" id="">
               {socials.map((social, index) => (
                 <>
-                  <option>{social.name}</option>
+                  <option>{_ucfirst(social.name)}</option>
                 </>
               ))}
             </select>
