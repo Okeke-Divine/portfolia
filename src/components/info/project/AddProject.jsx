@@ -43,6 +43,17 @@ const AddProject = () => {
     formData.append("projectDesc", projectDesc);
     formData.append("projectImage", projectImage);
 
+    axios
+      .post("/api/info/project/", formData)
+      .then((response) => {
+        setLoading(false);
+      })
+      .catch((error) => {
+        if (error) {
+          setLoading(false);
+        }
+      });
+
     console.log(formData);
   }
 

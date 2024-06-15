@@ -13,6 +13,9 @@ export const POST = async (req) => {
             return badRequest("Project title and description is required");
         }
 
+        // upload project image if it's exists
+        
+
         console.log(data);
 
         return resourceCreated({})
