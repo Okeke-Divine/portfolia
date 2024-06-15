@@ -8,7 +8,7 @@ import Swal from "sweetalert2";
 
 const ViewSocialInfo = () => {
   const [socials, setSocials] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   console.log(loading);
 
