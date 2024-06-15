@@ -2,6 +2,20 @@ import prisma from "@/app/db";
 import { badRequest, conflict, internalServerError, resourceCreated } from "@/utils/prebuiltApiResponse"
 import { getUserId } from "@/utils/session";
 
+export const GET = async () => {
+    try {
+        const userId = await getUserId()
+        const socials = await prisma.userSocialInfo.findMany({
+            where: {
+                userId,
+            },
+        }) || [];
+        return
+    } catch (e) {
+        return internalServerError("")
+    }
+}
+
 export const POST = async (req) => {
     try {
         const data = await req.json();

@@ -29,10 +29,16 @@ export function resourceDeleted() {
     return NextResponse.json({ message: "success", data: {} }, { status: 200 })
 }
 
-export function unAuthorized(){
-    return NextResponse.json({message:"unAuthorized"},{status:401})
+export function resourceLoaded() {
+    return NextResponse.json({ message: "success", data: skills }, { status: 200 })
 }
 
-export function accessDenied(){
-    return NextResponse.json({message:"accessDenied"},{status:403})
+
+
+export function unAuthorized() {
+    return NextResponse.json({ message: "unAuthorized" }, { status: 401 })
+}
+
+export function accessDenied() {
+    return NextResponse.json({ message: "accessDenied" }, { status: 403 })
 }
