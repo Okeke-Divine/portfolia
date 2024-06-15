@@ -19,12 +19,12 @@ const PortfolioHero = ({ user }) => {
               <p className="app-text-light-2 py-2 max-w-[400px]">
                 {user?.userDetails?.bio}
               </p>
-              <div className="pt-2">
-                {/* <Link className="app-primary-button w-fit">
+              {/* <div className="pt-2">
+                <Link className="app-primary-button w-fit">
                   Message
                   <i className="fi fi-rr-paper-plane-top flaticon-offset"></i>
-                </Link> */}
-              </div>
+                </Link>
+              </div> */}
               <div className="divider"></div>
               {/* social links */}
               <div className="mt-2 flex flex-wrap gap-2">
