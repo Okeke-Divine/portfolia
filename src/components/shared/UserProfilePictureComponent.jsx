@@ -27,20 +27,15 @@ const UserProfilePictureComponent = () => {
       .catch((e) => _console_log("Error: " + e));
   }
 
-  if (typeof localStorage !== "undefined") {
-    setImgUrl(
-      typeof localStorage !== "undefined"
-        ? localStorage.getItem("user_imgUrl")
-        : defaultImgUrl
-    );
-  }
-
   useEffect(function () {
     // Retrieve imgUrl with fallback if localStorage is not available
-    const imgUrl =
-      typeof localStorage !== "undefined"
-        ? localStorage.getItem("user_imgUrl")
-        : defaultImgUrl;
+    if (typeof localStorage !== "undefined") {
+      setImgUrl(
+        typeof localStorage !== "undefined"
+          ? localStorage.getItem("user_imgUrl")
+          : defaultImgUrl
+      );
+    }
   }, []);
   console.log(imgUrl);
 
