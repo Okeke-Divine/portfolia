@@ -30,7 +30,7 @@ const PortfolioProjects = () => {
                   </figure>
                   <div className="card-body">
                     <h2 className="card-title">Strender</h2>
-                    <p className="max-h-[60px] overflow-y-auto">
+                    <p className="max-h-[80px] overflow-y-auto">
                     Renowed social media platform with over <b>150k</b> users
                       worldwide Renowed social media platform with over <b>150k</b> users
                       worldwide Renowed social media platform with over <b>150k</b> users
