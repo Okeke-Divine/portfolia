@@ -1,8 +1,12 @@
 "use client";
-import { SweetAlertError } from "@/utils/customSweetAlertFunction";
+import {
+  SweetAlertError,
+  SweetAlertSuccess,
+} from "@/utils/customSweetAlertFunction";
 import { _ucfirst, validatePhoneNumber } from "@/utils/main";
 import { useRef, useState } from "react";
 import axios from "axios";
+import { headers } from "next/headers";
 
 const socials = [
   { type: "email", name: "email" },
@@ -46,6 +50,30 @@ const AddSocialInfo = () => {
       return;
     }
 
+    axios
+      .post(
+        "/api/info/socials",
+        { socialType, socialValue },
+        { headers: { "Content-Type": "application/json" } }
+      )
+      .then((resonse) => {
+        if (response) {
+          setLoading(false);
+          if (response.status == 201) {
+            SweetAlertSuccess("");
+          }
+        }
+      })
+      .catch((error) => {
+        if (error) {
+          setLoading(false);
+          if (error.response.status == 409) {
+            SweetAlertError("Already exists");
+          } else {
+            SweetAlertError("An error occured. Please try again");
+          }
+        }
+      });
     console.log(socialType, socialValue);
   }
 
