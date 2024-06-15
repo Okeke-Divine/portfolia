@@ -1,5 +1,6 @@
 "use client";
 import SkillSkeleton from "@/components/skeleton/skills/SkillSkeleton";
+import { app_color_primary } from "@/constants/shared/color";
 import { getIconClass } from "@/utils/main";
 import axios from "axios";
 import { useState, useEffect } from "react";
