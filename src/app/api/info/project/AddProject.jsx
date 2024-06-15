@@ -60,7 +60,11 @@ const AddProject = () => {
               <div>
                 <label className="font-bold text-md">Project Image</label>
               </div>
-              <input type="file" accept="image/*" className="input" placeholder="https://..." />
+              <input
+                type="file"
+                accept="image/*"
+                className="file-input w-full"
+              />
             </div>
             {/* description */}
             <div className="mb-3">
