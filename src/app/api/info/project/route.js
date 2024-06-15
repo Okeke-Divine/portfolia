@@ -1,5 +1,7 @@
 import { _console_log } from "@/utils/console";
 import { badRequest, internalServerError, resourceCreated } from "@/utils/prebuiltApiResponse"
+import { getUserId } from "@/utils/session";
+import { cloudinaryUpload } from "@/utils/uploadFile";
 
 export const POST = async (req) => {
     try {
@@ -14,6 +16,8 @@ export const POST = async (req) => {
             return badRequest("Project title and description is required");
         }
 
+        const userId = await getUserId();
+
         // upload project image if it's exists
         if (projectImage != "undefined") {
             const allowedTypes = ["image/jpeg", "image/png"];
@@ -27,6 +31,18 @@ export const POST = async (req) => {
             if (projectImage.size > maxSize) {
                 return badRequest("Image must be less than 3 mb");
             }
+
+            const uploadFile = await cloudinaryUpload(picture, [
+                "picture",
+                "portfolia-picture",
+                "project-picture",
+                "portfolia",
+                "projectPicture-user-" + userId
+            ]);
+
+            const fileUrl = uploadFile.fileUrl;
+            const public_id = uploadFile.options.public_id;
+
         } else {
             _console_log("Pic not exists")
         }
