@@ -30,12 +30,47 @@ const PortfolioProjects = () => {
                   </figure>
                   <div className="card-body">
                     <h2 className="card-title">Strender</h2>
-                    <p>
-                      Renowed social media platform with over <b>150k</b> users
+                    <p className="max-h-[60px] overflow-y-auto">
+                    Renowed social media platform with over <b>150k</b> users
+                      worldwide Renowed social media platform with over <b>150k</b> users
+                      worldwide Renowed social media platform with over <b>150k</b> users
+                      worldwide Renowed social media platform with over <b>150k</b> users
+                      worldwide Renowed social media platform with over <b>150k</b> users
+                      worldwide Renowed social media platform with over <b>150k</b> users
+                      worldwide Renowed social media platform with over <b>150k</b> users
+                      worldwide Renowed social media platform with over <b>150k</b> users
+                      worldwide Renowed social media platform with over <b>150k</b> users
+                      worldwide Renowed social media platform with over <b>150k</b> users
+                      worldwide Renowed social media platform with over <b>150k</b> users
+                      worldwide Renowed social media platform with over <b>150k</b> users
+                      worldwide Renowed social media platform with over <b>150k</b> users
+                      worldwide Renowed social media platform with over <b>150k</b> users
+                      worldwide Renowed social media platform with over <b>150k</b> users
+                      worldwide Renowed social media platform with over <b>150k</b> users
+                      worldwide Renowed social media platform with over <b>150k</b> users
+                      worldwide Renowed social media platform with over <b>150k</b> users
+                      worldwide Renowed social media platform with over <b>150k</b> users
+                      worldwide Renowed social media platform with over <b>150k</b> users
+                      worldwide Renowed social media platform with over <b>150k</b> users
+                      worldwide Renowed social media platform with over <b>150k</b> users
+                      worldwide Renowed social media platform with over <b>150k</b> users
+                      worldwide Renowed social media platform with over <b>150k</b> users
+                      worldwide Renowed social media platform with over <b>150k</b> users
+                      worldwide Renowed social media platform with over <b>150k</b> users
+                      worldwide Renowed social media platform with over <b>150k</b> users
+                      worldwide Renowed social media platform with over <b>150k</b> users
+                      worldwide Renowed social media platform with over <b>150k</b> users
+                      worldwide Renowed social media platform with over <b>150k</b> users
+                      worldwide Renowed social media platform with over <b>150k</b> users
+                      worldwide Renowed social media platform with over <b>150k</b> users
+                      worldwide Renowed social media platform with over <b>150k</b> users
+                      worldwide Renowed social media platform with over <b>150k</b> users
+                      worldwide Renowed social media platform with over <b>150k</b> users
+                      worldwide Renowed social media platform with over <b>150k</b> users
                       worldwide
                     </p>
                     <div className="card-actions justify-end">
-                      <button className="app-primary-button">Live Site</button>
+                      <button className="app-primary-button">View</button>
                     </div>
                     <hr />
                     <div className="card-actions">
