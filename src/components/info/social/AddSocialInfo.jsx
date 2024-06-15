@@ -1,3 +1,4 @@
+"use client";
 import { _ucfirst } from "@/utils/main";
 import { useRef } from "react";
 
@@ -15,8 +16,16 @@ const socials = [
 ];
 
 const AddSocialInfo = () => {
+
+    const socialTypeRef = useRef(null);
+    const socialValueRef = useRef(null);
+
   function AddSocialInfo(e) {
     e.preventDefault();
+
+    const socialType = socialTypeRef.current.value;
+    const socialValue= socialValueRef.current.value;
+
   }
 
   return (
