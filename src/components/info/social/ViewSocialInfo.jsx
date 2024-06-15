@@ -87,9 +87,11 @@ const ViewSocialInfo = () => {
   }, [channel]);
 
   useEffect(function () {
+    setLoading(true);
     axios
       .get("/api/info/socials")
       .then((response) => setSocials(response.data.data));
+    setLoading(false);
   }, []);
 
   return (
