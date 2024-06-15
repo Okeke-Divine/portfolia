@@ -14,9 +14,11 @@ const NotFound = () => {
           <p className="text-center">
             Sorry, the page you're looking for doesn't exist or has been moved.
           </p>
-          <Link href="/" className="btn btn-ghost">
-            Go to Home
-          </Link>
+          <div className="flex justify-center mt-2">
+            <Link href=".." className="btn btn-ghost">
+              Go to Home
+            </Link>
+          </div>
         </div>
       </div>
     </>
