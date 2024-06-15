@@ -93,7 +93,7 @@ const ViewSocialInfo = () => {
 
   return (
     <>
-      {loading ? <SkillSkeleton /> : ""}
+      {loading ? (<><SkillSkeleton /></>) : ""}
       <div>
         {socials.map((social, index) => (
           <div
