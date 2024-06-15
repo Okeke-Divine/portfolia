@@ -58,8 +58,8 @@ const ViewProjects = () => {
                     <div className="font-bold">{project.title}</div>
                   </div>
                 </td>
-                <td>{project.tags}</td>
-                <td>{project.description}</td>
+                <td>{project.tags !="" ? project.tags : "-"}</td>
+                <td>{project.description !="" ? project.description : "-"}</td>
                 <td></td>
                 <td></td>
                 <td>
