@@ -13,7 +13,7 @@ export const POST = async (req) => {
 
         const userId = await getUserId();
 
-        if (!socialType != "other") {
+        if (socialType != "other") {
             // check if social type already exists
             const socialType_exists = await prisma.userSocialInfo.count({
                 where: {
