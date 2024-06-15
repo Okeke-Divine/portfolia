@@ -49,7 +49,7 @@ const ViewSocialInfo = () => {
               <button className="btn btn-sm">
                 <i className="fi fi-tr-pen-circle flaticon-offset"></i>
               </button>
-              <button className="btn btn-gsm">
+              <button className="btn btn-sm">
                 <i className="fi fi-rr-trash flaticon-offset"></i>
               </button>
             </div>
