@@ -1,8 +1,30 @@
 import prisma from "@/app/db";
 import { _console_log } from "@/utils/console";
-import { badRequest, internalServerError, resourceCreated } from "@/utils/prebuiltApiResponse"
+import { badRequest, internalServerError, resourceCreated, resourceLoaded } from "@/utils/prebuiltApiResponse"
 import { getUserId } from "@/utils/session";
 import { cloudinaryUpload } from "@/utils/uploadFile";
+
+export const GET = async (req) => {
+    try {
+        const userId = await getUserId()
+        const projects = await prisma.userProjects.findMany({
+            where: {
+                userId,
+            },
+            select: {
+                id: true,
+                imageUrl: true,
+                title: true,
+                description: true,
+                tags: true,
+                url: true,
+            },
+        });
+        return resourceLoaded(projects)
+    } catch ((e) => {
+        return internalServerError(e)
+    })
+}
 
 export const POST = async (req) => {
     try {
