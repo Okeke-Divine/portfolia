@@ -5,11 +5,13 @@ import SkillSkeleton from "@/components/skeleton/skills/SkillSkeleton";
 
 const ViewProjects = () => {
   const [projects, setProjects] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(function () {
+    setLoading(true);
     axios.get("/api/info/project").then((response) => {
       setProjects(response.data.data);
+      setLoading(false);
     });
   }, []);
 
