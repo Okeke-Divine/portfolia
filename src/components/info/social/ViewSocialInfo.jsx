@@ -1,18 +1,23 @@
-// "use client"
+"use client";
 import prisma from "@/app/db";
-import { getUserId } from "@/utils/session";
+import SkillSkeleton from "@/components/skeleton/skills/SkillSkeleton";
+import axios from "axios";
+import { useState, useEffect } from "react";
 
-const ViewSocialInfo = async () => {
-  const userId = await getUserId();
+const ViewSocialInfo = () => {
+  const [socials, setSocials] = useState([]);
+  const [loading, setLoading] = useState(false);
 
-  const userExpertise =
-    (await prisma.userSocialInfo.findMany({
-      where: {
-        userId,
-      },
-    })) || {};
-  console.log(userExpertise);
-  return <div>ViewSocialInfo</div>;
+  return (
+    <>
+      {loading ? <SkillSkeleton /> : ""}
+      <div>
+        {socials.map((social, index) => (
+          <div key={index}>me</div>
+        ))}
+      </div>
+    </>
+  );
 };
 
 export default ViewSocialInfo;
