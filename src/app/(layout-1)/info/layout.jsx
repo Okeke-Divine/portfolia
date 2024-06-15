@@ -13,11 +13,9 @@ export default function InfoLayout({ children }) {
         <div className="divider"></div>
         <div>
           <div className="flex flex-col md:flex-row gap-2">
-            <div className="w-fit">
-              <div className="w-full overflow-x-auto">
-                <div className="join join-horizontal md:join-vertical border-2">
-                  <InfoSideNav />
-                </div>
+            <div className="w-[250px]">
+              <div className="join join-horizontal md:join-vertical border-2">
+                <InfoSideNav />
               </div>
             </div>
             {/* <div className="divider divider-vertical"></div> */}
