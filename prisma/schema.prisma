@@ -35,8 +35,8 @@ model UserDetails {
   fullname   String?
   heroTitle  String?
   profession String?
-  bio        String? @db.LongText
-  about      String?
+  bio        String? @db.Text
+  about      String? @db.LongText
 }
 
 model SocialLinks {

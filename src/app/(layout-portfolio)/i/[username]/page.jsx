@@ -45,6 +45,10 @@ export default async function PortFolio({ params }) {
     },
   });
 
+  if (user && user.userDetails && user.userDetails.about) {
+    user.userDetails.about = Buffer.from(user.userDetails.about).toString('utf-8');
+  }
+
   if (!user) {
     return <>404 not found</>;
   }

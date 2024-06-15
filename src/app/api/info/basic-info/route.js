@@ -15,7 +15,8 @@ export const POST = async (req) => {
         }
 
         const newData = {
-            fullname, heroTitle, profession, bio, about
+            fullname, heroTitle, profession, bio: Buffer.from(bio, "utf-8")
+            , about
         }
 
         const updated_details = await prisma.userDetails.upsert({
@@ -29,9 +30,9 @@ export const POST = async (req) => {
             }
         })
 
-        if(updated_details){
+        if (updated_details) {
             return resourceUpdated({})
-        }else{
+        } else {
             return internalServerError("Upsert error")
         }
 

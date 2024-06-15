@@ -25,7 +25,7 @@ const PortfolioAbout = async ({ user }) => {
           </div>
           {/* about */}
           <div className="mt-2 app-text-light-2 app-portfolio-about-container">
-            <p>{user?.userDetails?.about}</p>
+            {/* <p>{user?.userDetails?.about}</p> */}
           </div>
           {/* divider */}
           <div className="divider"></div>
