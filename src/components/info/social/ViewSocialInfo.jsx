@@ -44,8 +44,8 @@ const ViewSocialInfo = () => {
               ></i>
             </div>
             <div className="w-full">{social.value}</div>
-            <div className="w-fit">
-              <button className="btn btn sm">Edit</button>
+            <div className="w-fit flex flex-wrap gap-2">
+              <button className="btn btn sm">e</button>
               <button className="btn btn sm">
                 <i className="fi fi-rr-trash flaticon-offset"></i>
               </button>
