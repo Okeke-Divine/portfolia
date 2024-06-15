@@ -17,7 +17,7 @@ const SettingsProfilePicture = () => {
             </ul>
           </div>
           <h1 className="flex items-center gap-2">
-            <i class="fi fi-rr-portrait titleIcon"></i>Profile Picture
+            <i className="fi fi-rr-portrait titleIcon"></i>Profile Picture
           </h1>
         </div>
         <div className="divider"></div>
