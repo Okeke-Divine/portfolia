@@ -25,7 +25,23 @@ const AddProject = () => {
                   type="text"
                   required
                   className="grow"
-                  placeholder="Project Tile"
+                  placeholder="Project Titlre"
+                />
+              </div>
+            </div>
+            {/* tags */}
+            <div className="mb-3">
+              <div>
+                <label className="font-bold text-md">
+                  Tags (Seperated by comma)
+                </label>
+              </div>
+              <div className="input border-2 border-gray-100 flex items-center gap-2 mt-1">
+                <input
+                  type="text"
+                  required
+                  className="grow"
+                  placeholder="e.g. NextJs, Prisma, MySQL, Tailwind, .."
                 />
               </div>
             </div>
