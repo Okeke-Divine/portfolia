@@ -27,7 +27,7 @@ const PortfolioHero = ({ user }) => {
               </div> */}
               <div className="divider"></div>
               {/* social links */}
-              <div className="mt-2 flex flex-wrap gap-2">
+              <div className="mt-2">
                 <PortfolioSocialLink userId={user.id} />
               </div>
             </div>

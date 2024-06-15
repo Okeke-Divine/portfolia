@@ -35,7 +35,7 @@ const PortfolioNavbar = ({ userId }) => {
             </Link> */}
           </div>
         </div>
-        <div className="navbar-end flex gap-2">
+        <div className="navbar-end">
           <PortfolioSocialLink userId={userId} />
         </div>
       </div>
