@@ -33,11 +33,11 @@ const PortfolioSocialLink = async () => {
         <Link
           href={
             link.name == "email"
-              ? ""
+              ? "mailto:" + link.value
               : link.name == "phone_number"
-              ? ""
+              ? "tel:" + link.value
               : link.name == "whatsapp"
-              ? ""
+              ? "https://api.whatsapp.com/?phone=" + link.value
               : link.value
           }
           target="_blank"
