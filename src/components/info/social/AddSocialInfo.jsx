@@ -40,9 +40,7 @@ const AddSocialInfo = () => {
               >
                 {socials.map((social, index) => (
                   <>
-                    <option value={social.value}>
-                      {_ucfirst(social.name)}
-                    </option>
+                    <option value={social.type}>{_ucfirst(social.name)}</option>
                   </>
                 ))}
               </select>
@@ -62,7 +60,7 @@ const AddSocialInfo = () => {
                     ? "Your Email"
                     : selected == "phone_number"
                     ? "Phone Number"
-                    : _ucfirst(selected) + " Url"
+                    : "Your" + selected + " Url"
                 }
               />
             </div>
