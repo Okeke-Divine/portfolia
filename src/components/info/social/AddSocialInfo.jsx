@@ -73,7 +73,6 @@ const AddSocialInfo = () => {
           }
         }
       });
-    console.log(socialType, socialValue);
   }
 
   return (
