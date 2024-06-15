@@ -59,8 +59,8 @@ const AddSocialInfo = () => {
                   selected == "email"
                     ? "Your Email"
                     : selected == "phone_number"
-                    ? "Phone Number"
-                    : "Your" + selected + " Url"
+                    ? "Your Phone Number"
+                    : "Your " + selected + " Url"
                 }
               />
             </div>
