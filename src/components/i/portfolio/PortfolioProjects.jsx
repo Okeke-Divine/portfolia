@@ -42,11 +42,11 @@ const PortfolioProjects = async ({ user }) => {
                     <p className="max-h-[80px] overflow-y-auto">
                       {project.description}
                     </p>
-                    {project.link != "" ? (
+                    {project.url != "" ? (
                       <>
                         <div className="card-actions justify-end">
                           <Link
-                            href={project.link}
+                            href={project.url}
                             target="_blank"
                             className="app-primary-button"
                           >
