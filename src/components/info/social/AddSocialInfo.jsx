@@ -103,15 +103,15 @@ const AddSocialInfo = () => {
                 type={
                   selected == "email"
                     ? "email"
-                    : selected == "phone_number" || selected == "whatsapp"
+                    : (selected == "phone_number" || selected == "whatsapp")
                     ? "text"
                     : "url"
                 }
                 placeholder={
                   selected == "email"
                     ? "Your Email"
-                    : selected == "phone_number" || selected == "whatsapp"
-                    ? "Your Phone Number"
+                    : (selected == "phone_number" || selected == "whatsapp")
+                    ? "Your Number"
                     : "Your " + selected + " Url"
                 }
               />
