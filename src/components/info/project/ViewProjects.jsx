@@ -1,9 +1,13 @@
-import React from 'react'
+"use client";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 const ViewProjects = () => {
   return (
-    <div>ViewProjects</div>
-  )
-}
+    <>
+      <div>lol</div>
+    </>
+  );
+};
 
-export default ViewProjects
+export default ViewProjects;
