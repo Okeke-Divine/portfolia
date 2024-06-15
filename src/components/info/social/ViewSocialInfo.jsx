@@ -1,3 +1,4 @@
+// "use client"
 import prisma from "@/app/db";
 import { getUserId } from "@/utils/session";
 
@@ -5,7 +6,7 @@ const ViewSocialInfo = async () => {
   const userId = await getUserId();
 
   const userExpertise =
-    (await prisma.userSocialInfo.findFirst({
+    (await prisma.userSocialInfo.findMany({
       where: {
         userId,
       },
