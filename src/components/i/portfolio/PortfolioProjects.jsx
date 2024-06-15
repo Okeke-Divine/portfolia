@@ -34,7 +34,16 @@ const PortfolioProjects = async ({ user }) => {
                   {project.imageUrl != "" ? (
                     <>
                       <figure>
-                        <img src={project.imageUrl} alt="Shoes" />
+                        <img
+                          src={project.imageUrl}
+                          alt={
+                            project.title +
+                            " - " +
+                            project.description +
+                            " | " +
+                            user.fullname
+                          }
+                        />
                       </figure>
                     </>
                   ) : (
