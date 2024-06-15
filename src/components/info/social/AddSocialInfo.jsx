@@ -76,7 +76,7 @@ const AddSocialInfo = () => {
           </button>
         </div>
       </form>
-      <p>
+      <p className="mt-1">
         <b>NOTE:</b> You can not have more than one entry for each social info
         type.
       </p>
