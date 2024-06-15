@@ -21,7 +21,7 @@ const AddSocialInfo = () => {
       <div className="">
         <div className="block md:flex join mb-2">
           <div className="w-full md:w-fit join-item">
-            <select className="select">
+            <select className="select input-bordered">
               {socials.map((social, index) => (
                 <>
                   <option value={social.value}>{_ucfirst(social.name)}</option>
