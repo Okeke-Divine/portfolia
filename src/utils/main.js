@@ -19,7 +19,12 @@ export function getIconClass(name) {
   }
 }
 
-  export function _ucfirst(str) {
+export function _ucfirst(str) {
   if (!str) return str;
   return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+export function validatePhoneNumber(phoneNumber) {
+  const phoneRegex = /^\+?\d{1,14}$/;
+  return phoneRegex.test(phoneNumber);
 }

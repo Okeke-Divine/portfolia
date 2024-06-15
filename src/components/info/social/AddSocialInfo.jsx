@@ -1,6 +1,6 @@
 "use client";
 import { SweetAlertError } from "@/utils/customSweetAlertFunction";
-import { _ucfirst } from "@/utils/main";
+import { _ucfirst, validatePhoneNumber } from "@/utils/main";
 import { useRef, useState } from "react";
 
 const socials = [
@@ -21,7 +21,7 @@ const AddSocialInfo = () => {
   const socialValueRef = useRef(null);
 
   const [selected, setSelected] = useState("email");
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   function AddSocialInfo(e) {
     e.preventDefault();
@@ -32,6 +32,13 @@ const AddSocialInfo = () => {
     if (!socialType || !socialValue) {
       SweetAlertError("All fields are required");
       return;
+    }
+
+    if (
+      socialType == "phone_number" &&
+      validatePhoneNumber(socialValue) == false
+    ) {
+      SweetAlertError("Invalid phone number. E.g (080.....) or (+23480...)");
     }
 
     console.log(socialType, socialValue);
