@@ -9,7 +9,7 @@ const ViewSocialInfo = () => {
   const [socials, setSocials] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  function deleteSocialInfo(id) {
+  function deleteSocialInfo(social_id) {
     Swal.fire({
       title: "Warning",
       icon: "warning",
@@ -29,8 +29,8 @@ const ViewSocialInfo = () => {
         });
         axios
           .post(
-            "/api/skill/delete",
-            { skill_id },
+            "/api/info/socials/delete",
+            { social_id },
             {
               headers: {
                 "Content-Type": "application/json",
@@ -46,7 +46,7 @@ const ViewSocialInfo = () => {
                 confirmButtonColor: app_color_primary,
               });
               const parent_container = document.getElementById(
-                "skill_" + skill_id
+                "social_" + social_id
               );
               parent_container.classList.add("hidden");
             } else {
@@ -97,6 +97,7 @@ const ViewSocialInfo = () => {
       <div>
         {socials.map((social, index) => (
           <div
+            id={"social_" + social.id}
             key={index}
             className={`flex gap-2 items-center mb-2 p-2 ${
               index % 2 === 0 ? "bg-white" : "bg-gray-200"
