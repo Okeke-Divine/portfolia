@@ -13,9 +13,9 @@ const ViewProjects = () => {
 
   return (
     <>
-      <table>
-        
-      </table>
+      <div className="overflow-x-auto w-full">
+        <table></table>
+      </div>
     </>
   );
 };
