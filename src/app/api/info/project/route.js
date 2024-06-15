@@ -1,3 +1,4 @@
+import prisma from "@/app/db";
 import { _console_log } from "@/utils/console";
 import { badRequest, internalServerError, resourceCreated } from "@/utils/prebuiltApiResponse"
 import { getUserId } from "@/utils/session";
@@ -44,15 +45,26 @@ export const POST = async (req) => {
 
             fileUrl = uploadFile.fileUrl;
             public_id = uploadFile.options.public_id;
-
         }
 
         console.log("fileUrl: ", fileUrl);
         console.log("public_id: ", public_id);
 
+        const project = await prisma.userProjects.create({
+            data: {
+                userId,
+                imageUrl: fileUrl != undefined ? fileUrl : "",
+                imagePublicId: public_id != undefined ? public_id : "",
+                title: projectTitle,
+                description: projectDesc,
+                tags: projectTags,
+                url: projectUrl
+            }
+        })
 
-        if (true) {
-            return resourceCreated({})
+
+        if (project) {
+            return resourceCreated({ project })
         } else {
             return internalServerError("Could not create project")
         }
