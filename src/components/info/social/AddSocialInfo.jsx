@@ -48,6 +48,7 @@ const AddSocialInfo = () => {
             </div>
             <div className="w-full join-item">
               <input
+                required
                 ref={socialTypeRef}
                 className="input input-bordered w-full"
                 type={
