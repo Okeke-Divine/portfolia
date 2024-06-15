@@ -1,6 +1,7 @@
 "use client";
 import prisma from "@/app/db";
 import SkillSkeleton from "@/components/skeleton/skills/SkillSkeleton";
+import { getIconClass } from "@/utils/main";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
@@ -34,7 +35,16 @@ const ViewSocialInfo = () => {
       {loading ? <SkillSkeleton /> : ""}
       <div>
         {socials.map((social, index) => (
-          <div key={index}>{social.value}</div>
+          <div key={index}>
+            <div>
+              <i
+                className={`${getIconClass(
+                  social.name
+                )} app-portfolio-navbar-icon`}
+              ></i>
+            </div>
+            {social.value}
+          </div>
         ))}
       </div>
     </>
