@@ -36,7 +36,7 @@ const AddSocialInfo = () => {
             <div className="w-full md:w-fit join-item">
               <select
                 className="select input-bordered"
-                onSelect={(e) => alert(e.target.value)}
+                onChange={(e) => setSelected(e.target.value)}
               >
                 {socials.map((social, index) => (
                   <>
@@ -50,8 +50,20 @@ const AddSocialInfo = () => {
             <div className="w-full join-item">
               <input
                 className="input input-bordered w-full"
-                type={selected == "email" ? "email" : selected == "phone_number" ? "text" : "url"}
-                placeholder={selected == "email" ? "Your Email" : selected == "phone_number" ? "Phone Number" : _ucfirst(selected)+ " Url"}
+                type={
+                  selected == "email"
+                    ? "email"
+                    : selected == "phone_number"
+                    ? "text"
+                    : "url"
+                }
+                placeholder={
+                  selected == "email"
+                    ? "Your Email"
+                    : selected == "phone_number"
+                    ? "Phone Number"
+                    : _ucfirst(selected) + " Url"
+                }
               />
             </div>
           </div>
