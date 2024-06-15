@@ -4,7 +4,7 @@ import {
   SweetAlertSuccess,
 } from "@/utils/customSweetAlertFunction";
 import { useRef, useState } from "react";
-import Swal from "sweetalert2";
+import axios from "axios"
 
 const ChangeProfilePictureForm = () => {
   const [loading, setLoading] = useState(false);
@@ -26,7 +26,7 @@ const ChangeProfilePictureForm = () => {
     formData.append("picture", picture);
 
     axios
-      .post("/api", formData)
+      .post("/api/profile/picture/change", formData)
       .then((response) => {
         if (response) {
           setLoading(false);
