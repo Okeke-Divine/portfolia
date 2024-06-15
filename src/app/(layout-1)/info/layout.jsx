@@ -13,13 +13,13 @@ export default function InfoLayout({ children }) {
         <div className="divider"></div>
         <div>
           <div className="flex flex-col md:flex-row gap-2">
-            <div className="w-[250px]">
+            <div className="w-[250px] bg-red-200">
               <div className="join join-horizontal md:join-vertical border-2">
                 <InfoSideNav />
               </div>
             </div>
             {/* <div className="divider divider-vertical"></div> */}
-            <div className="w-full">{children}</div>
+            <div className="w-full bg-blue-200">{children}</div>
           </div>
         </div>
       </div>
