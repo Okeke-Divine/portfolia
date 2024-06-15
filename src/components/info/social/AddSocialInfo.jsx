@@ -51,13 +51,8 @@ const AddSocialInfo = () => {
               <input
                 type="text"
                 className="input input-bordered w-full"
-                placeholder={
-                  selected == "email"
-                    ? "Your Email"
-                    : selected == "phone_number"
-                    ? "Phone Number"
-                    : _ucfirst(selected) + " Url"
-                }
+                type={selected == "email" ? "email" : selected == "phone_number" ? "text" : "url"}
+                placeholder={selected == "email" ? "Your Email" : selected == "phone_number" ? "Phone Number" : _ucfirst(selected)+ " Url"}
               />
             </div>
           </div>
