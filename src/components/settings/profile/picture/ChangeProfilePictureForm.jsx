@@ -12,8 +12,8 @@ const ChangeProfilePictureForm = () => {
 
     const picture = profilePictureRef.current.files[0];
 
-    if(!picture){
-        SweetAlertError("Picture is required.")
+    if (!picture) {
+      SweetAlertError("Picture is required.");
     }
   }
 
@@ -23,9 +23,13 @@ const ChangeProfilePictureForm = () => {
         <div className="mb-2">
           <label className="font-bold text-md">Select a picture</label>
         </div>
-        <input type="file" accept="image/*" className="file-input w-full" 
-        // required
-         />
+        <input
+          type="file"
+          accept="image/*"
+          className="file-input w-full"
+          ref={profilePictureRef}
+          // required
+        />
         {/* submit button */}
         <div className="mt-2">
           <button
