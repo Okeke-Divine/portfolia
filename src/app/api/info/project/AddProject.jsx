@@ -11,10 +11,24 @@ const AddProject = () => {
   return (
     <>
       <div className="collapse collapse-arrow rounded-md bg-base-200">
-        <input type="checkbox" />
+        <input type="checkbox" checked />
         <div className="collapse-title text-xl font-medium">Add Project</div>
         <div className="collapse-content">
           <form onSubmit={_addProject} className="form-control">
+            {/* title */}
+            <div className="mb-3">
+              <div>
+                <label className="font-bold text-md">Title</label>
+              </div>
+              <div className="input border-2 border-gray-100 flex items-center gap-2 mt-1">
+                <input
+                  type="text"
+                  required
+                  className="grow"
+                  placeholder="Project Tile"
+                />
+              </div>
+            </div>
             {/* submit button */}
             <div>
               <button
