@@ -1,6 +1,7 @@
 "use client";
 import { useState, useRef } from "react";
-import axios from "axios"
+import axios from "axios";
+import { SweetAlertError } from "@/utils/customSweetAlertFunction";
 
 const AddProject = () => {
   const [loading, setLoading] = useState(false);
@@ -14,13 +15,26 @@ const AddProject = () => {
 
   function _addProject(e) {
     e.preventDefault();
+    setLoading(true);
 
+    //get the values
     const projectTitle = projectTitleRef.current.value;
     const projectTags = projectTagsRef.current.value;
     const projectUrl = projectUrlRef.current.value;
     const projectDesc = projectDescRef.current.value;
     const projectImage = projectImageRef.current.files[0];
 
+    if (!projectTitle) {
+      SweetAlertError("Project title is required.");
+      setLoading(false);
+      eturn;
+    }
+
+    if (!projectDesc) {
+      SweetAlertError("Project description is required.");
+      setLoading(false);
+      return;
+    }
   }
 
   return (
