@@ -117,7 +117,7 @@ const ViewSocialInfo = () => {
             </div>
             <div className="w-full">
               <input
-                readonly={true}
+                readOnly={true}
                 defaultValue={
                   social.value + social.value + social.value + social.value
                 }
