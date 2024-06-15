@@ -46,7 +46,9 @@ const ViewSocialInfo = () => {
             <div className="w-full">{social.value}</div>
             <div className="w-fit">
               <button className="btn btn sm">Edit</button>
-              <button className="btn btn sm">Delete</button>
+              <button className="btn btn sm">
+                <i className="fi fi-rr-trash flaticon-offset"></i>
+              </button>
             </div>
           </div>
         ))}
