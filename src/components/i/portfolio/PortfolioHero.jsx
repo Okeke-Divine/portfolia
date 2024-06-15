@@ -29,7 +29,7 @@ const PortfolioHero = ({ user }) => {
               <div className="divider"></div>
               {/* social links */}
               <div className="mt-2 flex flex-wrap gap-2">
-                <PortfolioSocialLink userId={userId} />
+                <PortfolioSocialLink userId={user.id} />
               </div>
             </div>
           </div>
