@@ -49,7 +49,6 @@ const AddSocialInfo = () => {
             </div>
             <div className="w-full join-item">
               <input
-                type="text"
                 className="input input-bordered w-full"
                 type={selected == "email" ? "email" : selected == "phone_number" ? "text" : "url"}
                 placeholder={selected == "email" ? "Your Email" : selected == "phone_number" ? "Phone Number" : _ucfirst(selected)+ " Url"}
