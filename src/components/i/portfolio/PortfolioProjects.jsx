@@ -2,7 +2,7 @@ import prisma from "@/app/db";
 
 const PortfolioProjects = async ({ user }) => {
   const userId = user?.id;
-  const project = await prisma.userProjects.findMany({
+  const projects = await prisma.userProjects.findMany({
     where: {
       userId,
     },
@@ -15,7 +15,7 @@ const PortfolioProjects = async ({ user }) => {
       url: true,
     },
   });
-  const projects = [{}, {}, {}, {}, {}];
+  // const projects = [{}, {}, {}, {}, {}];
   return (
     <>
       <section className="app-portfolio-padding" id="projects">
