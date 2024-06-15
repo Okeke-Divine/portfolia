@@ -1,8 +1,16 @@
 "use client";
 import { useState, useRef } from "react";
+import axios from "axios"
 
 const AddProject = () => {
   const [loading, setLoading] = useState(false);
+
+  //refs
+  const projectTitleRef = useRef(null);
+  const projectTagsRef = useRef(null);
+  const projectUrlRef = useRef(null);
+  const projectDescRef = useRef(null);
+  const projectImageRef = useRef(null);
 
   function _addProject(e) {
     e.preventDefault();
