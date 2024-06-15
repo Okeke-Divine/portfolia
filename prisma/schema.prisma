@@ -16,7 +16,7 @@ model User {
   profilePicture_url String?          @db.Text
   dateJoined         DateTime         @default(now())
   //realations
-  SocialLinks        SocialLinks[]
+  UserSocialInfo     UserSocialInfo[]
   UserExpertise      UserExpertise[]
   UserProjects       UserProjects[]
   //
@@ -44,7 +44,7 @@ model UserSocialInfo {
   userId Int
   user   User   @relation(fields: [userId], references: [id])
   //
-  name   String
+  name   String @unique
   value  String
 }
 
