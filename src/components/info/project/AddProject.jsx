@@ -70,7 +70,7 @@ const AddProject = () => {
   return (
     <>
       <div className="collapse collapse-arrow rounded-md bg-base-200">
-        <input type="checkbox" checked />
+        <input type="checkbox" />
         <div className="collapse-title text-xl font-medium">Add Project</div>
         <div className="collapse-content">
           <form onSubmit={_addProject} className="form-control">
