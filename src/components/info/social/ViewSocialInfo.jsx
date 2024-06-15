@@ -1,9 +1,9 @@
 "use client";
-import prisma from "@/app/db";
 import SkillSkeleton from "@/components/skeleton/skills/SkillSkeleton";
 import { getIconClass } from "@/utils/main";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import Swal from "sweetalert2";
 
 const ViewSocialInfo = () => {
   const [socials, setSocials] = useState([]);
@@ -93,7 +93,13 @@ const ViewSocialInfo = () => {
 
   return (
     <>
-      {loading ? (<><SkillSkeleton /></>) : ""}
+      {loading ? (
+        <>
+          <SkillSkeleton />
+        </>
+      ) : (
+        ""
+      )}
       <div>
         {socials.map((social, index) => (
           <div
