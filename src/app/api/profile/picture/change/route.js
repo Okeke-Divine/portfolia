@@ -29,8 +29,13 @@ export const POST = async (req) => {
                 profilePicture_url: {
                     not: "",
                 }
+            }, select: {
+                profilePicture_assetId: true,
             }
         })
+        if (profileVerify) {
+            console.log(profileVerify.profilePicture_assetId);
+        }
 
         console.log(profileVerify);
 
