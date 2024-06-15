@@ -37,7 +37,7 @@ const ViewSocialInfo = () => {
         {socials.map((social, index) => (
           <div
             key={index}
-            className={`flex gap-2 items-center mb-2 ${
+            className={`flex gap-2 items-center mb-2 p-2 ${
               index % 2 === 0 ? "bg-white" : "bg-gray-200"
             }`}
           >
@@ -46,10 +46,10 @@ const ViewSocialInfo = () => {
             </div>
             <div className="grow">{social.value}</div>
             <div className="w-fit flex gap-2">
-              <button className="btn btn sm">
+              <button className="btn btn-sm">
                 <i className="fi fi-tr-pen-circle flaticon-offset"></i>
               </button>
-              <button className="btn btn sm">
+              <button className="btn btn-gsm">
                 <i className="fi fi-rr-trash flaticon-offset"></i>
               </button>
             </div>
