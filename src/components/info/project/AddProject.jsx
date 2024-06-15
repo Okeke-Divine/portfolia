@@ -46,7 +46,9 @@ const AddProject = () => {
     axios
       .post("/api/info/project/", formData)
       .then((response) => {
-        setLoading(false);
+        if (response) {
+          setLoading(false);
+        }
       })
       .catch((error) => {
         if (error) {
