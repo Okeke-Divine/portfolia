@@ -1,3 +1,4 @@
+import { _console_log } from "@/utils/console";
 import { badRequest, internalServerError, resourceCreated } from "@/utils/prebuiltApiResponse"
 
 export const POST = async (req) => {
@@ -14,9 +15,12 @@ export const POST = async (req) => {
         }
 
         // upload project image if it's exists
+        if (projectImage != "undefined") {
 
+        } else {
+            _console_log("Pic not exists")
+        }
 
-        console.log(data);
 
         if (true) {
             return resourceCreated({})
