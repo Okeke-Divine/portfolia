@@ -17,6 +17,8 @@ export const POST = async (req) => {
         }
 
         const userId = await getUserId();
+        let fileUrl;
+        let public_id;
 
         // upload project image if it's exists
         if (projectImage != "undefined") {
@@ -40,12 +42,13 @@ export const POST = async (req) => {
                 "projectPicture-user-" + userId
             ]);
 
-            const fileUrl = uploadFile.fileUrl;
-            const public_id = uploadFile.options.public_id;
+            fileUrl = uploadFile.fileUrl;
+            public_id = uploadFile.options.public_id;
 
-        } else {
-            _console_log("Pic not exists")
         }
+
+        console.log("fileUrl: ", fileUrl);
+        console.log("public_id: ", public_id);
 
 
         if (true) {
