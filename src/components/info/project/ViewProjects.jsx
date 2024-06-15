@@ -31,9 +31,7 @@ const ViewProjects = () => {
               <th>Title</th>
               <th>Tags</th>
               <th>Description</th>
-              <th>Url</th>
-              <th></th>
-              <th></th>
+              <th>Actions</th>
             </tr>
           </thead>
           <tbody className="w-full">
@@ -60,16 +58,13 @@ const ViewProjects = () => {
                 </td>
                 <td>{project.tags != "" ? project.tags : "-"}</td>
                 <td>{project.description != "" ? project.description : "-"}</td>
-                <td></td>
-                <td>
+                <td className="flex gap-2">
                   <button
                     className="btn btn-sm"
                     onClick={() => alert("Coming soon")}
                   >
                     <i className="fi fi-tr-pen-circle flaticon-offset"></i>
                   </button>
-                </td>
-                <td>
                   <button
                     className="btn btn-sm"
                     onClick={() => deleteProject(project.id)}
