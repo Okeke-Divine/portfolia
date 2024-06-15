@@ -20,8 +20,10 @@ const SettingsProfilePicture = () => {
             <i className="fi fi-rr-portrait titleIcon"></i>Profile Picture
           </h1>
           <p>
-            <b>Recommended:</b> Profile picture should be a square dimension.
-            Profle picture must not be more than 3mb
+            <strong>Recommended:</strong> Profile picture should be square
+            dimensions.
+            <br />
+            Profile picture must not be more than 3 MB.
           </p>
         </div>
         <div className="divider"></div>
