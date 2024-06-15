@@ -59,8 +59,8 @@ const AddSocialInfo = () => {
         if (response) {
           setLoading(false);
           if (response?.status == 201) {
-            socialValueRef.current.value = "";
             SweetAlertSuccess("");
+            socialValueRef.current.value = "";
           }
         }
       })
