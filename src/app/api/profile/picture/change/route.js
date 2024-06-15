@@ -2,8 +2,9 @@ import { internalServerError, resourceUpdated } from "@/utils/prebuiltApiRespons
 
 export const POST = async (req) => {
     try {
-        const data = req.FormData();
+        const data = await req.formData();
         console.log(data);
+        console.log("test");
         return resourceUpdated({})
     } catch (e) {
         return internalServerError(e)
