@@ -59,6 +59,13 @@ export const POST = async (req) => {
                 description: projectDesc,
                 tags: projectTags,
                 url: projectUrl
+            }, select: {
+                id: true,
+                imageUrl: true,
+                title: true,
+                description: true,
+                tags: true,
+                url: true
             }
         })
 
