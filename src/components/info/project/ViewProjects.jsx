@@ -22,7 +22,6 @@ const ViewProjects = () => {
           <thead className="w-full">
             <tr>
               <th></th>
-              <th>Image</th>
               <th>Title</th>
               <th>Tags</th>
               <th>Description</th>
@@ -35,6 +34,24 @@ const ViewProjects = () => {
             {projects.map((project, index) => (
               <tr key={index}>
                 <td>{index + 1}</td>
+                <td>
+                  <div className="flex gap-2">
+                    {project.imgUrl != "" ? (
+                      <>
+                        <div class="w-full h-[50px] overflow-hidden">
+                          <img
+                            src={project.imageUrl}
+                            alt={project.title}
+                            class="object-cover w-full h-full"
+                          />
+                        </div>
+                      </>
+                    ) : (
+                      ""
+                    )}
+                    <div>{project.title}</div>
+                  </div>
+                </td>
               </tr>
             ))}
           </tbody>
