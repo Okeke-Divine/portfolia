@@ -18,8 +18,8 @@ const AddSocialInfo = () => {
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-        <div className="join w-full">
-          <div className="join-item">
+        <div className="flex">
+          <div className="w-fit">
             <select name="" id="">
               {socials.map((social, index) => (
                 <>
@@ -28,11 +28,13 @@ const AddSocialInfo = () => {
               ))}
             </select>
           </div>
-          <div>
-            <input type="text" className="input input-bordered" />
+          <div className="w-full">
+            <input type="text" className="input input-bordered w-full" />
           </div>
         </div>
-        <button className="btn app-bg-primary text-white">Add</button>
+        <button className="w-full app-bg-primary duration-300 hover:app-bg-primary-dark btn btn-md text-white">
+          Add
+        </button>
       </div>
     </>
   );
