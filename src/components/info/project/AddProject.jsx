@@ -56,10 +56,10 @@ const AddProject = () => {
           projectTagsRef.current.value = "";
           projectUrlRef.current.value = "";
           projectDescRef.current.value = "";
-          projectImageRef.current.files[0] = "";
         }
       })
       .catch((error) => {
+        console.log(error);
         if (error) {
           if (error?.response?.status == 400) {
             SweetAlertError(error.response.data.reason);
