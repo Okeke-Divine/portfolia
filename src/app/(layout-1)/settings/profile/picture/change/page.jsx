@@ -19,6 +19,10 @@ const SettingsProfilePicture = () => {
           <h1 className="flex items-center gap-2">
             <i className="fi fi-rr-portrait titleIcon"></i>Profile Picture
           </h1>
+          <p>
+            <b>Recommended:</b> Profile picture should be a square dimension.
+            Profle picture must not be more than 3mb
+          </p>
         </div>
         <div className="divider"></div>
         <div>
