@@ -29,7 +29,7 @@ const PortfolioProjects = async ({ user }) => {
         <div>
           <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 mt-2">
             {projects.map((project, index) => (
-              <div className="card shadow-xl" key={index}>
+              <div className="card shadow-xl h-fit" key={index}>
                 {project.imageUrl != "" ? (
                   <>
                     <figure class="w-full h-[250px] md:h-[200px] overflow-hidden">
