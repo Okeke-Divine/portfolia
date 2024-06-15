@@ -9,6 +9,11 @@ export const GET = async () => {
             where: {
                 userId,
             },
+            select: {
+                id: true,
+                name: true,
+                value: true
+            }
         }) || [];
         return resourceLoaded(socials)
     } catch (e) {
@@ -47,11 +52,16 @@ export const POST = async (req) => {
                 userId,
                 name: socialType,
                 value: socialValue
+            },
+            select: {
+                id: true,
+                name: true,
+                value: true
             }
         })
 
         if (socialInfo) {
-            return resourceCreated({})
+            return resourceCreated(socialInfo)
         } else {
             return internalServerError("Error inserting social info")
         }

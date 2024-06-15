@@ -25,6 +25,9 @@ const AddSocialInfo = () => {
   const socialTypeRef = useRef(null);
   const socialValueRef = useRef(null);
 
+  const channel = new BroadcastChannel("user-socials-channel")
+
+
   const [selected, setSelected] = useState("email");
   const [loading, setLoading] = useState(false);
 
@@ -62,6 +65,12 @@ const AddSocialInfo = () => {
           if (response?.status == 201) {
             SweetAlertSuccess("");
             socialValueRef.current.value = "";
+
+            const broadcast_message = {
+              type: "NEW_SOCIAL",
+              data: response.data.data
+            }
+            channel.postMessage(broadcast_message);
           }
         }
       })
