@@ -43,7 +43,7 @@ const ViewSocialInfo = () => {
                 )} app-portfolio-navbar-icon`}
               ></i>
             </div>
-            <div className="grow bg-red-200">{social.value}</div>
+            <div className="grow">{social.value}</div>
             <div className="w-fit flex gap-2">
               <button className="btn btn sm">
                 <i className="fi fi-tr-pen-circle"></i>
