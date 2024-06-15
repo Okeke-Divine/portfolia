@@ -1,4 +1,5 @@
 import prisma from "@/app/db";
+import NotFound from "@/app/not-found";
 import PortfolioAbout from "@/components/i/portfolio/PortfolioAbout";
 import PortfolioFooter from "@/components/i/portfolio/PortfolioFooter";
 // import PortfolioExpertise from "@/components/i/portfolio/PortfolioExpertise";
@@ -46,7 +47,11 @@ export default async function PortFolio({ params }) {
   });
 
   if (!user) {
-    return <>404 not found</>;
+    return (
+      <>
+        <NotFound />
+      </>
+    );
   }
 
   return (
