@@ -1,6 +1,6 @@
 "use client";
 import { _ucfirst } from "@/utils/main";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 const socials = [
   { type: "email", name: "email" },
@@ -16,16 +16,16 @@ const socials = [
 ];
 
 const AddSocialInfo = () => {
+  const socialTypeRef = useRef(null);
+  const socialValueRef = useRef(null);
 
-    const socialTypeRef = useRef(null);
-    const socialValueRef = useRef(null);
+  const [selected, setSelected] = useState("email");
 
   function AddSocialInfo(e) {
     e.preventDefault();
 
     const socialType = socialTypeRef.current.value;
-    const socialValue= socialValueRef.current.value;
-
+    const socialValue = socialValueRef.current.value;
   }
 
   return (
@@ -34,7 +34,10 @@ const AddSocialInfo = () => {
         <div className="">
           <div className="block md:flex join mb-2 gap-2">
             <div className="w-full md:w-fit join-item">
-              <select className="select input-bordered">
+              <select
+                className="select input-bordered"
+                onChange={(e) => alert(e.target.value)}
+              >
                 {socials.map((social, index) => (
                   <>
                     <option value={social.value}>
@@ -48,7 +51,7 @@ const AddSocialInfo = () => {
               <input
                 type="text"
                 className="input input-bordered w-full"
-                placeholder="Enter..."
+                placeholder=""
               />
             </div>
           </div>
