@@ -58,15 +58,16 @@ const AddSocialInfo = () => {
       .then((resonse) => {
         if (response) {
           setLoading(false);
-          if (response.status == 201) {
+          if (response?.status == 201) {
             SweetAlertSuccess("");
           }
         }
       })
       .catch((error) => {
+        console.log(error);
         if (error) {
           setLoading(false);
-          if (error.response.status == 409) {
+          if (error.response?.status == 409) {
             SweetAlertError("Already exists");
           } else {
             SweetAlertError("An error occured. Please try again");
