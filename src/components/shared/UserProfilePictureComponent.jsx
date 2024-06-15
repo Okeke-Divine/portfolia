@@ -4,7 +4,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 
 const UserProfilePictureComponent = () => {
-  const [imgUrl, setImgUrl] = useState(defaultImgUrl);
+  const [imgUrl, setImgUrl] = useState(defaultImgUrl); //shoiuld be a loading image
 
   if (
     typeof localStorage !== "undefined" &&
