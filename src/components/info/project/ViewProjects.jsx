@@ -58,7 +58,7 @@ const ViewProjects = () => {
                 </td>
                 <td>{project.tags != "" ? project.tags : "-"}</td>
                 <td>{project.description != "" ? project.description : "-"}</td>
-                <td className="flex gap-2">
+                <td className="flex gap-2 items-center">
                   <button
                     className="btn btn-sm"
                     onClick={() => alert("Coming soon")}
