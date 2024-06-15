@@ -32,9 +32,11 @@ export const POST = async (req) => {
             }
         })
 
-
-        console.log(data);
-        return resourceCreated({})
+        if (socialInfo) {
+            return resourceCreated({})
+        } else {
+            return internalServerError("Error inserting social info")
+        }
     } catch (e) {
         return internalServerError(e)
     }
