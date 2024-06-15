@@ -22,7 +22,7 @@ const AddProject = () => {
                   Project Title <span className="text-red-600">*</span>
                 </label>
               </div>
-              <div className="input border-2 border-gray-100 flex items-center gap-2 mt-1">
+              <div className="input input-bordered flex items-center gap-2 mt-1">
                 <input
                   type="text"
                   required
@@ -38,7 +38,7 @@ const AddProject = () => {
                   Tags (Seperated by comma)
                 </label>
               </div>
-              <div className="input border-2 border-gray-100 flex items-center gap-2 mt-1">
+              <div className="input input-bordered flex items-center gap-2 mt-1">
                 <input
                   type="text"
                   className="grow"
@@ -46,33 +46,28 @@ const AddProject = () => {
                 />
               </div>
             </div>
-              {/* url */}
-              <div className="mb-3">
+            {/* url */}
+            <div className="mb-3">
               <div>
-                <label className="font-bold text-md">
-                  Preview Url
-                </label>
+                <label className="font-bold text-md">Preview Url</label>
               </div>
-              <div className="input border-2 border-gray-100 flex items-center gap-2 mt-1">
-                <input
-                  type="url"
-                  className="grow"
-                  placeholder="https://..."
-                />
+              <div className="input input-bordered flex items-center gap-2 mt-1">
+                <input type="url" className="grow" placeholder="https://..." />
               </div>
             </div>
-              {/* description */}
-              <div className="mb-3">
+            {/* description */}
+            <div className="mb-3">
               <div>
-                <label className="font-bold text-md">
-                  Project Description
-                </label>
+                <label className="font-bold text-md">Project Description</label>
               </div>
-            <div className="mt-1">
-                <textarea name="" id="" cols="30" rows="10" className="textarea"></textarea>
+              <div className="mt-1">
+                <textarea
+                  rows={5}
+                  className="textarea w-full input-bordered"
+                ></textarea>
+              </div>
             </div>
-            </div>
-            
+
             {/* submit button */}
             <div>
               <button
