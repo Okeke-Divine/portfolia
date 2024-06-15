@@ -29,7 +29,7 @@ export default function SignUp() {
                   Already have an account?{" "}
                   <Link
                     href="/signin"
-                    className="app-text-primary duration-300 hover:app-text-primary-dark"
+                    className="w-full app-bg-primary duration-300 hover:app-bg-primary-dark btn btn-md text-white"
                   >
                     Sign In
                   </Link>
