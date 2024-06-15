@@ -17,6 +17,8 @@ const ViewProjects = () => {
 
   function deleteProject(project_id) {
     alert(project_id);
+    const parent_container = document.getElementById("project_" + project_id);
+    parent_container.classList.add("hidden");
   }
 
   return (
@@ -36,7 +38,7 @@ const ViewProjects = () => {
           </thead>
           <tbody className="w-full">
             {projects.map((project, index) => (
-              <tr key={index}>
+              <tr key={index} id={"project_" + project.id}>
                 <td>{index + 1}</td>
                 <td>
                   <div className="flex gap-2">
