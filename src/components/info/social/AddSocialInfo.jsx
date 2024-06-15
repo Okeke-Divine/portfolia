@@ -20,7 +20,7 @@ const AddSocialInfo = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
         <div className="flex">
           <div className="w-fit">
-            <select name="" id="">
+            <select className="select">
               {socials.map((social, index) => (
                 <>
                   <option>{_ucfirst(social.name)}</option>
@@ -29,7 +29,7 @@ const AddSocialInfo = () => {
             </select>
           </div>
           <div className="w-full">
-            <input type="text" className="input input-bordered w-full" />
+            <input type="text" className="input input-bordered w-full" placeholder="Enter..." />
           </div>
         </div>
         <button className="w-full app-bg-primary duration-300 hover:app-bg-primary-dark btn btn-md text-white">
