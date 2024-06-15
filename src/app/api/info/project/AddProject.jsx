@@ -63,7 +63,7 @@ const AddProject = () => {
               <input
                 type="file"
                 accept="image/*"
-                className="file-input w-full"
+                className="file-input w-full mt-1"
               />
             </div>
             {/* description */}
