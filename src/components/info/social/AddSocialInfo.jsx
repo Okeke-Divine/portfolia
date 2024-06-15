@@ -39,6 +39,7 @@ const AddSocialInfo = () => {
       validatePhoneNumber(socialValue) == false
     ) {
       SweetAlertError("Invalid phone number. E.g (080.....) or (+23480...)");
+      return;
     }
 
     console.log(socialType, socialValue);
