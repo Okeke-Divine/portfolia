@@ -1,7 +1,11 @@
 import React from "react";
 
 const SettingsProfilePicture = () => {
-  return <div>SettingsProfilePicture</div>;
+  return (
+    <>
+      settings/profile/picture/change
+    </>
+  )
 };
 
 export default SettingsProfilePicture;
