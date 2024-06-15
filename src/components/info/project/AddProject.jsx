@@ -44,7 +44,7 @@ const AddProject = () => {
     formData.append("projectImage", projectImage);
 
     axios
-      .post("/api/info/project", formData)
+      .post("/api/info/project/", formData)
       .then((response) => {
         if (response) {
           setLoading(false);
