@@ -10,9 +10,8 @@ const SettingsProfilePicture = () => {
       <div>
         <div>
           <h1 className="flex items-center gap-2">
-            <i className="fi fi-ts-web-design titleIcon"></i> Info
+            <i class="fi fi-rr-portrait titleIcon"></i>Profile Picture
           </h1>
-          <p className="app-text-light">Write once, use anywhere</p>
         </div>
         <div className="divider"></div>
         <div>
