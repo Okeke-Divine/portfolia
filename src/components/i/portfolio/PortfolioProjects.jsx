@@ -1,13 +1,21 @@
-import React from "react";
+import prisma from "@/app/db";
 
-const PortfolioProjects = () => {
-  const projects = [
-    {},
-    {},
-    {},
-    {},
-    {},
-  ];
+const PortfolioProjects = async ({ user }) => {
+  const userId = user?.id;
+  const project = await prisma.userProjects.findMany({
+    where: {
+      userId,
+    },
+    select: {
+      id: true,
+      imageUrl: true,
+      title: true,
+      description: true,
+      tags: true,
+      url: true,
+    },
+  });
+  const projects = [{}, {}, {}, {}, {}];
   return (
     <>
       <section className="app-portfolio-padding" id="projects">
@@ -31,43 +39,7 @@ const PortfolioProjects = () => {
                   <div className="card-body">
                     <h2 className="card-title">Strender</h2>
                     <p className="max-h-[80px] overflow-y-auto">
-                    Renowed social media platform with over <b>150k</b> users
-                      worldwide Renowed social media platform with over <b>150k</b> users
-                      worldwide Renowed social media platform with over <b>150k</b> users
-                      worldwide Renowed social media platform with over <b>150k</b> users
-                      worldwide Renowed social media platform with over <b>150k</b> users
-                      worldwide Renowed social media platform with over <b>150k</b> users
-                      worldwide Renowed social media platform with over <b>150k</b> users
-                      worldwide Renowed social media platform with over <b>150k</b> users
-                      worldwide Renowed social media platform with over <b>150k</b> users
-                      worldwide Renowed social media platform with over <b>150k</b> users
-                      worldwide Renowed social media platform with over <b>150k</b> users
-                      worldwide Renowed social media platform with over <b>150k</b> users
-                      worldwide Renowed social media platform with over <b>150k</b> users
-                      worldwide Renowed social media platform with over <b>150k</b> users
-                      worldwide Renowed social media platform with over <b>150k</b> users
-                      worldwide Renowed social media platform with over <b>150k</b> users
-                      worldwide Renowed social media platform with over <b>150k</b> users
-                      worldwide Renowed social media platform with over <b>150k</b> users
-                      worldwide Renowed social media platform with over <b>150k</b> users
-                      worldwide Renowed social media platform with over <b>150k</b> users
-                      worldwide Renowed social media platform with over <b>150k</b> users
-                      worldwide Renowed social media platform with over <b>150k</b> users
-                      worldwide Renowed social media platform with over <b>150k</b> users
-                      worldwide Renowed social media platform with over <b>150k</b> users
-                      worldwide Renowed social media platform with over <b>150k</b> users
-                      worldwide Renowed social media platform with over <b>150k</b> users
-                      worldwide Renowed social media platform with over <b>150k</b> users
-                      worldwide Renowed social media platform with over <b>150k</b> users
-                      worldwide Renowed social media platform with over <b>150k</b> users
-                      worldwide Renowed social media platform with over <b>150k</b> users
-                      worldwide Renowed social media platform with over <b>150k</b> users
-                      worldwide Renowed social media platform with over <b>150k</b> users
-                      worldwide Renowed social media platform with over <b>150k</b> users
-                      worldwide Renowed social media platform with over <b>150k</b> users
-                      worldwide Renowed social media platform with over <b>150k</b> users
-                      worldwide Renowed social media platform with over <b>150k</b> users
-                      worldwide
+                      Renowed social media platform with over <b>150k</b> users
                     </p>
                     <div className="card-actions justify-end">
                       <button className="app-primary-button">View</button>
