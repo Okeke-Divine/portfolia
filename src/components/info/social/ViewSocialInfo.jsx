@@ -8,7 +8,9 @@ import Swal from "sweetalert2";
 
 const ViewSocialInfo = () => {
   const [socials, setSocials] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
+
+  console.log(loading);
 
   function deleteSocialInfo(social_id) {
     Swal.fire({
@@ -99,9 +101,10 @@ const ViewSocialInfo = () => {
       {loading ? (
         <>
           <SkillSkeleton />
+          lol
         </>
       ) : (
-        ""
+        "lolet"
       )}
       <div>
         {socials.map((social, index) => (
