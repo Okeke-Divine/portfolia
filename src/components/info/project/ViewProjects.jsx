@@ -23,7 +23,7 @@ const ViewProjects = () => {
 
   return (
     <>
-      <div className="overflow-x-auto w-full">
+      <div className="overflow-x-auto max-w-[40%]">
         <table className="table table-zebra w-full">
           <thead className="w-full">
             <tr>
