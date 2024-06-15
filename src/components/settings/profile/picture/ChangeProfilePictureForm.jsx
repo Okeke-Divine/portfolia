@@ -1,5 +1,8 @@
 "use client";
-import { SweetAlertError } from "@/utils/customSweetAlertFunction";
+import {
+  SweetAlertError,
+  SweetAlertSuccess,
+} from "@/utils/customSweetAlertFunction";
 import { useRef, useState } from "react";
 import Swal from "sweetalert2";
 
@@ -27,11 +30,15 @@ const ChangeProfilePictureForm = () => {
       .then((response) => {
         if (response) {
           setLoading(false);
+          SweetAlertSuccess(
+            "Your profile picture has been updated successfully."
+          );
         }
       })
       .catch((error) => {
         if (error) {
           setLoading(false);
+          SweetAlertError("An error occured. Please try again");
         }
       });
   }
