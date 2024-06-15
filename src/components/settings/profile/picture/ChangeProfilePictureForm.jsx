@@ -4,7 +4,7 @@ import {
   SweetAlertSuccess,
 } from "@/utils/customSweetAlertFunction";
 import { useRef, useState } from "react";
-import axios from "axios"
+import axios from "axios";
 
 const ChangeProfilePictureForm = () => {
   const [loading, setLoading] = useState(false);
@@ -33,6 +33,7 @@ const ChangeProfilePictureForm = () => {
           SweetAlertSuccess(
             "Your profile picture has been updated successfully."
           );
+          document.location = "/dashboard";
         }
       })
       .catch((error) => {
