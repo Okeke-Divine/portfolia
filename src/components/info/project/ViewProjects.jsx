@@ -27,7 +27,7 @@ const ViewProjects = () => {
         <table className="table table-zebra w-full">
           <thead className="w-full">
             <tr>
-              <th></th>
+              <th>S/N</th>
               <th>Title</th>
               <th>Tags</th>
               <th>Description</th>
@@ -58,6 +58,10 @@ const ViewProjects = () => {
                     <div className="font-bold">{project.title}</div>
                   </div>
                 </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
                 <td>
                   <button
                     className="btn btn-sm"
