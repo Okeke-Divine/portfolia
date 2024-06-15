@@ -31,12 +31,15 @@ const PortfolioProjects = async ({ user }) => {
             {projects.map((project, index) => (
               <>
                 <div className="card shadow-xl">
-                  <figure>
-                    <img
-                      src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                      alt="Shoes"
-                    />
-                  </figure>
+                  {project.imageUrl != "" ? (
+                    <>
+                      <figure>
+                        <img src={project.imageUrl} alt="Shoes" />
+                      </figure>
+                    </>
+                  ) : (
+                    ""
+                  )}
                   <div className="card-body">
                     <h2 className="card-title">{project.title}</h2>
                     <p className="max-h-[80px] overflow-y-auto">
