@@ -28,9 +28,9 @@ const InfoSkills = async () => {
           <div className="divider"></div>
           <Link
             href="/settings/profile/picture/change"
-            className="w-full app-bg-primary duration-300 hover:app-bg-primary-dark btn btn-md text-white"
+            className="w-full bg-ghost duration-300 btn btn-md hover:bg-gray-200"
           >
-            Chnage Profile Picture
+            Change Profile Picture
           </Link>
         </Suspense>
       </div>
