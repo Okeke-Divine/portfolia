@@ -18,9 +18,9 @@ const UserProfilePictureComponent = () => {
             "user_imgUrl",
             result.data.data.profilePicture_url
           );
-          setImgUrl(result.data.data.profilePicture_url);
+        //   setImgUrl(result.data.data.profilePicture_url);
         } else {
-          setImgUrl(defaultImgUrl);
+        //   setImgUrl(defaultImgUrl);
           localStorage.setItem("user_imgUrl", defaultImgUrl);
         }
       })
