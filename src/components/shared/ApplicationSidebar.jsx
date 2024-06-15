@@ -7,7 +7,6 @@ import { usePathname } from "next/navigation";
 import { twitterAccUrl, buyMeACoffeUrl } from "@/constants/shared/constant";
 import { app_color_primary } from "@/constants/shared/color";
 import ComingSoonComponent from "./ComingSoonComponent";
-import { getCurrentUserProfilePicture } from "@/utils/main";
 
 function confirmSignOut() {
   Swal.fire({
@@ -36,7 +35,6 @@ function confirmSignOut() {
 }
 
 export default function ApplicationSidedar() {
-  console.log(getCurrentUserProfilePicture())
   const links = [
     {
       name: "Dashboard",

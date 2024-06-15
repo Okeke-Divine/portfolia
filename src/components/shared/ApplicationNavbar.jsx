@@ -1,4 +1,3 @@
-import { defaultImgUrl } from "@/constants/shared/constant";
 import config from "@/data/config.json";
 import Link from "next/link";
 import UserProfilePictureComponent from "./UserProfilePictureComponent";

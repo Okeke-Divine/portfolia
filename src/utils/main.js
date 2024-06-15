@@ -1,4 +1,6 @@
 import { defaultImgUrl } from "@/constants/shared/constant";
+import axios from "axios"
+import { _console_log } from "./console";
 
 export function getIconClass(name) {
   switch (name) {
@@ -38,18 +40,21 @@ export function validatePhoneNumber(phoneNumber) {
 export function getCurrentUserProfilePicture() {
   // Check if localStorage is available
   if (typeof localStorage !== 'undefined') {
-      // Get the user profile picture URL from localStorage
-      let userImgUrl = localStorage.getItem('user_imgUrl');
-      
-      // If the URL does not exist, set it to an empty string
-      if (userImgUrl === null) {
-          userImgUrl = defaultImgUrl;
-          localStorage.setItem('user_imgUrl', userImgUrl);
-      }
-      
-      return userImgUrl;
+    // Get the user profile picture URL from localStorage
+    let userImgUrl = localStorage.getItem('user_imgUrl');
+
+    // If the URL does not exist, set it to an empty string
+    if (userImgUrl === null) {
+      axios.get("/api/profile/picture").then((response) => {
+        console.log(response.data.data);
+      })
+      userImgUrl = defaultImgUrl;
+      localStorage.setItem('user_imgUrl', userImgUrl);
+    }
+
+    return userImgUrl;
   } else {
-      // If localStorage is not available, return an empty string
-      return defaultImgUrl;
+    _console_log("Server component image request")
+    return defaultImgUrl;
   }
 }
