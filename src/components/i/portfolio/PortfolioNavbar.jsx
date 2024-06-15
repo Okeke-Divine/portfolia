@@ -1,19 +1,9 @@
 import { defaultImgUrl } from "@/constants/shared/constant";
 import Link from "next/link";
 import { getIconClass } from "@/utils/main";
+import PortfolioSocialLink from "./PortfolioSocialLink";
 
 const PortfolioNavbar = () => {
-  const social_link = [
-    { name: "instagram", url: "https://google.com" },
-    { name: "twitter", url: "https://google.com" },
-    // { name: "facebook", url: "https://google.com" },
-    // { name: "dribble", url: "https://google.com" },
-    // { name: "linkedin", url: "https://google.com" },
-    { name: "github", url: "https://google.com" },
-    { name: "email", url: "https://google.com" },
-    // { name: "phone_number", url: "https://google.com" },
-  ];
-
   return (
     <>
       <div className="navbar px-5 md:px-10 py-5 md:py-5 bg-base-200">
@@ -47,15 +37,7 @@ const PortfolioNavbar = () => {
           </div>
         </div>
         <div className="navbar-end flex gap-2">
-          {social_link.map((link, index) => (
-            <Link href={link.url} className="app-portfolio-navbar-link">
-              <i
-                className={`${getIconClass(
-                  link.name
-                )} app-portfolio-navbar-icon`}
-              ></i>
-            </Link>
-          ))}
+          <PortfolioSocialLink />
         </div>
       </div>
     </>
