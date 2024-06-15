@@ -98,7 +98,9 @@ const AddProject = () => {
             {/* description */}
             <div className="mb-3">
               <div>
-                <label className="font-bold text-md">Project Description</label>
+                <label className="font-bold text-md">
+                  Project Description <span className="text-red-600">*</span>
+                </label>
               </div>
               <div className="mt-1">
                 <textarea
