@@ -35,7 +35,7 @@ const ViewSocialInfo = () => {
       {loading ? <SkillSkeleton /> : ""}
       <div>
         {socials.map((social, index) => (
-          <div key={index} className="flex gap-2 items-center">
+          <div key={index} className="flex gap-2 items-center mb-2">
             <div className="w-fit">
               <i
                 className={`${getIconClass(
@@ -46,7 +46,7 @@ const ViewSocialInfo = () => {
             <div className="grow bg-red-200">{social.value}</div>
             <div className="w-fit flex gap-2">
               <button className="btn btn sm">
-              <i className="fi fi-tr-pen-circle"></i>
+                <i className="fi fi-tr-pen-circle"></i>
               </button>
               <button className="btn btn sm">
                 <i className="fi fi-rr-trash flaticon-offset"></i>
