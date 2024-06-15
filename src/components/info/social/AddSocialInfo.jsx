@@ -2,6 +2,7 @@
 import { SweetAlertError } from "@/utils/customSweetAlertFunction";
 import { _ucfirst, validatePhoneNumber } from "@/utils/main";
 import { useRef, useState } from "react";
+import axios from "axios";
 
 const socials = [
   { type: "email", name: "email" },
