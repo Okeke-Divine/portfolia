@@ -19,7 +19,7 @@ const AddSocialInfo = () => {
   return (
     <>
       <div className="">
-        <div className="block md:flex join mb-2">
+        <div className="block md:flex join mb-2 gap-2">
           <div className="w-full md:w-fit join-item">
             <select className="select input-bordered">
               {socials.map((social, index) => (
