@@ -6,7 +6,6 @@ import {
 import { _ucfirst, validatePhoneNumber } from "@/utils/main";
 import { useRef, useState } from "react";
 import axios from "axios";
-import { headers } from "next/headers";
 
 const socials = [
   { type: "email", name: "email" },
