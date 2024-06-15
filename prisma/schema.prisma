@@ -44,7 +44,7 @@ model UserSocialInfo {
   userId Int
   user   User   @relation(fields: [userId], references: [id])
   //
-  name   String @unique
+  name   String
   value  String
 }
 
@@ -83,7 +83,7 @@ model Feedback {
 
 model UserSkills {
   id         Int    @id @default(autoincrement())
-  skill_name String @unique
+  skill_name String
   userId     Int
   user       User   @relation(fields: [userId], references: [id])
 }
