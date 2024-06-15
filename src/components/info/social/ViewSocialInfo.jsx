@@ -119,7 +119,7 @@ const ViewSocialInfo = () => {
               <input
                 readOnly={true}
                 defaultValue={social.value}
-                className="input input-ghost w-full"
+                className="input input-ghost w-full h-6"
               />
             </div>
             <div className="w-fit flex gap-2">
