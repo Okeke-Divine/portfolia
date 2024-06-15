@@ -21,9 +21,9 @@ export const GET = async (req) => {
             },
         });
         return resourceLoaded(projects)
-    } catch ((e) => {
+    } catch (e) {
         return internalServerError(e)
-    })
+    }
 }
 
 export const POST = async (req) => {
