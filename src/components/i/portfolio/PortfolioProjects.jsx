@@ -42,9 +42,9 @@ const PortfolioProjects = async ({ user }) => {
                     <p className="max-h-[80px] overflow-y-auto">
                       {project.description}
                     </p>
-                    <div className="card-actions justify-end">
-                      {project.link != "" ? (
-                        <>
+                    {project.link != "" ? (
+                      <>
+                        <div className="card-actions justify-end">
                           <Link
                             href={project.link}
                             target="_blank"
@@ -52,16 +52,22 @@ const PortfolioProjects = async ({ user }) => {
                           >
                             View
                           </Link>
-                        </>
-                      ) : (
-                        ""
-                      )}
-                    </div>
-                    <hr />
-                    <div className="card-actions">
-                      <div className="badge badge-outline">CSS</div>
-                      <div className="badge badge-outline">HTML</div>
-                    </div>
+                        </div>
+                      </>
+                    ) : (
+                      ""
+                    )}
+                    {project.tags != "" ? (
+                      <>
+                        <div className="divider"></div>
+                        <div className="card-actions">
+                          <div className="badge badge-outline">CSS</div>
+                          <div className="badge badge-outline">HTML</div>
+                        </div>
+                      </>
+                    ) : (
+                      ""
+                    )}
                   </div>
                 </div>
               </>
