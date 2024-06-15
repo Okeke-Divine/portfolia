@@ -27,7 +27,7 @@ const InfoSkills = async () => {
           <BasicInfoForm userDetails={userDetails} />
           <div className="divider"></div>
           <Link
-            href="#"
+            href="/settings/profile/picture/change"
             className="app-text-primary duration-300 hover:app-text-primary-dark"
           >
             Chnage Profile Picture
