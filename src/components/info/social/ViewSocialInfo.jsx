@@ -92,8 +92,10 @@ const ViewSocialInfo = () => {
     setLoading(true);
     axios
       .get("/api/info/socials")
-      .then((response) => setSocials(response.data.data));
-    setLoading(false);
+      .then((response) => {
+        setSocials(response.data.data);
+        setLoading(false);
+      });
   }, []);
 
   return (
@@ -101,10 +103,9 @@ const ViewSocialInfo = () => {
       {loading ? (
         <>
           <SkillSkeleton />
-          lol
         </>
       ) : (
-        "lolet"
+        ""
       )}
       <div>
         {socials.map((social, index) => (
