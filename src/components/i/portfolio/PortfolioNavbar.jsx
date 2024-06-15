@@ -11,8 +11,8 @@ const PortfolioNavbar = ({ userId }) => {
             <div className="w-10 rounded-full ring ring-green-300">
               <img
                 src={
-                  user?.profilePicture_url != ""
-                    ? user.profilePicture_url
+                  profilePicture_url != ""
+                    ? profilePicture_url
                     : defaultImgUrl
                 }
                 alt="User Profile Picture"
