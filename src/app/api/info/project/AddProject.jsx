@@ -27,7 +27,7 @@ const AddProject = () => {
                   type="text"
                   required
                   className="grow"
-                  placeholder="Project Titlre"
+                  placeholder="Project Title"
                 />
               </div>
             </div>
