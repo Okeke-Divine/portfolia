@@ -9,6 +9,13 @@ const SettingsProfilePicture = () => {
     <>
       <div>
         <div>
+          <div className="text-sm breadcrumbs">
+            <ul>
+              <li>Settings </li>
+              <li>Profile</li>
+              <li>Picture</li>
+            </ul>
+          </div>
           <h1 className="flex items-center gap-2">
             <i class="fi fi-rr-portrait titleIcon"></i>Profile Picture
           </h1>
