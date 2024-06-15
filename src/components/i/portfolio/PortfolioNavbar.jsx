@@ -1,6 +1,5 @@
 import { defaultImgUrl } from "@/constants/shared/constant";
 import Link from "next/link";
-import { getIconClass } from "@/utils/main";
 import PortfolioSocialLink from "./PortfolioSocialLink";
 
 const PortfolioNavbar = () => {
