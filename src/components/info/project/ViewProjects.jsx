@@ -44,7 +44,7 @@ const ViewProjects = () => {
                   <div className="flex gap-2 items-center">
                     {project.imgUrl != "" ? (
                       <>
-                        <div class="h-[50px] w-[50px] overflow-hidden">
+                        <div class="h-[50px] w-[50px] overflow-hidden rounded-md">
                           <img
                             src={project.imageUrl}
                             alt={project.title}
