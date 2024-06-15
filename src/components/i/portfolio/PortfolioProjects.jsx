@@ -29,60 +29,59 @@ const PortfolioProjects = async ({ user }) => {
         <div>
           <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 mt-2">
             {projects.map((project, index) => (
-              <>
-                <div className="card shadow-xl">
-                  {project.imageUrl != "" ? (
+              <div className="card shadow-xl" key={index}>
+                {project.imageUrl != "" ? (
+                  <>
+                    <figure class="w-full h-[100px] overflow-hidden">
+                      <img
+                        src={project.imageUrl}
+                        alt={
+                          project.title +
+                          " - " +
+                          project.description +
+                          " | " +
+                          user.fullname
+                        }
+                        class="object-cover w-full h-full"
+                      />
+                    </figure>
+                  </>
+                ) : (
+                  ""
+                )}
+                <div className="card-body">
+                  <h2 className="card-title">{project.title}</h2>
+                  <p className="max-h-[80px] overflow-y-auto">
+                    {project.description}
+                  </p>
+                  {project.url != "" ? (
                     <>
-                      <figure>
-                        <img
-                          src={project.imageUrl}
-                          alt={
-                            project.title +
-                            " - " +
-                            project.description +
-                            " | " +
-                            user.fullname
-                          }
-                        />
-                      </figure>
+                      <div className="card-actions justify-end">
+                        <Link
+                          href={project.url}
+                          target="_blank"
+                          className="app-primary-button"
+                        >
+                          View
+                        </Link>
+                      </div>
                     </>
                   ) : (
                     ""
                   )}
-                  <div className="card-body">
-                    <h2 className="card-title">{project.title}</h2>
-                    <p className="max-h-[80px] overflow-y-auto">
-                      {project.description}
-                    </p>
-                    {project.url != "" ? (
-                      <>
-                        <div className="card-actions justify-end">
-                          <Link
-                            href={project.url}
-                            target="_blank"
-                            className="app-primary-button"
-                          >
-                            View
-                          </Link>
-                        </div>
-                      </>
-                    ) : (
-                      ""
-                    )}
-                    {project.tags != "" ? (
-                      <>
-                        <div className="divider"></div>
-                        <div className="card-actions">
-                          <div className="badge badge-outline">CSS</div>
-                          <div className="badge badge-outline">HTML</div>
-                        </div>
-                      </>
-                    ) : (
-                      ""
-                    )}
-                  </div>
+                  {project.tags != "" ? (
+                    <>
+                      <div className="divider"></div>
+                      <div className="card-actions">
+                        <div className="badge badge-outline">CSS</div>
+                        <div className="badge badge-outline">HTML</div>
+                      </div>
+                    </>
+                  ) : (
+                    ""
+                  )}
                 </div>
-              </>
+              </div>
             ))}
           </div>
         </div>
