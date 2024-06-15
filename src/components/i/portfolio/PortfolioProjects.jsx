@@ -1,4 +1,5 @@
 import prisma from "@/app/db";
+import Link from "next/link";
 
 const PortfolioProjects = async ({ user }) => {
   const userId = user?.id;
@@ -37,12 +38,24 @@ const PortfolioProjects = async ({ user }) => {
                     />
                   </figure>
                   <div className="card-body">
-                    <h2 className="card-title">Strender</h2>
+                    <h2 className="card-title">{project.title}</h2>
                     <p className="max-h-[80px] overflow-y-auto">
-                      Renowed social media platform with over <b>150k</b> users
+                      {project.description}
                     </p>
                     <div className="card-actions justify-end">
-                      <button className="app-primary-button">View</button>
+                      {project.link != "" ? (
+                        <>
+                          <Link
+                            href={project.link}
+                            target="_blank"
+                            className="app-primary-button"
+                          >
+                            View
+                          </Link>
+                        </>
+                      ) : (
+                        ""
+                      )}
                     </div>
                     <hr />
                     <div className="card-actions">
