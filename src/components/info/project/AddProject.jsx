@@ -1,7 +1,10 @@
 "use client";
 import { useState, useRef } from "react";
 import axios from "axios";
-import { SweetAlertError } from "@/utils/customSweetAlertFunction";
+import {
+  SweetAlertError,
+  SweetAlertSuccess,
+} from "@/utils/customSweetAlertFunction";
 
 const AddProject = () => {
   const [loading, setLoading] = useState(false);
@@ -44,9 +47,10 @@ const AddProject = () => {
     formData.append("projectImage", projectImage);
 
     axios
-      .post("/api/info/project/", formData)
+      .post("/api/info/project", formData)
       .then((response) => {
         if (response) {
+          SweetAlertSuccess("Your project has been successfully added.");
           setLoading(false);
           projectTitleRef.current.value = "";
           projectTagsRef.current.value = "";
