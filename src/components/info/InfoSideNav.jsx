@@ -5,8 +5,8 @@ import ComingSoonComponent from "../shared/ComingSoonComponent";
 
 const links = [
   { name: "Basic Info", url: "/info", shipped: true },
-  { name: "Skills", url: "/info/skills", shipped: true },
   { name: "Social", url: "/info/social", shipped: true },
+  { name: "Skills", url: "/info/skills", shipped: true },
   { name: "Projects", url: "/info/projects", shipped: true },
   { name: "Experience", url: "/info/experience", shipped: false },
   { name: "Education", url: "/info/education", shipped: false },
