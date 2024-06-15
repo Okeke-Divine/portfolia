@@ -19,8 +19,8 @@ const AddSocialInfo = () => {
   return (
     <>
       <div className="">
-        <div className="flex join mb-2">
-          <div className="w-fit join-item">
+        <div className="block md:flex join mb-2">
+          <div className="w-full md:w-fit join-item">
             <select className="select">
               {socials.map((social, index) => (
                 <>
