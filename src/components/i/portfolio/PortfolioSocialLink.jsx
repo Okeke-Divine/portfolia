@@ -22,7 +22,6 @@ const PortfolioSocialLink = async () => {
         userId,
       },
       select: {
-        id: true,
         name: true,
         value: true,
       },
