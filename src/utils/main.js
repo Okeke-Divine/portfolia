@@ -14,6 +14,8 @@ export function getIconClass(name) {
       return "fi fi-rr-envelope";
     case "phone_number":
       return "fi fi-rr-phone-call";
+    case "whatsapp":
+      return "fi fi-brands-whatsapp";
     default:
       return "fi fi-rr-link";
   }
