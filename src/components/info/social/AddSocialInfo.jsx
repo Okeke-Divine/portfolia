@@ -17,6 +17,7 @@ const socials = [
   { type: "github", name: "github" },
   { type: "email", name: "email" },
   { type: "phone_number", name: "phone number" },
+  { type: "whatsapp", name: "whatsapp" },
   { type: "other", name: "other" },
 ];
 
