@@ -3,7 +3,6 @@ import { defaultImgUrl } from "@/constants/shared/constant";
 import PortfolioSocialLink from "./PortfolioSocialLink";
 
 const PortfolioHero = ({ user }) => {
-  console.log(user);
   return (
     <>
       <div>
