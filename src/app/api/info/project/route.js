@@ -1,4 +1,4 @@
-import { internalServerError, resourceCreated } from "@/utils/prebuiltApiResponse"
+import { badRequest, internalServerError, resourceCreated } from "@/utils/prebuiltApiResponse"
 
 export const POST = async (req) => {
     try {
@@ -8,6 +8,11 @@ export const POST = async (req) => {
         const projectUrl = data.get("projectUrl");
         const projectDesc = data.get("projectDesc");
         const projectImage = data.get("projectImage");
+
+        if (!projectTitle || !projectDesc) {
+            return badRequest("Project title and description is required");
+        }
+
         console.log(data);
 
         return resourceCreated({})
