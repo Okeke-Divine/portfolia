@@ -32,7 +32,7 @@ const PortfolioProjects = async ({ user }) => {
               <div className="card shadow-xl" key={index}>
                 {project.imageUrl != "" ? (
                   <>
-                    <figure class="w-full h-[200px] overflow-hidden">
+                    <figure class="w-full h-[250px] md:h-[200px] overflow-hidden">
                       <img
                         src={project.imageUrl}
                         alt={
