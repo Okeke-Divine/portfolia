@@ -32,6 +32,7 @@ const AddSocialInfo = () => {
             <input type="text" className="input input-bordered" />
           </div>
         </div>
+        <button className="btn app-bg-primary text-white">Add</button>
       </div>
     </>
   );
