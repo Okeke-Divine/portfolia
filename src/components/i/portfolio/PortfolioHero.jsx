@@ -3,6 +3,7 @@ import { defaultImgUrl } from "@/constants/shared/constant";
 import PortfolioSocialLink from "./PortfolioSocialLink";
 
 const PortfolioHero = ({ user }) => {
+  console.log(user);
   return (
     <>
       <div>
@@ -37,7 +38,14 @@ const PortfolioHero = ({ user }) => {
             <div className="flex justify-center md:justify-end items-center">
               <div className="avatar cursor-pointer">
                 <div className="mask mask-squircle bg-green-200 bg-opacity-20 w-52 lg:w-96">
-                  <img src={defaultImgUrl} alt="User Profile Picture" />
+                  <img
+                    src={
+                      user?.profilePicture_url != ""
+                        ? user.profilePicture_url
+                        : defaultImgUrl
+                    }
+                    alt="User Profile Picture"
+                  />
                 </div>
               </div>
             </div>
