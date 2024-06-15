@@ -4,7 +4,10 @@ const ChangeProfilePictureForm = () => {
   return (
     <>
       <form>
-        <input type="text" accept="image/*" className="file-input" />
+        <div className="mb-2">
+          <label className="font-bold text-md">Select a picture</label>
+        </div>
+        <input type="file" accept="image/*" className="file-input" />
       </form>
     </>
   );
