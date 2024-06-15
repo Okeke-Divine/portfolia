@@ -33,7 +33,14 @@ const PortfolioAbout = async ({ user }) => {
           <div className="flex flex-wrap gap-2 items-center mt-2">
             <div className="avatar cursor-pointer">
               <div className="w-12 rounded-full ring ring-green-300">
-                <img src={defaultImgUrl} alt="User Profile Picture" />
+                <img
+                  src={
+                    user?.profilePicture_url != ""
+                      ? user.profilePicture_url
+                      : defaultImgUrl
+                  }
+                  alt="User Profile Picture"
+                />
               </div>
             </div>
             <div className="grow">
