@@ -39,13 +39,13 @@ model UserDetails {
   about      String? @db.LongText
 }
 
-model SocialLinks {
+model UserSocialInfo {
   id     Int    @id @default(autoincrement())
   userId Int
   user   User   @relation(fields: [userId], references: [id])
   //
   name   String
-  url    String
+  value  String
 }
 
 model UserExpertise {
