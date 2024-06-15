@@ -27,6 +27,7 @@ export const POST = async (req) => {
         // insert into the data base if social type doesn't exists
         const socialInfo = await prisma.userSocialInfo.create({
             data: {
+                userId,
                 name: socialType,
                 value: socialValue
             }
