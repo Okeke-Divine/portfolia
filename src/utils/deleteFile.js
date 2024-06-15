@@ -8,7 +8,7 @@ cloudinary.config({
     api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
-export async function cloudinaryUpload(file, tags = []) {
+export async function cloudinaryDelete(file) {
     "use server";
     _console_log("Uploading image with cloudinary");
     try {
@@ -18,7 +18,6 @@ export async function cloudinaryUpload(file, tags = []) {
             const uploaded_file = cloudinary.uploader
                 .upload_stream(
                     {
-                        tags: tags,
                     },
                     function (error, result) {
                         if (error) {

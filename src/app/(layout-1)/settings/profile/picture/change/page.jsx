@@ -3,7 +3,11 @@ export const metadata = {
 };
 
 const SettingsProfilePicture = () => {
-  return <>settings/profile/picture/change</>;
+  return (
+    <>
+    
+    </>
+  )
 };
 
 export default SettingsProfilePicture;
