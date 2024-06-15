@@ -14,8 +14,6 @@ const PortfolioHero = ({ user }) => {
     // { name: "phone_number", url: "https://google.com" },
   ];
 
-  console.log(user);
-
   return (
     <>
       <div>
