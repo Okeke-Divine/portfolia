@@ -27,8 +27,7 @@ const AddSocialInfo = () => {
     const socialType = socialTypeRef.current.value;
     const socialValue = socialValueRef.current.value;
 
-    console.log(socialType,socialValue);
-
+    console.log(socialType, socialValue);
   }
 
   return (
@@ -52,7 +51,7 @@ const AddSocialInfo = () => {
             <div className="w-full join-item">
               <input
                 required
-                ref={socialTypeRef}
+                ref={socialValueRef}
                 className="input input-bordered w-full"
                 type={
                   selected == "email"
