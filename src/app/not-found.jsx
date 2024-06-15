@@ -6,10 +6,10 @@ const NotFound = () => {
     <>
     <div className="w-full h-[100vh] flex justify-center items-center">
       <div>
-        <div className="font-bold text-3xl">
+        <div className="font-bold text-3xl text-center">
           We've lost this page
         </div>
-        <p>
+        <p className="text-center">
           Sorry, the page you're looking for doesn't  exist or has been moved.
         </p>
       </div>
