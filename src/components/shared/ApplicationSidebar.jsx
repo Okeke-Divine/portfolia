@@ -24,8 +24,11 @@ function confirmSignOut() {
         icon: "info",
         text: "Please wait...",
         showConfirmButton: false,
-        allowOutsideClick: false
+        allowOutsideClick: false,
       });
+      if (typeof localStorage !== "undefined") {
+        localStorage.removeItem("user_imgUrl");
+      }
       signOut();
     }
   });
@@ -106,8 +109,7 @@ export default function ApplicationSidedar() {
               )}
             </Link>
           ))}
-          <button
-          className="btn btn-ghost w-full mb-2 justify-start">
+          <button className="btn btn-ghost w-full mb-2 justify-start">
             <i className="fi fi-tr-poll-h"></i>
             Resume
             <ComingSoonComponent />

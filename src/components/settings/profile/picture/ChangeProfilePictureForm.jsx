@@ -33,6 +33,12 @@ const ChangeProfilePictureForm = () => {
           SweetAlertSuccess(
             "Your profile picture has been updated successfully."
           );
+          if (typeof localStorage !== "undefined") {
+            localStorage.setItem(
+              "user_imgUrl",
+              response.data.data.profilePicture_url
+            );
+          }
           document.location = "/dashboard";
         }
       })

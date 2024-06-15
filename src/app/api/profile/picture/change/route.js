@@ -1,4 +1,5 @@
 import prisma from "@/app/db";
+import { cloudinaryDelete } from "@/utils/deleteFile";
 import { badRequest, internalServerError, resourceUpdated } from "@/utils/prebuiltApiResponse"
 import { getUserId } from "@/utils/session";
 import { cloudinaryUpload } from "@/utils/uploadFile";
@@ -25,7 +26,7 @@ export const POST = async (req) => {
         // check if user already has a profile picture
         const profileVerify = await prisma.user.findFirst({
             where: {
-                userId,
+                id: userId,
                 profilePicture_url: {
                     not: "",
                 }
@@ -33,26 +34,33 @@ export const POST = async (req) => {
                 profilePicture_assetId: true,
             }
         })
+
+
+
         if (profileVerify) {
-            console.log(profileVerify.profilePicture_assetId);
+            const delete_file = await cloudinaryDelete(profileVerify.profilePicture_assetId)
+            if (delete_file != true) {
+                return badRequest("Could not delete user old profile image")
+            }
         }
 
-        console.log(profileVerify);
 
         const uploadFile = await cloudinaryUpload(picture, [
             "picture",
             "portfolia-picture",
             "profile-picture",
-            "portfolia"
+            "portfolia",
+            "profilePicture-user-" + userId
         ]);
 
         const fileUrl = uploadFile.fileUrl;
-        const asset_id = uploadFile.options.asset_id;
+        const asset_id = uploadFile.options.public_id;
+
 
         // update the profile picture data
         const saveFileDetails = await prisma.user.update({
             where: {
-                userId
+                id: userId
             },
             data: {
                 profilePicture_url: fileUrl,
@@ -60,6 +68,7 @@ export const POST = async (req) => {
             },
             select: {
                 profilePicture_url: true,
+                profilePicture_assetId: true
             }
         })
 
