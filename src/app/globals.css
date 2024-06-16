@@ -47,7 +47,7 @@
     @apply mb-2 font-[400];
   }
   .app-link-primary {
-    @apply app-text-primary font-bold duration-300 hover:app-text-primary-dark;
+    @apply app-text-primary font-bold duration-300 hover:app-text-primary-dark;app-text-primary duration-300 hover:app-text-primary-dark font-semibold
   }
   .app-portfolio-navbar-icon {
     @apply text-[20px];

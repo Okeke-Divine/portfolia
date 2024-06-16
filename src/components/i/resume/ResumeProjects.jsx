@@ -1,4 +1,5 @@
 import prisma from "@/app/db";
+import Link from "next/link";
 
 const ResumeProjects = async ({ userId }) => {
   const projects = await prisma.userProjects.findMany({
@@ -28,7 +29,26 @@ const ResumeProjects = async ({ userId }) => {
                   key={index}
                   className="border-b-2 border-gray-200 border-dotted pb-2 mb-2"
                 >
-                  <div className="font-bold text-xl mb-1">{project.title}</div>
+                  <div>
+                    <div className="font-bold text-xl mb-1">
+                      {project.title}
+                    </div>
+                    {project.url != "" ? (
+                      <>
+                        <div className="card-actions justify-end">
+                          <Link
+                            href={project.url}
+                            target="_blank"
+                            className="app-link-primary"
+                          >
+                            View
+                          </Link>
+                        </div>
+                      </>
+                    ) : (
+                      ""
+                    )}
+                  </div>
                   {/* project tags */}
                   {project.tags !== "" ? (
                     <>

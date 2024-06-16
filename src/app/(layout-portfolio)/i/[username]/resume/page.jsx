@@ -75,7 +75,7 @@ export default async function Resume({ params }) {
                 <Link
                   target="_blank"
                   href={"/i/" + user.username}
-                  className="app-text-primary duration-300 hover:app-text-primary-dark font-semibold"
+                  className="app-link-primary"
                 >
                   My Portfolio
                 </Link>
