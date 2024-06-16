@@ -32,7 +32,7 @@ const SitePreviewCarousel = () => {
             <div className="h-fit">
               <Slider {...settings} className="flex justify-center items-center">
                 {images.map((image, index) => (
-                  <div key={index} className="h-fit">
+                  <div key={index} className="bg-red-200 flex justify-center items-center h-full">
                     <img src={"/images/" + image} alt="Mockup Image" />
                   </div>
                 ))}

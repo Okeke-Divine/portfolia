@@ -3,6 +3,7 @@ import config from "@/data/config.json";
 import SignUpForm from "@/components/signup/SignUpForm";
 import SignUpFormSkeleton from "@/components/skeleton/SignUpFormSkeleton";
 import { Suspense } from "react";
+import SitePreviewCarousel from "@/components/shared/SitePreviewCarousel";
 
 export const metadata = {
   title: "Create an Account",
@@ -44,7 +45,7 @@ export default function SignUp() {
               </div>
             </div>
           </div>
-          <div className="bg-gray-900 min-h-[100vh]"></div>
+          <SitePreviewCarousel />
         </div>
       </div>
     </>
