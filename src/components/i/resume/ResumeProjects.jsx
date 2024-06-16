@@ -24,7 +24,10 @@ const ResumeProjects = async ({ userId }) => {
             </div>
             <div>
               {projects.map((project, index) => (
-                <div key={index} className="border-b-4 border-dotted pb-2">
+                <div
+                  key={index}
+                  className="border-b-2 border-black border-dotted pb-2"
+                >
                   <div className="font-bold text-xl">{project.title}</div>
                   <div className="">
                     <p className="overflow-y-auto whitespace-pre-line">
