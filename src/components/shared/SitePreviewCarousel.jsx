@@ -27,12 +27,11 @@ const SitePreviewCarousel = () => {
     <>
       <div className="fixed top-0 left-0 w-full h-[100vh] bg-red-300">
         <Slider {...settings}>
-          <div>
-            <img src="/images/Samsung-Galaxy-S20-localhost.png" />
-          </div>
-          <div>
-            <img src="/images/iPad-Air-4-localhost (1).png" />
-          </div>
+          {images.map((image, index) => (
+            <div key={index}>
+              <img src={"/images/" + image} alt="Mockup Image" />
+            </div>
+          ))}
         </Slider>
       </div>
     </>
