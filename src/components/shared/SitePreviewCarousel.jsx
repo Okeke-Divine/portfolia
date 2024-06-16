@@ -4,12 +4,8 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 const images = [
-//   "iPad-Air-4-localhost (1).png",
-  "Samsung-Galaxy-S20-localhost.png",
-//   "Macbook-Air-localhost.png",
-//   "Macbook-Air-localhost (1).png",
-  "iPhone-13-PRO-localhost.png",
-//   "iPad-Air-4-localhost.png",
+  "iPhone-13-PRO-localhost-1.png",
+  "iPhone-13-PRO-localhost-1.png",
 ];
 
 const SitePreviewCarousel = () => {
@@ -30,9 +26,15 @@ const SitePreviewCarousel = () => {
         <div>
           <div className="slider-container w-[300px] h-fit">
             <div className="h-fit">
-              <Slider {...settings} className="flex justify-center items-center">
+              <Slider
+                {...settings}
+                className="flex justify-center items-center"
+              >
                 {images.map((image, index) => (
-                  <div key={index} className="bg-red-200 flex justify-center items-center h-full">
+                  <div
+                    key={index}
+                    className="flex justify-center items-center h-full"
+                  >
                     <img src={"/images/" + image} alt="Mockup Image" />
                   </div>
                 ))}
