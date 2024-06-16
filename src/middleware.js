@@ -21,5 +21,5 @@ export async function middleware(req) {
 
 // Specify the routes for which this middleware should run
 export const config = {
-    matcher: ['/dashboard', '/feedback', '/portfolio/:path*', '/info/:path*', '/settings/:path*'],
+    matcher: ['/dashboard', '/feedback', '/portfolio/:path*', '/resume/:path*', '/info/:path*', '/settings/:path*'],
 };
