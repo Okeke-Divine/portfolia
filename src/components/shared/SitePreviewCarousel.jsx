@@ -28,7 +28,7 @@ const SitePreviewCarousel = () => {
     <>
       <div>
         {/* <div className="fixed top-0 left-0 w-full h-[100vh] bg-red-300"> */}
-        <div className="slider-container w-[200px] h-[100vh] overflow-hidden">
+        <div className="slider-container w-[300px] h-[100vh] overflow-hidden">
           <Slider {...settings}>
             {images.map((image, index) => (
               <div key={index}>
