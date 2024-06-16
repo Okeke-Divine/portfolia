@@ -113,19 +113,19 @@ const ViewProjects = () => {
                 <td>{index + 1}</td>
                 <td>
                   <div className="flex gap-2 items-center">
-                    {project.imgUrl != "" ? (
-                      <>
-                        <div class="h-[50px] w-[50px] overflow-hidden rounded-md">
+                    <div class="h-[50px] w-[50px] overflow-hidden rounded-md app-bg-primary">
+                      {project.imgUrl != "" ? (
+                        <>
                           <img
                             src={project.imageUrl}
                             alt={project.title}
                             class="object-cover w-full h-full"
                           />
-                        </div>
-                      </>
-                    ) : (
-                      ""
-                    )}
+                        </>
+                      ) : (
+                        ""
+                      )}
+                    </div>
                     <div className="font-bold">{project.title}</div>
                   </div>
                 </td>
