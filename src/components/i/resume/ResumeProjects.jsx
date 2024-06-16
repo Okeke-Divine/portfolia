@@ -1,3 +1,5 @@
+import prisma from "@/app/db";
+
 const ResumeProjects = async ({ userId }) => {
   const projects = await prisma.userProjects.findMany({
     where: {
