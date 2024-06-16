@@ -137,8 +137,8 @@ export default function ApplicationSidedar() {
       </div>
 
       {/* expand buttton */}
-      <button className="btn btn-md rounded-full fixed bottom-4 left-4 bg-black text-white">
-        .
+      <button className="btn btn-md rounded-full fixed bottom-4 left-4 app-bg-primary shadow-md duration-300 text-white">
+      <i className="fi fi-tr-bars-staggered"></i>
       </button>
     </>
   );
