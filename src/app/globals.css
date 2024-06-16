@@ -69,3 +69,7 @@
     @apply pt-2;
   }
 }
+
+.resumeContainerBackground {
+  background: red;
+}
