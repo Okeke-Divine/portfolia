@@ -2,6 +2,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import SkillSkeleton from "@/components/skeleton/skills/SkillSkeleton";
+import { app_color_primary } from "@/constants/shared/color";
+import Swal from "sweetalert2";
 
 const ViewProjects = () => {
   const [projects, setProjects] = useState([]);
@@ -16,9 +18,65 @@ const ViewProjects = () => {
   }, []);
 
   function deleteProject(project_id) {
-    alert(project_id);
-    const parent_container = document.getElementById("project_" + project_id);
-    parent_container.classList.add("hidden");
+    Swal.fire({
+      title: "Warning",
+      icon: "warning",
+      text: "Are you certain you want to delete this project? Please note: This action is irreversible. The project will also be removed from any portfolios or resumes where it has been listed.",
+      showCancelButton: true,
+      confirmButtonText: "Yes, delete!",
+      confirmButtonColor: app_color_primary,
+      cancelButtonText: "Cancel",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: "Processing",
+          icon: "info",
+          text: "Please wait...",
+          showConfirmButton: false,
+          allowOutsideClick: false,
+        });
+        axios
+          .post(
+            "/api/info/project/delete",
+            { project_id },
+            {
+              headers: {
+                "Content-Type": "application/json",
+              },
+            }
+          )
+          .then((response) => {
+            if (response.status == 200) {
+              Swal.fire({
+                title: "Success",
+                icon: "success",
+                text: "Delete successfull",
+                confirmButtonColor: app_color_primary,
+              });
+
+              const parent_container = document.getElementById(
+                "project_" + project_id
+              );
+              parent_container.classList.add("hidden");
+            } else {
+              Swal.fire({
+                title: "Error",
+                icon: "error",
+                text: "An error occured. Please try again 1",
+              });
+            }
+          })
+          .catch((error) => {
+            if (error) {
+              Swal.fire({
+                title: "Error",
+                icon: "warning",
+                text: "An error occured. Please try again",
+              });
+            }
+          });
+      }
+    });
   }
 
   return (
