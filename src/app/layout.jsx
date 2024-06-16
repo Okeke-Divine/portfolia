@@ -9,6 +9,10 @@ export const metadata = {
     template: "%s | " + config.app_name,
     default: config.app_name,
   },
+  generator: "Portfolia",
+  applicationName: "Portfolia",
+  referrer: "origin-when-cross-origin",
+  keywords: ["Portfolia", "CMS", "Portfolio", "Resume"],
 };
 
 export default function RootLayout({ children }) {
