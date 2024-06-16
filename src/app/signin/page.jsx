@@ -1,6 +1,7 @@
 import SignInForm from "@/components/signin/SignInForm";
 import Link from "next/link";
 import config from "@/data/config.json";
+import SitePreviewCarousel from "@/components/shared/SitePreviewCarousel";
 
 export const metadata = {
   title: "Sign in",
@@ -35,7 +36,9 @@ const SignIn = () => {
               </div>
             </div>
           </div>
-          <div className="bg-gray-900 min-h-[100vh]"></div>
+          <div className="bg-gray-900 min-h-[100vh]">
+            <SitePreviewCarousel />
+          </div>
         </div>
       </div>
     </>
