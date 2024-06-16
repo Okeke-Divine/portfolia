@@ -26,7 +26,7 @@ const ResumeProjects = async ({ userId }) => {
               {projects.map((project, index) => (
                 <div
                   key={index}
-                  className="border-b-2 border-black border-dotted pb-2"
+                  className="border-b-2 border-gray-200 border-dotted pb-2 mb-2"
                 >
                   <div className="font-bold text-xl">{project.title}</div>
                   <div className="">
