@@ -29,7 +29,7 @@ const ResumeProjects = async ({ userId }) => {
                   key={index}
                   className="border-b-2 border-gray-200 border-dotted pb-2 mb-2"
                 >
-                  <div className="flex items-center gap-3 md:gap-5">
+                  <div className="flex items-center gap-2">
                     <div className="font-bold text-xl mb-1">
                       {project.title}
                     </div>
@@ -42,6 +42,7 @@ const ResumeProjects = async ({ userId }) => {
                             className="app-link-primary"
                           >
                             View
+                            <i className="fi fi-tr-arrow-up-right-from-square text-[10px]"></i>
                           </Link>
                         </div>
                       </>
