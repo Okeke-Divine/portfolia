@@ -69,7 +69,7 @@ export default async function Resume({ params }) {
                 </Link>
               </div>
               <div className="divider"></div>
-              <ResumeAbout />
+              <ResumeAbout user={user} />
             </div>
           </div>
         </div>
