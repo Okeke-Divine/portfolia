@@ -37,7 +37,6 @@ const UserProfilePictureComponent = () => {
       );
     }
   }, []);
-  console.log(imgUrl);
 
   return (
     <>
