@@ -13,9 +13,9 @@ export async function generateMetadata({ params }) {
   const user = await prisma.user.findFirst({
     where: { username },
     select: {
-      fullname: true,
       userDetails: {
         select: {
+      fullname: true,
           heroTitle: true,
           profession: true,
           bio: true,
@@ -31,7 +31,7 @@ export async function generateMetadata({ params }) {
   }
   return {
     title:
-      _ucfirst(user.fullname) +
+      _ucfirst(user.userDetails.fullname) +
       " - " +
       user.userDetails.profession +
       " | Resume",
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }) {
         ? user.userDetails.bio
         : user.userDetails.about != ""
         ? user.userDetails.about
-        : _ucfirst(user.fullname) + " - " + user.userDetails.profession,
+        : _ucfirst(user.userDetails.fullname) + " - " + user.userDetails.profession,
   };
 }
 
