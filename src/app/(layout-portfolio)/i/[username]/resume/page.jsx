@@ -2,6 +2,7 @@ import prisma from "@/app/db";
 import NotFound from "@/app/not-found";
 import ResumeAbout from "@/components/i/resume/ResumeAbout";
 import ResumeHeroSection from "@/components/i/resume/ResumeHeroSection";
+import ResumeSocialLink from "@/components/i/resume/ResumeSocialLink";
 import { _ucfirst } from "@/utils/main";
 import Link from "next/link";
 
@@ -58,6 +59,15 @@ export default async function Resume({ params }) {
           <div className="bg-white w-full md:w-[80vw] lg:w-[70vw] xl:w-[60vw] border-l-8 app-border-primary">
             <div className="py-10">
               <ResumeHeroSection user={user} />
+              <ResumeSocialLink userId={user.id} />
+              <div className="app-resume-padding">
+                <Link
+                  href={"/i/" + user.username}
+                  className="app-text-primary duration-300 hover:app-text-primary-dark font-semibold"
+                >
+                  My Portfolio
+                </Link>
+              </div>
               <div className="divider"></div>
               <ResumeAbout user={user} />
             </div>

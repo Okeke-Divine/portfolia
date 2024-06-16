@@ -1,5 +1,3 @@
-import ResumeSocialLink from "./ResumeSocialLink";
-
 const ResumeHeroSection = ({ user }) => {
   return (
     <>
@@ -40,8 +38,6 @@ const ResumeHeroSection = ({ user }) => {
           </div>
         </div>
       </div>
-      {/* social links */}
-      <ResumeSocialLink userId={user.id} user={user} />
     </>
   );
 };
