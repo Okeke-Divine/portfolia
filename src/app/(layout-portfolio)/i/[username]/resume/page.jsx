@@ -19,6 +19,7 @@ export async function generateMetadata({ params }) {
           heroTitle: true,
           profession: true,
           bio: true,
+          about: true,
         },
       },
     },
@@ -29,7 +30,17 @@ export async function generateMetadata({ params }) {
     };
   }
   return {
-    title: _ucfirst(user.fullname),
+    title:
+      _ucfirst(user.fullname) +
+      " - " +
+      user.userDetails.profession +
+      " | Resume",
+    description:
+      user.userDetails.bio != ""
+        ? user.userDetails.bio
+        : user.userDetails.about != ""
+        ? user.userDetails.about
+        : _ucfirst(user.fullname) + " - " + user.userDetails.profession,
   };
 }
 
