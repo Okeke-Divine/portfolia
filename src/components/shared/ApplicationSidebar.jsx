@@ -129,9 +129,18 @@ export default function ApplicationSidedar() {
           isSidebarExpanded ? "left-0" : "-left-full"
         } md:left-0 h-[100%] max-h-[100vh] overflow-y-auto bg-black w-[250px] flex justify-between flex-col text-white px-5 md:px-7 py-5 md:py-10 duration-300 z-50`}
       >
-        <div className="text-2xl text-center font-bold uppercase">
-          {config.app_name}
+        <div>
+          <div>
+            <img
+              src="/images/logo/logo.png"
+              alt={config.app_name + "'s logo"}
+            />
+          </div>
+          <div className="text-2xl text-center font-bold uppercase">
+            {config.app_name}
+          </div>
         </div>
+        {/* // */}
         <div>
           {links.map((link, index) => (
             <Link
