@@ -13,6 +13,9 @@ export const metadata = {
   applicationName: "Portfolia",
   referrer: "origin-when-cross-origin",
   keywords: ["Portfolia", "CMS", "Portfolio", "Resume"],
+  authors: [{ name: 'Okeke Divine-Vessel', url: 'https://twitter.com/okekedivine__' }],
+  creator: 'Okeke Divine-Vessel',
+  publisher: 'Okeke Divine-Vessel',
 };
 
 export default function RootLayout({ children }) {
