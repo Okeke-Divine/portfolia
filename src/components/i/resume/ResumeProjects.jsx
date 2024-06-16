@@ -42,7 +42,7 @@ const ResumeProjects = async ({ userId }) => {
                             className="app-link-primary flex items-center"
                           >
                             View
-                            <i className="fi fi-tr-arrow-up-right-from-square pl-2 text-[10px]"></i>
+                            <i className="fi fi-tr-arrow-up-right-from-square pl-1 text-[10px]"></i>
                           </Link>
                         </div>
                       </>
