@@ -66,6 +66,9 @@ export async function generateMetadata({ params }) {
         alt: user.userDetails.fullname + "'s profile picture",
       },
     },
+    icons: {
+      icon: [{ url: img_url }],
+    },
   };
 }
 
