@@ -5,6 +5,7 @@ import ResumeHeroSection from "@/components/i/resume/ResumeHeroSection";
 import ResumeProjects from "@/components/i/resume/ResumeProjects";
 import ResumeSkills from "@/components/i/resume/ResumeSkills";
 import ResumeSocialLink from "@/components/i/resume/ResumeSocialLink";
+import { defaultImgUrl } from "@/constants/shared/constant";
 import { _ucfirst } from "@/utils/main";
 import Link from "next/link";
 
@@ -13,9 +14,10 @@ export async function generateMetadata({ params }) {
   const user = await prisma.user.findFirst({
     where: { username },
     select: {
+      profilePicture_url: true,
       userDetails: {
         select: {
-      fullname: true,
+          fullname: true,
           heroTitle: true,
           profession: true,
           bio: true,
@@ -40,7 +42,14 @@ export async function generateMetadata({ params }) {
         ? user.userDetails.bio
         : user.userDetails.about != ""
         ? user.userDetails.about
-        : _ucfirst(user.userDetails.fullname) + " - " + user.userDetails.profession,
+        : _ucfirst(user.userDetails.fullname) +
+          " - " +
+          user.userDetails.profession,
+    openGraph: {
+      images: [
+        user.profilePicture_url != "" ? user.profilePicture_url : defaultImgUrl,
+      ],
+    },
   };
 }
 
