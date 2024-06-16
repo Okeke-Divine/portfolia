@@ -130,8 +130,9 @@ export default function ApplicationSidedar() {
         } md:left-0 h-[100%] max-h-[100vh] overflow-y-auto bg-black w-[250px] flex justify-between flex-col text-white px-5 md:px-7 py-5 md:py-10 duration-300 z-50`}
       >
         <div>
-          <div>
+          <div className="flex justify-center">
             <img
+              className="w-16"
               src="/images/logo/logo.png"
               alt={config.app_name + "'s logo"}
             />
