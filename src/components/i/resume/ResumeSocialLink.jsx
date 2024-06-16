@@ -2,7 +2,7 @@ import prisma from "@/app/db";
 import { getIconClass } from "@/utils/main";
 import Link from "next/link";
 
-const ResumeSocialLink = async ({ userId,user }) => {
+const ResumeSocialLink = async ({ userId, user }) => {
   if (!userId) {
     return <></>;
   }
@@ -46,7 +46,7 @@ const ResumeSocialLink = async ({ userId,user }) => {
           ))}
         </div>
       </div>
-      portfolio link
+      {/* portfolio link */}
       <div className="app-resume-padding">
         <Link
           href={"/i/" + user.username}

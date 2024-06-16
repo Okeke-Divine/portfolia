@@ -1,5 +1,3 @@
-import ResumeSocialLink from "./ResumeSocialLink";
-
 const ResumeAbout = ({ user }) => {
   return (
     <>
@@ -11,8 +9,6 @@ const ResumeAbout = ({ user }) => {
           <p className="whitespace-pre-line">{user?.userDetails?.about}</p>
         </div>
       </div>
-      {/* social links */}
-      <ResumeSocialLink userId={user.id} user={user} />
     </>
   );
 };
