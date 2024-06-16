@@ -34,7 +34,11 @@ const ResumeHeroSection = ({ user }) => {
                 {user?.userDetails?.profession}
               </div>
               <div>
-                <Link href="./resume" className="app-link-primary font-bold">
+                <Link
+                  target="_blank"
+                  href="./resume"
+                  className="app-link-primary font-bold"
+                >
                   My Resume
                 </Link>
               </div>
