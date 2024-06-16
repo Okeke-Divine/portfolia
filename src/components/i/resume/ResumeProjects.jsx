@@ -1,6 +1,18 @@
-import React from "react";
+const ResumeProjects = async ({ userId }) => {
+  const projects = await prisma.userProjects.findMany({
+    where: {
+      userId,
+    },
+    select: {
+      id: true,
+      imageUrl: true,
+      title: true,
+      description: true,
+      tags: true,
+      url: true,
+    },
+  });
 
-const ResumeProjects = () => {
   return (
     <>
       <div className="app-resume-padding">

@@ -2,6 +2,7 @@ import prisma from "@/app/db";
 import NotFound from "@/app/not-found";
 import ResumeAbout from "@/components/i/resume/ResumeAbout";
 import ResumeHeroSection from "@/components/i/resume/ResumeHeroSection";
+import ResumeProjects from "@/components/i/resume/ResumeProjects";
 import ResumeSkills from "@/components/i/resume/ResumeSkills";
 import ResumeSocialLink from "@/components/i/resume/ResumeSocialLink";
 import { _ucfirst } from "@/utils/main";
@@ -73,6 +74,7 @@ export default async function Resume({ params }) {
               <div className="divider"></div>
               <ResumeAbout user={user} />
               <ResumeSkills userId={user.id} />
+              <ResumeProjects userId={user.id} />
             </div>
           </div>
         </div>
