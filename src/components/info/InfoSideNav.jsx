@@ -11,7 +11,7 @@ const links = [
   { name: "Experience", url: "/info/experience", shipped: false },
   { name: "Education", url: "/info/education", shipped: false },
   { name: "Language", url: "/info/language", shipped: false },
-  { name: "Certificates", url: "/info/certificates", shipped: false },
+  { name: "Certificates", url: "/info/certificates", shipped: true },
   { name: "Awards", url: "/info/awards", shipped: false },
 ];
 
