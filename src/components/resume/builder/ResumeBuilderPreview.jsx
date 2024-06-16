@@ -38,7 +38,7 @@ const PortfolioBuilderPreview = ({ username }) => {
           >
             <div className="mockup-browser-toolbar">
               <div className="input text-center">
-                {process.env.NEXT_PUBLIC_BASE_URL}/i/{username}
+                {process.env.NEXT_PUBLIC_BASE_URL}/i/{username}/resume
               </div>
             </div>
             <div className="">
