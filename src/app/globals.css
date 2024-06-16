@@ -56,4 +56,7 @@
   .titleIcon {
     @apply relative top-[5px] text-[25px];
   }
+  .app-resume-padding {
+    @apply px-3 md:px-10 lg:px-16 xl:px-20;
+  }
 }
