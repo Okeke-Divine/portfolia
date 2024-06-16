@@ -23,6 +23,13 @@ const ResumeProjects = async ({ userId }) => {
             <div className="divider divider-start">
               <h3 className="uppercase">Projects</h3>
             </div>
+            <div>
+              {projects.map((project, index) => (
+                <div key={index}>
+                  <div className="font-bold text-xl">{project.title}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </>
       ) : (
