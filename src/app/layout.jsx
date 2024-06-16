@@ -13,7 +13,15 @@ export const metadata = {
   generator: "Next.js",
   applicationName: "Portfolia",
   referrer: "origin-when-cross-origin",
-  keywords: ["Portfolia", "CMS", "Portfolio", "Resume"],
+  keywords: [
+    "Portfolia",
+    "CMS",
+    "Portfolio",
+    "Resume",
+    "No code portfolio and resume creator",
+    "Wordpress",
+    "Bubble",
+  ],
   authors: [
     { name: "Okeke Divine-Vessel", url: "https://twitter.com/okekedivine__" },
   ],
