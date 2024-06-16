@@ -1,9 +1,11 @@
-import React from 'react'
-
 const SitePreviewCarousel = () => {
   return (
-    <div>SitePreviewCarousel</div>
-  )
+    <>
+        <div>
+            
+        </div>
+    </>
+    )
 }
 
 export default SitePreviewCarousel
