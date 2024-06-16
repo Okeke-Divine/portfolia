@@ -72,7 +72,7 @@ export default async function Resume({ params }) {
               </div>
               <div className="divider"></div>
               <ResumeAbout user={user} />
-              <ResumeSkills user={user} />
+              <ResumeSkills userId={user.id} />
             </div>
           </div>
         </div>

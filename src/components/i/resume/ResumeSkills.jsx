@@ -1,6 +1,10 @@
-import React from "react";
+import prisma from "@/app/db";
 
-const ResumeSkills = ({ user }) => {
+const ResumeSkills = async ({ userId }) => {
+    const skills = await prisma.userSkills.findMany({
+      where: { userId },
+    });
+  
   return (
     <>
       <div className="app-resume-padding">
