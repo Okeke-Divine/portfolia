@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import { twitterAccUrl, buyMeACoffeUrl } from "@/constants/shared/constant";
 import { app_color_primary } from "@/constants/shared/color";
 import ComingSoonComponent from "./ComingSoonComponent";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function confirmSignOut() {
   Swal.fire({
@@ -36,6 +36,32 @@ function confirmSignOut() {
 }
 
 export default function ApplicationSidedar() {
+  const [isSidebarExpanded, setIsSidebarExpanded] = useState(false);
+
+  useEffect(() => {
+    // Check if window is defined (i.e., we are in the browser environment)
+    if (typeof window !== "undefined") {
+      const isLargeScreen = window.innerWidth >= 768;
+      setIsSidebarExpanded(isLargeScreen);
+
+      const handleResize = () => {
+        setIsSidebarExpanded(window.innerWidth >= 768);
+      };
+
+      // Add event listener for window resize
+      window.addEventListener("resize", handleResize);
+
+      // Cleanup function to remove event listener
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
+  }, []);
+
+  const toggleSidebar = () => {
+    setIsSidebarExpanded(!isSidebarExpanded);
+  };
+
   const links = [
     {
       name: "Dashboard",
@@ -85,7 +111,11 @@ export default function ApplicationSidedar() {
 
   return (
     <>
-      <div className="fixed top-0 -left-full md:left-0 h-[100%] max-h-[100vh] overflow-y-auto bg-black w-[250px] flex justify-between flex-col text-white px-5 md:px-7 py-5 md:py-10">
+      <div
+        className={`fixed top-0 ${
+          isSidebarExpanded ? "left-0" : "-left-full"
+        } md:lemft-0 h-[100%] max-h-[100vh] overflow-y-auto bg-black w-[250px] flex justify-between flex-col text-white px-5 md:px-7 py-5 md:py-10`}
+      >
         <div className="text-2xl text-center font-bold uppercase">
           {config.app_name}
         </div>
@@ -138,7 +168,12 @@ export default function ApplicationSidedar() {
       </div>
 
       {/* expand buttton */}
-      <button className="btn btn-md rounded-full fixed bottom-4 left-4 app-bg-primary hover:app-bg-primary-dark shadow-md duration-300 hover:shadow-lg text-white">
+      <button
+        className={`btn btn-md rounded-full fixed bottom-4 ${
+          isSidebarExpanded ? "left-[17rem]" : "left-5"
+        } app-bg-primary hover:app-bg-primary-dark shadow-md duration-300 hover:shadow-lg text-white`}
+        onClick={toggleSidebar}
+      >
         <i className="fi fi-tr-bars-staggered"></i>
       </button>
     </>
