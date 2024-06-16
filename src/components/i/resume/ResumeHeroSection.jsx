@@ -2,12 +2,12 @@ const ResumeHeroSection = ({ user }) => {
   return (
     <>
       <div className="app-resume-padding">
-        <div className="flex gap-2 md:gap-5">
+        <div className="block md:flex gap-2 md:gap-5 items-center">
           {user.profilePicture_url != "" ? (
             <>
-              <div className="w-fit">
+              <div className="w-fit mb-2 md:mb-0">
                 <div className="avatar">
-                  <div className="mask mask-squircle bg-green-200 bg-opacity-20 w-5">
+                  <div className="mask mask-squircle bg-green-200 bg-opacity-20 w-20">
                     <img
                       src={
                         user?.profilePicture_url != ""
