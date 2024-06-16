@@ -25,6 +25,15 @@ const PortfolioHero = ({ user }) => {
                   <i className="fi fi-rr-paper-plane-top flaticon-offset"></i>
                 </Link>
               </div> */}
+              <div>
+                <Link
+                  target="_blank"
+                  href="./resume"
+                  className="app-primary-button"
+                >
+                  My Resume
+                </Link>
+              </div>
               <div className="divider"></div>
               {/* social links */}
               <div className="mt-2">
