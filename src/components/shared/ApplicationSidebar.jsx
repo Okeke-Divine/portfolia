@@ -127,7 +127,7 @@ export default function ApplicationSidedar() {
       <div
         className={`fixed top-0 ${
           isSidebarExpanded ? "left-0" : "-left-full"
-        } md:lemft-0 h-[100%] max-h-[100vh] overflow-y-auto bg-black w-[250px] flex justify-between flex-col text-white px-5 md:px-7 py-5 md:py-10 duration-300 z-50`}
+        } md:left-0 h-[100%] max-h-[100vh] overflow-y-auto bg-black w-[250px] flex justify-between flex-col text-white px-5 md:px-7 py-5 md:py-10 duration-300 z-50`}
       >
         <div className="text-2xl text-center font-bold uppercase">
           {config.app_name}
@@ -183,8 +183,8 @@ export default function ApplicationSidedar() {
       {/* expand buttton */}
       <button
         className={`btn btn-md rounded-full fixed bottom-4 ${
-          isSidebarExpanded ? "left-[100px]" : "left-5"
-        } app-bg-primary hover:app-bg-primary-dark shadow-md duration-300 hover:shadow-lg text-white md:hidden z-[100]`}
+          isSidebarExpanded ? "left-[250px]" : "left-5"
+        } app-bg-primary hover:app-bg-primary-dark shadow-md hover:shadow-lg text-white md:hidden duration-300 z-[100]`}
         onClick={toggleSidebar}
       >
         <i
