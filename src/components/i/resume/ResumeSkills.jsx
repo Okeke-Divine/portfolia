@@ -4,6 +4,7 @@ const ResumeSkills = async ({ userId }) => {
   const skills = await prisma.userSkills.findMany({
     where: { userId },
   });
+  console.log(skills);
 
   return (
     <>
