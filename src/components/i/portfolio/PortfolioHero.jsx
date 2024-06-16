@@ -31,6 +31,7 @@ const PortfolioHero = ({ user }) => {
                   href="./resume"
                   className="app-primary-button"
                 >
+                  <i className="fi fi-tr-poll-h"></i>
                   My Resume
                 </Link>
               </div>
