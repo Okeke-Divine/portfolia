@@ -54,7 +54,7 @@ export default async function Resume({ params }) {
   return (
     <>
       <div className="bg-gray-200 flex justify-center min-h-[100vh]">
-        <div className="bg-white w-full md:w-[80vw] lg:w-[70vw] xl:w-[60vw]">
+        <div className="bg-white w-full md:w-[80vw] lg:w-[70vw] xl:w-[60vw] border-l-8 app-border-primary">
           <div className="py-10">
             <ResumeHeroSection user={user} />
             <ResumeSocialLink userId={user.id} />

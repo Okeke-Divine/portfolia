@@ -28,6 +28,9 @@
   .app-bg-primary {
     @apply bg-green-500;
   }
+  .app-border-primary {
+    @apply border-green-500;
+  }
   .app-bg-primary-dark {
     @apply bg-green-600;
   }
