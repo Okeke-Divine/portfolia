@@ -54,7 +54,15 @@ export default async function Resume({ params }) {
         <div className="bg-white w-full md:w-[80vw] lg:w-[70vw] xl:w-[60vw]">
           <div className="py-10">
             <div className="app-resume-padding">
-              <h1 className="text-5xl">Okeke Divine-Vessel.</h1>
+              <div>
+                <h1 className="text-5xl">Okeke Divine-Vessel.</h1>
+              </div>
+              <div className="flex gap-2">
+                <div className="w-fit">Full Stack Web Developer @ Gools</div>
+                <div className="w-full">
+                  <div className="divider"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
