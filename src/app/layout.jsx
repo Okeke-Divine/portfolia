@@ -1,8 +1,8 @@
-import { Inter } from "next/font/google";
+import { Cabin} from "next/font/google";
 import "./globals.css";
 import config from "@/data/config.json";
 
-const application_font = Inter({ subsets: ["latin"], weight: '400' });
+const application_font = Cabin({ subsets: ["latin"], weight: '600' });
 
 export const metadata = {
   title: {

@@ -20,7 +20,7 @@ const ResumeSocialLink = async ({ userId }) => {
 
   return (
     <>
-      <div className="app-resume-padding">
+      <div className="app-resume-padding mt-2">
         <div className="flex gap-2 md:gap-5 flex-wrap">
           {social_link.map((link, index) => (
             <Link
