@@ -38,31 +38,33 @@ export async function generateMetadata({ params }) {
     user.userDetails.profession +
     " | Resume";
 
-  const description = user.userDetails.bio != ""
-  ? user.userDetails.bio
-  : user.userDetails.about != ""
-  ? user.userDetails.about
-  : _ucfirst(user.userDetails.fullname) +
-    " - " +
-    user.userDetails.profession;
+  const description =
+    user.userDetails.bio != ""
+      ? user.userDetails.bio
+      : user.userDetails.about != ""
+      ? user.userDetails.about
+      : _ucfirst(user.userDetails.fullname) +
+        " - " +
+        user.userDetails.profession;
+
+  const img_url =
+    user.profilePicture_url != "" ? user.profilePicture_url : defaultImgUrl2;
 
   return {
     title: title,
-    description:
-      description,
+    description: description,
     openGraph: {
-      images: [
-        user.profilePicture_url != "" ? user.profilePicture_url : defaultImgUrl2,
-      ],
+      images: [img_url],
     },
     twitter: {
       card: "summary_large_image",
       title: title,
       description: description,
       creator: "@okekedivine__",
-      images: [
-        user.profilePicture_url != "" ? user.profilePicture_url : defaultImgUrl2
-      ],
+      images: {
+        url: img_url,
+        alt: user.userDetails.fullname + "'s profile picture",
+      },
     },
   };
 }
