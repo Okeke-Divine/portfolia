@@ -15,6 +15,13 @@ export default function SignUp() {
         <div className="grid grid-cols-1 md:grid-cols-2 px-0">
           <div className="min-h-[100vh] flex items-center justify-center bg-gray-100">
             <div className="bg-white shadow-md hover:shadow-lg duration-100 px-5 py-10 md:px-[50px] md:py-[50px]  rounded-md">
+              <div className="flex justify-center">
+                <img
+                  className="w-24 mb-2 rounded-full shadow-lg"
+                  src="/images/logo/logo.png"
+                  alt={config.app_name + "'s logo"}
+                />
+              </div>
               <h1>
                 Hi, Welcome to{" "}
                 <Link href="/" className="app-text-primary">
