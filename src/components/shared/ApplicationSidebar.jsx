@@ -51,6 +51,10 @@ export default function ApplicationSidedar() {
       // Add event listener for window resize
       window.addEventListener("resize", handleResize);
 
+      document.querySelectorAll("a").forEach((e) => {
+        console.log(e);
+      })
+
       // Cleanup function to remove event listener
       return () => {
         window.removeEventListener("resize", handleResize);
