@@ -43,21 +43,27 @@ export default function ApplicationSidedar() {
       blank: false,
     },
     {
-      name: "Portfolio Builder",
+      name: "Info",
+      url: "/info",
+      icon: <i className="fi fi-rr-leaderboard-alt"></i>,
+      blank: false,
+    },
+    {
+      name: "Portfolio",
       url: "/portfolio/builder",
       icon: <i className="fi fi-ts-web-design"></i>,
+      blank: false,
+    },
+    {
+      name: "Resume",
+      url: "/resume/builder",
+      icon: <i className="fi fi-tr-poll-h"></i>,
       blank: false,
     },
     {
       name: "Feedback",
       url: "/feedback",
       icon: <i className="fi fi-ts-skill-user"></i>,
-      blank: false,
-    },
-    {
-      name: "Info",
-      url: "/info",
-      icon: <i className="fi fi-rr-leaderboard-alt"></i>,
       blank: false,
     },
     {
@@ -109,11 +115,6 @@ export default function ApplicationSidedar() {
               )}
             </Link>
           ))}
-          <button className="btn btn-ghost w-full mb-2 justify-start">
-            <i className="fi fi-tr-poll-h"></i>
-            Resume
-            <ComingSoonComponent />
-          </button>
           <button className="btn btn-ghost w-full mb-2 justify-start">
             <i className="fi fi-tr-customization-cogwheel"></i>
             Settings
