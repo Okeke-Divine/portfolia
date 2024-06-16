@@ -37,7 +37,7 @@ const ResumeHeroSection = ({ user }) => {
                 <Link
                   target="_blank"
                   href="./resume"
-                  className="app-link-primary font-bold"
+                  className="app-primary-button"
                 >
                   My Resume
                 </Link>
