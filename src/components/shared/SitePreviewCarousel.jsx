@@ -1,6 +1,6 @@
 "use client";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 const images = [
@@ -27,15 +27,16 @@ const SitePreviewCarousel = () => {
   return (
     <>
       <div>
-        {/* <div className="fixed top-0 left-0 w-full h-[100vh] bg-red-300"> */}
-        <div className="slider-container w-[300px] h-[100vh] overflow-hidden">
-          <Slider {...settings}>
-            {images.map((image, index) => (
-              <div key={index}>
-                <img src={"/images/" + image} alt="Mockup Image" />
-              </div>
-            ))}
-          </Slider>
+        <div className="slider-container w-[300px] h-fit bg-red-200">
+          <div className="bg-green-200 h-fit">
+            <Slider {...settings}>
+              {images.map((image, index) => (
+                <div key={index} className="bg-yellow-500">
+                  <img src={"/images/" + image} alt="Mockup Image" />
+                </div>
+              ))}
+            </Slider>
+          </div>
         </div>
       </div>
     </>
