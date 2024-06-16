@@ -1,4 +1,4 @@
-// import { twitterAccUrl } from "@/constants/shared/constant";
+import { twitterAccUrl } from "@/constants/shared/constant";
 import config from "@/data/config.json";
 import Link from "next/link";
 
@@ -13,16 +13,16 @@ const MinorFooter = () => {
               Skiyen
             </Link>
           </div>
-          {/* <div className="w-full text-center  text-[18px] font-semibold">
-            Designed, Built and Marketed by{" "}
+          <div className="w-full text-center  text-[18px] font-semibold">
+            {/* Designed, Built and Marketed by{" "} */}
             <Link
               href={twitterAccUrl}
               target="_blank"
               className="app-link-primary font-bold"
             >
-              Dev Divine
+              Twitter
             </Link>
-          </div> */}
+          </div>
         </div>
       </div>
     </>
