@@ -4,16 +4,21 @@ import config from "@/data/config.json";
 
 const application_font = Cabin({ subsets: ["latin"], weight: '600' });
 
+const description = "";
+const banner_url = "";
+
 export const metadata = {
   title: {
     template: "%s | " + config.app_name,
     default: config.app_name,
   },
+  description: description,
   canonical: process.env.NEXT_PUBLIC_BASE_UR,
   generator: "Next.js",
-  applicationName: "Portfolia",
+  applicationName: config.app_name,
   referrer: "origin-when-cross-origin",
   keywords: [
+    config.app_name,
     "Portfolia",
     "CMS",
     "Portfolio",
@@ -40,9 +45,22 @@ export const metadata = {
       "max-snippet": -1,
     },
   },
-  // icons: {
-  //   icon: '/icon.png',
-  // },
+  images: ["/images/logo/logo.png"],
+  icons: {
+    icon: '/images/logo/logo.png',
+  },
+  openGraph: {
+    images: [banner_url],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: config.app_name,
+    description: description,
+    creator: "@okekedivine__",
+    images: {
+      url: banner_url,
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
