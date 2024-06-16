@@ -65,4 +65,7 @@
   .app-resume-padding {
     @apply px-5 md:px-10 lg:px-16 xl:px-20;
   }
+  .app-resume-container-margin-top {
+    @apply mt-5;
+  }
 }

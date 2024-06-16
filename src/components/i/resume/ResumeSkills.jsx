@@ -9,7 +9,7 @@ const ResumeSkills = async ({ userId }) => {
     <>
       {skills.length > 0 ? (
         <>
-          <div className="app-resume-padding">
+          <div className="app-resume-padding app-resume-container-margin-top">
             <div className="divider divider-start">
               <h3 className="uppercase">Skills</h3>
             </div>
