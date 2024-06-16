@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const ResumeHeroSection = ({ user }) => {
   return (
     <>
@@ -30,6 +32,11 @@ const ResumeHeroSection = ({ user }) => {
             <div className="flex gap-2 items-center">
               <div className="w-fit text-xl">
                 {user?.userDetails?.profession}
+              </div>
+              <div>
+                <Link href="./resume" className="app-link-primary font-bold">
+                  My Resume
+                </Link>
               </div>
               <div className="grow">
                 <div className="divider"></div>
