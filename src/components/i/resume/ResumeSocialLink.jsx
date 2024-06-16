@@ -21,7 +21,7 @@ const ResumeSocialLink = async ({ userId }) => {
   return (
     <>
       <div className="app-resume-padding">
-        <div className="flex gap-2 flex-wrap">
+        <div className="flex gap-2 md:gap-5 flex-wrap justify-end">
           {social_link.map((link, index) => (
             <Link
               href={
