@@ -44,7 +44,7 @@ const PortfolioBuilderPreview = ({ username }) => {
             <div className="">
               <iframe
                 className="w-full min-h-[80vh] md:min-h-[80vh]"
-                src={"/i/" + username}
+                src={"/i/" + username + "/resume"}
               ></iframe>
             </div>
           </div>
@@ -60,7 +60,7 @@ const PortfolioBuilderPreview = ({ username }) => {
               <div className="display">
                 <iframe
                   className="w-full min-h-[90vh] md:min-h-[80vh]"
-                  src={"/i/" + username}
+                  src={"/i/" + username + "/resume"}
                 ></iframe>
               </div>
             </div>
