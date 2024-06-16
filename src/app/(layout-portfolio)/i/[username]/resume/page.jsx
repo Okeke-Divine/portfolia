@@ -52,9 +52,11 @@ export default async function Resume({ params }) {
     <>
       <div className="bg-gray-200 flex justify-center min-h-[100vh]">
         <div className="bg-white w-full md:w-[80vw] lg:w-[70vw] xl:w-[60vw]">
+          <div className="py-10">
             <div className="app-resume-padding">
-                <h1>Okeke Divine-Vessel.</h1>
+              <h1 className="text-6xl">Okeke Divine-Vessel.</h1>
             </div>
+          </div>
         </div>
       </div>
     </>
