@@ -1,5 +1,6 @@
 import SignInForm from "@/components/signin/SignInForm";
 import Link from "next/link";
+import config from "@/data/config.json";
 
 export const metadata = {
   title: "Sign in",
