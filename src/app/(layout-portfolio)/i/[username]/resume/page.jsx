@@ -3,6 +3,7 @@ import NotFound from "@/app/not-found";
 import ResumeHeroSection from "@/components/i/resume/ResumeHeroSection";
 import ResumeSocialLink from "@/components/i/resume/ResumeSocialLink";
 import { _ucfirst } from "@/utils/main";
+import Link from "next/link";
 
 export async function generateMetadata({ params }) {
   const username = params.username;
@@ -57,6 +58,9 @@ export default async function Resume({ params }) {
           <div className="py-10">
             <ResumeHeroSection user={user} />
             <ResumeSocialLink userId={user.id} />
+            <div>
+              <Link href="..">My Portfolio</Link>
+            </div>
             <div className="divider"></div>
           </div>
         </div>
