@@ -11,7 +11,7 @@ const ResumeSkills = async ({ userId }) => {
         <div className="divider divider-start">
           <h3 className="uppercase">Skills</h3>
         </div>
-        <div className="flex flex-wrap gap-2 md:gap-5">
+        <div className="flex flex-wrap gap-x-2 md:gap-x-3 gap-y-2">
           {skills.map((skill, index) => (
             <div key={index} className="badge badge-outline">
               {skill.skill_name}
