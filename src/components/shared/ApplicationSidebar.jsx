@@ -183,11 +183,15 @@ export default function ApplicationSidedar() {
       {/* expand buttton */}
       <button
         className={`btn btn-md rounded-full fixed bottom-4 ${
-          isSidebarExpanded ? "left-[17rem]" : "left-5"
+          isSidebarExpanded ? "left-full" : "left-5"
         } app-bg-primary hover:app-bg-primary-dark shadow-md duration-300 hover:shadow-lg text-white md:hidden z-50`}
         onClick={toggleSidebar}
       >
-        <i className={`fi ${isSidebarExpanded ? "fi-tr-circle-xmark" : "fi-tr-bars-staggered"}`}></i>
+        <i
+          className={`fi ${
+            isSidebarExpanded ? "fi-tr-circle-xmark" : "fi-tr-bars-staggered"
+          }`}
+        ></i>
       </button>
     </>
   );
