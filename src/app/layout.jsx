@@ -10,7 +10,7 @@ export const metadata = {
     default: config.app_name,
   },
   canonical: process.env.NEXT_PUBLIC_BASE_UR,
-  generator: "Portfolia",
+  generator: "Next.js",
   applicationName: "Portfolia",
   referrer: "origin-when-cross-origin",
   keywords: ["Portfolia", "CMS", "Portfolio", "Resume"],
