@@ -36,7 +36,7 @@ const SignIn = () => {
               </div>
             </div>
           </div>
-          <div className="bg-gray-900 min-h-[100vh]">
+          <div className="bg-gray-900 min-h-[100vh] flex justify-center">
             <SitePreviewCarousel />
           </div>
         </div>
