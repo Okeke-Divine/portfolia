@@ -183,7 +183,7 @@ export default function ApplicationSidedar() {
       {/* expand buttton */}
       <button
         className={`btn btn-md rounded-full fixed bottom-4 ${
-          isSidebarExpanded ? "left-[250px]" : "left-5"
+          isSidebarExpanded ? "left-[260px]" : "left-5"
         } app-bg-primary hover:app-bg-primary-dark shadow-md hover:shadow-lg text-white md:hidden duration-300 z-[100]`}
         onClick={toggleSidebar}
       >
