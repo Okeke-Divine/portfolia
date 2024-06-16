@@ -187,7 +187,7 @@ export default function ApplicationSidedar() {
         } app-bg-primary hover:app-bg-primary-dark shadow-md duration-300 hover:shadow-lg text-white md:hidden z-50`}
         onClick={toggleSidebar}
       >
-        <i className="fi fi-tr-bars-staggered"></i>
+        <i className={`fi ${isSidebarExpanded ? "fi-tr-circle-xmark" : "fi-tr-bars-staggered"}`}></i>
       </button>
     </>
   );
