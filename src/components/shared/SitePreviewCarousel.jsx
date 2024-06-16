@@ -4,12 +4,12 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 const images = [
-  "iPad-Air-4-localhost (1).png",
+//   "iPad-Air-4-localhost (1).png",
   "Samsung-Galaxy-S20-localhost.png",
 //   "Macbook-Air-localhost.png",
 //   "Macbook-Air-localhost (1).png",
   "iPhone-13-PRO-localhost.png",
-  "iPad-Air-4-localhost.png",
+//   "iPad-Air-4-localhost.png",
 ];
 
 const SitePreviewCarousel = () => {
