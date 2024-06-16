@@ -51,7 +51,7 @@ export default async function Resume({ params }) {
   return (
     <>
       <div className="bg-gray-200 flex justify-center min-h-[100vh]">
-        <div className="bg-white p-5 w-full md:w-[80vw]">
+        <div className="bg-white p-5 w-full md:w-[80vw] lg:w-[75vw] xl:w-[70vw]">
           <h1>Divine</h1>
         </div>
       </div>
