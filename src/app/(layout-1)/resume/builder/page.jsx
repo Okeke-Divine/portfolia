@@ -1,4 +1,4 @@
-import PortfolioBuilderPreview from "@/components/portfolio/builder/PortfolioBuilderPreview";
+import ResumeBuilderPreview from "@/components/resume/builder/ResumeBuilderPreview";
 import { getCurrentSession } from "@/utils/session";
 
 export const metadata = {
@@ -9,7 +9,7 @@ const ResumeBuilder = async () => {
   const session = await getCurrentSession();
   return (
     <>
-      <PortfolioBuilderPreview username={session.user.username} />
+      <ResumeBuilderPreview username={session.user.username} />
     </>
   );
 };

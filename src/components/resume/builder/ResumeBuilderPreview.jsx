@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 
-const PortfolioBuilderPreview = ({ username }) => {
+const ResumeBuilderPreview = ({ username }) => {
   const [preview, setPreview] = useState("desktop");
 
   return (
@@ -73,4 +73,4 @@ const PortfolioBuilderPreview = ({ username }) => {
   );
 };
 
-export default PortfolioBuilderPreview;
+export default ResumeBuilderPreview;
