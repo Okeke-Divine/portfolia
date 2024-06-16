@@ -1,5 +1,6 @@
 import prisma from "@/app/db";
 import NotFound from "@/app/not-found";
+import ResumeHeroSection from "@/components/i/resume/ResumeHeroSection";
 import { _ucfirst } from "@/utils/main";
 
 export async function generateMetadata({ params }) {
@@ -53,19 +54,7 @@ export default async function Resume({ params }) {
       <div className="bg-gray-200 flex justify-center min-h-[100vh]">
         <div className="bg-white w-full md:w-[80vw] lg:w-[70vw] xl:w-[60vw]">
           <div className="py-10">
-            <div className="app-resume-padding">
-              <div>
-                <h1 className="text-5xl">Okeke Divine-Vessel.</h1>
-              </div>
-              <div className="flex gap-2 items-center">
-                <div className="w-fit text-xl">
-                  Full Stack Web Developer @ Google
-                </div>
-                <div className="grow">
-                  <div className="divider"></div>
-                </div>
-              </div>
-            </div>
+            <ResumeHeroSection user={user} />
           </div>
         </div>
       </div>
