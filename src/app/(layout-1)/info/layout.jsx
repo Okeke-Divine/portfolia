@@ -15,7 +15,7 @@ export default function InfoLayout({ children }) {
           <div className="block md:flex md:flex-row gap-2">
             <div className="w-full md:w-fit">
               {/* <div className="max-w-full overflow-x-auto"> */}
-              <div className="join join-horizontal md:join-vertical border-2 max-w-[100%] overflow-hidden">
+              <div className="join join-horizontal md:join-vertical border-2 max-w-[100%] overflow-x-auto">
                 <InfoSideNav />
               </div>
               {/* </div> */}
