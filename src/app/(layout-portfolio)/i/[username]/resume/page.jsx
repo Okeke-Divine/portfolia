@@ -62,6 +62,7 @@ export default async function Resume({ params }) {
               <ResumeSocialLink userId={user.id} />
               <div className="app-resume-padding">
                 <Link
+                  target="_blank"
                   href={"/i/" + user.username}
                   className="app-text-primary duration-300 hover:app-text-primary-dark font-semibold"
                 >
