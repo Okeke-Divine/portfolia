@@ -13,9 +13,33 @@ export const metadata = {
   applicationName: "Portfolia",
   referrer: "origin-when-cross-origin",
   keywords: ["Portfolia", "CMS", "Portfolio", "Resume"],
-  authors: [{ name: 'Okeke Divine-Vessel', url: 'https://twitter.com/okekedivine__' }],
-  creator: 'Okeke Divine-Vessel',
-  publisher: 'Okeke Divine-Vessel',
+  authors: [
+    { name: "Okeke Divine-Vessel", url: "https://twitter.com/okekedivine__" },
+  ],
+  creator: "Okeke Divine-Vessel",
+  publisher: "Okeke Divine-Vessel",
+  robots: {
+    index: false,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: false,
+      noimageindex: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  // icons: {
+  //   icon: '/icon.png',
+  //   shortcut: '/shortcut-icon.png',
+  //   apple: '/apple-icon.png',
+  //   other: {
+  //     rel: 'apple-touch-icon-precomposed',
+  //     url: '/apple-touch-icon-precomposed.png',
+  //   },
+  // },
 };
 
 export default function RootLayout({ children }) {

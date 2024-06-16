@@ -5,7 +5,7 @@ import ResumeHeroSection from "@/components/i/resume/ResumeHeroSection";
 import ResumeProjects from "@/components/i/resume/ResumeProjects";
 import ResumeSkills from "@/components/i/resume/ResumeSkills";
 import ResumeSocialLink from "@/components/i/resume/ResumeSocialLink";
-import { defaultImgUrl } from "@/constants/shared/constant";
+import { defaultImgUrl2 } from "@/constants/shared/constant";
 import { _ucfirst } from "@/utils/main";
 import Link from "next/link";
 
@@ -31,23 +31,37 @@ export async function generateMetadata({ params }) {
       title: "404 | Not Found",
     };
   }
+
+  const title =
+    _ucfirst(user.userDetails.fullname) +
+    " - " +
+    user.userDetails.profession +
+    " | Resume";
+
+  const description = user.userDetails.bio != ""
+  ? user.userDetails.bio
+  : user.userDetails.about != ""
+  ? user.userDetails.about
+  : _ucfirst(user.userDetails.fullname) +
+    " - " +
+    user.userDetails.profession;
+
   return {
-    title:
-      _ucfirst(user.userDetails.fullname) +
-      " - " +
-      user.userDetails.profession +
-      " | Resume",
+    title: title,
     description:
-      user.userDetails.bio != ""
-        ? user.userDetails.bio
-        : user.userDetails.about != ""
-        ? user.userDetails.about
-        : _ucfirst(user.userDetails.fullname) +
-          " - " +
-          user.userDetails.profession,
+      description,
     openGraph: {
       images: [
-        user.profilePicture_url != "" ? user.profilePicture_url : defaultImgUrl,
+        user.profilePicture_url != "" ? user.profilePicture_url : defaultImgUrl2,
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: title,
+      description: description,
+      creator: "@okekedivine__",
+      images: [
+        user.profilePicture_url != "" ? user.profilePicture_url : defaultImgUrl2
       ],
     },
   };
