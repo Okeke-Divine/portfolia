@@ -137,7 +137,7 @@ export default function ApplicationSidedar() {
       </div>
 
       {/* expand buttton */}
-      <button className="btn btn-md rounded-full fixed bottom-4 left-4 app-bg-primary-dark shadow-md duration-300 hover:shadow-lg text-white">
+      <button className="btn btn-md rounded-full fixed bottom-4 left-4 app-bg-primary hover:app-bg-primary-dark shadow-md duration-300 hover:shadow-lg text-white">
         <i className="fi fi-tr-bars-staggered"></i>
       </button>
     </>
