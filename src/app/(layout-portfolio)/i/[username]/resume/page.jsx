@@ -88,6 +88,7 @@ export default async function Resume({ params }) {
                   href={"/i/" + user.username}
                   className="app-link-primary"
                 >
+                  <i className="fi fi-ts-web-design flaticon-offset"></i>
                   My Portfolio
                 </Link>
               </div>
