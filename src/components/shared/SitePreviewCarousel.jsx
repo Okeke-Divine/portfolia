@@ -19,7 +19,7 @@ const images = [
 
 const SitePreviewCarousel = () => {
   const settings = {
-    dots: true, // Show navigation dots
+    dots: false, // Show navigation dots
     infinite: true, // Looping the slides
     speed: 500, // Transition speed
     slidesToShow: 1, // Number of slides to show at a time
