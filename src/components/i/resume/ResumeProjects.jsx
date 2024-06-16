@@ -26,7 +26,8 @@ const ResumeProjects = async ({ userId }) => {
               {projects.map((project, index) => (
                 <div key={index} className="mb-5">
                   <div className="font-bold text-xl">{project.title}</div>
-                  project tags
+                  <div className="">{project.description}</div>
+                  {/* project tags */}
                   {project.tags !== "" ? (
                     <>
                       <div className="flex flex-wrap gap-2">
