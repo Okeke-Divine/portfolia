@@ -48,16 +48,25 @@ export default function ApplicationSidedar() {
         setIsSidebarExpanded(window.innerWidth >= 768);
       };
 
+      const clickFunction = () => {
+        if (window.innerWidth < 768) {
+          setIsSidebarExpanded(false);
+        }
+      };
+
       // Add event listener for window resize
       window.addEventListener("resize", handleResize);
 
       document.querySelectorAll("a").forEach((e) => {
-        console.log(e);
-      })
+        e.addEventListener("click", clickFunction);
+      });
 
       // Cleanup function to remove event listener
       return () => {
         window.removeEventListener("resize", handleResize);
+        document.querySelectorAll("a").forEach((e) => {
+          e.removeEventListener("click", clickFunction);
+        });
       };
     }
   }, []);
