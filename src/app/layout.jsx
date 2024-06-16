@@ -25,8 +25,8 @@ export const metadata = {
   authors: [
     { name: "Okeke Divine-Vessel", url: "https://twitter.com/okekedivine__" },
   ],
-  creator: "Okeke Divine-Vessel",
-  publisher: "Okeke Divine-Vessel",
+  creator: "Okeke Divine-Vessel, Programmer and CEO",
+  publisher: "Okeke Divine-Vessel, Programmer and CEO",
   robots: {
     index: true,
     follow: true,
