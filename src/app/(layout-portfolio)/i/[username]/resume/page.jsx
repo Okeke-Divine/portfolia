@@ -58,7 +58,7 @@ export default async function Resume({ params }) {
           <div className="py-10">
             <ResumeHeroSection user={user} />
             <ResumeSocialLink userId={user.id} />
-            <div>
+            <div className="app-resume-padding">
               <Link href="..">My Portfolio</Link>
             </div>
             <div className="divider"></div>
