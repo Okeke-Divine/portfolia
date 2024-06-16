@@ -9,6 +9,9 @@ import {
 const AddProject = () => {
   const [loading, setLoading] = useState(false);
 
+  //broad cast channel
+  const channel = new BroadcastChannel("user-projects-channel")
+
   //refs
   const projectTitleRef = useRef(null);
   const projectTagsRef = useRef(null);
@@ -56,6 +59,13 @@ const AddProject = () => {
           projectTagsRef.current.value = "";
           projectUrlRef.current.value = "";
           projectDescRef.current.value = "";
+
+          //broadcast the project info
+          const broadcast_message = {
+            type: "NEW_PROJECT",
+            data: response.data.data
+          }
+          channel.postMessage(broadcast_message);
         }
       })
       .catch((error) => {

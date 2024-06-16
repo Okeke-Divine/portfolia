@@ -93,7 +93,7 @@ export const POST = async (req) => {
 
 
         if (project) {
-            return resourceCreated({ project })
+            return resourceCreated(project)
         } else {
             return internalServerError("Could not create project")
         }

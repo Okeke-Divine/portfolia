@@ -9,6 +9,21 @@ const ViewProjects = () => {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(false);
 
+  const channel = new BroadcastChannel("user-projects-channel");
+
+  useEffect(() => {
+    channel.onmessage = (event) => {
+      setLoading(true);
+      const newProject = event.data.data;
+      setProjects((prevProjects) => [...prevProjects, newProject]);
+      setLoading(false);
+    };
+
+    return () => {
+      channel.close();
+    };
+  }, [channel]);
+
   useEffect(function () {
     setLoading(true);
     axios.get("/api/info/project").then((response) => {
