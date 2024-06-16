@@ -1,8 +1,8 @@
-import { Kode_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import config from "@/data/config.json";
 
-const application_font = Kode_Mono({ subsets: ["latin"], weight: '400' });
+const application_font = Inter({ subsets: ["latin"], weight: '400' });
 
 export const metadata = {
   title: {
