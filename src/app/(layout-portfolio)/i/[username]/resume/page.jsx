@@ -50,8 +50,8 @@ export default async function Resume({ params }) {
 
   return (
     <>
-      <div className="bg-gray-500 flex justify-center">
-        <div className="bg-white p-5">
+      <div className="bg-gray-200 flex justify-center">
+        <div className="bg-white p-5 w-full md:min-w-[80vw]">
           <h1>Divine</h1>
         </div>
       </div>
