@@ -9,6 +9,7 @@ export const metadata = {
     template: "%s | " + config.app_name,
     default: config.app_name,
   },
+  canonical: process.env.NEXT_PUBLIC_BASE_UR,
   generator: "Portfolia",
   applicationName: "Portfolia",
   referrer: "origin-when-cross-origin",
