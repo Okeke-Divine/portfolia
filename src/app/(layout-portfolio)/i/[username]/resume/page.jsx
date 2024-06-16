@@ -59,7 +59,7 @@ export default async function Resume({ params }) {
             <ResumeHeroSection user={user} />
             <ResumeSocialLink userId={user.id} />
             <div className="app-resume-padding">
-              <Link href="..">My Portfolio</Link>
+              <Link href=".." className="app-text-primary duration-300 hover:app-text-primary-dark font-bold">My Portfolio</Link>
             </div>
             <div className="divider"></div>
           </div>
