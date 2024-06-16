@@ -26,16 +26,18 @@ const SitePreviewCarousel = () => {
 
   return (
     <>
-      <div>
-        <div className="slider-container w-[300px] h-fit bg-red-200">
-          <div className="bg-green-200 h-fit">
-            <Slider {...settings}>
-              {images.map((image, index) => (
-                <div key={index} className="bg-yellow-500">
-                  <img src={"/images/" + image} alt="Mockup Image" />
-                </div>
-              ))}
-            </Slider>
+      <div className="bg-green-400 min-h-[100vh] flex justify-center items-center">
+        <div>
+          <div className="slider-container w-[300px] h-fit">
+            <div className="h-fit">
+              <Slider {...settings} className="bg-red-200 flex justify-center items-center">
+                {images.map((image, index) => (
+                  <div key={index} className="bg-yellow-500">
+                    <img src={"/images/" + image} alt="Mockup Image" />
+                  </div>
+                ))}
+              </Slider>
+            </div>
           </div>
         </div>
       </div>
