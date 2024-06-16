@@ -35,7 +35,7 @@ const PortfolioHero = ({ user }) => {
           {/* right content */}
           <div>
             <div className="flex justify-center md:justify-end items-center">
-              <div className="avatar cursor-pointer">
+              <div className="avatar">
                 <div className="mask mask-squircle bg-green-200 bg-opacity-20 w-52 lg:w-96">
                   <img
                     src={
