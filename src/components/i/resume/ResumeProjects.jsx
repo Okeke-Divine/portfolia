@@ -7,7 +7,6 @@ const ResumeProjects = async ({ userId }) => {
     },
     select: {
       id: true,
-      imageUrl: true,
       title: true,
       description: true,
       tags: true,
@@ -25,8 +24,22 @@ const ResumeProjects = async ({ userId }) => {
             </div>
             <div>
               {projects.map((project, index) => (
-                <div key={index}>
+                <div key={index} className="mb-5">
                   <div className="font-bold text-xl">{project.title}</div>
+                  project tags
+                  {project.tags !== "" ? (
+                    <>
+                      <div className="flex flex-wrap gap-2">
+                        {project.tags.split(",").map((tag, index) => (
+                          <div key={index} className="badge badge-outline">
+                            {tag.trim()}
+                          </div>
+                        ))}
+                      </div>
+                    </>
+                  ) : (
+                    ""
+                  )}
                 </div>
               ))}
             </div>
