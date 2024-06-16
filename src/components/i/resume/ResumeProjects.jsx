@@ -26,7 +26,11 @@ const ResumeProjects = async ({ userId }) => {
               {projects.map((project, index) => (
                 <div key={index} className="mb-5">
                   <div className="font-bold text-xl">{project.title}</div>
-                  <div className="">{project.description}</div>
+                  <div className="">
+                    <p className="overflow-y-auto whitespace-pre-line">
+                      {project.description}
+                    </p>
+                  </div>
                   {/* project tags */}
                   {project.tags !== "" ? (
                     <>
