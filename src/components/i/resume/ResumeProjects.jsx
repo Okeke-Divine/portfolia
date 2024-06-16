@@ -32,7 +32,7 @@ const ResumeProjects = async ({ userId }) => {
                   {/* project tags */}
                   {project.tags !== "" ? (
                     <>
-                      <div className="mb-2 text-gray-200">
+                      <div className="mb-2 text-gray-500">
                         {project.tags.split(",").map((tag, index) => (
                           <span key={index}>{tag.trim()}, </span>
                         ))}
