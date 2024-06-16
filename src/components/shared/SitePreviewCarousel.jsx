@@ -5,7 +5,16 @@ import Slider from "react-slick";
 
 const images = [
   "iPhone-13-PRO-localhost-1.png",
-  "iPhone-13-PRO-localhost-1.png",
+  "iPhone-13-PRO-localhost (4).png",
+  "iPhone-13-PRO-localhost.png",
+  "iPhone-13-PRO-localhost (1).png",
+  "iPhone-13-PRO-localhost (2).png",
+  "iPhone-13-PRO-localhost (3).png",
+  "iPhone-13-PRO-localhost (5).png",
+  "iPhone-13-PRO-localhost (6).png",
+  "iPhone-13-PRO-localhost (7).png",
+  "iPhone-13-PRO-localhost (8).png",
+  "iPhone-13-PRO-localhost (9).png",
 ];
 
 const SitePreviewCarousel = () => {
