@@ -14,13 +14,13 @@ export default function InfoLayout({ children }) {
         <div>
           <div className="flex flex-col md:flex-row gap-2">
             <div className="w-fit">
-              <div className="w-full overflow-x-auto">
+              <div className="max-w-[50%] overflow-hidden">
                 <div className="join join-horizontal md:join-vertical border-2">
                   <InfoSideNav />
                 </div>
               </div>
             </div>
-            {/* <div className="divider divider-vertical"></div> */}
+            {/*  */}
             <div className="w-full">{children}</div>
           </div>
         </div>
