@@ -36,6 +36,7 @@ const ResumeProjects = async ({ userId }) => {
                     {project.url != "" ? (
                       <>
                         <div className="card-actions justify-end">
+                          |{" "}
                           <Link
                             href={project.url}
                             target="_blank"
