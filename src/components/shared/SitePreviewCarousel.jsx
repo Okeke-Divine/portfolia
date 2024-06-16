@@ -21,18 +21,22 @@ const SitePreviewCarousel = () => {
     slidesToScroll: 1, // Number of slides to scroll at a time
     autoplay: true, // Autoplay
     autoplaySpeed: 2000, // Autoplay speed
+    pauseOnHover: true,
   };
 
   return (
     <>
+      {/* <div> */}
       <div className="fixed top-0 left-0 w-full h-[100vh] bg-red-300">
-        <Slider {...settings}>
-          {images.map((image, index) => (
-            <div key={index}>
-              <img src={"/images/" + image} alt="Mockup Image" />
-            </div>
-          ))}
-        </Slider>
+        <div className="slider-container">
+          <Slider {...settings}>
+            {images.map((image, index) => (
+              <div key={index}>
+                <img src={"/images/" + image} alt="Mockup Image" />
+              </div>
+            ))}
+          </Slider>
+        </div>
       </div>
     </>
   );
