@@ -30,7 +30,11 @@ export async function generateMetadata({ params }) {
     };
   }
   return {
-    title: _ucfirst(user.fullname) + " - " + user.userDetails.profession,
+    title:
+      _ucfirst(user.fullname) +
+      " - " +
+      user.userDetails.profession +
+      " | Portfolio",
     description:
       user.userDetails.bio != ""
         ? user.userDetails.bio
