@@ -31,7 +31,7 @@ const SitePreviewCarousel = () => {
 
   return (
     <>
-      <div className="bg-green-400 min-h-[100vh] flex justify-center items-center">
+      <div className="bg-green-400 min-h-[100vh] flex justify-center items-center mt-2 md:mt-0">
         <div>
           <div className="slider-container w-[300px] h-fit">
             <div className="h-fit">
