@@ -24,7 +24,7 @@ const ResumeProjects = async ({ userId }) => {
             </div>
             <div>
               {projects.map((project, index) => (
-                <div key={index} className="mb-5">
+                <div key={index} className="border-b-4 border-dotted pb-2">
                   <div className="font-bold text-xl">{project.title}</div>
                   <div className="">
                     <p className="overflow-y-auto whitespace-pre-line">
@@ -34,7 +34,7 @@ const ResumeProjects = async ({ userId }) => {
                   {/* project tags */}
                   {project.tags !== "" ? (
                     <>
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-2 mt-2">
                         {project.tags.split(",").map((tag, index) => (
                           <div key={index} className="badge badge-outline">
                             {tag.trim()}
