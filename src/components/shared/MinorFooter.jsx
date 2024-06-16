@@ -1,4 +1,5 @@
 // import { twitterAccUrl } from "@/constants/shared/constant";
+import config from "@/data/config.json";
 import Link from "next/link";
 
 const MinorFooter = () => {
@@ -7,7 +8,7 @@ const MinorFooter = () => {
       <div className="footer p-5 md:p-10 bg-base-300">
         <div className="w-full">
           <div className="w-full text-center text-[18px] font-semibold">
-            A product of{" "}
+            <b>{config.app_name}</b> - a product of{" "}
             <Link href={"#"} className="app-link-primary font-bold">
               Skiyen
             </Link>
