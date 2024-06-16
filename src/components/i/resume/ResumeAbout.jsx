@@ -1,10 +1,11 @@
 const ResumeAbout = ({ user }) => {
   return (
     <>
-      <div className="divider">
-        <h3 className="uppercase">About Me</h3>
+      <div className="app-resume-padding">
+        <div className="divider divider-start">
+          <h3 className="uppercase">About Me</h3>
+        </div>
       </div>
-      <div className="app-resume-padding"></div>
     </>
   );
 };
