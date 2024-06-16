@@ -114,7 +114,7 @@ const ViewProjects = () => {
                 <td>
                   <div className="flex gap-2 items-center">
                     <div class="h-[50px] w-[50px] overflow-hidden rounded-md app-bg-primary">
-                      {project.imgUrl != "" ? (
+                      {project.imageUrl != "" ? (
                         <>
                           <img
                             src={project.imageUrl}
