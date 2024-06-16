@@ -28,26 +28,24 @@ const ResumeProjects = async ({ userId }) => {
                   key={index}
                   className="border-b-2 border-gray-200 border-dotted pb-2 mb-2"
                 >
-                  <div className="font-bold text-xl">{project.title}</div>
-                  <div className="">
-                    <p className="overflow-y-auto whitespace-pre-line">
-                      {project.description}
-                    </p>
-                  </div>
+                  <div className="font-bold text-xl mb-1">{project.title}</div>
                   {/* project tags */}
                   {project.tags !== "" ? (
                     <>
-                      <div className="flex flex-wrap gap-2 mt-2">
+                      <div className="mb-2">
                         {project.tags.split(",").map((tag, index) => (
-                          <div key={index} className="badge badge-outline">
-                            {tag.trim()}
-                          </div>
+                          <span key={index}>{tag.trim()}, </span>
                         ))}
                       </div>
                     </>
                   ) : (
                     ""
                   )}
+                  <div className="">
+                    <p className="overflow-y-auto whitespace-pre-line">
+                      {project.description}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>
