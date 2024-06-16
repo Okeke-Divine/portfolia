@@ -4,7 +4,6 @@ const ResumeSkills = async ({ userId }) => {
   const skills = await prisma.userSkills.findMany({
     where: { userId },
   });
-  console.log(skills);
 
   return (
     <>
@@ -15,7 +14,7 @@ const ResumeSkills = async ({ userId }) => {
         <div className="flex flex-wrap gap-2 md:gap-5">
           {skills.map((skill, index) => (
             <div key={index} className="badge badge-outline">
-              {skill.name}
+              {skill.skill_name}
             </div>
           ))}
         </div>
