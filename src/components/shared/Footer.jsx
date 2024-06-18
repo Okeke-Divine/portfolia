@@ -1,4 +1,5 @@
 import config from "@/data/config.json"
+import Link from "next/link"
 
 const Footer = () => {
   return (
@@ -20,8 +21,9 @@ const Footer = () => {
           <h6 className="footer-title">Links</h6>
         </div>
         <div>
-          <h6 className="footer-title">Links</h6>
-
+          <h6 className="footer-title">Legal</h6>
+          <Link href="#">Terms of services</Link>
+          <Link href="#">Privacy policy</Link>
         </div>
         <div>
           <h6 className="footer-title">Other</h6>
