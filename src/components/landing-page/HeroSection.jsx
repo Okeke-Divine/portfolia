@@ -1,7 +1,7 @@
 const HeroSection = () => {
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-2 landingPagePadx">
+      <div className="grid grid-cols-1 md:grid-cols-2 landingPagePadx py-5">
         <div>
           <h1>
             Make a beautiful portfolio + resume in <span className="app-text-primary">minutes</span> not days
