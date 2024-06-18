@@ -16,15 +16,7 @@ const HeroSection = () => {
           <Link className="app-primary-button mt-3 w-fit" href="/signup">Get Started → It's free</Link>
         </div>
         <div className="">
-          <div className="w-full">
-            <figure class="w-full">
-              <img
-                src={imageThumbnail}
-                alt={config.app_name}
-                class="object-cover w-full h-full"
-              />
-            </figure>
-          </div>
+
         </div>
       </div>
     </>
