@@ -3,7 +3,7 @@ import config from "@/data/config.json"
 const Footer = () => {
   return (
     <>
-      <div className="footer bg-base-200 py-2 md:py-5 landingPagePadx">
+      <div className="footer bg-base-200 py-5 md:py-10 landingPagePadx">
         <div>
           <div className="flex justify-center">
             <img
