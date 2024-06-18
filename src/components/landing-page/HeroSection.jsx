@@ -19,7 +19,7 @@ const HeroSection = () => {
             <img
               src={"/images/mockups/923_1x_shots_so.png"}
               alt={config.app_name}
-              class="object-cover w-full rounded-lg"
+              class="object-cover w-full rounded-3xl"
             />
           </div>
         </div>
