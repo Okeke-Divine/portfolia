@@ -2,10 +2,6 @@ const faqs = [
   { title: "Test", description: "amodmsodmosmdosdmfosdmfo" },
   { title: "Test", description: "amodmsodmosmdosdmfosdmfo" },
   { title: "Test", description: "amodmsodmosmdosdmfosdmfo" },
-  { title: "Test", description: "amodmsodmosmdosdmfosdmfo" },
-  { title: "Test", description: "amodmsodmosmdosdmfosdmfo" },
-  { title: "Test", description: "amodmsodmosmdosdmfosdmfo" },
-  { title: "Test", description: "amodmsodmosmdosdmfosdmfo" },
   { title: "Test", description: "amodmsodmosmdosdmfosdmfo" }
 ]
 
