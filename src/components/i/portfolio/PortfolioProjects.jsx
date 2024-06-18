@@ -28,7 +28,7 @@ const PortfolioProjects = async ({ user }) => {
           <h1 className="text-center text-4xl">My Creative Works</h1>
         </div>
         <div>
-          <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 mt-2">
+          <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 mt-3">
             {/* <div className="columns-1 gap-5 lg:gap-8 md:columns-2 lg:columns-3 space-y-5"> */}
             {projects.map((project, index) => (
               <div className="card shadow-xl" key={index}>
