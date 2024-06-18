@@ -68,8 +68,10 @@
   .app-resume-container-margin-top {
     @apply pt-2;
   }
-}
-
-.resumeContainerBackground {
-  background: white;
+  .landingPagePadx {
+    @apply px-10;
+  }
+  .resumeContainerBackground {
+    @apply bg-white;
+  }
 }

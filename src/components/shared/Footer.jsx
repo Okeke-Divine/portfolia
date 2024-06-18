@@ -2,7 +2,7 @@
 const Footer = () => {
   return (
     <>
-      <div className="footer bg-base-200 p-3 md:p-5 lg:p-8">
+      <div className="footer bg-base-200 py-2 md:py-5 landingPagePadx">
         <div></div>
         <div>
           <h6 className="footer-title">Links</h6>
