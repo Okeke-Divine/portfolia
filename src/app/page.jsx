@@ -5,6 +5,7 @@ import HowItWorks from "@/components/landing-page/HowItWorks";
 import LowerCallToAction from "@/components/landing-page/LowerCallToAction";
 import Reviews from "@/components/landing-page/Reviews";
 import Footer from "@/components/shared/Footer";
+import MinorFooter from "@/components/shared/MinorFooter";
 import Navbar from "@/components/shared/Navbar";
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       <FAQ />
       <LowerCallToAction />
       <Footer />
+      <MinorFooter />
     </>
   );
 }
