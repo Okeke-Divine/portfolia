@@ -6,7 +6,7 @@ const HeroSection = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 landingPagePadx py-5 md:py-10">
         <div>
           <h1 className="text-5xl">
-            Make a beautiful portfolio + resume <span className="app-text-primary">in minutes</span> not days
+            Make a beautiful portfolio + resume in <span className="app-text-primary">minutes</span> not <span className="line-through">days</span>
           </h1>
           <p className="text-gray-600 lg:max-w-[400px] mt-3">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad inventore quos ab ducimus aliquam soluta nam quod doloremque deleniti quas. Maiores iusto ipsum enim ipsam corrupti neque voluptates amet totam?
