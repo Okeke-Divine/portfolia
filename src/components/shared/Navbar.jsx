@@ -17,7 +17,9 @@ const Navbar = () => {
             <div className="text-xl font-bold">{config.app_name}</div>
           </div>
         </div>
-        <div className="navbar-end"></div>
+        <div className="navbar-end">
+          <Link className="btn btn-ghost" href="/signin">Login</Link>
+        </div>
       </div>
     </>
   )

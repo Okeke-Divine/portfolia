@@ -1,4 +1,4 @@
-import { skiyenUrl } from "@/constants/shared/constant"
+import { buyMeACoffeUrl, skiyenUrl, twitterAccUrl } from "@/constants/shared/constant"
 import config from "@/data/config.json"
 import Link from "next/link"
 
@@ -21,8 +21,8 @@ const Footer = () => {
         <div>
           <h6 className="footer-title">Links</h6>
           <div className="flex flex-col gap-2 app-footer-link">
-            <Link href="#">Signin</Link>
-            <Link href="#">Signup</Link>
+            <Link href="/signin">Signin</Link>
+            <Link href="/signup">Signup</Link>
           </div>
         </div>
         <div>
@@ -35,8 +35,8 @@ const Footer = () => {
         <div>
           <h6 className="footer-title">Other</h6>
           <div className="flex flex-col gap-2 app-footer-link">
-            <Link href="#">Twitter</Link>
-            <Link href="#">Buy me a coffee</Link>
+            <Link href={twitterAccUrl}>Twitter</Link>
+            <Link href={buyMeACoffeUrl}>Buy me a coffee</Link>
             <Link href={skiyenUrl} target="_blank">Skiyen</Link>
           </div>
         </div>
