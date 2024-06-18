@@ -29,25 +29,25 @@ const PortfolioProjects = async ({ user }) => {
         </div>
         <div>
           <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 mt-2">
-          {/* <div className="columns-1 gap-5 lg:gap-8 md:columns-2 lg:columns-3 space-y-5"> */}
+            {/* <div className="columns-1 gap-5 lg:gap-8 md:columns-2 lg:columns-3 space-y-5"> */}
             {projects.map((project, index) => (
               <div className="card shadow-xl" key={index}>
-                    <figure class="w-full h-[250px] md:h-[200px] overflow-hidden">
-                      <img
-                        src={project.imageUrl != "" ? project.imageUrl : imageThumbnail}
-                        alt={
-                          project.title +
-                          " - " +
-                          project.description +
-                          " | " +
-                          user.fullname
-                        }
-                        class="object-cover w-full h-full"
-                      />
-                    </figure>
+                <figure class="w-full h-[250px] md:h-[200px] overflow-hidden">
+                  <img
+                    src={project.imageUrl != "" ? project.imageUrl : imageThumbnail}
+                    alt={
+                      project.title +
+                      " - " +
+                      project.description +
+                      " | " +
+                      user.fullname
+                    }
+                    class="object-cover w-full h-full"
+                  />
+                </figure>
                 <div className="card-body">
                   <h2 className="card-title">{project.title}</h2>
-                  <p className="max-h-[80px] overflow-y-auto whitespace-pre-line">
+                  <p className="overflow-y-auto whitespace-pre-line">
                     {project.description}
                   </p>
                   {project.url != "" ? (
