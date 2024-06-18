@@ -7,11 +7,13 @@ const Navbar = () => {
       <div className="navbar border-b-2">
         <div className="navbar-start">
           <div className="flex gap-2">
-            <div> <img
-              className="w-6 mb-2 rounded-full shadow-lg"
-              src="/images/logo/logo.png"
-              alt={config.app_name + "'s logo"}
-            /></div>
+            <div>
+              <img
+                className="w-6 mb-2 rounded-full shadow-lg"
+                src="/images/logo/logo.png"
+                alt={config.app_name + "'s logo"}
+              />
+            </div>
             <div>{config.app_name}</div>
           </div>
         </div>
