@@ -2,7 +2,10 @@ import config from "@/data/config.json"
 import Link from "next/link"
 
 const platforms = [
-  { image: "hackerNews.webp", url: "#" }
+  { image: "product-hunt.webp", url: "#" },
+  { image: "hackerNews.webp", url: "#" },
+  { image: "reddit.webp", url: "#" },
+  { image: "twitter.webp", url: "#" },
 ]
 
 const HeroSection = () => {
@@ -28,12 +31,12 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      <div className="landingPagePadx text-gray-600">
+      <div className="landingPagePadx text-gray-600 py-5">
         <div className="flex justify-center w-fit gap-2 flex-wrap items-center">
           <div>As seen on</div>
           {platforms.map((platform, index) => (
             <div key={index}>
-              <Link href={platform.url} target="_blank">{platform.image}</Link>
+              <Link href={platform.url} target="_blank"><img src={"/images/logo/" + platform.image} alt={platform.image} /></Link>
             </div>
           ))}
         </div>
