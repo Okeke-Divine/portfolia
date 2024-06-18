@@ -4,6 +4,7 @@ import axios from "axios";
 import SkillSkeleton from "@/components/skeleton/skills/SkillSkeleton";
 import { app_color_primary } from "@/constants/shared/color";
 import Swal from "sweetalert2";
+import { imageThumbnail } from "@/constants/shared/constant";
 
 const ViewProjects = () => {
   const [projects, setProjects] = useState([]);
@@ -114,17 +115,17 @@ const ViewProjects = () => {
                 <td>
                   <div className="flex gap-2 items-center">
                     <div class="h-[50px] w-[50px] overflow-hidden rounded-md app-bg-primary">
-                      {project.imageUrl != "" ? (
-                        <>
-                          <img
-                            src={project.imageUrl}
-                            alt={project.title}
-                            class="object-cover w-full h-full"
-                          />
-                        </>
-                      ) : (
-                        ""
-                      )}
+                      {/* {project.imageUrl != "" ? ( */}
+                      {/* <> */}
+                      <img
+                        src={project.imageUrl != "" ? project.imageUrl : imageThumbnail}
+                        alt={project.title}
+                        class="object-cover w-full h-full"
+                      />
+                      {/* </> */}
+                      {/* ) : ( */}
+                      {/* "" */}
+                      {/* )} */}
                     </div>
                     <div className="font-bold">{project.title}</div>
                   </div>
