@@ -20,21 +20,21 @@ const Footer = () => {
         </div>
         <div>
           <h6 className="footer-title">Links</h6>
-          <div>
+          <div className="flex flex-col gap-2 app-footer-link">
             <Link href="#">Signin</Link>
             <Link href="#">Signup</Link>
           </div>
         </div>
         <div>
           <h6 className="footer-title">Legal</h6>
-          <div>
+          <div className="flex flex-col gap-2 app-footer-link">
             <Link href="#">Terms of services</Link>
             <Link href="#">Privacy policy</Link>
           </div>
         </div>
         <div>
           <h6 className="footer-title">Other</h6>
-          <div>
+          <div className="flex flex-col gap-2 app-footer-link">
             <Link href="#">Twitter</Link>
             <Link href="#">Buy me a coffee</Link>
             <Link href={skiyenUrl} target="_blank">Skiyen</Link>
