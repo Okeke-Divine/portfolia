@@ -14,6 +14,7 @@ const Footer = () => {
           </div>
           <div className="uppercase text-xl font-bold">{config.app_name}</div>
           <div className="text-gray-500">{config.summary}</div>
+          <div className="text-gray-500">Copyright © 2024 - All right reserved</div>
         </div>
         <div>
           <h6 className="footer-title">Links</h6>
