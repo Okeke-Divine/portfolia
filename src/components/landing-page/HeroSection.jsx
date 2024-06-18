@@ -1,6 +1,10 @@
 import config from "@/data/config.json"
 import Link from "next/link"
 
+const platforms = [
+  { image: "hackerNews.webp", url: "#" }
+]
+
 const HeroSection = () => {
   return (
     <>
@@ -27,9 +31,11 @@ const HeroSection = () => {
       <div className="landingPagePadx text-gray-600">
         <div className="flex justify-center w-fit gap-2 flex-wrap items-center">
           <div>As seen on</div>
-          <div></div>
-          <div></div>
-          <div></div>
+          {platforms.map((platform, index) => (
+            <div key={index}>
+              <Link href={platform.url} target="_blank">{platform.image}</Link>
+            </div>
+          ))}
         </div>
       </div>
     </>
