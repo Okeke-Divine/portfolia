@@ -1,3 +1,4 @@
+import { skiyenUrl } from "@/constants/shared/constant"
 import config from "@/data/config.json"
 import Link from "next/link"
 
@@ -36,7 +37,7 @@ const Footer = () => {
           <div>
             <Link href="#">Twitter</Link>
             <Link href="#">Buy me a coffee</Link>
-            <Link href="#">Skiyen</Link>
+            <Link href={skiyenUrl} target="_blank">Skiyen</Link>
           </div>
         </div>
       </div>
