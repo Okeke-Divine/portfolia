@@ -4,7 +4,7 @@ import Link from "next/link"
 const Navbar = () => {
   return (
     <>
-      <div className="navbar border-b-2">
+      <div className="navbar border-b-2 mb-2">
         <div className="navbar-start">
           <div className="flex gap-2 items-center">
             <div>

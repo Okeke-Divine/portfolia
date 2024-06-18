@@ -1,8 +1,10 @@
-import React from 'react'
-
 const HeroSection = () => {
   return (
-    <div>HeroSection</div>
+    <>
+      <div className="grid grid-cols-1 md:grid-cols-2 landingPagePadx">
+
+      </div>
+    </>
   )
 }
 
