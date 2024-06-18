@@ -7,13 +7,13 @@ const MinorFooter = () => {
     <>
       <div className="footer p-5 md:p-10 bg-base-300">
         <div className="w-full">
-          <div className="w-full text-center text-[18px] font-semibold">
+          <div className="w-full text-center text-[16px] font-semibold">
             <b>{config.app_name}</b> - a product of{" "}
             <Link href={skiyenUrl} target="_blank" className="app-link-primary font-bold">
               Skiyen
             </Link>
           </div>
-          <div className="w-full text-center  text-[18px] font-semibold">
+          <div className="w-full text-center  text-[16px] font-semibold">
             {/* Designed, Built and Marketed by{" "} */}
             <Link
               href={twitterAccUrl}
