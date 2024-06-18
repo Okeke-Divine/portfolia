@@ -1,3 +1,5 @@
+import { imageThumbnail } from "@/constants/shared/constant"
+import config from "@/data/config.json"
 import Link from "next/link"
 
 const HeroSection = () => {
@@ -13,7 +15,17 @@ const HeroSection = () => {
           </p>
           <Link className="app-primary-button mt-3 w-fit" href="/signup">Get Started → It's free</Link>
         </div>
-        <div className="bg-green-100"></div>
+        <div className="">
+          <div className="w-full">
+            <figure class="w-full h-[250px] md:h-[200px] overflow-hidden">
+              <img
+                src={imageThumbnail}
+                alt={config.app_name}
+                class="object-cover w-full h-full"
+              />
+            </figure>
+          </div>
+        </div>
       </div>
     </>
   )
