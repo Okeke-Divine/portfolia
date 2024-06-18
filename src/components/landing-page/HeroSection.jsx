@@ -4,7 +4,7 @@ import Link from "next/link"
 const HeroSection = () => {
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 landingPagePadx py-5 md:py-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-5 landingPagePadx py-5 md:py-10">
         <div>
           <h1 className="text-4xl md:text-5xl">
             Make a beautiful portfolio + resume in <span className="app-text-primary">minutes</span> not <span className="line-through">days</span>
