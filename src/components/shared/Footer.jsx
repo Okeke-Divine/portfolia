@@ -7,8 +7,14 @@ const Footer = () => {
         <div>
           <h6 className="footer-title">Links</h6>
         </div>
-        <div></div>
-        <div></div>
+        <div>
+          <h6 className="footer-title">Links</h6>
+
+        </div>
+        <div>
+          <h6 className="footer-title">Other</h6>
+
+        </div>
       </div>
     </>
   )
