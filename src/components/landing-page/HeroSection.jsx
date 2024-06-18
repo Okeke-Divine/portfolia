@@ -32,9 +32,9 @@ const HeroSection = () => {
         </div>
       </div>
       <div className="landingPagePadx text-gray-600 py-5 flex justify-center">
-       <div className="mb-3">
-       <div className="text-center">As seen on</div>
-        <div className="flex justify-center w-fit gap-5 md:gap-10 flex-wrap items-center">
+       <div className="">
+       <div className="text-center text-xl font-semibold mb-3">As seen on</div>
+        <div className="flex justify-center w-fit gap-x-5 gap-y-2 md:gap-x-10 md:gap-y-10 flex-wrap items-center">
           {platforms.map((platform, index) => (
             <div key={index}>
               <Link href={platform.url} target="_blank"><img src={"/images/logo/" + platform.image} alt={platform.image} /></Link>
