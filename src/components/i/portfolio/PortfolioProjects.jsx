@@ -1,4 +1,5 @@
 import prisma from "@/app/db";
+import { imageThumbnail } from "@/constants/shared/constant";
 import Link from "next/link";
 
 const PortfolioProjects = async ({ user }) => {
@@ -35,7 +36,7 @@ const PortfolioProjects = async ({ user }) => {
                   <>
                     <figure class="w-full h-[250px] md:h-[200px] overflow-hidden">
                       <img
-                        src={project.imageUrl}
+                        src={project.imageUrl != "" ? project.imageUrl : imageThumbnail}
                         alt={
                           project.title +
                           " - " +
