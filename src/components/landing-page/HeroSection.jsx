@@ -13,7 +13,7 @@ const HeroSection = () => {
           </p>
           <Link className="app-primary-button mt-3 w-fit" href="/signup">Get Started → It's free</Link>
         </div>
-        <div></div>
+        <div className="bg-green-100"></div>
       </div>
     </>
   )
