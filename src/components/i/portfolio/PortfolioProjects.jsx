@@ -32,8 +32,6 @@ const PortfolioProjects = async ({ user }) => {
           {/* <div className="columns-1 gap-5 lg:gap-8 md:columns-2 lg:columns-3 space-y-5"> */}
             {projects.map((project, index) => (
               <div className="card shadow-xl" key={index}>
-                {project.imageUrl != "" ? (
-                  <>
                     <figure class="w-full h-[250px] md:h-[200px] overflow-hidden">
                       <img
                         src={project.imageUrl != "" ? project.imageUrl : imageThumbnail}
@@ -47,10 +45,6 @@ const PortfolioProjects = async ({ user }) => {
                         class="object-cover w-full h-full"
                       />
                     </figure>
-                  </>
-                ) : (
-                  ""
-                )}
                 <div className="card-body">
                   <h2 className="card-title">{project.title}</h2>
                   <p className="max-h-[80px] overflow-y-auto whitespace-pre-line">
