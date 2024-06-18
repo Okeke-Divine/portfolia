@@ -18,7 +18,8 @@ const Navbar = () => {
           </div>
         </div>
         <div className="navbar-end">
-          <Link className="btn btn-neutrual" href="/signin">Login</Link>
+          <Link className="btn btn-neutrual" href="/signin">Signin</Link>
+          <Link className="btn app-primary-button" href="/signin">Get Started</Link>
         </div>
       </div>
     </>
