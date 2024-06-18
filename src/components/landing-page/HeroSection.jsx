@@ -3,7 +3,7 @@ import Link from "next/link"
 const HeroSection = () => {
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-2 landingPagePadx py-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 landingPagePadx py-5 md:py-10">
         <div>
           <h1 className="text-5xl">
             Make a beautiful portfolio + resume in <span className="app-text-primary">minutes</span> not days
