@@ -14,7 +14,7 @@ const Footer = () => {
               alt={config.app_name + "'s logo"}
             />
           </div>
-          <div className="uppercase text-xl font-bold">{config.app_name}</div>
+          <div className="text-xl font-bold">{config.app_name}</div>
           <div className="text-gray-600">{config.summary}</div>
           <div className="text-gray-600">Copyright © 2024 - All right reserved</div>
         </div>

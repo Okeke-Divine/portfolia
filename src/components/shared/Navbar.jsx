@@ -14,7 +14,7 @@ const Navbar = () => {
                 alt={config.app_name + "'s logo"}
               />
             </div>
-            <div>{config.app_name}</div>
+            <div className="text-xl font-bold">{config.app_name}</div>
           </div>
         </div>
         <div className="navbar-end"></div>
