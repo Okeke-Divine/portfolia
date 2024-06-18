@@ -1,4 +1,3 @@
-import { imageThumbnail } from "@/constants/shared/constant"
 import config from "@/data/config.json"
 import Link from "next/link"
 
@@ -18,7 +17,7 @@ const HeroSection = () => {
         <div className="">
           <div className="w-full">
             <img
-              src={imageThumbnail}
+              src={"/images/mockups/923_1x_shots_so.png"}
               alt={config.app_name}
               class="object-cover w-full h-full"
             />
