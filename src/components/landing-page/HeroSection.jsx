@@ -12,7 +12,7 @@ const HeroSection = () => {
           <p className="text-gray-600 lg:max-w-[400px] mt-3">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad inventore quos ab ducimus aliquam soluta nam quod doloremque deleniti quas. Maiores iusto ipsum enim ipsam corrupti neque voluptates amet totam?
           </p>
-          <Link className="app-primary-button mt-3 w-fit" href="/signup">Get Yours Now → It's free</Link>
+          <Link className="app-primary-button mt-3 w-fit" href="/signup">Get yours now → It's free</Link>
         </div>
         <div className="">
           <div className="w-full">
