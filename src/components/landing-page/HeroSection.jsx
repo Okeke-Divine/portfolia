@@ -8,7 +8,10 @@ const HeroSection = () => {
           <h1 className="text-5xl">
             Make a beautiful portfolio + resume in <span className="app-text-primary">minutes</span> not days
           </h1>
-          <Link className="app-primary-button" href="/signup">Get Started → It's free</Link>
+          <p className="text-gray-600 lg:max-w-[400px] mt-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad inventore quos ab ducimus aliquam soluta nam quod doloremque deleniti quas. Maiores iusto ipsum enim ipsam corrupti neque voluptates amet totam?
+          </p>
+          <Link className="app-primary-button mt-3 w-fit" href="/signup">Get Started → It's free</Link>
         </div>
         <div></div>
       </div>
