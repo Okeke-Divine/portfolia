@@ -17,7 +17,7 @@ const HeroSection = () => {
         </div>
         <div className="">
           <div className="w-full">
-            <figure class="w-full h-[250px] md:h-[200px] overflow-hidden">
+            <figure class="w-full">
               <img
                 src={imageThumbnail}
                 alt={config.app_name}
