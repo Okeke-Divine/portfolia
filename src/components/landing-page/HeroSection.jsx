@@ -24,6 +24,14 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+      <div className="landingPagePadx text-gray-600">
+        <div className="flex justify-center w-fit gap-2 flex-wrap">
+          <div>As seen on</div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
     </>
   )
 }
