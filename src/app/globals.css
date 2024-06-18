@@ -69,12 +69,12 @@
     @apply pt-2;
   }
   .landingPagePadx {
-    @apply px-10;
+    @apply px-10 lg:px-16;
   }
   .resumeContainerBackground {
     @apply bg-white;
   }
-  .app-footer-link > a{
+  .app-footer-link > a {
     @apply text-gray-600 duration-300 hover:text-green-600;
   }
 }

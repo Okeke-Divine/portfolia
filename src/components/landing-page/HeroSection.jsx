@@ -5,7 +5,6 @@ const HeroSection = () => {
         <div>
           <h1>
             Make a beautiful portfolio + resume in <span className="app-text-primary">minutes</span> not days
-
           </h1>
         </div>
         <div></div>
