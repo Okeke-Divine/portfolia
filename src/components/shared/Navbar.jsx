@@ -1,8 +1,11 @@
-import React from 'react'
-
 const Navbar = () => {
   return (
-    <div>Navbar</div>
+    <>
+      <div className="navbar border-b-2">
+        <div className="navbar-start"></div>
+        <div className="navbar-end"></div>
+      </div>
+    </>
   )
 }
 
