@@ -32,7 +32,7 @@ const HeroSection = () => {
         </div>
       </div>
       <div className="landingPagePadx text-gray-600 py-5 flex justify-center">
-       <div className="mb-2">
+       <div className="mb-3">
        <div className="text-center">As seen on</div>
         <div className="flex justify-center w-fit gap-5 md:gap-10 flex-wrap items-center">
           {platforms.map((platform, index) => (
