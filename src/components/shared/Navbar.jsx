@@ -1,8 +1,20 @@
+import config from "@/data/config.json"
+import Link from "next/link"
+
 const Navbar = () => {
   return (
     <>
       <div className="navbar border-b-2">
-        <div className="navbar-start"></div>
+        <div className="navbar-start">
+          <div className="flex gap-2">
+            <div> <img
+              className="w-6 mb-2 rounded-full shadow-lg"
+              src="/images/logo/logo.png"
+              alt={config.app_name + "'s logo"}
+            /></div>
+            <div>{config.app_name}</div>
+          </div>
+        </div>
         <div className="navbar-end"></div>
       </div>
     </>
