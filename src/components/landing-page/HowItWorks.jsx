@@ -20,8 +20,8 @@ const HowItWorks = () => {
       <section className="bg-base-100" id="how">
         <div className="py-5 md:py-10 max-w-7xl mx-auto px-4"  >
           <div className="flex flex-col text-center w-full mb-2"  >
-        <div className="text-center uppercase app-text-primary">How It Works</div>
-        <h2 className="text-center">Get yours today</h2>
+            <div className="text-center uppercase app-text-primary">How It Works</div>
+            <h2 className="text-center">Get yours today</h2>
           </div>
           <div className="relative"  >
             <div className="absolute inset-x-0 hidden top-2 md:block md:px-20 lg:px-28 xl:px-44"  >
@@ -47,7 +47,7 @@ const HowItWorks = () => {
                     <span className="text-xl font-medium"> {index + 1} </span>
                   </div>
                   <h3 className="mt-6 text-lg lg:text-xl font-medium text-black md:mt-10">{hiw.title}</h3>
-                  <p className="mt-4 text-base text-base-content-secondary leading-relaxed">
+                  <p className="mt-4 text-base text-base-content-secondary leading-relaxed text-gray-500">
                     {hiw.content}
                   </p>
                 </div>
