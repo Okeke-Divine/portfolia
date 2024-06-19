@@ -101,9 +101,9 @@ model UserAnalytics {
   userId              Int
   user                User @relation(fields: [userId], references: [id])
   ///
-  portfolioViewCount  Int  @default(0)
-  portfolioClickCount Int  @default(0)
-  resumeViewCount     Int  @default(0)
-  resumeClickCount    Int  @default(0)
-  resumeDownloadCount Int  @default(0)
+  portfolioViewCount  Int? @default(0)
+  portfolioClickCount Int? @default(0)
+  resumeViewCount     Int? @default(0)
+  resumeClickCount    Int? @default(0)
+  resumeDownloadCount Int? @default(0)
 }
