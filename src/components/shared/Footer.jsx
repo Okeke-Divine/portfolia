@@ -28,8 +28,8 @@ const Footer = () => {
         <div>
           <h6 className="footer-title">Legal</h6>
           <div className="flex flex-col gap-2 app-footer-link">
-            <Link href="#">Terms of services</Link>
-            <Link href="#">Privacy policy</Link>
+            <Link href="/tos">Terms of services</Link>
+            <Link href="/privacy-policy">Privacy policy</Link>
           </div>
         </div>
         <div>
