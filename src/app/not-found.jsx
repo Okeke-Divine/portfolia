@@ -1,6 +1,6 @@
+import BackButton from "@/components/shared/BackButton";
 import Footer from "@/components/shared/Footer";
 import Navbar from "@/components/shared/Navbar";
-import Link from "next/link";
 
 export const metadata = {
   title: "404 Not Found",
@@ -18,9 +18,7 @@ const NotFound = () => {
             Sorry, the page you're looking for doesn't exist or has been moved.
           </p>
           <div className="flex justify-center mt-2">
-            <Link href=".." className="btn btn-ghost">
-              <i className="fi flaticon-offset fi-tr-angle-small-left"></i> Back
-            </Link>
+            <BackButton />
           </div>
         </div>
       </div>
