@@ -102,7 +102,7 @@ export default async function PortFolio({ params }) {
   }
 
   //add portfolio view
-  await analysisTracker(user.username,'portfolioView');
+  // await analysisTracker(user.username,'portfolioView');
 
   return (
     <>

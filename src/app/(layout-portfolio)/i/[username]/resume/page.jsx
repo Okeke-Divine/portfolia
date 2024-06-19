@@ -104,7 +104,7 @@ export default async function Resume({ params }) {
   }
 
   //add resume view
-  await analysisTracker(user.username,'resumeView');
+  // await analysisTracker(user.username,'resumeView');
 
   return (
     <>
