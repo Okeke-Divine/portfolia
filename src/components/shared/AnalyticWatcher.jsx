@@ -9,6 +9,7 @@ const AnalyticWatcher = ({ username, parent }) => {
         // Function to handle click events
         const handleClick = () => {
             if (parent == "portfolio") {
+                console.log("sent")
                 analysisTracker(username, 'portfolioClick')
             }
             console.log(parent, "clicked");
