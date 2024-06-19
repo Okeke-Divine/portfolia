@@ -6,8 +6,9 @@ const CustomLayout1 = ({ children }) => {
             <div className="max-w-xl mx-auto py-5 md:py-10">
                 <div>
                     <Link href=".." className="uppercase font-bold">
-                        <i className="fi flaticon-offset"></i> Back</Link>
+                        <i className="fi flaticon-offset fi-tr-angle-small-left"></i> Back</Link>
                 </div>
+                <div className="divider"></div>
                 <div>{children}</div>
             </div>
         </>
