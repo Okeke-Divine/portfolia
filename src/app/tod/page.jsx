@@ -56,7 +56,7 @@ const TermsOfService = () => {
         <div className="mt-1">
           {tacs.map((tac, index) => (
             <div key={index} className="mb-3">
-              <div className="font-bold mb-1">{index + 1}{tac.title}</div>
+              <div className="font-bold mb-1">{index + 1}. {tac.title}</div>
               <div>{tac.message}</div>
             </div>
           ))}
