@@ -8,7 +8,7 @@ const TermsOfService = () => {
   return (
     <>
       <CustomLayout1>
-        Lol
+        <h1>Terms and Conditions</h1>
       </CustomLayout1>
     </>
   )
