@@ -31,7 +31,7 @@ const tacs = [
   },
   {
     title: "General Terms and Law",
-    message: "This Agreement is governed by the laws of [Your Country]. You acknowledge that no joint venture, partnership, employment, or agency relationship exists between you and Portfoliia as a result of your use of these services. You agree not to hold yourself out as a representative, agent, or employee of Portfoliia. You agree that Portfoliia will not be liable by reason of any representation, act, or omission to act by you."
+    message: "You acknowledge that no joint venture, partnership, employment, or agency relationship exists between you and Portfoliia as a result of your use of these services. You agree not to hold yourself out as a representative, agent, or employee of Portfoliia. You agree that Portfoliia will not be liable by reason of any representation, act, or omission to act by you."
   },
   {
     title: "Changes to Terms and Conditions",
