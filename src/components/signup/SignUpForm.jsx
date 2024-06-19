@@ -221,7 +221,7 @@ const SignUpForm = () => {
             {/* agree sections */}
 
             <div className="mt-1 mb-2 max-w-[350px]">
-              By creating an account, you agree to our <Link href="/tac" className="font-bold underline">Terms and Conditions</Link> and <Link href="/privacy-policy" className="font-bold underline">Privacy Policy</Link>.
+              By creating an account, you agree to our <Link href="/tac" target="_blank" className="font-bold underline">Terms and Conditions</Link> and <Link href="/privacy-policy" target="_blank" className="font-bold underline">Privacy Policy</Link>.
             </div>
 
             {/* submit button */}
