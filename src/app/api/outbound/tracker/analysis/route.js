@@ -68,6 +68,62 @@ export const POST = async (req) => {
             }
         }
 
+        // portfolioClick
+        if (actionType === "portfolioClick") {
+            // Check if user exists
+            const user = await prisma.user.findFirst({ where: { username }, select: { id: true } });
+
+            if (user !== null) {
+                // Get the user id
+                const userId = user.id;
+
+                // Get the previous count
+                const userAnalytics = await prisma.userAnalytics.findFirst({
+                    where: { userId },
+                    select: { portfolioClickCount: true }
+                });
+
+                const portfolioClickCount = userAnalytics ? userAnalytics.portfolioClickCount : 0;
+
+                // Upsert the previous count or create a new record
+                await prisma.userAnalytics.upsert({
+                    where: { userId },
+                    update: { portfolioClickCount: portfolioClickCount + 1 },
+                    create: {
+                        userId, portfolioClickCount: 1
+                    }
+                });
+            }
+        }
+
+         // resumeClick
+         if (actionType === "resumeClick") {
+            // Check if user exists
+            const user = await prisma.user.findFirst({ where: { username }, select: { id: true } });
+
+            if (user !== null) {
+                // Get the user id
+                const userId = user.id;
+
+                // Get the previous count
+                const userAnalytics = await prisma.userAnalytics.findFirst({
+                    where: { userId },
+                    select: { resumeClickCount: true }
+                });
+
+                const resumeClickCount = userAnalytics ? userAnalytics.resumeClickCount : 0;
+
+                // Upsert the previous count or create a new record
+                await prisma.userAnalytics.upsert({
+                    where: { userId },
+                    update: { resumeClickCount: resumeClickCount + 1 },
+                    create: {
+                        userId, resumeClickCount: 1
+                    }
+                });
+            }
+        }
+
         return resourceLoaded({});
     } catch (e) {
         return internalServerError(e);
