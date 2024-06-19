@@ -1,7 +1,13 @@
+"use client"
 import config from "@/data/config.json"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 
 const Navbar = () => {
+
+  const pathname = usePathname();
+  console.log(pathname);
+
   return (
     <>
       <div className="navbar border-b-2 landingPagePadx fixed top-0 left-0 bg-white z-50">
