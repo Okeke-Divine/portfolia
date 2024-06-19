@@ -1,3 +1,5 @@
+import Footer from "@/components/shared/Footer";
+import Navbar from "@/components/shared/Navbar";
 import Link from "next/link";
 
 export const metadata = {
@@ -6,6 +8,7 @@ export const metadata = {
 const NotFound = () => {
   return (
     <>
+      <Navbar />
       <div className="w-full h-[100vh] flex justify-center items-center">
         <div>
           <div className="font-bold text-4xl text-center">
@@ -16,11 +19,12 @@ const NotFound = () => {
           </p>
           <div className="flex justify-center mt-2">
             <Link href=".." className="btn btn-ghost">
-            <i className="fi flaticon-offset fi-tr-angle-small-left"></i> Back
+              <i className="fi flaticon-offset fi-tr-angle-small-left"></i> Back
             </Link>
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };
