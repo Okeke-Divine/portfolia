@@ -6,7 +6,7 @@ import PortfolioFooter from "@/components/i/portfolio/PortfolioFooter";
 import PortfolioHero from "@/components/i/portfolio/PortfolioHero";
 import PortfolioNavbar from "@/components/i/portfolio/PortfolioNavbar";
 import PortfolioProjects from "@/components/i/portfolio/PortfolioProjects";
-import { _ucfirst } from "@/utils/main";
+import { _ucfirst, analysisTracker } from "@/utils/main";
 
 export async function generateMetadata({ params }) {
   const username = params.username;
@@ -100,6 +100,9 @@ export default async function PortFolio({ params }) {
       </>
     );
   }
+
+  //add portfolio view
+  await analysisTracker(user.username,'portfolioView');
 
   return (
     <>

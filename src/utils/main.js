@@ -58,3 +58,7 @@ export function getCurrentUserProfilePicture() {
     return defaultImgUrl;
   }
 }
+
+export async function analysisTracker(username,actionType){
+  console.log(username,actionType);
+}

@@ -6,7 +6,7 @@ import ResumeProjects from "@/components/i/resume/ResumeProjects";
 import ResumeSkills from "@/components/i/resume/ResumeSkills";
 import ResumeSocialLink from "@/components/i/resume/ResumeSocialLink";
 import { defaultImgUrl2 } from "@/constants/shared/constant";
-import { _ucfirst } from "@/utils/main";
+import { _ucfirst, analysisTracker } from "@/utils/main";
 import Link from "next/link";
 
 export async function generateMetadata({ params }) {
@@ -102,6 +102,9 @@ export default async function Resume({ params }) {
       </>
     );
   }
+
+  //add resume view
+  await analysisTracker(user.username,'resumeView');
 
   return (
     <>
