@@ -18,7 +18,7 @@ const Navbar = () => {
           </div>
         </div>
         <div className="hidden md:flex navbar-center">
-          <ul className="menu menu-horizontal px-1">
+          <ul className="menu menu-horizontal px-1 gap-1">
             <li>
               <Link href="/#how">How it works</Link>
             </li>
