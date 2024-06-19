@@ -108,7 +108,7 @@ export default async function PortFolio({ params }) {
     <>
       {/* //add portfolio view */}
       <AnalyticTracker username={username} actionType="portfolioView" />
-      <AnalyticWatcher parent="portfolio" />
+      <AnalyticWatcher username={username} parent="portfolio" />
       {/* //end analytics */}
       <PortfolioNavbar
         userId={user.id}

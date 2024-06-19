@@ -1,12 +1,16 @@
 "use client"
+import { analysisTracker } from "@/utils/main";
 import { useEffect } from "react"
 
-const AnalyticWatcher = ({ parent }) => {
+const AnalyticWatcher = ({ username, parent }) => {
 
     useEffect(function () {
 
         // Function to handle click events
-        const handleClick = (event) => {
+        const handleClick = () => {
+            if (parent == "portfolio") {
+                analysisTracker(username, 'portfolioClick')
+            }
             console.log(parent, "clicked");
         };
 
