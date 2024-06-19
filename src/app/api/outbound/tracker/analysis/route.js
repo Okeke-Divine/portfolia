@@ -14,9 +14,9 @@ export const POST = async (req) => {
         }
 
         if (actionType == "portfolioView") {
-            const usernameExist = await prisma.user.findFirst({ where: { username }, select: { userId: true } });
-            if(usernameExist !== null){
-                
+            const usernameExist = await prisma.user.findFirst({ where: { username }, select: { id: true } });
+            if (usernameExist !== null) {
+
             }
             console.log(usernameExist);
         }
