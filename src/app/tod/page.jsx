@@ -53,7 +53,7 @@ const TermsOfService = () => {
     <>
       <CustomLayout1>
         <h1>Terms and Conditions</h1>
-        <div>
+        <div className="mt-1">
           {tacs.map((tac, index) => (
             <div key={index} className="mb-3">
               <div className="font-bold mb-1">{index + 1}{tac.title}</div>
