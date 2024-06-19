@@ -1,6 +1,7 @@
 "use client";
 import { useRef, useState } from "react";
 import { signIn } from "next-auth/react";
+import Swal from "sweetalert2";
 
 const SignInForm = () => {
   const emailRef = useRef(null);
@@ -93,9 +94,8 @@ const SignInForm = () => {
             />
             <i
               onClick={togglePswdVisible}
-              className={`${
-                pswdVisible ? "fi fi-rr-eye-crossed" : "fi fi-rr-eye"
-              } cursor-pointer flaticon-offset`}
+              className={`${pswdVisible ? "fi fi-rr-eye-crossed" : "fi fi-rr-eye"
+                } cursor-pointer flaticon-offset`}
             ></i>
           </div>
         </div>
