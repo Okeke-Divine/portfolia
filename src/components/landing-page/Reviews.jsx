@@ -12,15 +12,15 @@ const reviews = [
 const Reviews = () => {
   return (
     <>
-      <secton className="landingPagePadx py-5 md:p-10">
+      <div className="landingPagePadx py-5 md:p-10 bg-base-200">
         <div className="text-center uppercase app-text-primary">Reviews</div>
         <h2 className="text-center">Over 120+ portfolio's have been created</h2>
         <div className="flex justify-center mt-2">
           <div className="text-center text-gray-600 max-w-[70%] md:max-w-[60%] lg:max-w-[40%]">You're in good company. Here's what our beautiful customers have to say about us.</div>
         </div>
-        <div className="grid gird-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+        <div className="grid gird-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mt-2">
           {reviews.map((review, index) => (
-            <div key={index} className="bg-white rounded-lg p-2">
+            <div key={index} className="bg-white rounded-lg p-5">
               <div>
                 {review.message}
               </div>
@@ -35,7 +35,7 @@ const Reviews = () => {
             </div>
           ))}
         </div>
-      </secton>
+      </div>
     </>
   )
 }
