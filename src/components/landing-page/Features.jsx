@@ -6,7 +6,7 @@ const features = [
 const Features = () => {
   return (
     <>
-      <div className="landingPagePadx py-5 md:p-10 bg-base-200">
+      <div className="landingPagePadx py-5 md:p-10 bg-base-200" id="features">
         <div className="text-center uppercase app-text-primary">Features</div>
         <h2 className="text-center">The fastest way to setup a portfolio + resume</h2>
         <div className="flex justify-center mt-2">

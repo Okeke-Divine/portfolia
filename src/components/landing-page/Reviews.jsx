@@ -15,7 +15,7 @@ const reviews = [
 const Reviews = () => {
   return (
     <>
-      <div className="landingPagePadx py-5 md:p-10 bg-base-200">
+      <div className="landingPagePadx py-5 md:p-10 bg-base-200" id="reviews">
         <div className="text-center uppercase app-text-primary">Reviews</div>
         <h2 className="text-center">Over {config.portfolio_count}+ portfolio's have been created</h2>
         <div className="flex justify-center mt-2">
