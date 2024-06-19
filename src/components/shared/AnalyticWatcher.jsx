@@ -1,7 +1,7 @@
 "use client"
 import { useEffect } from "react"
 
-const AnalyticWatcher = () => {
+const AnalyticWatcher = ({parent}) => {
 
     useEffect(function (){
         
