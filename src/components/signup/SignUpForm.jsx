@@ -4,6 +4,7 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import { signIn } from "next-auth/react";
 import { app_color_primary } from "@/constants/shared/color";
+import Link from "next/link";
 
 async function _signIn(email, password) {
   const login = await signIn("credentials", {
@@ -219,8 +220,8 @@ const SignUpForm = () => {
 
             {/* agree sections */}
 
-            <div className="mt-1 mb-2 max-w-[300px]">
-              By creating an account, you agree to our Terms and Conditions and Privacy Policy.
+            <div className="mt-1 mb-2 max-w-[350px]">
+              By creating an account, you agree to our <Link href="/tac" className="font-bold underline">Terms and Conditions</Link> and <Link href="/privacy-policy" className="font-bold underline">Privacy Policy</Link>.
             </div>
 
             {/* submit button */}
