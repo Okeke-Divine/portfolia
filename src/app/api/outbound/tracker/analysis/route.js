@@ -1,42 +1,48 @@
 import prisma from "@/app/db";
-import { internalServerError, resourceLoaded } from "@/utils/prebuiltApiResponse"
+import { internalServerError, resourceLoaded } from "@/utils/prebuiltApiResponse";
 import { userAgent } from "next/server";
 
 export const POST = async (req) => {
     try {
-        const data = await req.json()
-        //destructure
-        const username = data.username;
-        const actionType = data.actionType;
+        const data = await req.json();
+        const { username, actionType } = data;
 
         if (!username || !actionType) {
             return resourceLoaded({});
         }
 
-        if (actionType == "portfolioView") {
-
-            // check if user exist
+        if (actionType === "portfolioView") {
+            // Check if user exists
             const user = await prisma.user.findFirst({ where: { username }, select: { id: true } });
 
             if (user !== null) {
-                // get the user id
+                // Get the user id
                 const userId = user.id;
-                //get the previeous count
-                const portfolioViewCount = await prisma.userAnalytics.findFirst({ where: { userId }, select: { portfolioViewCount: true } }) || 0;
+
+                // Get the previous count
+                const userAnalytics = await prisma.userAnalytics.findFirst({
+                    where: { userId },
+                    select: { portfolioViewCount: true }
+                });
+
+                const portfolioViewCount = userAnalytics ? userAnalytics.portfolioViewCount : 0;
+
                 console.log(portfolioViewCount);
-                // upsert the previous count or create a new record
-                const updatePortfolioViewCount = await prisma.userAnalytics.upsert({
+
+                return resourceLoaded({});
+                // Upsert the previous count or create a new record
+                await prisma.userAnalytics.upsert({
                     where: { userId },
                     update: { portfolioViewCount: portfolioViewCount + 1 },
                     create: {
                         userId, portfolioViewCount: 1
                     }
-                })
+                });
             }
         }
 
-        return resourceLoaded({})
+        return resourceLoaded({});
     } catch (e) {
-        return internalServerError(e)
+        return internalServerError(e);
     }
-}
+};
