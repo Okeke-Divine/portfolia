@@ -17,7 +17,7 @@ const Features = () => {
         <div className="flex justify-center mt-2">
           <div className="text-center text-gray-600 max-w-[70%] md:max-w-[60%] lg:max-w-[40%]">Packed with a ton of featueres</div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-5 mt-5">
           {features.map((feature, index) => (
             <div key={index} className="p-5 bg-white rounded-lg">
               <div className="mb-2 flex justify-center">
