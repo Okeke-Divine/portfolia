@@ -20,7 +20,7 @@ const HeroSection = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad inventore quos ab ducimus aliquam soluta nam quod doloremque deleniti quas. Maiores iusto ipsum enim ipsam corrupti neque voluptates amet totam?
           </p>
           <Link className="app-primary-button mt-3 w-fit" href="/signup">Get yours now → It's free</Link>
-          <div className="mt-2 flex items-center">
+          <div className="my-2 flex items-center">
             <img src="/images/svg/flower-left.svg" alt="flower left" />
             <div className="flex md:block justify-center">
               <div>140+ portfolio's created</div>
