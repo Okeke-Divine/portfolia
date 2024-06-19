@@ -16,6 +16,7 @@ const HeroSection = () => {
           <h1 className="text-4xl md:text-5xl">
             Make a beautiful portfolio + resume in <span className="app-text-primary">minutes</span> not <span className="line-through">days</span>
           </h1>
+          <h2 class="badge badge-ghost font-medium mb-4 lg:mb-6">The #1 Portfolio + Resume Generator</h2>
           <p className="text-gray-600 lg:max-w-[400px] mt-3">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad inventore quos ab ducimus aliquam soluta nam quod doloremque deleniti quas. Maiores iusto ipsum enim ipsam corrupti neque voluptates amet totam?
           </p>
