@@ -20,6 +20,9 @@ const HeroSection = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad inventore quos ab ducimus aliquam soluta nam quod doloremque deleniti quas. Maiores iusto ipsum enim ipsam corrupti neque voluptates amet totam?
           </p>
           <Link className="app-primary-button mt-3 w-fit" href="/signup">Get yours now → It's free</Link>
+          <div className="mt-2">
+            <img src="/images/svg/flowe-left.svg" alt="flower left" />
+          </div>
         </div>
         <div className="">
           <div className="w-full">
