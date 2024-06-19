@@ -18,7 +18,6 @@ export const POST = async (req) => {
             if (user !== null) {
                 const userId = user.id;
             }
-            console.log(user);
         }
 
         return resourceLoaded({})
