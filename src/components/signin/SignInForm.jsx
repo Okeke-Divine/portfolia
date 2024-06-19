@@ -38,6 +38,13 @@ const SignInForm = () => {
       setError("Email or Password is incorrect");
       setLoading(false);
     } else {
+      Swal.fire({
+        title: "Redirecting",
+        icon: "info",
+        text: "Please wait...",
+        showConfirmButton: false,
+        allowOutsideClick: false,
+      });
       document.location = "/dashboard";
       setLoading(false);
     }
