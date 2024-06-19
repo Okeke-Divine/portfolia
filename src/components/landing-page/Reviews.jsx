@@ -26,7 +26,13 @@ const Reviews = () => {
               </div>
               <div className="divider"></div>
               <div className="flex">
-                <div className="w-fit"></div>
+                <div className="w-fit">
+                  <div className="avatar">
+                    <div className="w-12 rounded-xl">
+                      <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                    </div>
+                  </div>
+                </div>
                 <div className="w-full">
                   <div className="font-bold mb-1">{review.name}</div>
                   <div className="mb-1">{review.username}</div>
