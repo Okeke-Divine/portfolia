@@ -22,8 +22,8 @@ const Navbar = () => {
             <div className="text-xl font-bold">{config.app_name}</div>
           </div>
         </div>
-        <div className="hidden md:flex navbar-center">
-          <ul className="menu menu-horizontal px-1 gap-1">
+        <div className="hidden md:flex navbar-center overflow-x-auto w-fit">
+          <ul className="menu menu-horizontal px-1 gap-1 w-fit">
             {pathname === "/" ? (<>
               <li>
                 <Link href="/#how">How it works</Link>
