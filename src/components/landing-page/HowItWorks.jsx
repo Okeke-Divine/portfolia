@@ -1,3 +1,10 @@
+
+const hiws = [
+  { title: "run", content: "run" },
+  { title: "run", content: "run" },
+  { title: "run", content: "run" }
+]
+
 const HowItWorks = () => {
   return (
     <>
@@ -23,17 +30,19 @@ const HowItWorks = () => {
               </div>
             </div>
             <div className="relative grid grid-cols-1 text-center gap-y-12 md:grid-cols-3 gap-x-12"  >
-              <div  >
-                <div
-                  className="flex items-center justify-center w-16 h-16 mx-auto bg-base-100 text-[#1098ad] border-2 border-[#1098ad]/30 rounded-full"
-                >
-                  <span className="text-xl font-medium"> 1 </span>
+              {hiws.map((hiw, index) => (
+                <div key={index} >
+                  <div
+                    className="flex items-center justify-center w-16 h-16 mx-auto bg-base-100 text-[#1098ad] border-2 border-[#1098ad]/30 rounded-full"
+                  >
+                    <span className="text-xl font-medium"> {index + 1} </span>
+                  </div>
+                  <h3 className="mt-6 text-lg lg:text-xl font-medium text-black md:mt-10">{hiw.title}</h3>
+                  <p className="mt-4 text-base text-base-content-secondary leading-relaxed">
+                    {hiw + content}
+                  </p>
                 </div>
-                <h3 className="mt-6 text-lg lg:text-xl font-medium text-black md:mt-10">Describe your project</h3>
-                <p className="mt-4 text-base text-base-content-secondary leading-relaxed">
-                  A few words about your business, what you do, what you sell... Anything, really!
-                </p>
-              </div>
+              ))}
               <div  >
                 <div
                   className="flex items-center justify-center w-16 h-16 mx-auto bg-base-100 text-[#07b39b] border-2 border-[#07b39b]/30 rounded-full"
