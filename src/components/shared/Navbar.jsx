@@ -25,18 +25,22 @@ const Navbar = () => {
         </div>
         <div className="hidden md:flex navbar-center">
           <ul className="menu menu-horizontal px-1 gap-1">
-            <li>
-              <Link href="/#how">How it works</Link>
-            </li>
-            <li>
-              <Link href="/#features">Features</Link>
-            </li>
-            <li>
-              <Link href="/#reviews">Reviews</Link>
-            </li>
-            <li>
-              <Link href="/#faqs">FAQs</Link>
-            </li>
+            {pathname === "/" ? (<>
+              <li>
+                <Link href="/#how">How it works</Link>
+              </li>
+              <li>
+                <Link href="/#features">Features</Link>
+              </li>
+              <li>
+                <Link href="/#reviews">Reviews</Link>
+              </li>
+              <li>
+                <Link href="/#faqs">FAQs</Link>
+              </li></>) : (<>
+                <li>
+                  <Link href="/">Home</Link>
+                </li></>)}
           </ul>
         </div>
         <div className="navbar-end flex gap-2">
