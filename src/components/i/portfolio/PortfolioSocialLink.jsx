@@ -37,7 +37,7 @@ const PortfolioSocialLink = async ({ userId }) => {
             className="app-portfolio-navbar-link"
           >
             <i
-              className={`${getIconClass(link.name)} app-portfolio-navbar-icon`}
+              className={`${getIconClass(link.name)} app-portfolio-navbar-icon dmdomo`}
             ></i>
           </Link>
         ))}
