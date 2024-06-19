@@ -39,7 +39,7 @@ const tacs = [
   },
   {
     title: "Last Updated",
-    message: "[Current Date]"
+    message: "19th June 2024"
   }
 ];
 
