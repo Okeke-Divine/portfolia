@@ -18,6 +18,8 @@ const Features = () => {
         <div className="flex justify-center mt-2">
           <div className="text-center text-gray-600 max-w-[70%] md:max-w-[60%] lg:max-w-[40%]">You're in good company. Here's what our beautiful customers have to say about us.</div>
         </div>
+        <div>
+        </div>
       </secton>
     </>
   )
