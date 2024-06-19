@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 import { signIn } from "next-auth/react";
 import { app_color_primary } from "@/constants/shared/color";
 
-async function _signIn(email,password){
+async function _signIn(email, password) {
   const login = await signIn("credentials", {
     redirect: false,
     email,
@@ -92,7 +92,7 @@ const SignUpForm = () => {
               confirmButtonColor: app_color_primary
             });
             setTimeout(function () {
-             _signIn(email,password)
+              _signIn(email, password)
             }, 3000);
           }
           setLoading(false);
@@ -125,7 +125,7 @@ const SignUpForm = () => {
           <div className="py-5">
             <div className="alert alert-success text-white">
               <div>
-              <span className="mb-2 font-semibold">Logging in...</span><br />
+                <span className="mb-2 font-semibold">Logging in...</span><br />
                 <span>Your account has been created successfully</span>
               </div>
             </div>
@@ -211,12 +211,18 @@ const SignUpForm = () => {
                 />
                 <i
                   onClick={togglePswdVisible}
-                  className={`${
-                    pswdVisible ? "fi fi-rr-eye-crossed" : "fi fi-rr-eye"
-                  } cursor-pointer flaticon-offset`}
+                  className={`${pswdVisible ? "fi fi-rr-eye-crossed" : "fi fi-rr-eye"
+                    } cursor-pointer flaticon-offset`}
                 ></i>
               </div>
             </div>
+
+            {/* agree sections */}
+
+            <div className="mt-1 mb-2 max-w-[300px]">
+              By creating an account, you agree to our Terms and Conditions and Privacy Policy.
+            </div>
+
             {/* submit button */}
             <div>
               <button
