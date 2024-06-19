@@ -17,6 +17,13 @@ const Navbar = () => {
             <div className="text-xl font-bold">{config.app_name}</div>
           </div>
         </div>
+        <div className="hidden md:block navbar-center">
+        <Link href="/#how">How it works</Link>
+        <Link href="/#features">Features</Link>
+        <Link href="/#reviews">Reviews</Link>
+        <Link href="/#faqs">FAQs</Link>
+
+        </div>
         <div className="navbar-end flex gap-2">
           <Link className="btn btn-neutrual" href="/signin">Signin</Link>
           <Link className="btn app-primary-button w-fit" href="/signup">Get Started</Link>

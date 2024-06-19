@@ -33,7 +33,7 @@ const faqs = [
 const FAQ = () => {
   return (
     <>
-      <div className="landingPagePadx py-5 md:p-10">
+      <div className="landingPagePadx py-5 md:p-10" id="faqs">
         <div className="text-center uppercase app-text-primary">FAQs</div>
         <h2 className="text-center">Questions & Anwers</h2>
         <div className="flex justify-center mt-2">
