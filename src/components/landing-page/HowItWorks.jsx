@@ -1,8 +1,18 @@
 const hiws = [
-  { title: "run", content: "run" },
-  { title: "run", content: "run" },
-  { title: "run", content: "run" }
+  {
+    title: "Create Your Account",
+    content: "Sign up with your email address and create a secure password. Once registered, you'll be able to access your dashboard where you can start building your resume and portfolio."
+  },
+  {
+    title: "Fill in Your Information",
+    content: "Enter your personal details such as name, contact information, skills, work experience, education, and any other relevant information. You can also add sections for projects, certifications, and more. Use our easy-to-navigate forms to input your data."
+  },
+  {
+    title: "Customize and Share",
+    content: "Our platform automatically generates a professional resume and portfolio based on the information you provide. Customize the look and feel using our intuitive drag-and-drop editor. Once you're satisfied, share your live link with potential employers or download your resume as a PDF."
+  }
 ]
+
 
 const HowItWorks = () => {
   return (
