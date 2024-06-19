@@ -28,7 +28,7 @@ export const POST = async (req) => {
                 const updatePortfolioViewCount = await prisma.userAnalytics.upsert({
                     where: { userId },
                     update: { portfolioViewCount: portfolioViewCount + 1 },
-                    insert: {
+                    create: {
                         userId, portfolioViewCount: 1
                     }
                 })
