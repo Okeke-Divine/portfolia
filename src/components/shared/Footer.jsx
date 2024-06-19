@@ -28,7 +28,7 @@ const Footer = () => {
         <div>
           <h6 className="footer-title">Legal</h6>
           <div className="flex flex-col gap-2 app-footer-link">
-            <Link href="/tod">Terms and Conditions</Link>
+            <Link href="/tac">Terms and Conditions</Link>
             <Link href="/privacy-policy">Privacy policy</Link>
           </div>
         </div>
