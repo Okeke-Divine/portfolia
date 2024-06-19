@@ -17,19 +17,21 @@ const Navbar = () => {
             <div className="text-xl font-bold">{config.app_name}</div>
           </div>
         </div>
-        <div className="hidden md:block navbar-center">
-          <li>
-            <Link href="/#how">How it works</Link>
-          </li>
-          <li>
-            <Link href="/#features">Features</Link>
-          </li>
-          <li>
-            <Link href="/#reviews">Reviews</Link>
-          </li>
-          <li>
-            <Link href="/#faqs">FAQs</Link>
-          </li>
+        <div className="hidden md:flex navbar-center">
+          <ul className="menu menu-horizontal px-1">
+            <li>
+              <Link href="/#how">How it works</Link>
+            </li>
+            <li>
+              <Link href="/#features">Features</Link>
+            </li>
+            <li>
+              <Link href="/#reviews">Reviews</Link>
+            </li>
+            <li>
+              <Link href="/#faqs">FAQs</Link>
+            </li>
+          </ul>
         </div>
         <div className="navbar-end flex gap-2">
           <Link className="btn btn-neutrual" href="/signin">Signin</Link>
