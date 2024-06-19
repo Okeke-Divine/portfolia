@@ -24,7 +24,7 @@ const Reviews = () => {
         <div className="grid gird-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mt-5 md:gap-5">
           {reviews.map((review, index) => (
             <div key={index} className="bg-white rounded-lg p-5">
-              <div className="text-gray-500">
+              <div className="text-gray-600">
                 {review.message}
               </div>
               <div className="divider"></div>

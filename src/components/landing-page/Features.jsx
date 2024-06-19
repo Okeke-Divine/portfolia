@@ -26,7 +26,7 @@ const Features = () => {
                 </div>
               </div>
               <div className="text-center text-xl font-bold mb-2">{feature.title}</div>
-              <div className="text-gray-500 text-center mb-2">{feature.message}</div>
+              <div className="text-gray-600 text-center mb-2">{feature.message}</div>
             </div>
           ))}
         </div>

@@ -47,7 +47,7 @@ const HowItWorks = () => {
                     <span className="text-xl font-medium"> {index + 1} </span>
                   </div>
                   <h3 className="mt-6 text-lg lg:text-xl font-medium text-black md:mt-10">{hiw.title}</h3>
-                  <p className="mt-4 text-base text-base-content-secondary leading-relaxed text-gray-500">
+                  <p className="mt-4 text-base text-base-content-secondary leading-relaxed text-gray-600">
                     {hiw.content}
                   </p>
                 </div>
