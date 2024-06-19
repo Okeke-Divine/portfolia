@@ -29,7 +29,7 @@ const PortfolioHero = ({ user }) => {
                 <Link
                   target="_blank"
                   href={`/i/${user.username}/resume`}
-                  className="app-primary-button"
+                  className="app-primary-button dmdomo"
                 >
                   <i className="fi fi-tr-poll-h flaticon-offset"></i>
                   My Resume

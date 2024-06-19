@@ -56,7 +56,7 @@ const PortfolioProjects = async ({ user }) => {
                         <Link
                           href={project.url}
                           target="_blank"
-                          className="app-primary-button"
+                          className="app-primary-button dmdomo"
                         >
                           View
                         </Link>
