@@ -13,10 +13,10 @@ const Features = () => {
   return (
     <>
       <secton className="landingPagePadx py-5 md:p-10">
-        <div className="text-center uppercase app-text-primary">Reviews</div>
-        <h2 className="text-center">Over 120+ portfolio's have been created</h2>
+        <div className="text-center uppercase app-text-primary">Features</div>
+        <h2 className="text-center">The fastest way to setup a portfolio + resume</h2>
         <div className="flex justify-center mt-2">
-          <div className="text-center text-gray-600 max-w-[70%] md:max-w-[60%] lg:max-w-[40%]">You're in good company. Here's what our beautiful customers have to say about us.</div>
+          <div className="text-center text-gray-600 max-w-[70%] md:max-w-[60%] lg:max-w-[40%]">Packed with a ton of featueres</div>
         </div>
         <div>
         </div>
