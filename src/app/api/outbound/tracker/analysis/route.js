@@ -1,5 +1,6 @@
 import prisma from "@/app/db";
 import { internalServerError, resourceLoaded } from "@/utils/prebuiltApiResponse"
+import { userAgent } from "next/server";
 
 export const POST = async (req) => {
     try {
@@ -14,6 +15,9 @@ export const POST = async (req) => {
 
         if (actionType == "portfolioView") {
             const usernameExist = await prisma.user.findFirst({ where: { username }, select: { userId: true } });
+            if(usernameExist !== null){
+                
+            }
             console.log(usernameExist);
         }
 
