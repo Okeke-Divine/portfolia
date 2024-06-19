@@ -1,12 +1,36 @@
-
 const features = [
-  { title: "Inbuilt SEO", message: "Our Artificial Intelligence uses millions of converting headlines to write yours. It speaks 50+ languages!", icon: "fi-ts-web-design" },
-  { title: "Inbuilt SEO", message: "Our Artificial Intelligence uses millions of converting headlines to write yours. It speaks 50+ languages!", icon: "fi-ts-web-design" },
-  { title: "Inbuilt SEO", message: "Our Artificial Intelligence uses millions of converting headlines to write yours. It speaks 50+ languages!", icon: "fi-ts-web-design" },
-  { title: "Inbuilt SEO", message: "Our Artificial Intelligence uses millions of converting headlines to write yours. It speaks 50+ languages!", icon: "fi-ts-web-design" },
-  { title: "Inbuilt SEO", message: "Our Artificial Intelligence uses millions of converting headlines to write yours. It speaks 50+ languages!", icon: "fi-ts-web-design" },
-  { title: "Inbuilt SEO", message: "Our Artificial Intelligence uses millions of converting headlines to write yours. It speaks 50+ languages!", icon: "fi-ts-web-design" },
+  {
+    title: "Inbuilt Analysis",
+    message: "Gain insights into your resume's effectiveness with our inbuilt analysis tool. It provides feedback on content quality, keyword optimization, and overall structure to ensure your resume stands out.",
+    icon: "fi-ts-web-design"
+  },
+  {
+    title: "SEO Optimization",
+    message: "Enhance your online visibility with our SEO optimization features. Our platform automatically optimizes your resume and portfolio for search engines, making it easier for potential employers to find you.",
+    icon: "fi-ts-web-design"
+  },
+  {
+    title: "Google Indexing",
+    message: "Get your resume and portfolio indexed by Google with just a few clicks. Our platform ensures your content is searchable and ranks well on Google, increasing your chances of being noticed.",
+    icon: "fi-ts-web-design"
+  },
+  {
+    title: "CMS Platform",
+    message: "Manage your resume and portfolio with ease using our content management system (CMS). Update your information, add new sections, and keep your content current without any hassle.",
+    icon: "fi-ts-web-design"
+  },
+  {
+    title: "Live Links",
+    message: "Share your resume and portfolio effortlessly with live links. Simply copy the link and share it with potential employers, allowing them to view your professional information online.",
+    icon: "fi-ts-web-design"
+  },
+  {
+    title: "PDF Download",
+    message: "Download your resume as a professionally formatted PDF. Our platform ensures your resume looks great in print and digital formats, making it easy to share in any context.",
+    icon: "fi-ts-web-design"
+  }
 ]
+
 
 const Features = () => {
   return (
