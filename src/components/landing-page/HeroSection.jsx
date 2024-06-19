@@ -25,7 +25,13 @@ const HeroSection = () => {
           <div className="md:block my-2 flex justify-center">
             <div className="w-fit">
               <div>140+ portfolio's created</div>
-
+              <div className="rating">
+                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" checked />
+              </div>
             </div>
           </div>
         </div>
