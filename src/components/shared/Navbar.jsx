@@ -4,7 +4,7 @@ import Link from "next/link"
 const Navbar = () => {
   return (
     <>
-      <div className="navbar border-b-2 mb-2 landingPagePadx">
+      <div className="navbar border-b-2 landingPagePadx fixed top-0 left-0 bg-white">
         <div className="navbar-start">
           <div className="flex gap-2 items-center">
             <div>
@@ -22,6 +22,8 @@ const Navbar = () => {
           <Link className="btn app-primary-button w-fit" href="/signin">Get Started</Link>
         </div>
       </div>
+      {/* space below */}
+      <div className="mb-24"></div>
     </>
   )
 }
