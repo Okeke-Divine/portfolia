@@ -36,10 +36,18 @@ const Navbar = () => {
               </li>
               <li>
                 <Link href="/#faqs">FAQs</Link>
-              </li></>) : (<>
+              </li></>) : (
+              <>
                 <li>
                   <Link href="/">Home</Link>
-                </li></>)}
+                </li>
+                <li>
+                  <Link href="/tac">Terms and Conditions</Link>
+                </li>
+                <li>
+                  <Link href="/privacy-policy">Privacy Policy</Link>
+                </li>
+              </>)}
           </ul>
         </div>
         <div className="navbar-end flex gap-2">
