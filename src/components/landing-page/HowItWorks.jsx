@@ -9,7 +9,7 @@ const hiws = [
   },
   {
     title: "Customize and Share",
-    content: "Our platform automatically generates a professional resume and portfolio based on the information you provide. Customize the look and feel using our intuitive drag-and-drop editor. Once you're satisfied, share your live link with potential employers or download your resume as a PDF."
+    content: "Our platform automatically generates a professional resume and portfolio based on the information you provide. Customize the look and feel to match your personal brand. Once you're satisfied, share your live link with potential employers or download your resume as a PDF."
   }
 ]
 
