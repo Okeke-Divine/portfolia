@@ -1,6 +1,11 @@
 
 const features = [
   { title: "Inbuilt SEO", message: "Our Artificial Intelligence uses millions of converting headlines to write yours. It speaks 50+ languages!", icon: "fi-ts-web-design" },
+  { title: "Inbuilt SEO", message: "Our Artificial Intelligence uses millions of converting headlines to write yours. It speaks 50+ languages!", icon: "fi-ts-web-design" },
+  { title: "Inbuilt SEO", message: "Our Artificial Intelligence uses millions of converting headlines to write yours. It speaks 50+ languages!", icon: "fi-ts-web-design" },
+  { title: "Inbuilt SEO", message: "Our Artificial Intelligence uses millions of converting headlines to write yours. It speaks 50+ languages!", icon: "fi-ts-web-design" },
+  { title: "Inbuilt SEO", message: "Our Artificial Intelligence uses millions of converting headlines to write yours. It speaks 50+ languages!", icon: "fi-ts-web-design" },
+  { title: "Inbuilt SEO", message: "Our Artificial Intelligence uses millions of converting headlines to write yours. It speaks 50+ languages!", icon: "fi-ts-web-design" },
 ]
 
 const Features = () => {
