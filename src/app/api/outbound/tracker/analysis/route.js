@@ -96,8 +96,8 @@ export const POST = async (req) => {
             }
         }
 
-         // resumeClick
-         if (actionType === "resumeClick") {
+        // resumeClick
+        if (actionType === "resumeClick") {
             // Check if user exists
             const user = await prisma.user.findFirst({ where: { username }, select: { id: true } });
 
@@ -119,6 +119,34 @@ export const POST = async (req) => {
                     update: { resumeClickCount: resumeClickCount + 1 },
                     create: {
                         userId, resumeClickCount: 1
+                    }
+                });
+            }
+        }
+
+        // resumeDownload
+        if (actionType === "resumeDownload") {
+            // Check if user exists
+            const user = await prisma.user.findFirst({ where: { username }, select: { id: true } });
+
+            if (user !== null) {
+                // Get the user id
+                const userId = user.id;
+
+                // Get the previous count
+                const userAnalytics = await prisma.userAnalytics.findFirst({
+                    where: { userId },
+                    select: { resumeDownloadCount: true }
+                });
+
+                const resumeDownloadCount = userAnalytics ? userAnalytics.resumeDownloadCount : 0;
+
+                // Upsert the previous count or create a new record
+                await prisma.userAnalytics.upsert({
+                    where: { userId },
+                    update: { resumeDownloadCount: resumeDownloadCount + 1 },
+                    create: {
+                        userId, resumeDownloadCount: 1
                     }
                 });
             }
