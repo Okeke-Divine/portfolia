@@ -1,4 +1,3 @@
-
 const hiws = [
   { title: "run", content: "run" },
   { title: "run", content: "run" },
@@ -43,31 +42,6 @@ const HowItWorks = () => {
                   </p>
                 </div>
               ))}
-              <div  >
-                <div
-                  className="flex items-center justify-center w-16 h-16 mx-auto bg-base-100 text-[#07b39b] border-2 border-[#07b39b]/30 rounded-full"
-
-                >
-                  <span className="text-xl font-medium"> 2 </span>
-                </div>
-                <h3 className="mt-6 text-lg lg:text-xl font-medium text-black md:mt-10">Our AI builds your landing page</h3>
-                <p className="mt-4 text-base text-base-content-secondary leading-relaxed">
-                  Artificial Intelligence generates copy that sells, unique logo and illustrations. This takes less than 1
-                  minute!
-                </p>
-              </div>
-              <div  >
-                <div
-                  className="flex items-center justify-center w-16 h-16 mx-auto bg-base-100 text-[#6fba82] border-2 border-[#6fba82]/30 rounded-full"
-
-                >
-                  <span className="text-xl font-medium"> 3 </span>
-                </div>
-                <h3 className="mt-6 text-lg lg:text-xl font-medium text-black md:mt-10">Customize the content</h3>
-                <p className="mt-4 text-base text-base-content-secondary leading-relaxed">
-                  Upload pictures of your business, change the copy, edit buttons. Then just share your site!
-                </p>
-              </div>
             </div>
           </div>
         </div>
