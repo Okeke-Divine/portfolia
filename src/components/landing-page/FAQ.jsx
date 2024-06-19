@@ -1,9 +1,26 @@
 const faqs = [
-  { title: "Test", description: "amodmsodmosmdosdmfosdmfo" },
-  { title: "Test", description: "amodmsodmosmdosdmfosdmfo" },
-  { title: "Test", description: "amodmsodmosmdosdmfosdmfo" },
-  { title: "Test", description: "amodmsodmosmdosdmfosdmfo" }
-]
+  { 
+    title: "What is your return policy?", 
+    description: "You can return any item within 30 days of purchase as long as it is in its original condition and packaging." 
+  },
+  { 
+    title: "How long does shipping take?", 
+    description: "Shipping times vary based on your location. Domestic shipping typically takes 5-7 business days, while international shipping can take 2-3 weeks." 
+  },
+  { 
+    title: "Do you offer customer support?", 
+    description: "Yes, our customer support team is available 24/7 to assist you with any inquiries or issues you may have. You can reach us via email, phone, or live chat." 
+  },
+  { 
+    title: "Can I track my order?", 
+    description: "Yes, once your order has shipped, you will receive a tracking number via email. You can use this number to track the status of your delivery on our website." 
+  },
+  { 
+    title: "What payment methods do you accept?", 
+    description: "We accept various payment methods including credit cards, debit cards, PayPal, and Apple Pay." 
+  }
+];
+
 
 const FAQ = () => {
   return (
