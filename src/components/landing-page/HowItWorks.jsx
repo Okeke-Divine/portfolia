@@ -19,7 +19,7 @@ const HowItWorks = () => {
     <>
       <section className="bg-base-100" id="how">
         <div className="py-5 md:py-10 max-w-7xl mx-auto px-4"  >
-          <div className="flex flex-col text-center w-full mb-2"  >
+          <div className="flex flex-col text-center w-full mb-4"  >
             <div className="text-center uppercase app-text-primary">How It Works</div>
             <h2 className="text-center">Get yours today</h2>
           </div>
