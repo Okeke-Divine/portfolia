@@ -24,7 +24,7 @@ export const POST = async (req) => {
                 //get the previeous count
                 const portfolioViewCount = await prisma.userAnalytics.findFirst({ where: { userId }, select: { portfolioViewCount: true } }) || 0;
                 console.log(portfolioViewCount);
-                // upsert the previous count or create a new row
+                // upsert the previous count or create a new record
                 const updatePortfolioViewCount = await prisma.userAnalytics.upsert({
                     where: { userId },
                     update: { portfolioViewCount: portfolioViewCount + 1 },
