@@ -238,7 +238,7 @@ const SignUpForm = () => {
                     <span className="loading loading-dots loading-xs"></span>
                   </>
                 ) : (
-                  "Get Started"
+                  "Signup"
                 )}
               </button>
             </div>
