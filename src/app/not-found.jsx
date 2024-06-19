@@ -9,7 +9,7 @@ const NotFound = () => {
   return (
     <>
       <Navbar />
-      <div className="w-full h-[50vh] flex justify-center items-center">
+      <div className="w-full min-h-[50vh] flex justify-center items-center">
         <div>
           <div className="font-bold text-4xl text-center">
             We've lost this page
