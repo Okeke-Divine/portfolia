@@ -102,11 +102,10 @@ export default async function PortFolio({ params }) {
     );
   }
 
-  //add portfolio view
-  // await analysisTracker(user.username,'portfolioView');
 
   return (
     <>
+  {/* //add portfolio view */}
     <AnalyticTracker username={username} actionType="portfolioView" />
       <PortfolioNavbar
         userId={user.id}

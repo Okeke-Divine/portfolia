@@ -5,6 +5,7 @@ import ResumeHeroSection from "@/components/i/resume/ResumeHeroSection";
 import ResumeProjects from "@/components/i/resume/ResumeProjects";
 import ResumeSkills from "@/components/i/resume/ResumeSkills";
 import ResumeSocialLink from "@/components/i/resume/ResumeSocialLink";
+import AnalyticTracker from "@/components/shared/AnalyticTracker";
 import { defaultImgUrl2 } from "@/constants/shared/constant";
 import { _ucfirst, analysisTracker } from "@/utils/main";
 import Link from "next/link";
@@ -42,8 +43,8 @@ export async function generateMetadata({ params }) {
     user.userDetails.bio != ""
       ? user.userDetails.bio
       : user.userDetails.about != ""
-      ? user.userDetails.about
-      : _ucfirst(user.userDetails.fullname) +
+        ? user.userDetails.about
+        : _ucfirst(user.userDetails.fullname) +
         " - " +
         user.userDetails.profession;
 
@@ -103,11 +104,10 @@ export default async function Resume({ params }) {
     );
   }
 
-  //add resume view
-  // await analysisTracker(user.username,'resumeView');
-
   return (
     <>
+      {/* //add resume view */}
+      <AnalyticTracker username={username} actionType="resumeView" />
       <div className="bg-gray-200 flex justify-center items-center min-h-[100vh]">
         <div id="resumeContainer" className="h-fit">
           <div className="resumeContainerBackground w-full md:w-[80vw] lg:w-[70vw] xl:w-[60vw] border-l-8 app-border-primary">
