@@ -1,5 +1,6 @@
 {
     "app_name": "Portfoliia",
     "summary": "Create your portfolia and resume in minutes not days",
-    "description": ""
+    "description": "",
+    "portfolio_count": 240
 }
