@@ -1,7 +1,7 @@
 const features = [
   {
     title: "Inbuilt Analysis",
-    message: "Gain insights into your resume's effectiveness with our inbuilt analysis tool. It provides feedback on content quality, keyword optimization, and overall structure to ensure your resume stands out.",
+    message: "Track your resume's performance with detailed analytics. Get insights into total views, clicks, and conversion rates, helping you understand how potential employers are interacting with your content.",
     icon: "fi-ts-web-design"
   },
   {
@@ -30,6 +30,7 @@ const features = [
     icon: "fi-ts-web-design"
   }
 ]
+
 
 
 const Features = () => {

@@ -2,7 +2,7 @@ import { Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 import config from "@/data/config.json";
 
-const application_font = Bricolage_Grotesque({ subsets: ["latin"], weight: '600' });
+const application_font = Bricolage_Grotesque({ subsets: ["latin"], weight: '400' });
 
 const description = "";
 const banner_url = "";
