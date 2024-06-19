@@ -27,8 +27,6 @@ export const POST = async (req) => {
 
                 const portfolioViewCount = userAnalytics ? userAnalytics.portfolioViewCount : 0;
 
-                console.log(portfolioViewCount);
-
                 // Upsert the previous count or create a new record
                 await prisma.userAnalytics.upsert({
                     where: { userId },
