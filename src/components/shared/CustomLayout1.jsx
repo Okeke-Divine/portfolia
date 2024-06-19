@@ -1,4 +1,4 @@
-const CustomLayout1 = ({ childrend }) => {
+const CustomLayout1 = ({ children }) => {
     return (
         <>
             <div className="max-w-xl mx-auto">
