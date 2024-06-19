@@ -17,6 +17,15 @@ export const POST = async (req) => {
             const user = await prisma.user.findFirst({ where: { username }, select: { id: true } });
             if (user !== null) {
                 const userId = user.id;
+                const portfolioViewCount = await prisma.userAnalytics.findFirst({ where: { userId }, select: { portfolioViewCount: true } }) || 0;
+                console.log(portfolioViewCount);
+                const updatePortfolioViewCount = await prisma.userAnalytics.upsert({
+                    where: { userId },
+                    update: { portfolioViewCount: portfolioViewCount + 1 },
+                    insert: {
+                        userId, portfolioViewCount: 1
+                    }
+                })
             }
         }
 
