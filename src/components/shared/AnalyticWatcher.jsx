@@ -11,7 +11,7 @@ const AnalyticWatcher = ({ parent }) => {
         };
 
         // Get all elements with the .clickMeCounter class
-        const elements = document.querySelectorAll(".clickMeCounter");
+        const elements = document.querySelectorAll(".dmdomo");
 
         // Add event listeners to all elements
         elements.forEach(element => {
