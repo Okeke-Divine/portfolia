@@ -39,7 +39,7 @@ const HowItWorks = () => {
                   </div>
                   <h3 className="mt-6 text-lg lg:text-xl font-medium text-black md:mt-10">{hiw.title}</h3>
                   <p className="mt-4 text-base text-base-content-secondary leading-relaxed">
-                    {hiw + content}
+                    {hiw.content}
                   </p>
                 </div>
               ))}
