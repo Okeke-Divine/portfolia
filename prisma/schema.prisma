@@ -98,7 +98,7 @@ model UserSkills {
 
 model UserAnalytics {
   id                  Int  @id @default(autoincrement())
-  userId              Int
+  userId              Int @unique
   user                User @relation(fields: [userId], references: [id])
   ///
   portfolioViewCount  Int? @default(0)
