@@ -21,21 +21,21 @@ const Reviews = () => {
         <div className="grid gird-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mt-2">
           {reviews.map((review, index) => (
             <div key={index} className="bg-white rounded-lg p-5">
-              <div>
+              <div className="text-gray-500">
                 {review.message}
               </div>
               <div className="divider"></div>
-              <div className="flex">
+              <div className="flex gap-2 items-center">
                 <div className="w-fit">
                   <div className="avatar">
-                    <div className="w-12 rounded-xl">
+                    <div className="w-10 rounded-xl">
                       <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
                     </div>
                   </div>
                 </div>
                 <div className="w-full">
-                  <div className="font-bold mb-1">{review.name}</div>
-                  <div className="mb-1">{review.username}</div>
+                  <div className="font-bold">{review.name}</div>
+                  <div className="mb-1 text-gray-500">{review.username}</div>
                 </div>
               </div>
             </div>
