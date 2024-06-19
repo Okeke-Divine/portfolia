@@ -23,7 +23,7 @@ const Navbar = () => {
         </div>
       </div>
       {/* space below */}
-      <div className="mb-24"></div>
+      <div className="mb-16"></div>
     </>
   )
 }
