@@ -6,6 +6,7 @@ import PortfolioFooter from "@/components/i/portfolio/PortfolioFooter";
 import PortfolioHero from "@/components/i/portfolio/PortfolioHero";
 import PortfolioNavbar from "@/components/i/portfolio/PortfolioNavbar";
 import PortfolioProjects from "@/components/i/portfolio/PortfolioProjects";
+import AnalyticTracker from "@/components/shared/AnalyticTracker";
 import { _ucfirst, analysisTracker } from "@/utils/main";
 
 export async function generateMetadata({ params }) {
@@ -106,6 +107,7 @@ export default async function PortFolio({ params }) {
 
   return (
     <>
+    <AnalyticTracker username={username} actionType="portfolioView" />
       <PortfolioNavbar
         userId={user.id}
         profilePicture_url={user?.profilePicture_url}
