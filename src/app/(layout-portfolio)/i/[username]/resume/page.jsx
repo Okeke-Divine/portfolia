@@ -6,6 +6,7 @@ import ResumeProjects from "@/components/i/resume/ResumeProjects";
 import ResumeSkills from "@/components/i/resume/ResumeSkills";
 import ResumeSocialLink from "@/components/i/resume/ResumeSocialLink";
 import AnalyticTracker from "@/components/shared/AnalyticTracker";
+import AnalyticWatcher from "@/components/shared/AnalyticWatcher";
 import { defaultImgUrl2 } from "@/constants/shared/constant";
 import { _ucfirst, analysisTracker } from "@/utils/main";
 import Link from "next/link";
@@ -108,6 +109,8 @@ export default async function Resume({ params }) {
     <>
       {/* //add resume view */}
       <AnalyticTracker username={username} actionType="resumeView" />
+      <AnalyticWatcher username={username} parent="portfolio" />
+      {/* end analytics */}
       <div className="bg-gray-200 flex justify-center items-center min-h-[100vh]">
         <div id="resumeContainer" className="h-fit">
           <div className="resumeContainerBackground w-full md:w-[80vw] lg:w-[70vw] xl:w-[60vw] border-l-8 app-border-primary">
