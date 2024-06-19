@@ -26,6 +26,7 @@ model User {
   UserExperience         UserExperience[]
   Feedback               Feedback[]
   UserSkills             UserSkills[]
+  UserAnalytics          UserAnalytics[]
 }
 
 model UserDetails {
@@ -93,4 +94,16 @@ model UserSkills {
   skill_name String
   userId     Int
   user       User   @relation(fields: [userId], references: [id])
+}
+
+model UserAnalytics {
+  id                  Int  @id @default(autoincrement())
+  userId              Int
+  user                User @relation(fields: [userId], references: [id])
+  ///
+  portfolioViewCount  Int  @default(0)
+  portfolioClickCount Int  @default(0)
+  resumeViewCount     Int  @default(0)
+  resumeClickCount    Int  @default(0)
+  resumeDownloadCount Int  @default(0)
 }
