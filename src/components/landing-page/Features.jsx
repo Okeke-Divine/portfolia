@@ -1,6 +1,6 @@
 
 const features = [
-  { title: "Inbuilt SEO", message: "Our Artificial Intelligence uses millions of converting headlines to write yours. It speaks 50+ languages!", icon: "" },
+  { title: "Inbuilt SEO", message: "Our Artificial Intelligence uses millions of converting headlines to write yours. It speaks 50+ languages!", icon: "fi-ts-web-design" },
 ]
 
 const Features = () => {
@@ -14,8 +14,13 @@ const Features = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap">
           {features.map((feature, index) => (
-            <div key={index} className="p-5 bg-white">
-              <div className="text-center text-xl font-bold">{feature.title}</div>
+            <div key={index} className="p-5 bg-white rounded-lg">
+              <div className="mb-2 flex justify-center">
+                <div className="flex justify-center items-center w-10 h-10 bg-green-100">
+                  <i className={`fi flaticon-offset ${feature.icon}`}></i>
+                </div>
+              </div>
+              <div className="text-center text-xl font-bold mb-2">{feature.title}</div>
               <div className="text-gray-500">{feature.message}</div>
             </div>
           ))}
