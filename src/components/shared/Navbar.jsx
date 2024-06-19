@@ -18,11 +18,18 @@ const Navbar = () => {
           </div>
         </div>
         <div className="hidden md:block navbar-center">
-        <Link href="/#how">How it works</Link>
-        <Link href="/#features">Features</Link>
-        <Link href="/#reviews">Reviews</Link>
-        <Link href="/#faqs">FAQs</Link>
-
+          <li>
+            <Link href="/#how">How it works</Link>
+          </li>
+          <li>
+            <Link href="/#features">Features</Link>
+          </li>
+          <li>
+            <Link href="/#reviews">Reviews</Link>
+          </li>
+          <li>
+            <Link href="/#faqs">FAQs</Link>
+          </li>
         </div>
         <div className="navbar-end flex gap-2">
           <Link className="btn btn-neutrual" href="/signin">Signin</Link>
