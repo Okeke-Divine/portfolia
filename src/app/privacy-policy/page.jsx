@@ -15,7 +15,7 @@ const pps = [
   },
   {
     title: "Account Creation",
-    message: "You can sign up with your email address to create a Portfoliia account. Your account username will be prefilled with your name, and you can upload a profile picture."
+    message: "You can sign up with your email address, fullname, and username to create a Portfoliia account."
   },
   {
     title: "Data Retention",
@@ -32,10 +32,6 @@ const pps = [
   {
     title: "External Links",
     message: "Our website may link to external sites that are not operated by us. Please be aware that we have no control over the content and practices of these sites, and cannot accept responsibility or liability for their respective privacy policies."
-  },
-  {
-    title: "Refusal of Personal Information",
-    message: "You are free to refuse our request for your personal information, with the understanding that we may be unable to provide you with some of your desired services."
   },
   {
     title: "Acceptance of Practices",
