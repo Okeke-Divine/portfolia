@@ -5,6 +5,11 @@ const AnalyticWatcher = ({ parent }) => {
 
     useEffect(function () {
 
+        // Function to handle click events
+        const handleClick = (event) => {
+            console.log(parent, "clicked");
+        };
+
         // Get all elements with the .clickMeCounter class
         const elements = document.querySelectorAll(".clickMeCounter");
 
