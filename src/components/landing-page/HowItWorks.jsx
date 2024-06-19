@@ -10,8 +10,8 @@ const HowItWorks = () => {
       <section className="bg-base-100" id="how">
         <div className="py-5 md:py-10 max-w-7xl mx-auto px-4"  >
           <div className="flex flex-col text-center w-full mb-2"  >
-            <p className="mx-auto font-medium text-gradient-warm mb-4">How it works?</p>
-            <h2 className="sm:text-4xl text-3xl font-medium text-base-content md:mb-2">Get yours today</h2>
+        <div className="text-center uppercase app-text-primary">How It Works</div>
+        <h2 className="text-center">Get yours today</h2>
           </div>
           <div className="relative"  >
             <div className="absolute inset-x-0 hidden top-2 md:block md:px-20 lg:px-28 xl:px-44"  >
