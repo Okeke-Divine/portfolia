@@ -1,16 +1,62 @@
 import config from "@/data/config.json"
 
 const reviews = [
-  { message: "Non-IT people can finally build this amazing landing page on their own (like me) 🤩 Truly brilliant idea to save lots of time and money for busy solo entrepreneurs! ", name: "John Doe", username: "@johndoe", img: "https://makelanding.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftestimonial-wonji.96376f67.jpeg&w=48&q=75" },
-  { message: "Non-IT people can finally build this amazing landing page on their own (like me) 🤩 Truly brilliant idea to save lots of time and money for busy solo entrepreneurs! ", name: "John Doe", username: "@johndoe", img: "https://makelanding.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftestimonial-wonji.96376f67.jpeg&w=48&q=75" },
-  { message: "Non-IT people can finally build this amazing landing page on their own (like me) 🤩 Truly brilliant idea to save lots of time and money for busy solo entrepreneurs! ", name: "John Doe", username: "@johndoe", img: "https://makelanding.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftestimonial-wonji.96376f67.jpeg&w=48&q=75" },
-  { message: "Non-IT people can finally build this amazing landing page on their own (like me) 🤩 Truly brilliant idea to save lots of time and money for busy solo entrepreneurs! ", name: "John Doe", username: "@johndoe", img: "https://makelanding.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftestimonial-wonji.96376f67.jpeg&w=48&q=75" },
-  { message: "Non-IT people can finally build this amazing landing page on their own (like me) 🤩 Truly brilliant idea to save lots of time and money for busy solo entrepreneurs! ", name: "John Doe", username: "@johndoe", img: "https://makelanding.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftestimonial-wonji.96376f67.jpeg&w=48&q=75" },
-  { message: "Non-IT people can finally build this amazing landing page on their own (like me) 🤩 Truly brilliant idea to save lots of time and money for busy solo entrepreneurs! ", name: "John Doe", username: "@johndoe", img: "https://makelanding.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftestimonial-wonji.96376f67.jpeg&w=48&q=75" },
-  { message: "Non-IT people can finally build this amazing landing page on their own (like me) 🤩 Truly brilliant idea to save lots of time and money for busy solo entrepreneurs! ", name: "John Doe", username: "@johndoe", img: "https://makelanding.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftestimonial-wonji.96376f67.jpeg&w=48&q=75" },
-  { message: "Non-IT people can finally build this amazing landing page on their own (like me) 🤩 Truly brilliant idea to save lots of time and money for busy solo entrepreneurs! ", name: "John Doe", username: "@johndoe", img: "https://makelanding.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftestimonial-wonji.96376f67.jpeg&w=48&q=75" },
-  { message: "Non-IT people can finally build this amazing landing page on their own (like me) 🤩 Truly brilliant idea to save lots of time and money for busy solo entrepreneurs! ", name: "John Doe", username: "@johndoe", img: "https://makelanding.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftestimonial-wonji.96376f67.jpeg&w=48&q=75" },
+  {
+    message: "This platform is a game-changer for job seekers. It automatically generated a stunning resume and portfolio for me, saving me countless hours of work.",
+    name: "Alice Johnson",
+    username: "@alicej",
+    img: "https://makelanding.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftestimonial-wonji.96376f67.jpeg&w=48&q=75"
+  },
+  {
+    message: "As a busy entrepreneur, I needed something quick and efficient. This platform exceeded my expectations, making it so easy to create and share my professional profile.",
+    name: "Michael Brown",
+    username: "@mikebrown",
+    img: "https://makelanding.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftestimonial-wonji.96376f67.jpeg&w=48&q=75"
+  },
+  {
+    message: "Incredible tool for anyone needing a professional resume without the hassle. The built-in SEO features helped my profile get noticed faster than I expected.",
+    name: "Samantha Lee",
+    username: "@samanthalee",
+    img: "https://makelanding.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftestimonial-wonji.96376f67.jpeg&w=48&q=75"
+  },
+  {
+    message: "I love how user-friendly the platform is. I could track how many views and clicks my resume was getting, which really helped me understand its effectiveness.",
+    name: "David Kim",
+    username: "@davidk",
+    img: "https://makelanding.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftestimonial-wonji.96376f67.jpeg&w=48&q=75"
+  },
+  {
+    message: "The Google indexing feature is a huge plus. My resume started appearing in search results within days, which boosted my visibility to recruiters.",
+    name: "Jessica Smith",
+    username: "@jessicas",
+    img: "https://makelanding.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftestimonial-wonji.96376f67.jpeg&w=48&q=75"
+  },
+  {
+    message: "This platform made it so easy to update my resume and portfolio. I could make changes on the fly, and the live link reflected updates instantly.",
+    name: "Robert Johnson",
+    username: "@robertj",
+    img: "https://makelanding.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftestimonial-wonji.96376f67.jpeg&w=48&q=75"
+  },
+  {
+    message: "Absolutely love this platform! It offers all the tools I need to create a professional online presence and share it effortlessly with potential employers.",
+    name: "Emily Davis",
+    username: "@emilyd",
+    img: "https://makelanding.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftestimonial-wonji.96376f67.jpeg&w=48&q=75"
+  },
+  {
+    message: "The inbuilt analysis tool is fantastic. I could see exactly how many people viewed my resume and what actions they took, which helped me tweak my approach.",
+    name: "James Wilson",
+    username: "@jamesw",
+    img: "https://makelanding.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftestimonial-wonji.96376f67.jpeg&w=48&q=75"
+  },
+  {
+    message: "Being able to download a professional PDF of my resume is so convenient. It looks great both online and offline, which is perfect for interviews.",
+    name: "Laura Martinez",
+    username: "@lauram",
+    img: "https://makelanding.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftestimonial-wonji.96376f67.jpeg&w=48&q=75"
+  }
 ]
+
 
 const Reviews = () => {
   return (
