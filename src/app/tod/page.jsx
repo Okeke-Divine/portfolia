@@ -45,7 +45,7 @@ const tacs = [
 
 
 export const metadata = {
-  title: "Terms of Sevice"
+  title: "Terms and Conditions"
 }
 
 const TermsOfService = () => {
