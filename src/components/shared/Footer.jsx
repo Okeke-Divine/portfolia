@@ -35,8 +35,8 @@ const Footer = () => {
         <div>
           <h6 className="footer-title">Other</h6>
           <div className="flex flex-col gap-2 app-footer-link">
-            <Link href={twitterAccUrl}>Twitter</Link>
-            <Link href={buyMeACoffeUrl}>Buy me a coffee</Link>
+            <Link href={twitterAccUrl} target="_blank">Twitter</Link>
+            <Link href={buyMeACoffeUrl} target="_blank">Buy me a coffee</Link>
             <Link href={skiyenUrl} target="_blank">Skiyen</Link>
           </div>
         </div>
