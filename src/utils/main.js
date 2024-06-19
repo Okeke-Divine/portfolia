@@ -59,6 +59,10 @@ export function getCurrentUserProfilePicture() {
   }
 }
 
-export async function analysisTracker(username,actionType){
-  console.log(username,actionType);
+export async function analysisTracker(username, actionType) {
+  if (!username || !actionType) {
+    return;
+  }
+  axios.post("/api/outbound/tracker/analysis", { username, actionType }, { headers: { "Content-Type": "application/json" } })
+  return;
 }
