@@ -19,13 +19,13 @@ const ResumeDownload = ({ username }) => {
             const pdf = new jsPDF({
                 orientation: "portrait",
                 unit: "px",
-                format: "a4"
+                format: "a4",
             });
 
-            const width = pdf.internal.pageSize.getWidth();
-            const height = (canvas.height * width) / canvas.width;
+            // const width = pdf.internal.pageSize.getWidth();
+            // const height = (canvas.height * width) / canvas.width;
 
-            pdf.addImage(imgData, "PNG", 0, 0, width, height);
+            pdf.addImage(imgData, "PNG");
             pdf.save("resume.pdf")
 
         } catch (e) {
