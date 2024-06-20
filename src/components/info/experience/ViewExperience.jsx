@@ -12,6 +12,27 @@ const ViewExperience = () => {
 
   const channel = new BroadcastChannel("user-certificates-channel");
 
+  useEffect(() => {
+    channel.onmessage = (event) => {
+      setLoading(true);
+      const newExperience = event.data.data;
+      setCertificates((prevExperiences) => [...prevExperiences, newExperience]);
+      setLoading(false);
+    };
+
+    return () => {
+      channel.close();
+    };
+  }, [channel]);
+
+
+  useEffect(function () {
+    setLoading(true);
+    axios.get("/api/info/experience").then((response) => {
+      setCertificates(response.data.data);
+      setLoading(false);
+    });
+  }, []);
 
   return (
     <div>ViewExperience</div>
