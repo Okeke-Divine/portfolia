@@ -7,7 +7,7 @@ import SkillSkeleton from "@/components/skeleton/skills/SkillSkeleton";
 
 const ViewExperience = () => {
 
-  const [languages, setLanguages] = useState([]);
+  const [certificates, setCertificates] = useState([]);
   const [loading, setLoading] = useState(false);
 
   const channel = new BroadcastChannel("user-certificates-channel");
