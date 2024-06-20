@@ -10,7 +10,7 @@ const ViewExperience = () => {
   const [experiences, setExperiences] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const channel = new BroadcastChannel("user-newExperience-channel");
+  const channel = new BroadcastChannel("user-experiences-channel");
 
   useEffect(() => {
     channel.onmessage = (event) => {
