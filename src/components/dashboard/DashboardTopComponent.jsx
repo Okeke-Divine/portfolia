@@ -28,11 +28,6 @@ const DashboardTopComponent = async ({ userAnalytics }) => {
                 {/* <div className="stat-desc app-text-primary">
                   0% more than last month
                 </div> */}
-                <div className="stat-desc mt-2">
-                  <span className="badge app-bg-primary border-none text-white">
-                    coming soon
-                  </span>
-                </div>
               </div>
               <div className="join-item stat">
                 <div className="stat-figure">
