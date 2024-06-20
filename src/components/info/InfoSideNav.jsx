@@ -8,10 +8,10 @@ const links = [
   { name: "Social", url: "/info/social", shipped: true },
   { name: "Skills", url: "/info/skills", shipped: true },
   { name: "Projects", url: "/info/projects", shipped: true },
-  { name: "Experience", url: "/info/experience", shipped: false },
-  { name: "Education", url: "/info/education", shipped: false },
-  { name: "Language", url: "/info/language", shipped: false },
-  { name: "Certificates", url: "/info/certificates", shipped: false },
+  { name: "Experience", url: "/info/experience", shipped: true },
+  { name: "Education", url: "/info/education", shipped: true },
+  { name: "Language", url: "/info/language", shipped: true },
+  { name: "Certificates", url: "/info/certificates", shipped: true },
   { name: "Awards", url: "/info/awards", shipped: false },
 ];
 
