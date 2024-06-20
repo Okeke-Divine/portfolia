@@ -1,3 +1,4 @@
+import AddEducation from "@/components/info/education/AddEducation"
 import ViewEducations from "@/components/info/education/ViewEducations"
 
 export const metadata = {
