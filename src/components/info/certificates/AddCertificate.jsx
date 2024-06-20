@@ -29,16 +29,16 @@ const AddCertificate = () => {
         const name = nameRef.current.value;
         const issuer = issuerRef.current.value;
         const issueMonth = issueMonthRef.current.value
-        const issuerYear = issueYearRef.current.value
+        const issueYear = issueYearRef.current.value
 
-        if (!name || !issuer || !issueMonth || !issuerYear) {
+        if (!name || !issuer || !issueMonth || !issueYear) {
             SweetAlertError("All fields are required.");
             setLoading(false);
             return;
         }
 
         axios
-            .post("/api/info/certificates", { name, issuer, issueMonth, issuerYear }, { headers: { "Content-Type": "application/json" } })
+            .post("/api/info/certificates", { name, issuer, issueMonth, issueYear }, { headers: { "Content-Type": "application/json" } })
             .then((response) => {
                 if (response) {
                     SweetAlertSuccess("Your certificate has been successfully added.");
