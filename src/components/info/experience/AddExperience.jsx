@@ -12,8 +12,10 @@ const AddExperience = () => {
   //refs
   const positionRef = useRef(null)
   const companyRef = useRef(null)
-  const startDateRef = useRef(null)
-  const endDateRef = useRef(null)
+  const startMonthRef = useRef(null)
+  const startYearRef = useRef(null)
+  const endMonthRef = useRef(null)
+  const endYearRef = useRef(null)
   const desciptionRef = useRef(null)
   // end refs
 
@@ -59,7 +61,21 @@ const AddExperience = () => {
             />
           </div>
         </div>
-
+        {/* Description */}
+        <div className="mb-3">
+          <div>
+            <label htmlFor="about" className="font-bold text-md">
+              Description
+            </label>
+          </div>
+          <textarea
+            rows={5}
+            required
+            ref={desciptionRef}
+            placeholder="Description"
+            className="textarea input-bordered w-full"
+          ></textarea>
+        </div>
         {/* submit button */}
         <div>
           <button
