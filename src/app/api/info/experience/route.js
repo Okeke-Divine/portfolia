@@ -31,7 +31,7 @@ export const POST = async (req) => {
         const data = await req.json();
         const { position, company, description, startMonth, startYear, endMonth, endYear } = data;
 
-        if (!school || !degree || !fieldOfStudy || !startYear) {
+        if (!position || !company || !description || !startMonth || !startYear) {
             return badRequest("All fields are required");
         }
 
