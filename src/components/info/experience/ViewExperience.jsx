@@ -103,7 +103,19 @@ const ViewExperience = () => {
         </>
       ) : (
         ""
-      )}</>
+      )}
+        <div>
+          {experiences.map((experience,index) => (
+                  <div
+                  id={"experience_" + experience.id}
+                  key={index}
+                  className={`flex gap-2 items-center mb-2 p-2 ${index % 2 === 0 ? "bg-white" : "bg-gray-200"
+                    }`}
+                >
+                  </div>
+          ))}
+        </div>
+      </>
   )
 }
 
