@@ -4,7 +4,6 @@ import { badRequest, internalServerError, resourceDeleted } from "@/utils/prebui
 export const POST = async (req) => {
   try {
     const data = await req.json();
-    console.log(data);
     const { language_id } = data;
 
     if (!language_id || !parseInt(language_id)) {
