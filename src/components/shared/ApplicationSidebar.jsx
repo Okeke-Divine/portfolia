@@ -107,6 +107,12 @@ export default function ApplicationSidedar() {
       blank: false,
     },
     {
+      name: "Settings",
+      url: "/settings",
+      icon: <i className="fi fi fi-tr-customization-cogwheel"></i>,
+      blank: false
+    },
+    {
       name: "Twitter",
       url: twitterAccUrl,
       icon: <i className="fi fi-brands-twitter-alt"></i>,
@@ -125,9 +131,8 @@ export default function ApplicationSidedar() {
   return (
     <>
       <div
-        className={`fixed top-0 ${
-          isSidebarExpanded ? "left-0" : "-left-full"
-        } md:left-0 h-[100%] max-h-[100vh] overflow-y-auto bg-black w-[250px] flex justify-between flex-col text-white px-5 md:px-7 py-5 md:py-10 duration-300 z-50`}
+        className={`fixed top-0 ${isSidebarExpanded ? "left-0" : "-left-full"
+          } md:left-0 h-[100%] max-h-[100vh] overflow-y-auto bg-black w-[250px] flex justify-between flex-col text-white px-5 md:px-7 py-5 md:py-10 duration-300 z-50`}
       >
         <div>
           <div className="flex justify-center">
@@ -148,11 +153,10 @@ export default function ApplicationSidedar() {
               href={link.url}
               key={index}
               target={link.blank ? "_blank" : "_self"}
-              className={`btn btn-ghost w-full mb-2 text-left justify-start ${
-                !pathname.toString().search(link.url)
+              className={`btn btn-ghost w-full mb-2 text-left justify-start ${!pathname.toString().search(link.url)
                   ? "app-bg-primary hover:app-bg-primary-dark"
                   : ""
-              }`}
+                }`}
             >
               {link.icon}
               {link.name}
@@ -192,15 +196,13 @@ export default function ApplicationSidedar() {
 
       {/* expand buttton */}
       <button
-        className={`w-10 h-10 flex items-center justify-center fixed bottom-4 ${
-          isSidebarExpanded ? "left-[260px]" : "left-5"
-        } app-bg-primary hover:app-bg-primary-dark shadow-md hover:shadow-lg text-white md:hidden duration-300 z-[100] rounded-full`}
+        className={`w-10 h-10 flex items-center justify-center fixed bottom-4 ${isSidebarExpanded ? "left-[260px]" : "left-5"
+          } app-bg-primary hover:app-bg-primary-dark shadow-md hover:shadow-lg text-white md:hidden duration-300 z-[100] rounded-full`}
         onClick={toggleSidebar}
       >
         <i
-          className={`fi flaticon-offset ${
-            isSidebarExpanded ? "fi-tr-circle-xmark" : "fi-tr-bars-staggered"
-          }`}
+          className={`fi flaticon-offset ${isSidebarExpanded ? "fi-tr-circle-xmark" : "fi-tr-bars-staggered"
+            }`}
         ></i>
       </button>
     </>
