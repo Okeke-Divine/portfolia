@@ -13,7 +13,7 @@ const ViewCertificates = () => {
 
     const channel = new BroadcastChannel("user-certificates-channel");
 
-    function deleteLanguage(certificate_id) {
+    function deleteCertificate(certificate_id) {
         Swal.fire({
             title: "Warning",
             icon: "warning",
@@ -114,6 +114,17 @@ const ViewCertificates = () => {
                         className={`flex gap-2 items-center mb-2 p-2 ${index % 2 === 0 ? "bg-white" : "bg-gray-200"
                             }`}
                     >
+                        <div className="w-full">
+                            <b>{certificate.name}</b> - {certificate.issuer}
+                        </div>
+                        <div className="w-fit flex gap-2">
+                            <button
+                                className="btn btn-sm"
+                                onClick={() => deleteCertificate(certificate.id)}
+                            >
+                                <i className="fi fi-rr-trash flaticon-offset"></i>
+                            </button>
+                        </div>
                     </div>
                 ))}
             </div>
