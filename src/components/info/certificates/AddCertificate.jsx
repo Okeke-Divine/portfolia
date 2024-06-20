@@ -27,7 +27,7 @@ const AddCertificate = () => {
 
         //get the values
         const name = nameRef.current.value;
-        const issuer = issurerRef.current.value;
+        const issuer = issuerRef.current.value;
         const issueMonth = issueMonthRef.current.value
         const issuerYear = issueYearRef.current.value
 
