@@ -29,6 +29,37 @@ const AddExperience = () => {
   return (
     <>
       <form onSubmit={_addExperience} className="form-control">
+        {/* language */}
+        <div className="mb-3">
+          <div>
+            <label className="font-bold text-md">Position</label>
+          </div>
+          <div className="input input-bordered flex items-center gap-2 mt-1">
+            <input
+              type="text"
+              className="grow"
+              placeholder="Position"
+              required
+              ref={positionRef}
+            />
+          </div>
+        </div>
+        {/* company */}
+        <div className="mb-3">
+          <div>
+            <label className="font-bold text-md">Company</label>
+          </div>
+          <div className="input input-bordered flex items-center gap-2 mt-1">
+            <input
+              type="text"
+              className="grow"
+              placeholder="Company"
+              required
+              ref={companyRef}
+            />
+          </div>
+        </div>
+
         {/* submit button */}
         <div>
           <button
