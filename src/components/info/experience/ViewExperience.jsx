@@ -127,6 +127,9 @@ const ViewExperience = () => {
                 </button>
               </div>
             </div>
+            <div className="text-gray-600">
+              {experience.description}
+            </div>
           </div>
         ))}
       </div>
