@@ -115,7 +115,8 @@ const ViewCertificates = () => {
                             }`}
                     >
                         <div className="w-full">
-                            <b>{certificate.name}</b> - {certificate.issuer}
+                            <div><b>{certificate.name}</b> - {certificate.issuer}</div>
+                            <div>{certificate.issueMonth} {certificate.issueYear}</div>
                         </div>
                         <div className="w-fit flex gap-2">
                             <button
