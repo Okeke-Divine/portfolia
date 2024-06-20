@@ -36,7 +36,7 @@ export const POST = async (req) => {
         const inserted_language = await prisma.userLanguage.create({
             data: {
                 userId,
-                name,
+                name: language,
                 proficiency
             },
             select: {
