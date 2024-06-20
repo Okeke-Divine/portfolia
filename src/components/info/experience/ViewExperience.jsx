@@ -54,8 +54,8 @@ const ViewExperience = () => {
         });
         axios
           .post(
-            "/api/info/language/delete",
-            { language_id },
+            "/api/info/experience/delete",
+            { experience_id },
             {
               headers: {
                 "Content-Type": "application/json",
@@ -71,7 +71,7 @@ const ViewExperience = () => {
                 confirmButtonColor: app_color_primary,
               });
               const parent_container = document.getElementById(
-                "language_" + language_id
+                "experience_" + experience_id
               );
               parent_container.classList.add("hidden");
             } else {
@@ -96,7 +96,14 @@ const ViewExperience = () => {
   }
 
   return (
-    <div>ViewExperience</div>
+    <>
+      {loading ? (
+        <>
+          <SkillSkeleton />
+        </>
+      ) : (
+        ""
+      )}</>
   )
 }
 
