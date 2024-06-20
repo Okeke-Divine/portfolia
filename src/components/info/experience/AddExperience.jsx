@@ -84,8 +84,8 @@ const AddExperience = () => {
             <div>
               <label className="font-bold text-md">Start Month</label>
             </div>
-            <select ref={startMonthRef} required className="select input-bordered w-full">
-              <option disabled selected value="">Select Month</option>
+            <select ref={startMonthRef} defaultValue="" required className="select input-bordered w-full">
+              <option disabled value="">Select Month</option>
               {months.map((month, index) => (
                 <option key={index} value={month}>{month}</option>
               ))}
@@ -96,8 +96,8 @@ const AddExperience = () => {
             <div>
               <label className="font-bold text-md">Start Year</label>
             </div>
-            <select ref={startYearRef} required className="select input-bordered w-full">
-              <option disabled selected value="">Select year</option>
+            <select ref={startYearRef} defaultValue="" required className="select input-bordered w-full">
+              <option disabled value="">Select year</option>
               {years.map((year, index) => (
                 <option key={index} value={year}>{year}</option>
               ))}
@@ -112,8 +112,8 @@ const AddExperience = () => {
             <div>
               <label className="font-bold text-md">End Month (optional)</label>
             </div>
-            <select ref={endMonthRef} className="select input-bordered w-full">
-              <option disabled selected value="">Select Month</option>
+            <select ref={endMonthRef} defaultValue="" className="select input-bordered w-full">
+              <option disabled selected >Select Month</option>
               {months.map((month, index) => (
                 <option key={index} value={month}>{month}</option>
               ))}
