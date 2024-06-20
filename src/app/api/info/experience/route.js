@@ -5,7 +5,7 @@ import { getUserId } from "@/utils/session";
 export const GET = async () => {
     try {
         const userId = await getUserId()
-        const educations = await prisma.userExperience.findMany({
+        const experiences = await prisma.userExperience.findMany({
             where: {
                 userId,
             },
@@ -20,7 +20,7 @@ export const GET = async () => {
                 endYear: true
             }
         }) || [];
-        return resourceLoaded(educations)
+        return resourceLoaded(experiences)
     } catch (e) {
         return internalServerError("")
     }
