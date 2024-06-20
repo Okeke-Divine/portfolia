@@ -17,7 +17,9 @@ const ResumeEducation = async ({ userId }) => {
                         <div className="">
                             {educations.map((education, index) => (
                                 <div key={index} className="mb-2">
-                                    {language.name} - {language.proficiency}
+                                    <div>
+                                        {education.degree} {education.fieldOfStudy}
+                                    </div>
                                 </div>
                             ))}
                         </div>
