@@ -34,7 +34,7 @@ const DashboardTopComponent = async ({ userAnalytics }) => {
                   <i className="fi fi-tr-bullseye-pointer text-4xl"></i>
                 </div>
                 <div className="stat-title">Page Clicks</div>
-                <div className="stat-value font-semibold">0</div>
+                <div className="stat-value font-semibold">{userAnalytics?.portfolioClickCount || 0}</div>
               </div>
               <div className="join-item stat">
                 <div className="stat-figure">
@@ -67,21 +67,21 @@ const DashboardTopComponent = async ({ userAnalytics }) => {
                   <i className="fi fi-tr-overview text-4xl"></i>
                 </div>
                 <div className="stat-title">Views</div>
-                <div className="stat-value font-semibold">0</div>
+                <div className="stat-value font-semibold">{userAnalytics?.resumeViewCount || 0}</div>
               </div>
               <div className="join-item stat">
                 <div className="stat-figure">
                   <i className="fi fi-tr-bullseye-pointer text-4xl"></i>
                 </div>
                 <div className="stat-title">Clicks</div>
-                <div className="stat-value font-semibold">0</div>
+                <div className="stat-value font-semibold">{userAnalytics?.resumeClickCount || 0}</div>
               </div>
               <div className="join-item stat">
                 <div className="stat-figure">
                   <i className="fi fi-tr-cloud-download-alt text-4xl"></i>
                 </div>
                 <div className="stat-title">Downloads</div>
-                <div className="stat-value font-semibold">0</div>
+                <div className="stat-value font-semibold">{userAnalytics?.resumeDownloadCount || 0}</div>
               </div>
             </div>
           </div>
