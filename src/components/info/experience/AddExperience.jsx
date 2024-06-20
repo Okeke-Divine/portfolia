@@ -16,7 +16,7 @@ const AddExperience = () => {
   const startYearRef = useRef(null)
   const endMonthRef = useRef(null)
   const endYearRef = useRef(null)
-  const desciptionRef = useRef(null)
+  const descriptionRef = useRef(null)
   // end refs
 
   const years = generateYearsArray();
@@ -145,7 +145,7 @@ const AddExperience = () => {
           <textarea
             rows={5}
             required
-            ref={desciptionRef}
+            ref={descriptionRef}
             placeholder="Description"
             className="textarea input-bordered w-full"
           ></textarea>
