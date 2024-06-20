@@ -147,7 +147,7 @@ export default function ApplicationSidedar() {
           </div>
         </div>
         {/* // */}
-        <div>
+        <div className="mt-2">
           {links.map((link, index) => (
             <Link
               href={link.url}
