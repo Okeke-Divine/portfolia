@@ -29,6 +29,13 @@ const AddCertificate = () => {
     return (
         <>
             <form onSubmit={_addCertificate} className="form-control">
+                {/* issue month */}
+                <div className="mb-2">
+                    <select ref={issueMonth} required className="select input-bordered w-full">
+                        <option disabled selected value="">Select month</option>
+
+                    </select>
+                </div>
                 {/* issue year */}
                 <div className="mb-2">
                     <select ref={issueYear} required className="select input-bordered w-full">
