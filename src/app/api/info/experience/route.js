@@ -60,8 +60,8 @@ export const POST = async (req) => {
             }
         })
 
-        if (experiences) {
-            return resourceCreated(experiences)
+        if (inserted_experience) {
+            return resourceCreated(inserted_experience)
         } else {
             return internalServerError("Error inserting experience")
         }
