@@ -87,6 +87,14 @@ const ViewCertificates = () => {
         };
     }, [channel]);
 
+    useEffect(function () {
+        setLoading(true);
+        axios.get("/api/info/certificates").then((response) => {
+            setCertificates(response.data.data);
+            setLoading(false);
+        });
+    }, []);
+
 
     return (
         <div>ViewCertificates</div>
