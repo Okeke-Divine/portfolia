@@ -16,7 +16,8 @@ const ResumeCertificates = async ({ userId }) => {
                 <div className="flex flex-wrap gap-x-2 md:gap-x-3 gap-y-2">
                     {certificates.map((certificate, index) => (
                         <div key={index} className="">
-                            <b> {certificate.name}</b> - {certificate.issuer}
+                            <div><b> {certificate.name}</b> - {certificate.issuer}</div>
+                            <div>{certificate.issueMonth} {certificate.issueYear}</div>
                         </div>
                     ))}
                 </div>
