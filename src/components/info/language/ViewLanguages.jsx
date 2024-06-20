@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 
 const ViewLanguages = () => {
 
-  const [socials, setSocials] = useState([]);
+  const [languages, setLanguages] = useState([]);
   const [loading, setLoading] = useState(false);
 
   const channel = new BroadcastChannel("user-languages-channel");
