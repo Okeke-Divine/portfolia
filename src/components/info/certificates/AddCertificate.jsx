@@ -38,7 +38,7 @@ const AddCertificate = () => {
         }
 
         axios
-            .post("/api/info/language", { language, proficiency }, { headers: { "Content-Type": "application/json" } })
+            .post("/api/info/certificates", { name, issuer, issueMonth, issuerYear }, { headers: { "Content-Type": "application/json" } })
             .then((response) => {
                 if (response) {
                     SweetAlertSuccess("Language has been successfully added.");
