@@ -51,7 +51,7 @@ const AddEducation = () => {
 
                     //broadcast the project info
                     const broadcast_message = {
-                        type: "NEW_LANGUAGE",
+                        type: "NEW_EDUCATION",
                         data: response.data.data
                     }
                     channel.postMessage(broadcast_message);
