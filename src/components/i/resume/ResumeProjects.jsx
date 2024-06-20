@@ -39,7 +39,7 @@ const ResumeProjects = async ({ userId }) => {
                           <Link
                             href={project.url}
                             target="_blank"
-                            className="app-link-primary flex items-center"
+                            className="app-link-primary flex items-center dmdomo"
                           >
                             View
                             <i className="fi fi-tr-arrow-up-right-from-square pl-1 text-[10px]"></i>

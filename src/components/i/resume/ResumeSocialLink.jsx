@@ -35,7 +35,7 @@ const ResumeSocialLink = async ({ userId }) => {
               }
               target="_blank"
               key={index}
-              className="app-portfolio-navbar-link"
+              className="app-portfolio-navbar-link dmdomo"
             >
               <i
                 className={`${getIconClass(

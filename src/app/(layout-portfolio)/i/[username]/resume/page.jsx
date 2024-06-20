@@ -121,7 +121,7 @@ export default async function Resume({ params }) {
                 <Link
                   target="_blank"
                   href={"/i/" + user.username}
-                  className="app-link-primary"
+                  className="app-link-primary dmdomo"
                 >
                   <i className="fi fi-ts-web-design flaticon-offset pr-1"></i>
                   My Portfolio
