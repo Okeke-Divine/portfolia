@@ -39,10 +39,11 @@ export const POST = async (req) => {
         const inserted_education = await prisma.userEducation.create({
             data: {
                 userId,
-                name,
-                issuer,
-                issueMonth,
-                issueYear: parseInt(issueYear),
+                school,
+                degree,
+                fieldOfStudy,
+                startYear: parseInt(startYear),
+                endYear: parseInt(endYear),
             },
             select: {
                 id: true,
