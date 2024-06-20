@@ -14,9 +14,9 @@ export const GET = async () => {
                 company: true,
                 position: true,
                 description: true,
-                startMonth: true, 
-                startYear: true, 
-                endMonth: true, 
+                startMonth: true,
+                startYear: true,
+                endMonth: true,
                 endYear: true
             }
         }) || [];
@@ -29,7 +29,7 @@ export const GET = async () => {
 export const POST = async (req) => {
     try {
         const data = await req.json();
-        const { school, degree, fieldOfStudy, startYear, endYear } = data;
+        const { position, company, description, startMonth, startYear, endMonth, endYear } = data;
 
         if (!school || !degree || !fieldOfStudy || !startYear) {
             return badRequest("All fields are required");
@@ -37,7 +37,6 @@ export const POST = async (req) => {
 
         const userId = await getUserId();
 
-        // insert into the data base if social type doesn't exists
         const inserted_experience = await prisma.userExperience.create({
             data: {
                 userId,
@@ -52,9 +51,9 @@ export const POST = async (req) => {
                 company: true,
                 position: true,
                 description: true,
-                startMonth: true, 
-                startYear: true, 
-                endMonth: true, 
+                startMonth: true,
+                startYear: true,
+                endMonth: true,
                 endYear: true
             }
         })
