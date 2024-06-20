@@ -26,6 +26,21 @@ const AddEducation = () => {
     return (
         <>
             <form onSubmit={_addEducation} className="form-control">
+                        {/* field of study */}
+        <div className="mb-3">
+          <div>
+            <label className="font-bold text-md">Field of Study</label>
+          </div>
+          <div className="input input-bordered flex items-center gap-2 mt-1">
+            <input
+              type="text"
+              className="grow"
+              placeholder="Field of Study"
+              required
+              ref={fieldOfStudyRef}
+            />
+          </div>
+        </div>
                 {/* submit button */}
                 <div>
                     <button
