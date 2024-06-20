@@ -5,6 +5,7 @@ import {
     SweetAlertError,
     SweetAlertSuccess,
 } from "@/utils/customSweetAlertFunction";
+import { generateYearsArray } from "@/utils/main";
 
 const AddEducation = () => {
     //refs
@@ -13,6 +14,8 @@ const AddEducation = () => {
     const degreeRef = useRef(null)
     const startYearRef = useRef(null)
     const endYearRef = useRef(null)
+
+    const years = generateYearsArray()
 
     const channel = new BroadcastChannel("user-educations-channel")
     const [loading, setLoading] = useState(false)
@@ -70,6 +73,18 @@ const AddEducation = () => {
                             ref={degreeRef}
                         />
                     </div>
+                </div>
+                {/* start year */}
+                <div className="mb-3">
+                    <div>
+                        <label className="font-bold text-md">Start Year</label>
+                    </div>
+                    <select ref={startYearRef} required className="select input-bordered w-full">
+                        <option disabled selected value="">Select year</option>
+                        {years.map((year, index) => (
+                            <option key={index} value={year}>{year}</option>
+                        ))}
+                    </select>
                 </div>
                 {/* submit button */}
                 <div>

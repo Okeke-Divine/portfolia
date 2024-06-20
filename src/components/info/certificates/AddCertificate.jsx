@@ -83,7 +83,7 @@ const AddCertificate = () => {
                 {/* issue year */}
                 <div className="mb-3">
                     <div>
-                        <label className="font-bold text-md">Issue Month</label>
+                        <label className="font-bold text-md">Issue Year</label>
                     </div>
                     <select ref={issueYear} required className="select input-bordered w-full">
                         <option disabled selected value="">Select year</option>
