@@ -1,5 +1,6 @@
 "use client"
 import { useRef, useState } from "react"
+import axios from "axios"
 
 const AddLanguage = () => {
 
@@ -11,6 +12,8 @@ const AddLanguage = () => {
 
   function _addLanguage(e) {
     e.preventDefault()
+    const language = languageRef.current.value;
+    const proficiency = proficiencyRef.current.value;
   }
 
   return (
