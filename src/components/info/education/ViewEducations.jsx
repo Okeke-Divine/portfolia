@@ -116,7 +116,7 @@ const ViewEducations = () => {
             <div className="w-full">
               <div> <b>{education.degree}</b> - {education.fieldOfStudy}</div>
               <div className="text-gray-600 italic">
-                {education.school} | {education.startYear}{education.endYear != "" ? ` - ${education.endYear}` : ""}
+                {education.school} | {education.startYear}{education.endYear != null ? ` - ${education.endYear}` : ""}
               </div>
             </div>
             <div className="w-fit flex gap-2">
