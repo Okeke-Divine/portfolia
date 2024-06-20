@@ -1,6 +1,7 @@
 import prisma from "@/app/db";
 import NotFound from "@/app/not-found";
 import ResumeAbout from "@/components/i/resume/ResumeAbout";
+import ResumeCertificates from "@/components/i/resume/ResumeCertificates";
 import ResumeDownload from "@/components/i/resume/ResumeDownload";
 import ResumeHeroSection from "@/components/i/resume/ResumeHeroSection";
 import ResumeLanguage from "@/components/i/resume/ResumeLanguage";
@@ -134,6 +135,7 @@ export default async function Resume({ params }) {
               <ResumeSkills userId={user.id} />
               <ResumeProjects userId={user.id} />
               <ResumeLanguage userId={user.id} />
+              <ResumeCertificates userId={user.id} />
             </div>
           </div>
         </div>
