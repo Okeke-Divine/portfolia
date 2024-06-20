@@ -1,6 +1,6 @@
 import { getCurrentSession } from "@/utils/session";
 
-const DashboardTopComponent = async () => {
+const DashboardTopComponent = async ({ userAnalytics }) => {
   const session = await getCurrentSession();
 
   return (
@@ -25,9 +25,9 @@ const DashboardTopComponent = async () => {
                 </div>
                 <div className="stat-title">Page Views</div>
                 <div className="stat-value font-semibold">0</div>
-                <div className="stat-desc app-text-primary">
+                {/* <div className="stat-desc app-text-primary">
                   0% more than last month
-                </div>
+                </div> */}
                 <div className="stat-desc mt-2">
                   <span className="badge app-bg-primary border-none text-white">
                     coming soon
@@ -40,14 +40,6 @@ const DashboardTopComponent = async () => {
                 </div>
                 <div className="stat-title">Page Clicks</div>
                 <div className="stat-value font-semibold">0</div>
-                <div className="stat-desc app-text-primary">
-                  0% more than last month
-                </div>
-                <div className="stat-desc mt-2">
-                  <span className="badge app-bg-primary border-none text-white">
-                    coming soon
-                  </span>
-                </div>
               </div>
               <div className="join-item stat">
                 <div className="stat-figure">
@@ -55,11 +47,6 @@ const DashboardTopComponent = async () => {
                 </div>
                 <div className="stat-title">Coversion</div>
                 <div className="stat-value font-semibold">0%</div>
-                <div className="stat-desc mt-2">
-                  <span className="badge app-bg-primary border-none text-white">
-                    coming soon
-                  </span>
-                </div>
               </div>
               {/* <div className="join-item stat">
                 <div className="stat-figure">
@@ -69,9 +56,6 @@ const DashboardTopComponent = async () => {
                 <div className="stat-value font-semibold">0%</div>
                 <div className="stat-desc">0% more than last month</div>
                 <div className="stat-desc mt-2">
-                  <span className="badge app-bg-primary border-none text-white">
-                    coming soon
-                  </span>
                 </div>
               </div> */}
             </div>
@@ -89,12 +73,6 @@ const DashboardTopComponent = async () => {
                 </div>
                 <div className="stat-title">Views</div>
                 <div className="stat-value font-semibold">0</div>
-                <div className="stat-desc">0% more than last month</div>
-                <div className="stat-desc mt-2">
-                  <span className="badge app-bg-primary border-none text-white">
-                    coming soon
-                  </span>
-                </div>
               </div>
               <div className="join-item stat">
                 <div className="stat-figure">
@@ -102,12 +80,6 @@ const DashboardTopComponent = async () => {
                 </div>
                 <div className="stat-title">Clicks</div>
                 <div className="stat-value font-semibold">0</div>
-                <div className="stat-desc">0% more than last month</div>
-                <div className="stat-desc mt-2">
-                  <span className="badge app-bg-primary border-none text-white">
-                    coming soon
-                  </span>
-                </div>
               </div>
               <div className="join-item stat">
                 <div className="stat-figure">
@@ -115,12 +87,6 @@ const DashboardTopComponent = async () => {
                 </div>
                 <div className="stat-title">Downloads</div>
                 <div className="stat-value font-semibold">0</div>
-                <div className="stat-desc">0% more than last month</div>
-                <div className="stat-desc mt-2">
-                  <span className="badge app-bg-primary border-none text-white">
-                    coming soon
-                  </span>
-                </div>
               </div>
             </div>
           </div>
