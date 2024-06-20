@@ -31,7 +31,17 @@ const AddLanguage = () => {
             />
           </div>
         </div>
-
+        {/* proficiency */}
+        <div className="mb-3">
+          <div>
+            <label className="font-bold text-md">Proficiency</label>
+          </div>
+          <div className="input input-bordered flex items-center gap-2 mt-1">
+            <select ref={proficiencyRef} className="select input-bordered">
+              <option disabled select value="">Select</option>
+            </select>
+          </div>
+        </div>
         {/* submit button */}
         <div>
           <button
