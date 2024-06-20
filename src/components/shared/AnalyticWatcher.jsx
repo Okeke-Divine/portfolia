@@ -11,7 +11,7 @@ const AnalyticWatcher = ({ username, parent }) => {
             if (parent == "portfolio") {
                 analysisTracker(username, 'portfolioClick')
                 console.log("sent")
-            } else if (parent == "resumeClick") {
+            } else if (parent == "resume") {
                 console.log("sent")
                 analysisTracker(username, 'resumeClick');
             }
