@@ -26,12 +26,12 @@ export const GET = async () => {
 export const POST = async (req) => {
     try {
         const data = await req.json();
-        const { name, issuer, issueMonth, issuerYear } = data;
+        const { name, issuer, issueMonth, issueYear } = data;
         console.log(data)
 
 
-        if (!name || !issuer || !issueMonth || !issuerYear) {
-            return badRequest("All fields are required");
+        if (!name || !issuer || !issueMonth || !issueYear) {
+            // return badRequest("All fields are required");
         }
 
         const userId = await getUserId();
