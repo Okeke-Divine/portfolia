@@ -1,6 +1,6 @@
 add language - 3 / 5
 add certficate - 3 / 5
-add education - 1 / 5
+add education - 3 / 5
 add experience - 1 / 5
 
 resume review
@@ -15,7 +15,7 @@ robots.txt
 portfolio banner
 
 
-delete .api/education and retest
+delete .api / education and retest
 
 -------------------------
 
