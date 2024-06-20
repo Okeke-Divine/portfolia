@@ -10,7 +10,7 @@ const PortfolioEducation = async ({ userId }) => {
         <>
             {educations.length > 0 ? (
                 <>
-                    <div className="app-resume-padding app-resume-container-margin-top">
+                    <div className="mt-3">
                         <div className="divider divider-start">
                             <h3 className="uppercase">Education</h3>
                         </div>
