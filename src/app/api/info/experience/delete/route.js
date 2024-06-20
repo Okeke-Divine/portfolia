@@ -10,7 +10,7 @@ export const POST = async (req) => {
             return badRequest("invalid experience_id")
         }
 
-        const delete_experience = await prisma.UserExperience.delete({
+        const delete_experience = await prisma.userExperience.delete({
             where: {
                 id: experience_id
             }
@@ -19,7 +19,7 @@ export const POST = async (req) => {
             return resourceDeleted();
         }
 
-        return internalServerError("failed to delete an education")
+        return internalServerError("failed to delete an experience")
     } catch (e) {
         return internalServerError(e);
     }
