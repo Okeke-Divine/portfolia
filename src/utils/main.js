@@ -63,6 +63,7 @@ export function analysisTracker(username, actionType) {
   if (!username || !actionType) {
     return;
   }
-  axios.post("http://localhost:3000/api/outbound/tracker/analysis", { username, actionType }, { headers: { "Content-Type": "application/json" } })
+  axios.post("/api/outbound/tracker/analysis", { username, actionType }, { headers: { "Content-Type": "application/json" } })
   return;
 }
+
