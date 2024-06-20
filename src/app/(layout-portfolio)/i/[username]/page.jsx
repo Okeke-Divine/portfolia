@@ -1,3 +1,4 @@
+import config from "@/data/config.json"
 import prisma from "@/app/db";
 import NotFound from "@/app/not-found";
 import PortfolioAbout from "@/components/i/portfolio/PortfolioAbout";
