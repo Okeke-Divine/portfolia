@@ -135,7 +135,7 @@ export default async function Resume({ params }) {
             </div>
           </div>
         </div>
-        <ResumeDownload username={user.username} />
+        <ResumeDownload name={user.userDetails.fullname || user.fullname || user.username} />
       </div>
     </>
   );

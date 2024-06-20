@@ -2,24 +2,24 @@
 import { _console_log } from '@/utils/console';
 import html2canvas from 'html2canvas-pro';
 import jsPDF from 'jspdf';
-import { useRef } from "react"
 
-const ResumeDownload = ({ username }) => {
 
-    const meRef = useRef(null)
+const ResumeDownload = ({ name }) => {
 
     const handlePrint = () => {
-        const printContents = document.getElementById("resumeContainer").innerHTML;
-        const originalContents = document.body.innerHTML;
+        const printContents = document.getElementById("resumeContainer").cloneNode(true);
+        const printWindow = window.open('', '', 'height=800,width=800');
 
-        document.body.innerHTML = printContents;
-        window.print();
-        document.body.innerHTML = originalContents;
+        printWindow.document.write('<html><head><title>Print Resume</title>');
+        // Add styles for printing
+        printWindow.document.write('<style>body{font-family: Arial, sans-serif;} a { color: blue; text-decoration: underline; } img { max-width: 100%; }</style>');
+        printWindow.document.write('</head><body >');
+        printWindow.document.write(printContents.outerHTML);
+        printWindow.document.write('</body></html>');
 
-        // To avoid issues with component states and reactivity, use window.location.reload()
-        window.location.reload();
+        printWindow.document.close();
+        printWindow.print();
     };
-
 
     const handleDownloadPdf = async () => {
 
@@ -41,7 +41,7 @@ const ResumeDownload = ({ username }) => {
 
 
             pdf.addImage(imgData, "PNG", 0, 0);
-            pdf.save("resume.pdf")
+            pdf.save(`(Portfoliia) - ${name} - Resume.pdf`)
 
         } catch (e) {
             _console_log(e)
@@ -52,13 +52,13 @@ const ResumeDownload = ({ username }) => {
         <>
             <button
                 onClick={handleDownloadPdf}
-                className="fixed bottom-5 right-16 app-bg-primary hover:app-bg-primary-dark shadow-md hover:shadow-lg text-white duration-300 z-[100] rounded-full w-10 h-10 flex items-center justify-center"
+                className="fixed bottom-5 right-16 app-bg-primary hover:app-bg-primary-dark shadow-md hover:shadow-lg text-white duration-300 z-[100] rounded-full w-10 h-10 flex items-center justify-center downsifn"
             >
                 <i className="fi fi-tr-cloud-download-alt text-xl flaticon-offset"></i>
             </button>
             <button
                 onClick={handlePrint}
-                className="fixed bottom-5 right-5 app-bg-primary hover:app-bg-primary-dark shadow-md hover:shadow-lg text-white duration-300 z-[100] rounded-full w-10 h-10 flex items-center justify-center"
+                className="fixed bottom-5 right-5 app-bg-primary hover:app-bg-primary-dark shadow-md hover:shadow-lg text-white duration-300 z-[100] rounded-full w-10 h-10 flex items-center justify-center downsifn"
             >
                 <i className="fi fi-tr-print text-xl flaticon-offset"></i>
             </button>
