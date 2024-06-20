@@ -7,16 +7,16 @@ import SkillSkeleton from "@/components/skeleton/skills/SkillSkeleton";
 
 const ViewExperience = () => {
 
-  const [certificates, setCertificates] = useState([]);
+  const [experiences, setExperiences] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const channel = new BroadcastChannel("user-certificates-channel");
+  const channel = new BroadcastChannel("user-newExperience-channel");
 
   useEffect(() => {
     channel.onmessage = (event) => {
       setLoading(true);
       const newExperience = event.data.data;
-      setCertificates((prevExperiences) => [...prevExperiences, newExperience]);
+      setExperiences((prevExperiences) => [...prevExperiences, newExperience]);
       setLoading(false);
     };
 
@@ -29,7 +29,7 @@ const ViewExperience = () => {
   useEffect(function () {
     setLoading(true);
     axios.get("/api/info/experience").then((response) => {
-      setCertificates(response.data.data);
+      setExperiences(response.data.data);
       setLoading(false);
     });
   }, []);

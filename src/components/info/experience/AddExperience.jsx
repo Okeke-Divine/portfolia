@@ -21,7 +21,7 @@ const AddExperience = () => {
 
   const years = generateYearsArray();
   const months = generateMonthArray();
-  const channel = new BroadcastChannel("user-certificates-channel")
+  const channel = new BroadcastChannel("user-experiences-channel")
   const [loading, setLoading] = useState(false)
 
   function _addExperience(e) {
