@@ -38,8 +38,14 @@ const AddLanguage = () => {
           </div>
           <div>
             <select ref={proficiencyRef} required className="select input-bordered w-full">
-              <option disabled selected value="">Select</option>
+              <option disabled selected value="">Select proficiency</option>
+              <option value="Beginner">Beginner</option>
+              <option value="Elementary">Elementary</option>
+              <option value="Intermediate">Intermediate</option>
+              <option value="Advanced">Advanced</option>
+              <option value="Proficient">Proficient</option>
             </select>
+
           </div>
         </div>
         {/* submit button */}
