@@ -9,6 +9,7 @@ import PortfolioProjects from "@/components/i/portfolio/PortfolioProjects";
 import AnalyticTracker from "@/components/shared/AnalyticTracker";
 import AnalyticWatcher from "@/components/shared/AnalyticWatcher";
 import { _ucfirst, analysisTracker } from "@/utils/main";
+import Link from "next/link";
 
 export async function generateMetadata({ params }) {
   const username = params.username;
@@ -119,6 +120,14 @@ export default async function PortFolio({ params }) {
       <PortfolioProjects user={user} />
       <PortfolioFooter user={user} />
       {/* <PortfolioExpertise /> */}
+      {/* powered by */}
+      <div className="fixed bottom-5 right-5">
+        <img
+          className="w-5 mb-2 rounded-full shadow-lg"
+          src="/images/logo/logo.png"
+          alt={config.app_name + "'s logo"}
+        />
+      </div>
     </>
   );
 }
