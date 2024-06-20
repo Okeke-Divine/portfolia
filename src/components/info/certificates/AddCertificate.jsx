@@ -44,7 +44,7 @@ const AddCertificate = () => {
                     SweetAlertSuccess("Your certificate has been successfully added.");
                     setLoading(false);
                     nameRef.current.value = "";
-                    issuerRef.current.value = "";
+                    // issuerRef.current.value = "";
                     issueMonthRef.current.value = "";
                     issueYearRef.current.value = "";
                     //broadcast the project info
