@@ -119,10 +119,12 @@ model UserExperience {
 }
 
 model UserLangugae {
-  id     Int  @id @default(autoincrement())
-  userId Int
-  user   User @relation(fields: [userId], references: [id])
+  id         Int    @id @default(autoincrement())
+  userId     Int
+  user       User   @relation(fields: [userId], references: [id])
   //
+  name       String
+  profeiceny String
 }
 
 model UserCertificate {
