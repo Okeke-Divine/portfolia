@@ -30,8 +30,6 @@ const AddLanguage = () => {
       return;
     }
 
-    proficiencyRef.current.value = "";
-    return;
     axios
       .post("/api/info/language", { language, proficiency }, { headers: { "Content-Type": "application/json" } })
       .then((response) => {
