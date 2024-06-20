@@ -15,6 +15,7 @@ const ResumeProjects = async ({ userId }) => {
     },
   });
 
+
   return (
     <>
       {projects.length > 0 ? (
@@ -63,7 +64,7 @@ const ResumeProjects = async ({ userId }) => {
                     ""
                   )}
                   <div className="">
-                    <p className="overflow-y-auto whitespace-pre-line">
+                    <p className="whitespace-pre-line">
                       {project.description}
                     </p>
                   </div>
