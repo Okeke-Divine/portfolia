@@ -7,7 +7,12 @@ import {
 } from "@/utils/customSweetAlertFunction";
 
 const AddEducation = () => {
-
+    //refs
+    const fieldOfStudyRef = useRef(null)
+    const schoolRef = useRef(null)
+    const degreeRef = useRef(null)
+    const startYearRef = useRef(null)
+    const endYearRef = useRef(null)
 
     const channel = new BroadcastChannel("user-educations-channel")
     const [loading, setLoading] = useState(false)
