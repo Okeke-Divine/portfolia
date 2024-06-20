@@ -87,6 +87,14 @@ const ViewLanguages = () => {
   }, [channel]);
 
 
+  useEffect(function () {
+    setLoading(true);
+    axios.get("/api/info/language").then((response) => {
+      setLanguages(response.data.data);
+      setLoading(false);
+    });
+  }, []);
+
   return (
     <>
       {loading ? (
