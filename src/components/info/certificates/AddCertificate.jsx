@@ -43,12 +43,13 @@ const AddCertificate = () => {
                 if (response) {
                     SweetAlertSuccess("Your certificate has been successfully added.");
                     setLoading(false);
-                    languageRef.current.value = "";
-                    proficiencyRef.current.value = "";
-
+                    nameRef.current.value = "";
+                    issuerRef.current.value = "";
+                    issueMonthRef.current.value = "";
+                    issueYearRef.current.value = "";
                     //broadcast the project info
                     const broadcast_message = {
-                        type: "NEW_LANGUAGE",
+                        type: "NEW_CERTIFICATE",
                         data: response.data.data
                     }
                     channel.postMessage(broadcast_message);
