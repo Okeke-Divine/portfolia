@@ -30,7 +30,7 @@ const ResumeSocialLink = async ({ userId }) => {
                   : link.name == "phone_number"
                   ? "tel:" + link.value
                   : link.name == "whatsapp"
-                  ? "https://api.whatsapp.com/?phone=" + link.value
+                  ? "https://wa.me/=" + link.value
                   : link.value
               }
               target="_blank"

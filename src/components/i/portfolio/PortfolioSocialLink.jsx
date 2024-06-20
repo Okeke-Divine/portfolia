@@ -27,10 +27,10 @@ const PortfolioSocialLink = async ({ userId }) => {
               link.name == "email"
                 ? "mailto:" + link.value
                 : link.name == "phone_number"
-                ? "tel:" + link.value
-                : link.name == "whatsapp"
-                ? "https://api.whatsapp.com/?phone=" + link.value
-                : link.value
+                  ? "tel:" + link.value
+                  : link.name == "whatsapp"
+                    ? "https://wa.me/" + link.value
+                    : link.value
             }
             target="_blank"
             key={index}
