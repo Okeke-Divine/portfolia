@@ -17,7 +17,7 @@ const ResumeEducation = async ({ userId }) => {
                         <div className="">
                             {educations.map((education, index) => (
                                 <div key={index} className="mb-2">
-                                    <div>
+                                    <div className="font-bold">
                                         {education.degree} {education.fieldOfStudy}
                                     </div>
                                     <div className='text-gray-600'>
