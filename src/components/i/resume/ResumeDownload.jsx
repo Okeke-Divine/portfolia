@@ -7,17 +7,23 @@ import jsPDF from 'jspdf';
 const ResumeDownload = ({ name }) => {
 
     const handlePrint = () => {
-        const printContents = document.getElementById("resumeContainer").cloneNode(true);
+        const element = document.getElementById("resumeContainer").cloneNode(true);
         const printWindow = window.open('', '', 'height=800,width=800');
 
         printWindow.document.write('<html><head><title>Print Resume</title>');
-        // Add styles for printing
-        printWindow.document.write('<style>body{font-family: Arial, sans-serif;} a { color: blue; text-decoration: underline; } img { max-width: 100%; }</style>');
-        printWindow.document.write('</head><body >');
-        printWindow.document.write(printContents.outerHTML);
+
+        // Inject Tailwind CSS into the new window
+        const stylesheets = Array.from(document.querySelectorAll('link[rel="stylesheet"], style'))
+            .map((node) => node.outerHTML)
+            .join('\n');
+        printWindow.document.write(stylesheets);
+
+        printWindow.document.write('</head><body>');
+        printWindow.document.write(element.outerHTML);
         printWindow.document.write('</body></html>');
 
         printWindow.document.close();
+        printWindow.focus();
         printWindow.print();
     };
 
