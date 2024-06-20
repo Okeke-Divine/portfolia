@@ -36,7 +36,7 @@ const AddLanguage = () => {
           <div>
             <label className="font-bold text-md">Proficiency</label>
           </div>
-          <div className="input input-bordered flex items-center gap-2 mt-1">
+          <div>
             <select ref={proficiencyRef} required className="select input-bordered w-full">
               <option disabled select value="">Select</option>
             </select>
