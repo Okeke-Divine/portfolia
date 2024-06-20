@@ -127,10 +127,10 @@ const ViewExperience = () => {
                 </button>
               </div>
             </div>
-            <div className="italics text-gray-600">
+            <div className="text-gray-600 italic">
               {experience.startMonth} {experience.startYear} {(experience.endMonth != "" && experience.endYear != null) ? ` - ${experience.endMonth} ${experience.endYear}` : ""}
             </div>
-            <div className="text-gray-600 mt-1">
+            <div className="text-gray-600 mt-1 whitespace-pre-line">
               {experience.description}
             </div>
           </div>
