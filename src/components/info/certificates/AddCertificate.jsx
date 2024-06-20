@@ -61,6 +61,9 @@ const AddCertificate = () => {
                 </div>
                 {/* issue month */}
                 <div className="mb-2">
+                    <div>
+                        <label className="font-bold text-md">Issue Month</label>
+                    </div>
                     <select ref={issueMonth} required className="select input-bordered w-full">
                         <option disabled selected value="">Select month</option>
                         <option value="January">January</option>
@@ -79,6 +82,9 @@ const AddCertificate = () => {
                 </div>
                 {/* issue year */}
                 <div className="mb-2">
+                    <div>
+                        <label className="font-bold text-md">Issue Month</label>
+                    </div>
                     <select ref={issueYear} required className="select input-bordered w-full">
                         <option disabled selected value="">Select year</option>
                         {years.map((year, index) => (
