@@ -188,7 +188,7 @@ export default function ApplicationSidedar() {
 
       {/* expand buttton */}
       <button
-        className={`w-10 h-10 flex items-center justify-center fixed bottom-4 ${isSidebarExpanded ? "left-[260px]" : "left-5"
+        className={`w-10 h-10 flex items-center justify-center fixed bottom-4 ${isSidebarExpanded ? "left-[270px]" : "left-5"
           } app-bg-primary hover:app-bg-primary-dark shadow-md hover:shadow-lg text-white md:hidden duration-300 z-[100] rounded-full`}
         onClick={toggleSidebar}
       >
