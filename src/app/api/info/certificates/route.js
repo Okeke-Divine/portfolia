@@ -35,12 +35,12 @@ export const POST = async (req) => {
         const userId = await getUserId();
 
         // insert into the data base if social type doesn't exists
-        const inserted_certifcate = await prisma.userLanguage.create({
+        const inserted_certifcate = await prisma.userCertificate.create({
             data: {
                 userId,
                 name,
                 issuer,
-                issueMonth: issueMonth,
+                issueMonth,
                 issueYear: parseInt(issueYear),
             },
             select: {
