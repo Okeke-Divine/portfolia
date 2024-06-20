@@ -14,6 +14,12 @@ const AddCertificate = () => {
     const channel = new BroadcastChannel("user-certificates-channel")
     const [loading, setLoading] = useState(false)
 
+    //refs
+    const nameRef = useRef(null)
+    const issuerRef = useRef(null)
+    const issueMonth = useRef(null)
+    const issueYear = useRef(null)
+    //end refs
 
     function _addCertificate(e) {
         e.preventDefault()
