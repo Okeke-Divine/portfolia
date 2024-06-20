@@ -11,8 +11,10 @@ const AnalyticWatcher = ({ username, parent }) => {
             if (parent == "portfolio") {
                 analysisTracker(username, 'portfolioClick')
             } else if (parent == "resumeClick") {
+                console.log(sent)
                 analysisTracker(username, 'resumeClick');
             }
+            console.log(parent,"click");
         };
 
         // Get all elements with the .clickMeCounter class
