@@ -88,63 +88,68 @@ const AddSocialInfo = () => {
 
   return (
     <>
-      <form className="form-control" onSubmit={AddSocialInfo}>
-        <div className="">
-          <div className="block md:flex join mb-2 gap-2">
-            <div className="w-full md:w-fit join-item">
-              <select
-                className="select input-bordered"
-                onChange={(e) => setSelected(e.target.value)}
-                ref={socialTypeRef}
+      <div className="collapse collapse-plus rounded-md bg-base-200">
+        <input type="checkbox" />
+        <div className="collapse-title text-xl font-medium">Add Social</div>
+        <div className="collapse-content">
+          <form className="form-control" onSubmit={AddSocialInfo}>
+            <div className="">
+              <div className="block md:flex join mb-2 gap-2">
+                <div className="w-full md:w-fit join-item">
+                  <select
+                    className="select input-bordered"
+                    onChange={(e) => setSelected(e.target.value)}
+                    ref={socialTypeRef}
+                  >
+                    {socials.map((social, index) => (
+                      <option key={index} value={social.type}>
+                        {_ucfirst(social.name)}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div className="w-full join-item">
+                  <input
+                    required
+                    ref={socialValueRef}
+                    className="input input-bordered w-full"
+                    type={
+                      selected == "email"
+                        ? "email"
+                        : (selected == "phone_number" || selected == "whatsapp")
+                          ? "text"
+                          : "url"
+                    }
+                    placeholder={
+                      selected == "email"
+                        ? "Your Email"
+                        : (selected == "phone_number" || selected == "whatsapp")
+                          ? "Your Number"
+                          : "Your " + selected + " Url"
+                    }
+                  />
+                </div>
+              </div>
+              <button
+                disabled={loading}
+                className="w-full app-bg-primary duration-300 hover:app-bg-primary-dark btn btn-md text-white"
+                type="submit"
               >
-                {socials.map((social, index) => (
-                  <option key={index} value={social.type}>
-                    {_ucfirst(social.name)}
-                  </option>
-                ))}
-              </select>
+                {loading ? (
+                  <>
+                    <span className="loading loading-dots loading-sm"></span>
+                  </>
+                ) : (
+                  "Add"
+                )}
+              </button>
             </div>
-            <div className="w-full join-item">
-              <input
-                required
-                ref={socialValueRef}
-                className="input input-bordered w-full"
-                type={
-                  selected == "email"
-                    ? "email"
-                    : (selected == "phone_number" || selected == "whatsapp")
-                    ? "text"
-                    : "url"
-                }
-                placeholder={
-                  selected == "email"
-                    ? "Your Email"
-                    : (selected == "phone_number" || selected == "whatsapp")
-                    ? "Your Number"
-                    : "Your " + selected + " Url"
-                }
-              />
-            </div>
-          </div>
-          <button
-            disabled={loading}
-            className="w-full app-bg-primary duration-300 hover:app-bg-primary-dark btn btn-md text-white"
-            type="submit"
-          >
-            {loading ? (
-              <>
-                <span className="loading loading-dots loading-sm"></span>
-              </>
-            ) : (
-              "Add"
-            )}
-          </button>
-        </div>
-      </form>
-      <p className="mt-1">
-        <b>NOTE:</b> You can not have more than one entry for each social info
-        type.
-      </p>
+          </form>
+          <p className="mt-1">
+            <b>NOTE:</b> You can not have more than one entry for each social info
+            type.
+          </p>
+        </div></div>
     </>
   );
 };
