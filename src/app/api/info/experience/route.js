@@ -38,7 +38,7 @@ export const POST = async (req) => {
         const userId = await getUserId();
 
         // insert into the data base if social type doesn't exists
-        const inserted_education = await prisma.userEducation.create({
+        const inserted_experience = await prisma.userEducation.create({
             data: {
                 userId,
                 school,
@@ -49,16 +49,18 @@ export const POST = async (req) => {
             },
             select: {
                 id: true,
-                school: true,
-                degree: true,
-                fieldOfStudy: true,
-                startYear: true,
+                company: true,
+                position: true,
+                description: true,
+                startMonth: true, 
+                startYear: true, 
+                endMonth: true, 
                 endYear: true
             }
         })
 
-        if (inserted_education) {
-            return resourceCreated(inserted_education)
+        if (experiences) {
+            return resourceCreated(experiences)
         } else {
             return internalServerError("Error inserting education")
         }
