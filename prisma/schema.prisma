@@ -124,7 +124,6 @@ model UserExperience {
   description String?
   startDate   DateTime
   endDate     DateTime?
-  // Add more fields as needed
 }
 
 model UserLanguage {
