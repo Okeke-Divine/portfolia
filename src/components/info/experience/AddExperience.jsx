@@ -42,6 +42,41 @@ const AddExperience = () => {
       return;
     }
 
+    axios
+      .post("/api/info/education", { position, company, description, startMonth, startYear, endMonth, endYear }, { headers: { "Content-Type": "application/json" } })
+      .then((response) => {
+        if (response) {
+          SweetAlertSuccess("Your experience has been successfully added.");
+          setLoading(false);
+
+          // Clear the refs
+          positionRef.current.value = "";
+          companyRef.current.value = "";
+          startMonthRef.current.value = "";
+          startYearRef.current.value = "";
+          endMonthRef.current.value = "";
+          endYearRef.current.value = "";
+          descriptionRef.current.value = "";
+
+          //broadcast the project info
+          const broadcast_message = {
+            type: "NEW_EXPERIENCE",
+            data: response.data.data
+          }
+          channel.postMessage(broadcast_message);
+        }
+      })
+      .catch((error) => {
+        if (error) {
+          if (error?.response?.status == 400) {
+            SweetAlertError(error.response.data.reason);
+          } else {
+            SweetAlertError("An error occured. Please try again");
+          }
+          setLoading(false);
+        }
+      });
+
   }
 
   return (
