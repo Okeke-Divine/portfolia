@@ -3,6 +3,12 @@ import { getCurrentSession } from "@/utils/session";
 const DashboardTopComponent = async ({ userAnalytics }) => {
   const session = await getCurrentSession();
 
+  // Calculate conversion percentage
+  const portfolioViews = userAnalytics?.portfolioViewCount || 0;
+  const portfolioClicks = userAnalytics?.portfolioClickCount || 0;
+  const portfolioConversion = portfolioViews > 0 ? ((portfolioClicks / portfolioViews) * 100).toFixed(2) : 0;
+
+
   return (
     <>
       <div>
@@ -41,7 +47,7 @@ const DashboardTopComponent = async ({ userAnalytics }) => {
                   <i className="fi fi-tr-rotate-reverse text-4xl"></i>
                 </div>
                 <div className="stat-title">Coversion</div>
-                <div className="stat-value font-semibold">0%</div>
+                <div className="stat-value font-semibold">{portfolioConversion}%</div>
               </div>
               {/* <div className="join-item stat">
                 <div className="stat-figure">
