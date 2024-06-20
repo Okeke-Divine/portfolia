@@ -35,7 +35,7 @@ const AddCertificate = () => {
             SweetAlertError("All fields are required.");
             setLoading(false);
             return;
-          }
+        }
 
     }
 
@@ -77,7 +77,7 @@ const AddCertificate = () => {
                     <div>
                         <label className="font-bold text-md">Issue Month</label>
                     </div>
-                    <select ref={issueMonth} required className="select input-bordered w-full">
+                    <select ref={issueMonthRef} required className="select input-bordered w-full">
                         <option disabled selected value="">Select month</option>
                         <option value="January">January</option>
                         <option value="February">February</option>
@@ -98,7 +98,7 @@ const AddCertificate = () => {
                     <div>
                         <label className="font-bold text-md">Issue Year</label>
                     </div>
-                    <select ref={issueYear} required className="select input-bordered w-full">
+                    <select ref={issueYearRef} required className="select input-bordered w-full">
                         <option disabled selected value="">Select year</option>
                         {years.map((year, index) => (
                             <option key={index} value={year}>{year}</option>
