@@ -1,3 +1,5 @@
+import prisma from "@/app/db";
+
 const ResumeCertificates = async ({ userId }) => {
 
     const certificates = await prisma.userCertificate.findMany({
@@ -13,8 +15,8 @@ const ResumeCertificates = async ({ userId }) => {
                 </div>
                 <div className="flex flex-wrap gap-x-2 md:gap-x-3 gap-y-2">
                     {certificates.map((certificate, index) => (
-                        <div key={index} className="badge badge-outline badge-md">
-                            {certificate.name} - {certificate.issuer}
+                        <div key={index} className="">
+                            <b> {certificate.name}</b> - {certificate.issuer}
                         </div>
                     ))}
                 </div>
