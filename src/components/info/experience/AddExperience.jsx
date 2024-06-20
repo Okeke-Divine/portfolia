@@ -9,6 +9,13 @@ import { generateYearsArray } from "@/utils/main";
 
 const AddExperience = () => {
 
+  //refs
+  const positionRef = useRef(null)
+  const companyRef = useRef(null)
+  const startDateRef = useRef(null)
+  const endDateRef = useRef(null)
+  const desciptionRef = useRef(null)
+  // end refs
 
   const years = generateYearsArray();
   const channel = new BroadcastChannel("user-certificates-channel")
