@@ -113,17 +113,17 @@ model UserEducation {
   fieldOfStudy String
   startYear    Int
   endYear      Int?
-  // Add more fields as needed
 }
 
 model UserExperience {
-  id        Int       @id @default(autoincrement())
-  userId    Int
-  user      User      @relation(fields: [userId], references: [id])
-  company   String
-  position  String
-  startDate DateTime
-  endDate   DateTime?
+  id          Int       @id @default(autoincrement())
+  userId      Int
+  user        User      @relation(fields: [userId], references: [id])
+  company     String
+  position    String
+  description String?
+  startDate   DateTime
+  endDate     DateTime?
   // Add more fields as needed
 }
 
