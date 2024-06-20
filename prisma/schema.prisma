@@ -8,14 +8,14 @@ datasource db {
 }
 
 model User {
-  id                     Int              @id @default(autoincrement())
+  id                     Int               @id @default(autoincrement())
   fullname               String
-  username               String           @unique
-  email                  String           @unique
+  username               String            @unique
+  email                  String            @unique
   password               String
-  profilePicture_url     String?          @db.Text
+  profilePicture_url     String?           @db.Text
   profilePicture_assetId String?
-  dateJoined             DateTime         @default(now())
+  dateJoined             DateTime          @default(now())
   //realations
   UserSocialInfo         UserSocialInfo[]
   UserExpertise          UserExpertise[]
@@ -27,6 +27,9 @@ model User {
   Feedback               Feedback[]
   UserSkills             UserSkills[]
   UserAnalytics          UserAnalytics[]
+  UserEducation          UserEducation[]
+  UserLangugae           UserLangugae[]
+  UserCertificate        UserCertificate[]
 }
 
 model UserDetails {
@@ -73,13 +76,6 @@ model UserProjects {
   url           String?
 }
 
-model UserExperience {
-  id     Int  @id @default(autoincrement())
-  userId Int
-  user   User @relation(fields: [userId], references: [id])
-  //
-}
-
 model Feedback {
   id      Int    @id @default(autoincrement())
   userId  Int
@@ -98,7 +94,7 @@ model UserSkills {
 
 model UserAnalytics {
   id                  Int  @id @default(autoincrement())
-  userId              Int @unique
+  userId              Int  @unique
   user                User @relation(fields: [userId], references: [id])
   ///
   portfolioViewCount  Int? @default(0)
@@ -106,4 +102,32 @@ model UserAnalytics {
   resumeViewCount     Int? @default(0)
   resumeClickCount    Int? @default(0)
   resumeDownloadCount Int? @default(0)
+}
+
+model UserEducation {
+  id     Int  @id @default(autoincrement())
+  userId Int  @unique
+  user   User @relation(fields: [userId], references: [id])
+  //
+}
+
+model UserExperience {
+  id     Int  @id @default(autoincrement())
+  userId Int
+  user   User @relation(fields: [userId], references: [id])
+  //
+}
+
+model UserLangugae {
+  id     Int  @id @default(autoincrement())
+  userId Int
+  user   User @relation(fields: [userId], references: [id])
+  //
+}
+
+model UserCertificate {
+  id     Int  @id @default(autoincrement())
+  userId Int
+  user   User @relation(fields: [userId], references: [id])
+  //
 }
