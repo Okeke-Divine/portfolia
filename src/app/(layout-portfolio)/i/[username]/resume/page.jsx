@@ -109,7 +109,7 @@ export default async function Resume({ params }) {
     <>
       {/* //add resume view */}
       <AnalyticTracker username={username} actionType="resumeView" />
-      <AnalyticWatcher username={username} parent="portfolio" />
+      <AnalyticWatcher username={username} parent="resume" />
       {/* end analytics */}
       <div className="bg-gray-200 flex justify-center items-center min-h-[100vh]">
         <div id="resumeContainer" className="h-fit">
