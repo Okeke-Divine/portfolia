@@ -16,7 +16,7 @@ export const GET = async () => {
                 issueDate: true
             }
         }) || [];
-        return resourceLoaded(issueDate)
+        return resourceLoaded(certificates)
     } catch (e) {
         return internalServerError("")
     }
