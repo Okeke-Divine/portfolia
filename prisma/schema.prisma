@@ -132,8 +132,7 @@ model UserLanguage {
   userId      Int
   user        User   @relation(fields: [userId], references: [id])
   name        String
-  proficiency String // This could be an enum or specific levels (e.g., basic, intermediate, advanced)
-  // Add more fields as needed
+  proficiency String
 }
 
 model UserCertificate {
