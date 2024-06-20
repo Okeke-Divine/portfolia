@@ -60,7 +60,7 @@ const AddCertificate = () => {
                     </div>
                 </div>
                 {/* issue month */}
-                <div className="mb-2">
+                <div className="mb-3">
                     <div>
                         <label className="font-bold text-md">Issue Month</label>
                     </div>
@@ -81,7 +81,7 @@ const AddCertificate = () => {
                     </select>
                 </div>
                 {/* issue year */}
-                <div className="mb-2">
+                <div className="mb-3">
                     <div>
                         <label className="font-bold text-md">Issue Month</label>
                     </div>
