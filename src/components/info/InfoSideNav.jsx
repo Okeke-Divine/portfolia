@@ -12,7 +12,7 @@ const links = [
   { name: "Education", url: "/info/education", shipped: true },
   { name: "Language", url: "/info/language", shipped: true },
   { name: "Certificates", url: "/info/certificates", shipped: true },
-  { name: "Awards", url: "/info/awards", shipped: false },
+  // { name: "Awards", url: "/info/awards", shipped: false },
 ];
 
 export default function InfoSideNav() {
