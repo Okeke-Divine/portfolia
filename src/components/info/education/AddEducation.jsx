@@ -72,95 +72,102 @@ const AddEducation = () => {
 
     return (
         <>
-            <form onSubmit={_addEducation} className="form-control">
-                {/* field of study */}
-                <div className="mb-3">
-                    <div>
-                        <label className="font-bold text-md">Field of Study</label>
-                    </div>
-                    <div className="input input-bordered flex items-center gap-2 mt-1">
-                        <input
-                            type="text"
-                            className="grow"
-                            placeholder="Field of Study"
-                            required
-                            ref={fieldOfStudyRef}
-                        />
-                    </div>
+            <div className="collapse collapse-plus rounded-md bg-base-200">
+                <input type="checkbox" />
+                <div className="collapse-title text-xl font-medium">Add Education</div>
+                <div className="collapse-content">
+
+                    <form onSubmit={_addEducation} className="form-control">
+                        {/* field of study */}
+                        <div className="mb-3">
+                            <div>
+                                <label className="font-bold text-md">Field of Study</label>
+                            </div>
+                            <div className="input input-bordered flex items-center gap-2 mt-1">
+                                <input
+                                    type="text"
+                                    className="grow"
+                                    placeholder="Field of Study"
+                                    required
+                                    ref={fieldOfStudyRef}
+                                />
+                            </div>
+                        </div>
+                        {/* school */}
+                        <div className="mb-3">
+                            <div>
+                                <label className="font-bold text-md">School</label>
+                            </div>
+                            <div className="input input-bordered flex items-center gap-2 mt-1">
+                                <input
+                                    type="text"
+                                    className="grow"
+                                    placeholder="School"
+                                    required
+                                    ref={schoolRef}
+                                />
+                            </div>
+                        </div>
+                        {/* degree */}
+                        <div className="mb-3">
+                            <div>
+                                <label className="font-bold text-md">Degree</label>
+                            </div>
+                            <div className="input input-bordered flex items-center gap-2 mt-1">
+                                <input
+                                    type="text"
+                                    className="grow"
+                                    placeholder="Degree"
+                                    required
+                                    ref={degreeRef}
+                                />
+                            </div>
+                        </div>
+                        {/* start year */}
+                        <div className="mb-3">
+                            <div>
+                                <label className="font-bold text-md">Start Year</label>
+                            </div>
+                            <select ref={startYearRef} required className="select input-bordered w-full">
+                                <option disabled selected value="">Select year</option>
+                                {years.map((year, index) => (
+                                    <option key={index} value={year}>{year}</option>
+                                ))}
+                            </select>
+                        </div>
+                        {/* end year */}
+                        <div className="mb-3">
+                            <div>
+                                <label className="font-bold text-md">End Year (optional)</label>
+                            </div>
+                            <div className="input input-bordered flex items-center gap-2 mt-1">
+                                <input
+                                    type="number"
+                                    className="grow"
+                                    placeholder="End Year"
+                                    ref={endYearRef}
+                                />
+                            </div>
+                        </div>
+                        {/* submit button */}
+                        <div>
+                            <button
+                                className="w-full app-bg-primary duration-300 hover:app-bg-primary-dark btn btn-md text-white"
+                                type="submit"
+                                disabled={loading}
+                            >
+                                {loading ? (
+                                    <>
+                                        <span className="loading loading-dots loading-xs"></span>
+                                    </>
+                                ) : (
+                                    "Add"
+                                )}
+                            </button>
+                        </div>
+                    </form>
                 </div>
-                {/* school */}
-                <div className="mb-3">
-                    <div>
-                        <label className="font-bold text-md">School</label>
-                    </div>
-                    <div className="input input-bordered flex items-center gap-2 mt-1">
-                        <input
-                            type="text"
-                            className="grow"
-                            placeholder="School"
-                            required
-                            ref={schoolRef}
-                        />
-                    </div>
-                </div>
-                {/* degree */}
-                <div className="mb-3">
-                    <div>
-                        <label className="font-bold text-md">Degree</label>
-                    </div>
-                    <div className="input input-bordered flex items-center gap-2 mt-1">
-                        <input
-                            type="text"
-                            className="grow"
-                            placeholder="Degree"
-                            required
-                            ref={degreeRef}
-                        />
-                    </div>
-                </div>
-                {/* start year */}
-                <div className="mb-3">
-                    <div>
-                        <label className="font-bold text-md">Start Year</label>
-                    </div>
-                    <select ref={startYearRef} required className="select input-bordered w-full">
-                        <option disabled selected value="">Select year</option>
-                        {years.map((year, index) => (
-                            <option key={index} value={year}>{year}</option>
-                        ))}
-                    </select>
-                </div>
-                {/* end year */}
-                <div className="mb-3">
-                    <div>
-                        <label className="font-bold text-md">End Year (optional)</label>
-                    </div>
-                    <div className="input input-bordered flex items-center gap-2 mt-1">
-                        <input
-                            type="number"
-                            className="grow"
-                            placeholder="End Year"
-                            ref={endYearRef}
-                        />
-                    </div>
-                </div>
-                {/* submit button */}
-                <div>
-                    <button
-                        className="w-full app-bg-primary duration-300 hover:app-bg-primary-dark btn btn-md text-white"
-                        type="submit"
-                        disabled={loading}
-                    >
-                        {loading ? (
-                            <>
-                                <span className="loading loading-dots loading-xs"></span>
-                            </>
-                        ) : (
-                            "Add"
-                        )}
-                    </button>
-                </div>
-            </form>
+            </div>
         </>
     )
 }
