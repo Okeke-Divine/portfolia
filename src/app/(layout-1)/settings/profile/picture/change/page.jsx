@@ -1,4 +1,5 @@
 import ChangeProfilePictureForm from "@/components/settings/profile/picture/ChangeProfilePictureForm";
+import Link from "next/link";
 
 export const metadata = {
   title: "Change Profile Picture | Info",
@@ -11,7 +12,9 @@ const SettingsProfilePicture = () => {
         <div>
           <div className="text-sm breadcrumbs">
             <ul>
-              <li>Settings </li>
+              <li>
+                <Link href="/settings">Settings</Link>
+              </li>
               <li>Profile</li>
               <li>Picture</li>
             </ul>
