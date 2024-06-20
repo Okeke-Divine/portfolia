@@ -29,6 +29,15 @@ const AddCertificate = () => {
     return (
         <>
             <form onSubmit={_addCertificate} className="form-control">
+                {/* issue year */}
+                <div>
+                    <select ref={issueYear} required className="select input-bordered w-full">
+                        <option disabled selected value="">Select proficiency</option>
+                        {years.map((year, index) => (
+                            <option key={index} value={year}>{year}</option>
+                        ))}
+                    </select>
+                </div>
                 {/* submit button */}
                 <div>
                     <button
