@@ -7,7 +7,7 @@ export const POST = async (req) => {
         const { education_id } = data;
 
         if (!education_id || !parseInt(education_id)) {
-            return badRequest("invalid certificate_id")
+            return badRequest("invalid education_id")
         }
 
         const delete_education = await prisma.userEducation.delete({
