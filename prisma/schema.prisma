@@ -121,7 +121,7 @@ model UserExperience {
   user        User    @relation(fields: [userId], references: [id])
   company     String
   position    String
-  description String?
+  description String? @db.Text
   startMonth  String
   startYear   Int
   endMonth    String?
