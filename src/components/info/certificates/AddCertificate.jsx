@@ -44,7 +44,7 @@ const AddCertificate = () => {
                     SweetAlertSuccess("Your certificate has been successfully added.");
                     setLoading(false);
                     nameRef.current.value = "";
-                    // issuerRef.current.value = "";
+                    issuerRef.current.value = "";
                     issueMonthRef.current.value = "";
                     issueYearRef.current.value = "";
                     //broadcast the project info
@@ -93,11 +93,11 @@ const AddCertificate = () => {
                     </div>
                     <div className="input input-bordered flex items-center gap-2 mt-1">
                         <input
+                            ref={issuerRef}
                             type="text"
                             className="grow"
                             placeholder="Issuer"
                             required
-                            ref={issuerRef}
                         />
                     </div>
                 </div>
