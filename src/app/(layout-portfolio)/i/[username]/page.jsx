@@ -123,7 +123,7 @@ export default async function PortFolio({ params }) {
       {/* <PortfolioExpertise /> */}
       {/* powered by */}
       <Link href="/">
-        <div className="fixed bottom-5 right-5 bg-white rounded-full flex gap-x-2 items-center duration-300 shadow-md hover:shadow-lg">
+        <div className="fixed bottom-5 right-5 bg-white rounded-full flex gap-x-1 items-center duration-300 shadow-md hover:shadow-lg">
           <div>
             <img
               className="w-10 rounded-full shadow-lg"
@@ -131,7 +131,7 @@ export default async function PortFolio({ params }) {
               alt={config.app_name + "'s logo"}
             />
           </div>
-          {/* <div>Powered  by {config.app_name} </div> */}
+          <div className="pr-2">Powered  by {config.app_name} </div>
         </div>
       </Link>
     </>
