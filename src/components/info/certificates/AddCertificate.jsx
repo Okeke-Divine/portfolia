@@ -41,7 +41,7 @@ const AddCertificate = () => {
             .post("/api/info/certificates", { name, issuer, issueMonth, issuerYear }, { headers: { "Content-Type": "application/json" } })
             .then((response) => {
                 if (response) {
-                    SweetAlertSuccess("Language has been successfully added.");
+                    SweetAlertSuccess("Your certificate has been successfully added.");
                     setLoading(false);
                     languageRef.current.value = "";
                     proficiencyRef.current.value = "";
