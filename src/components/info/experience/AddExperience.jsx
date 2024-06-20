@@ -5,7 +5,7 @@ import {
   SweetAlertError,
   SweetAlertSuccess,
 } from "@/utils/customSweetAlertFunction";
-import { generateYearsArray } from "@/utils/main";
+import { generateMonthArray, generateYearsArray } from "@/utils/main";
 
 const AddExperience = () => {
 
@@ -20,6 +20,7 @@ const AddExperience = () => {
   // end refs
 
   const years = generateYearsArray();
+  const months = generateMonthArray();
   const channel = new BroadcastChannel("user-certificates-channel")
   const [loading, setLoading] = useState(false)
 
