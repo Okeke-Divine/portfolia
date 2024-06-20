@@ -123,12 +123,15 @@ export default async function PortFolio({ params }) {
       {/* <PortfolioExpertise /> */}
       {/* powered by */}
       <Link href="/">
-        <div className="fixed bottom-5 right-5">
-          <img
-            className="w-5 mb-2 rounded-full shadow-lg"
-            src="/images/logo/logo.png"
-            alt={config.app_name + "'s logo"}
-          />
+        <div className="fixed bottom-5 right-5 bg-white rounded-full flex gap-2">
+          <div>
+            <img
+              className="w-10 mb-2 rounded-full shadow-lg"
+              src="/images/logo/logo.png"
+              alt={config.app_name + "'s logo"}
+            />
+          </div>
+          <div>Powered  by {config.app_name} </div>
         </div>
       </Link>
     </>
