@@ -26,30 +26,34 @@ export const GET = async () => {
 export const POST = async (req) => {
     try {
         const data = await req.json();
-        const { name, issuer, issueDate } = data;
+        const { name, issuer, issueMonth, issueYear } = data;
 
-        if (!language || !proficiency) {
+        if (!name || !issuer || !issueMonth || !issueYear) {
             return badRequest("All fields are required");
         }
 
         const userId = await getUserId();
 
         // insert into the data base if social type doesn't exists
-        const inserted_language = await prisma.userLanguage.create({
+        const inserted_certifcate = await prisma.userLanguage.create({
             data: {
                 userId,
-                name: language,
-                proficiency
+                name,
+                issuer,
+                issueMonth: issueMonth,
+                issueYear: parseInt(issueYear),
             },
             select: {
                 id: true,
                 name: true,
-                proficiency: true
+                issuer: true,
+                issueMonth: true,
+                issueYear: true,
             }
         })
 
-        if (inserted_language) {
-            return resourceCreated(inserted_language)
+        if (inserted_certifcate) {
+            return resourceCreated(inserted_certifcate)
         } else {
             return internalServerError("Error inserting language")
         }
