@@ -5,7 +5,7 @@ import { getUserId } from "@/utils/session";
 export const GET = async () => {
     try {
         const userId = await getUserId()
-        const certificates = await prisma.userCertificate.findMany({
+        const certificates = await prisma.userEducation.findMany({
             where: {
                 userId,
             },

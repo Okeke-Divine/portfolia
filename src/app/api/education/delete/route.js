@@ -4,22 +4,22 @@ import { badRequest, internalServerError, resourceDeleted } from "@/utils/prebui
 export const POST = async (req) => {
     try {
         const data = await req.json();
-        const { certificate_id } = data;
+        const { education_id } = data;
 
-        if (!certificate_id || !parseInt(certificate_id)) {
+        if (!education_id || !parseInt(education_id)) {
             return badRequest("invalid certificate_id")
         }
 
-        const delete_certificate = await prisma.userCertificate.delete({
+        const delete_education = await prisma.userEducation.delete({
             where: {
-                id: certificate_id
+                id: education_id
             }
         })
-        if (delete_certificate) {
+        if (delete_education) {
             return resourceDeleted();
         }
 
-        return internalServerError("failed to delete a certificate")
+        return internalServerError("failed to delete an education")
     } catch (e) {
         return internalServerError(e);
     }
