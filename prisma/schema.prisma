@@ -105,32 +105,43 @@ model UserAnalytics {
 }
 
 model UserEducation {
-  id     Int  @id @default(autoincrement())
-  userId Int  @unique
-  user   User @relation(fields: [userId], references: [id])
-  //
+  id             Int             @id @default(autoincrement())
+  userId         Int             @unique
+  user           User            @relation(fields: [userId], references: [id])
+  school         String
+  degree         String
+  fieldOfStudy   String
+  startYear      Int
+  endYear        Int?
+  // Add more fields as needed
 }
 
 model UserExperience {
-  id     Int  @id @default(autoincrement())
-  userId Int
-  user   User @relation(fields: [userId], references: [id])
-  //
+  id             Int             @id @default(autoincrement())
+  userId         Int
+  user           User            @relation(fields: [userId], references: [id])
+  company        String
+  position       String
+  startDate      DateTime
+  endDate        DateTime?
+  // Add more fields as needed
 }
 
-model UserLangugae {
-  id         Int    @id @default(autoincrement())
-  userId     Int
-  user       User   @relation(fields: [userId], references: [id])
-  //
-  name       String
-  profeiceny String
+model UserLanguage {
+  id             Int             @id @default(autoincrement())
+  userId         Int
+  user           User            @relation(fields: [userId], references: [id])
+  name           String
+  proficiency    String          // This could be an enum or specific levels (e.g., basic, intermediate, advanced)
+  // Add more fields as needed
 }
 
 model UserCertificate {
-  id     Int  @id @default(autoincrement())
-  userId Int
-  user   User @relation(fields: [userId], references: [id])
-  //
-  
+  id             Int             @id @default(autoincrement())
+  userId         Int
+  user           User            @relation(fields: [userId], references: [id])
+  name           String
+  issuer         String
+  issueDate      DateTime
+  // Add more fields as needed
 }
