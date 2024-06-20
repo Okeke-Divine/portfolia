@@ -15,10 +15,10 @@ const ResumeExperience = async ({ userId }) => {
                             <h3 className="uppercase">Experience</h3>
                         </div>
                         <div className="">
-                            {educations.map((education, index) => (
+                            {experiences.map((experience, index) => (
                                 <div key={index} className="mb-2">
-                                    <div className="font-bold">
-                                        {education.degree} {education.fieldOfStudy}
+                                    <div className="">
+                                        <span className="font-bold">{experience.position}</span> - {experience.company}
                                     </div>
                                     <div className='text-gray-600'>
                                         {education.school} | <span className="italic">{education.startYear} {education.endYear != null ? ` - ${education.endYear}` : ""}</span>
