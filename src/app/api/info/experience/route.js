@@ -14,7 +14,10 @@ export const GET = async () => {
                 company: true,
                 position: true,
                 description: true,
-                startMonth: true, startYear: true, endMonth: true, endYear: true
+                startMonth: true, 
+                startYear: true, 
+                endMonth: true, 
+                endYear: true
             }
         }) || [];
         return resourceLoaded(educations)
