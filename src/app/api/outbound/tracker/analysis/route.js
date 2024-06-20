@@ -5,7 +5,6 @@ import { userAgent } from "next/server";
 export const POST = async (req) => {
     try {
         const data = await req.json();
-        console.log(data);
         const { username, actionType } = data;
 
         if (!username || !actionType) {
