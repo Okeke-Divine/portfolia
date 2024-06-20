@@ -1,24 +1,24 @@
 "use client"
 import React from 'react';
-import jsPDF from 'jspdf';
+import html2pdf from 'html2pdf.js';
 
 const ResumeDownload = ({ username }) => {
     const handleDownloadPdf = () => {
-        // Get the text content of the resume container
-        const resumeContent = document.getElementById('resumeContainer').innerText;
+        const element = document.getElementById('resumeContainer');
+        if (!element) {
+            console.error('Element with id "resumeContainer" not found.');
+            return;
+        }
 
-        // Create a new jsPDF instance
-        const pdf = new jsPDF();
+        // Configure the options for html2pdf
+        const options = {
+            filename: `${username}_resume.pdf`,
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        };
 
-        // Set font size and text color
-        pdf.setFontSize(12);
-        pdf.setTextColor(0, 0, 0);
-
-        // Add text to the PDF
-        pdf.text(resumeContent, 10, 10);
-
-        // Save the PDF with a specific name
-        pdf.save(`${username}_resume.pdf`);
+        // Use html2pdf to generate PDF from HTML element
+        html2pdf().from(element).set(options).save();
     };
 
     return (

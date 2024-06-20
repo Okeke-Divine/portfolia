@@ -14,7 +14,7 @@
     "axios": "^1.7.2",
     "bcrypt": "^5.1.1",
     "cloudinary": "^2.2.0",
-    "html2canvas": "^1.4.1",
+    "html2pdf.js": "^0.10.1",
     "jspdf": "^2.5.1",
     "next": "14.2.3",
     "next-auth": "^4.24.7",
