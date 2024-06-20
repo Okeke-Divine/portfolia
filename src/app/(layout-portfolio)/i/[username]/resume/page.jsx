@@ -3,6 +3,7 @@ import NotFound from "@/app/not-found";
 import ResumeAbout from "@/components/i/resume/ResumeAbout";
 import ResumeDownload from "@/components/i/resume/ResumeDownload";
 import ResumeHeroSection from "@/components/i/resume/ResumeHeroSection";
+import ResumeLanguage from "@/components/i/resume/ResumeLanguage";
 import ResumeProjects from "@/components/i/resume/ResumeProjects";
 import ResumeSkills from "@/components/i/resume/ResumeSkills";
 import ResumeSocialLink from "@/components/i/resume/ResumeSocialLink";
@@ -132,6 +133,7 @@ export default async function Resume({ params }) {
               <ResumeAbout user={user} />
               <ResumeSkills userId={user.id} />
               <ResumeProjects userId={user.id} />
+              <ResumeLanguage userId={user.id} />
             </div>
           </div>
         </div>

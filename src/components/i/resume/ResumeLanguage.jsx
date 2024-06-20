@@ -1,6 +1,4 @@
-import React from 'react'
-
-const ResumeLanguage = () => {
+const ResumeLanguage = ({userId}) => {
   return (
     <div>ResumeLanguage</div>
   )
