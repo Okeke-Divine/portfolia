@@ -13,8 +13,6 @@ const ViewLanguages = () => {
 
   const channel = new BroadcastChannel("user-languages-channel");
 
-  console.log(generateYearsArray())
-
   function deleteLanguage(language_id) {
     Swal.fire({
       title: "Warning",
