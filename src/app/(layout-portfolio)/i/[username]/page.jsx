@@ -121,13 +121,15 @@ export default async function PortFolio({ params }) {
       <PortfolioFooter user={user} />
       {/* <PortfolioExpertise /> */}
       {/* powered by */}
-      <div className="fixed bottom-5 right-5">
-        <img
-          className="w-5 mb-2 rounded-full shadow-lg"
-          src="/images/logo/logo.png"
-          alt={config.app_name + "'s logo"}
-        />
-      </div>
+      <Link href="/">
+        <div className="fixed bottom-5 right-5">
+          <img
+            className="w-5 mb-2 rounded-full shadow-lg"
+            src="/images/logo/logo.png"
+            alt={config.app_name + "'s logo"}
+          />
+        </div>
+      </Link>
     </>
   );
 }
