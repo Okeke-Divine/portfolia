@@ -29,7 +29,7 @@ export const POST = async (req) => {
         const { name, issuer, issueMonth, issueYear } = data;
 
         if (!name || !issuer || !issueMonth || !issueYear) {
-            // return badRequest("All fields are required");
+            return badRequest("All fields are required");
         }
 
         const userId = await getUserId();
