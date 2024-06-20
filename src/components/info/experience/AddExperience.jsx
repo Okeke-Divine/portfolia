@@ -97,7 +97,12 @@ const AddExperience = () => {
             <div>
               <label className="font-bold text-md">End Month (optional)</label>
             </div>
-
+            <select ref={endMonthRef} required className="select input-bordered w-full">
+              <option disabled selected value="">Select Month</option>
+              {months.map((month, index) => (
+                <option key={index} value={month}>{month}</option>
+              ))}
+            </select>
           </div>
           {/* start year */}
           <div className="mb-3">
