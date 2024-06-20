@@ -43,7 +43,7 @@ const AddExperience = () => {
     }
 
     axios
-      .post("/api/info/education", { position, company, description, startMonth, startYear, endMonth, endYear }, { headers: { "Content-Type": "application/json" } })
+      .post("/api/info/experience", { position, company, description, startMonth, startYear, endMonth, endYear }, { headers: { "Content-Type": "application/json" } })
       .then((response) => {
         if (response) {
           SweetAlertSuccess("Your experience has been successfully added.");
