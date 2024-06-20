@@ -34,7 +34,7 @@ const AddLanguage = () => {
       .post("/api/info/language", { language, proficiency }, { headers: { "Content-Type": "application/json" } })
       .then((response) => {
         if (response) {
-          SweetAlertSuccess("Your project has been successfully added.");
+          SweetAlertSuccess("Language has been successfully added.");
           setLoading(false);
           languageRef.current.value = "";
           proficiencyRef.current.value = "";
