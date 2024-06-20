@@ -154,8 +154,8 @@ export default function ApplicationSidedar() {
               key={index}
               target={link.blank ? "_blank" : "_self"}
               className={`btn btn-ghost w-full mb-2 text-left justify-start ${!pathname.toString().search(link.url)
-                  ? "app-bg-primary hover:app-bg-primary-dark"
-                  : ""
+                ? "app-bg-primary hover:app-bg-primary-dark"
+                : ""
                 }`}
             >
               {link.icon}
@@ -173,16 +173,6 @@ export default function ApplicationSidedar() {
               )}
             </Link>
           ))}
-          <button className="btn btn-ghost w-full mb-2 justify-start">
-            <i className="fi fi-tr-customization-cogwheel"></i>
-            Settings
-            <ComingSoonComponent />
-          </button>
-          {/* <button className="btn btn-ghost w-full mb-2 justify-start">
-            <i className="fi fi-tr-analyse-alt"></i>
-            Analytics
-            <ComingSoonComponent />
-          </button> */}
         </div>
         <div className="">
           <button
