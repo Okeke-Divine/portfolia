@@ -14,7 +14,7 @@ const SettingsPage = () => {
             </div>
             <div className="divider"></div>
             <div>
-                <Link href="/settings/profile/picture/change" className="btn btn-ghost">Change Your Profile Picture</Link>
+                <Link href="/settings/profile/picture/change" className="btn btn-ghost w-full">Change Your Profile Picture</Link>
             </div>
         </>
     )
