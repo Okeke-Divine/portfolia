@@ -97,7 +97,7 @@ const ViewCertificates = () => {
 
 
     return (
-        <div>ViewCertificates</div>
+        <div>{JSON.stringify(certificates)}</div>
     )
 }
 
