@@ -26,6 +26,7 @@ const AddLanguage = () => {
               type="text"
               className="grow"
               placeholder="Language"
+              required
               ref={languageRef}
             />
           </div>
