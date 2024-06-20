@@ -134,12 +134,12 @@ const ViewProjects = () => {
                 <td>{project.description != "" ? project.description : "-"}</td>
                 <td className="">
                   <div className="flex gap-2 items-center">
-                    <button
+                    {/* <button
                       className="btn btn-sm"
                       onClick={() => alert("Coming soon")}
                     >
                       <i className="fi fi-tr-pen-circle flaticon-offset"></i>
-                    </button>
+                    </button> */}
                     <button
                       className="btn btn-sm"
                       onClick={() => deleteProject(project.id)}
