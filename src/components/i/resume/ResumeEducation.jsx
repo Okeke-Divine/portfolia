@@ -20,6 +20,9 @@ const ResumeEducation = async ({ userId }) => {
                                     <div>
                                         {education.degree} {education.fieldOfStudy}
                                     </div>
+                                    <div className='text-gray-600'>
+                                        {education.school} | <span className="italic">{education.startYear} {education.endYear != null ? ` - ${education.endYear}` : ""}</span>
+                                    </div>
                                 </div>
                             ))}
                         </div>
