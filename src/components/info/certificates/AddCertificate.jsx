@@ -32,7 +32,7 @@ const AddCertificate = () => {
                 {/* issue year */}
                 <div className="mb-2">
                     <select ref={issueYear} required className="select input-bordered w-full">
-                        <option disabled selected value="">Select proficiency</option>
+                        <option disabled selected value="">Select year</option>
                         {years.map((year, index) => (
                             <option key={index} value={year}>{year}</option>
                         ))}
