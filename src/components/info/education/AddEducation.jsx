@@ -86,6 +86,21 @@ const AddEducation = () => {
                         ))}
                     </select>
                 </div>
+                {/* end year */}
+                <div className="mb-3">
+                    <div>
+                        <label className="font-bold text-md">End Year</label>
+                    </div>
+                    <div className="input input-bordered flex items-center gap-2 mt-1">
+                        <input
+                            type="number"
+                            className="grow"
+                            placeholder="End Year"
+                            required
+                            ref={endYearRef}
+                        />
+                    </div>
+                </div>
                 {/* submit button */}
                 <div>
                     <button
