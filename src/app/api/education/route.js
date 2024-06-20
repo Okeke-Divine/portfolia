@@ -55,7 +55,7 @@ export const POST = async (req) => {
         if (inserted_certifcate) {
             return resourceCreated(inserted_certifcate)
         } else {
-            return internalServerError("Error inserting certifcate")
+            return internalServerError("Error inserting language")
         }
     } catch (e) {
         return internalServerError(e)
