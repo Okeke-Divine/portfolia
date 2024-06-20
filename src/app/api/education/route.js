@@ -15,7 +15,7 @@ export const GET = async () => {
                 degree: true,
                 fieldOfStudy: true,
                 startYear: true,
-                endYear: rue
+                endYear: true
             }
         }) || [];
         return resourceLoaded(educations)
