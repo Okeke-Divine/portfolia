@@ -90,6 +90,31 @@ const AddExperience = () => {
           </div>
         </div>
         {/* end start info */}
+        {/* end info */}
+        <div className="grid gap-2 grid-cols-1 md:grid-cols-2 mb-3">
+          {/* start month */}
+          <div className="mb-3">
+            <div>
+              <label className="font-bold text-md">End Month (optional)</label>
+            </div>
+
+          </div>
+          {/* start year */}
+          <div className="mb-3">
+            <div>
+              <label className="font-bold text-md">End Year (optional)</label>
+            </div>
+            <div className="input input-bordered flex items-center gap-2 mt-1">
+              <input
+                type="number"
+                className="grow"
+                placeholder="End Year"
+                ref={endYearRef}
+              />
+            </div>
+          </div>
+        </div>
+        {/* end end info */}
         {/* Description */}
         <div className="mb-3">
           <div>
