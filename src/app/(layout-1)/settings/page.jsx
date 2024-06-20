@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export const metadata = {
     title: "Settings"
 }
@@ -9,10 +11,11 @@ const SettingsPage = () => {
                 <h1 className="flex items-center gap-2">
                     <i className="fi fi-tr-customization-cogwheel titleIcon"></i> Settings
                 </h1>
-                <p className="app-text-light">Your account..</p>
             </div>
             <div className="divider"></div>
-
+            <div>
+                <Link href="/settings/profile/picture/change">Change Your Profile Picture</Link>
+            </div>
         </>
     )
 }
