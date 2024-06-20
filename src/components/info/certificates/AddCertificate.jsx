@@ -31,11 +31,39 @@ const AddCertificate = () => {
         const issueMonth = issueMonthRef.current.value
         const issuerYear = issueYearRef.current.value
 
-        if (!language || !proficiency) {
+        if (!name || !issuer || !issueMonth || !issuerYear) {
             SweetAlertError("All fields are required.");
             setLoading(false);
             return;
         }
+
+        axios
+            .post("/api/info/language", { language, proficiency }, { headers: { "Content-Type": "application/json" } })
+            .then((response) => {
+                if (response) {
+                    SweetAlertSuccess("Language has been successfully added.");
+                    setLoading(false);
+                    languageRef.current.value = "";
+                    proficiencyRef.current.value = "";
+
+                    //broadcast the project info
+                    const broadcast_message = {
+                        type: "NEW_LANGUAGE",
+                        data: response.data.data
+                    }
+                    channel.postMessage(broadcast_message);
+                }
+            })
+            .catch((error) => {
+                if (error) {
+                    if (error?.response?.status == 400) {
+                        SweetAlertError(error.response.data.reason);
+                    } else {
+                        SweetAlertError("An error occured. Please try again");
+                    }
+                    setLoading(false);
+                }
+            });
 
     }
 
