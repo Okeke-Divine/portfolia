@@ -27,6 +27,21 @@ const AddExperience = () => {
   function _addExperience(e) {
     e.preventDefault()
     setLoading(true);
+
+    const position = positionRef.current.value;
+    const company = companyRef.current.value;
+    const startMonth = startMonthRef.current.value;
+    const startYear = startYearRef.current.value;
+    const endMonth = endMonthRef.current.value;
+    const endYear = endYearRef.current.value;
+    const description = descriptionRef.current.value;
+
+    if (!position || !company || !description || !startMonth || !startYear) {
+      SweetAlertError("All fields except end month and year are required.");
+      setLoading(false);
+      return;
+    }
+
   }
 
   return (
