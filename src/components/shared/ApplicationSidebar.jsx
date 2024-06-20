@@ -109,7 +109,7 @@ export default function ApplicationSidedar() {
     {
       name: "Settings",
       url: "/settings",
-      icon: <i className="fi fi fi-tr-customization-cogwheel"></i>,
+      icon: <i className="fi fi-tr-customization-cogwheel"></i>,
       blank: false
     },
     {
