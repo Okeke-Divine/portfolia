@@ -5,7 +5,7 @@ import { getUserId } from "@/utils/session";
 export const GET = async () => {
     try {
         const userId = await getUserId()
-        const languages = await prisma.UserLanguage.findMany({
+        const languages = await prisma.userLanguage.findMany({
             where: {
                 userId,
             },
@@ -33,7 +33,7 @@ export const POST = async (req) => {
         const userId = await getUserId();
 
         // insert into the data base if social type doesn't exists
-        const inserted_language = await prisma.userSocialInfo.create({
+        const inserted_language = await prisma.userLanguage.create({
             data: {
                 userId,
                 name,
