@@ -21,7 +21,7 @@ const Dashboard = async () => {
   return (
     <>
       <Suspense fallback={<DashboardTopSkeleton />}>
-        <DashboardTopComponent />
+        <DashboardTopComponent userAnalytics={userAnalytics} />
       </Suspense>
     </>
   );
