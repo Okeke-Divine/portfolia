@@ -132,4 +132,5 @@ model UserCertificate {
   userId Int
   user   User @relation(fields: [userId], references: [id])
   //
+  
 }
