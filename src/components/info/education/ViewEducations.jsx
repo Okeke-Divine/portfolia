@@ -97,7 +97,27 @@ const ViewEducations = () => {
   }, []);
 
   return (
-    <div>ViewEducations</div>
+    <>
+      {loading ? (
+        <>
+          <SkillSkeleton />
+        </>
+      ) : (
+        ""
+      )}
+      <div>
+        {educations.map((education, index) => (
+          <div
+            id={"education_" + education.id}
+            key={index}
+            className={`flex gap-2 items-center mb-2 p-2 ${index % 2 === 0 ? "bg-white" : "bg-gray-200"
+              }`}
+          >
+
+          </div>
+        ))}
+      </div>
+    </>
   )
 }
 
