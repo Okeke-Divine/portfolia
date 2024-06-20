@@ -1,5 +1,5 @@
 import prisma from "@/app/db";
-import { badRequest, conflict, internalServerError, resourceCreated, resourceLoaded } from "@/utils/prebuiltApiResponse"
+import { badRequest, internalServerError, resourceCreated, resourceLoaded } from "@/utils/prebuiltApiResponse"
 import { getUserId } from "@/utils/session";
 
 export const GET = async () => {
@@ -38,7 +38,7 @@ export const POST = async (req) => {
         const userId = await getUserId();
 
         // insert into the data base if social type doesn't exists
-        const inserted_experience = await prisma.userEducation.create({
+        const inserted_experience = await prisma.userExperience.create({
             data: {
                 userId,
                 school,
@@ -62,7 +62,7 @@ export const POST = async (req) => {
         if (experiences) {
             return resourceCreated(experiences)
         } else {
-            return internalServerError("Error inserting education")
+            return internalServerError("Error inserting experience")
         }
     } catch (e) {
         return internalServerError(e)
