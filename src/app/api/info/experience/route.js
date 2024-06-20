@@ -40,11 +40,13 @@ export const POST = async (req) => {
         const inserted_experience = await prisma.userExperience.create({
             data: {
                 userId,
-                school,
-                degree,
-                fieldOfStudy,
+                position,
+                company,
+                description,
+                startMonth,
                 startYear: parseInt(startYear),
-                endYear: parseInt(endYear),
+                endMonth,
+                endYear: parseInt(endYear)
             },
             select: {
                 id: true,
