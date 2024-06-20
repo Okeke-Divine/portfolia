@@ -78,7 +78,7 @@ const ViewCertificates = () => {
         channel.onmessage = (event) => {
             setLoading(true);
             const newCertificate = event.data.data;
-            setLanguages((prevCertificates) => [...prevCertificates, newCertificate]);
+            setCertificates((prevCertificates) => [...prevCertificates, newCertificate]);
             setLoading(false);
         };
 
