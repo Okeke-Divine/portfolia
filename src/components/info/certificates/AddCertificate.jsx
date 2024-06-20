@@ -17,13 +17,26 @@ const AddCertificate = () => {
     //refs
     const nameRef = useRef(null)
     const issuerRef = useRef(null)
-    const issueMonth = useRef(null)
-    const issueYear = useRef(null)
+    const issueMonthRef = useRef(null)
+    const issueYearRef = useRef(null)
     //end refs
 
     function _addCertificate(e) {
         e.preventDefault()
         setLoading(true);
+
+        //get the values
+        const name = nameRef.current.value;
+        const issuer = issurerRef.current.value;
+        const issueMonth = issueMonthRef.current.value
+        const issuerYear = issueYearRef.current.value
+
+        if (!language || !proficiency) {
+            SweetAlertError("All fields are required.");
+            setLoading(false);
+            return;
+          }
+
     }
 
     return (
