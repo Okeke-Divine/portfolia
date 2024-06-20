@@ -4,7 +4,6 @@ import axios from "axios";
 import { app_color_primary } from "@/constants/shared/color";
 import Swal from "sweetalert2";
 import SkillSkeleton from "@/components/skeleton/skills/SkillSkeleton";
-import { generateYearsArray } from "@/utils/main";
 
 const ViewLanguages = () => {
 
