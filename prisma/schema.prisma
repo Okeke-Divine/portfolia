@@ -28,8 +28,8 @@ model User {
   UserSkills             UserSkills[]
   UserAnalytics          UserAnalytics[]
   UserEducation          UserEducation[]
-  UserLangugae           UserLangugae[]
   UserCertificate        UserCertificate[]
+  UserLanguage           UserLanguage[]
 }
 
 model UserDetails {
