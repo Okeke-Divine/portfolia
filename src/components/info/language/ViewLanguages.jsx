@@ -49,7 +49,7 @@ const ViewLanguages = () => {
                 confirmButtonColor: app_color_primary,
               });
               const parent_container = document.getElementById(
-                "language" + language_id
+                "language_" + language_id
               );
               parent_container.classList.add("hidden");
             } else {
