@@ -31,7 +31,7 @@ const AddEducation = () => {
         const startYear = startYearRef.current.value;
         const endYear = endYearRef.current.value;
 
-        if (!fieldOfStudy || !school || !degree || !startYear || !endYear) {
+        if (!fieldOfStudy || !school || !degree || !startYear) {
             SweetAlertError("All fields except end year are required.");
             setLoading(false);
             return;
