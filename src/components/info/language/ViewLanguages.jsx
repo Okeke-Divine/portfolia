@@ -11,6 +11,19 @@ const ViewLanguages = () => {
 
   const channel = new BroadcastChannel("user-languages-channel");
 
+  useEffect(() => {
+    channel.onmessage = (event) => {
+      setLoading(true);
+      const newLanguage = event.data.data;
+      setLanguages((prevLanguages) => [...prevLanguages, newLanguage]);
+      setLoading(false);
+    };
+
+    return () => {
+      channel.close();
+    };
+  }, [channel]);
+
 
   return (
     <div>ViewLanguages</div>
