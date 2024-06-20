@@ -27,10 +27,10 @@ export const GET = async () => {
 export const POST = async (req) => {
     try {
         const data = await req.json();
-        const { name, issuer, issueMonth, issueYear } = data;
+        const { school, degree, fieldOfStudy, startYear, endYear } = data;
 
-        if (!name || !issuer || !issueMonth || !issueYear) {
-            // return badRequest("All fields are required");
+        if (!school || !degree || !fieldOfStudy || !startYear || !endYear) {
+            return badRequest("All fields are required");
         }
 
         const userId = await getUserId();
