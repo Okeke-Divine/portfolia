@@ -1,3 +1,6 @@
+import AddCertificate from "@/components/info/certificates/AddCertificate";
+import ViewCertificates from "@/components/info/certificates/ViewCertificates";
+
 export const metadata = {
   title: "Certificate | Info",
 };
@@ -5,9 +8,11 @@ export const metadata = {
 const CertificateInfo = () => {
   return (
     <>
-    <div className="divider"></div>
+      <AddCertificate />
+      <div className="divider"></div>
+      <ViewCertificates />
     </>
-    )
+  )
 }
 
 export default CertificateInfo
