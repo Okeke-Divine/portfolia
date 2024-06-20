@@ -20,8 +20,11 @@ const ResumeExperience = async ({ userId }) => {
                                     <div className="">
                                         <span className="font-bold">{experience.position}</span> - {experience.company}
                                     </div>
-                                    <div className='text-gray-600'>
-                                        {education.school} | <span className="italic">{education.startYear} {education.endYear != null ? ` - ${education.endYear}` : ""}</span>
+                                    <div className="text-gray-600 italic">
+                                        {experience.startMonth} {experience.startYear} {(experience.endMonth != "" && experience.endYear != null) ? ` - ${experience.endMonth} ${experience.endYear}` : ""}
+                                    </div>
+                                    <div className="text-gray-600 mt-1 whitespace-pre-line">
+                                        {experience.description}
                                     </div>
                                 </div>
                             ))}
