@@ -3,6 +3,9 @@ import { useRef, useState } from "react"
 
 const AddLanguage = () => {
 
+  const languageRef = useRef(null)
+  const proficiencyRef = useRef(null)
+
   function _addLanguage(e) {
     e.preventDefault()
   }
