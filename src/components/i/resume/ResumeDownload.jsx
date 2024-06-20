@@ -10,17 +10,27 @@ const ResumeDownload = ({ name }) => {
         const element = document.getElementById("resumeContainer").cloneNode(true);
         const printWindow = window.open('', '', 'height=800,width=800');
     
-        printWindow.document.write(`<html><head><title>(Portfoliia) - ${name} - Resume</title>`);
-    
         // Inject Tailwind CSS into the new window
         const stylesheets = Array.from(document.querySelectorAll('link[rel="stylesheet"], style'))
             .map((node) => node.outerHTML)
             .join('\n');
-        printWindow.document.write(stylesheets);
     
-        printWindow.document.write('</head><body>');
-        printWindow.document.write(element.outerHTML);
-        printWindow.document.write('</body></html>');
+        printWindow.document.write(`
+            <html>
+            <head>
+                <title>(Portfoliia) - ${name} - Resume</title>
+                ${stylesheets}
+                <style>
+                    @page { margin: 0; }
+                    body { margin: 0; }
+                    img { max-width: 100%; }
+                </style>
+            </head>
+            <body>
+                ${element.outerHTML}
+            </body>
+            </html>
+        `);
     
         printWindow.document.close();
     
