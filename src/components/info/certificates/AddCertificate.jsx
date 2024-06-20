@@ -70,87 +70,94 @@ const AddCertificate = () => {
 
     return (
         <>
-            <form onSubmit={_addCertificate} className="form-control">
-                {/* name */}
-                <div className="mb-3">
-                    <div>
-                        <label className="font-bold text-md">Certificate Name</label>
-                    </div>
-                    <div className="input input-bordered flex items-center gap-2 mt-1">
-                        <input
-                            type="text"
-                            className="grow"
-                            placeholder="Certificate name"
-                            required
-                            ref={nameRef}
-                        />
-                    </div>
+            <div className="collapse collapse-plus rounded-md bg-base-200">
+                <input type="checkbox" />
+                <div className="collapse-title text-xl font-medium">Add Certificate</div>
+                <div className="collapse-content">
+
+                    <form onSubmit={_addCertificate} className="form-control">
+                        {/* name */}
+                        <div className="mb-3">
+                            <div>
+                                <label className="font-bold text-md">Certificate Name</label>
+                            </div>
+                            <div className="input input-bordered flex items-center gap-2 mt-1">
+                                <input
+                                    type="text"
+                                    className="grow"
+                                    placeholder="Certificate name"
+                                    required
+                                    ref={nameRef}
+                                />
+                            </div>
+                        </div>
+                        {/* issuere */}
+                        <div className="mb-3">
+                            <div>
+                                <label className="font-bold text-md">Issuer</label>
+                            </div>
+                            <div className="input input-bordered flex items-center gap-2 mt-1">
+                                <input
+                                    ref={issuerRef}
+                                    type="text"
+                                    className="grow"
+                                    placeholder="Issuer"
+                                    required
+                                />
+                            </div>
+                        </div>
+                        {/* issue month */}
+                        <div className="mb-3">
+                            <div>
+                                <label className="font-bold text-md">Issue Month</label>
+                            </div>
+                            <select ref={issueMonthRef} defaultValue="" required className="select input-bordered w-full">
+                                <option disabled value="">Select month</option>
+                                <option value="January">January</option>
+                                <option value="February">February</option>
+                                <option value="March">March</option>
+                                <option value="April">April</option>
+                                <option value="May">May</option>
+                                <option value="June">June</option>
+                                <option value="July">July</option>
+                                <option value="August">August</option>
+                                <option value="September">September</option>
+                                <option value="October">October</option>
+                                <option value="November">November</option>
+                                <option value="December">December</option>
+                            </select>
+                        </div>
+                        {/* issue year */}
+                        <div className="mb-3">
+                            <div>
+                                <label className="font-bold text-md">Issue Year</label>
+                            </div>
+                            <select ref={issueYearRef} defaultValue="" required className="select input-bordered w-full">
+                                <option disabled value="">Select year</option>
+                                {years.map((year, index) => (
+                                    <option key={index} value={year}>{year}</option>
+                                ))}
+                            </select>
+                        </div>
+                        {/* submit button */}
+                        <div>
+                            <button
+                                className="w-full app-bg-primary duration-300 hover:app-bg-primary-dark btn btn-md text-white"
+                                type="submit"
+                                disabled={loading}
+                            >
+                                {loading ? (
+                                    <>
+                                        <span className="loading loading-dots loading-xs"></span>
+                                    </>
+                                ) : (
+                                    "Add"
+                                )}
+                            </button>
+                        </div>
+                    </form>
                 </div>
-                {/* issuere */}
-                <div className="mb-3">
-                    <div>
-                        <label className="font-bold text-md">Issuer</label>
-                    </div>
-                    <div className="input input-bordered flex items-center gap-2 mt-1">
-                        <input
-                            ref={issuerRef}
-                            type="text"
-                            className="grow"
-                            placeholder="Issuer"
-                            required
-                        />
-                    </div>
-                </div>
-                {/* issue month */}
-                <div className="mb-3">
-                    <div>
-                        <label className="font-bold text-md">Issue Month</label>
-                    </div>
-                    <select ref={issueMonthRef} defaultValue="" required className="select input-bordered w-full">
-                        <option disabled value="">Select month</option>
-                        <option value="January">January</option>
-                        <option value="February">February</option>
-                        <option value="March">March</option>
-                        <option value="April">April</option>
-                        <option value="May">May</option>
-                        <option value="June">June</option>
-                        <option value="July">July</option>
-                        <option value="August">August</option>
-                        <option value="September">September</option>
-                        <option value="October">October</option>
-                        <option value="November">November</option>
-                        <option value="December">December</option>
-                    </select>
-                </div>
-                {/* issue year */}
-                <div className="mb-3">
-                    <div>
-                        <label className="font-bold text-md">Issue Year</label>
-                    </div>
-                    <select ref={issueYearRef} defaultValue="" required className="select input-bordered w-full">
-                        <option disabled value="">Select year</option>
-                        {years.map((year, index) => (
-                            <option key={index} value={year}>{year}</option>
-                        ))}
-                    </select>
-                </div>
-                {/* submit button */}
-                <div>
-                    <button
-                        className="w-full app-bg-primary duration-300 hover:app-bg-primary-dark btn btn-md text-white"
-                        type="submit"
-                        disabled={loading}
-                    >
-                        {loading ? (
-                            <>
-                                <span className="loading loading-dots loading-xs"></span>
-                            </>
-                        ) : (
-                            "Add"
-                        )}
-                    </button>
-                </div>
-            </form>
+            </div>
         </>
     )
 }
