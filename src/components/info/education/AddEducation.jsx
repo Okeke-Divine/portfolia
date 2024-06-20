@@ -27,7 +27,7 @@ const AddEducation = () => {
 
         const fieldOfStudy = fieldOfStudyRef.current.value;
         const school = schoolRef.current.value;
-        const degree = degree.current.value;
+        const degree = degreeRef.current.value;
         const startYear = startYearRef.current.value;
         const endYear = endYearRef.current.value;
 
@@ -41,10 +41,13 @@ const AddEducation = () => {
             .post("/api/info/education", { school, degree, fieldOfStudy, startYear, endYear }, { headers: { "Content-Type": "application/json" } })
             .then((response) => {
                 if (response) {
-                    SweetAlertSuccess("Your language has been successfully added.");
+                    SweetAlertSuccess("Your education has been successfully added.");
                     setLoading(false);
-                    languageRef.current.value = "";
-                    proficiencyRef.current.value = "";
+                    fieldOfStudyRef.current.value = "";
+                    schoolRef.current.value = "";
+                    degreeRef.current.value = "";
+                    startYearRef.current.value = "";
+                    endYearRef.current.value = "";
 
                     //broadcast the project info
                     const broadcast_message = {
