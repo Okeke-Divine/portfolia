@@ -1,6 +1,7 @@
 import prisma from "@/app/db";
 import { defaultImgUrl } from "@/constants/shared/constant";
 import PortfolioEducation from "./PortfolioEducation";
+import PortfolioExperience from "./PortfolioExperience";
 
 const PortfolioAbout = async ({ user }) => {
   const userId = user.id;
@@ -29,6 +30,7 @@ const PortfolioAbout = async ({ user }) => {
             <p className="whitespace-pre-line">{user?.userDetails?.about}</p>
           </div>
 
+          <PortfolioExperience userId={userId} />
           <PortfolioEducation userId={userId} />
 
           {/* divider */}
