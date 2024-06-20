@@ -9,12 +9,12 @@ const ResumeDownload = ({ name }) => {
     const handlePrint = () => {
         const element = document.getElementById("resumeContainer").cloneNode(true);
         const printWindow = window.open('', '', 'height=800,width=800');
-    
+
         // Inject Tailwind CSS into the new window
         const stylesheets = Array.from(document.querySelectorAll('link[rel="stylesheet"], style'))
             .map((node) => node.outerHTML)
             .join('\n');
-    
+
         printWindow.document.write(`
             <html>
             <head>
@@ -31,9 +31,9 @@ const ResumeDownload = ({ name }) => {
             </body>
             </html>
         `);
-    
+
         printWindow.document.close();
-    
+
         // Ensure stylesheets are fully loaded before printing
         printWindow.onload = () => {
             printWindow.focus();
@@ -41,7 +41,7 @@ const ResumeDownload = ({ name }) => {
             printWindow.close();
         };
     };
-    
+
     const handleDownloadPdf = async () => {
 
         try {
@@ -74,12 +74,14 @@ const ResumeDownload = ({ name }) => {
             <button
                 onClick={handleDownloadPdf}
                 className="fixed bottom-5 right-16 app-bg-primary hover:app-bg-primary-dark shadow-md hover:shadow-lg text-white duration-300 z-[100] rounded-full w-10 h-10 flex items-center justify-center downsifn"
+                title="Download static image"
             >
-                <i className="fi fi-tr-cloud-download-alt text-xl flaticon-offset"></i>
+                <i className="fi fi-tr-down-to-line text-xl flaticon-offset"></i>
             </button>
             <button
                 onClick={handlePrint}
                 className="fixed bottom-5 right-5 app-bg-primary hover:app-bg-primary-dark shadow-md hover:shadow-lg text-white duration-300 z-[100] rounded-full w-10 h-10 flex items-center justify-center downsifn"
+                title="Print dynamic resume"
             >
                 <i className="fi fi-tr-print text-xl flaticon-offset"></i>
             </button>
