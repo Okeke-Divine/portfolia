@@ -1,7 +1,14 @@
+export const metadata = {
+  title: "Education | Info"
+}
+
 const EducationInfo = () => {
   return (
-    <div>EducationInfo</div>
-  )
+    <>
+    
+      <div className="divider"></div>
+    </>
+    )
 }
 
 export default EducationInfo
