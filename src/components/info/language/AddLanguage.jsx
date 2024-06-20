@@ -1,6 +1,11 @@
 "use client"
 import { useRef, useState } from "react"
 import axios from "axios"
+import {
+  SweetAlertError,
+  SweetAlertSuccess,
+} from "@/utils/customSweetAlertFunction";
+
 
 const AddLanguage = () => {
 
@@ -12,8 +17,17 @@ const AddLanguage = () => {
 
   function _addLanguage(e) {
     e.preventDefault()
+    setLoading(true);
+
+    //get the values
     const language = languageRef.current.value;
     const proficiency = proficiencyRef.current.value;
+
+    if (!language || !proficiency) {
+      SweetAlertError("All fields are required.");
+      setLoading(false);
+      return;
+    }
   }
 
   return (

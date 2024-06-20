@@ -33,7 +33,7 @@ const AddProject = () => {
     if (!projectTitle) {
       SweetAlertError("Project title is required.");
       setLoading(false);
-      eturn;
+      return;
     }
 
     if (!projectDesc) {
