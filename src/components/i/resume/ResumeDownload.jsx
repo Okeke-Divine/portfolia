@@ -2,12 +2,17 @@
 import { _console_log } from '@/utils/console';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
+import { useRef } from "react"
 
 const ResumeDownload = ({ username }) => {
 
+    const meRef = useRef(null)
+
     const handleDownloadPdf = async () => {
-        const element = document.getElementById("resumeContainer");
+
+        // const element = document.getElementById("resumeContainer");
         try {
+            const element = meRef.current;
             const canvas = await html2canvas(element);
             const imgData = canvas.toDataURL("image/png");
 
@@ -30,6 +35,7 @@ const ResumeDownload = ({ username }) => {
 
     return (
         <>
+            <div ref={meRef}>lol</div>
             <button
                 onClick={handleDownloadPdf}
                 className="fixed bottom-5 right-5 app-bg-primary hover:app-bg-primary-dark shadow-md hover:shadow-lg text-white duration-300 z-[100] rounded-full w-10 h-10 flex items-center justify-center downsifn"
