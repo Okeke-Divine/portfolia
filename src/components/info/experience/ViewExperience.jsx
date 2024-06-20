@@ -104,16 +104,18 @@ const ViewExperience = () => {
       ) : (
         ""
       )}
-        <div>
-          {experiences.map((experience,index) => (
-                  <div
-                  id={"experience_" + experience.id}
-                  key={index}
-                  className={`flex gap-2 items-center mb-2 p-2 ${index % 2 === 0 ? "bg-white" : "bg-gray-200"
-                    }`}
-                >
-                              <div className="w-full">
-              <b>{language.name}</b> - {language.proficiency}
+      <div>
+        {experiences.map((experience, index) => (
+          <div
+            id={"experience_" + experience.id}
+            key={index}
+            className={`flex gap-2 items-center mb-2 p-2 ${index % 2 === 0 ? "bg-white" : "bg-gray-200"
+              }`}
+          >
+            <div className="w-full">
+              <div>
+                <b>{experience.position}</b> - {experience.company}
+              </div>
             </div>
             <div className="w-fit flex gap-2">
               <button
@@ -123,10 +125,10 @@ const ViewExperience = () => {
                 <i className="fi fi-rr-trash flaticon-offset"></i>
               </button>
             </div>
-                  </div>
-          ))}
-        </div>
-      </>
+          </div>
+        ))}
+      </div>
+    </>
   )
 }
 
