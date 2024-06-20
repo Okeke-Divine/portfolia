@@ -22,10 +22,10 @@ const ResumeDownload = ({ username }) => {
                 format: "a4",
             });
 
-            // const width = pdf.internal.pageSize.getWidth();
-            // const height = (canvas.height * width) / canvas.width;
+            const width = pdf.internal.pageSize.getWidth();
+            const height = (canvas.height * width) / canvas.width;
 
-            pdf.addImage(imgData, "PNG");
+            pdf.addImage(imgData, "PNG", 0, 0, width, height);
             pdf.save("resume.pdf")
 
         } catch (e) {
