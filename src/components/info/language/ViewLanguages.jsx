@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { app_color_primary } from "@/constants/shared/color";
 import Swal from "sweetalert2";
+import SkillSkeleton from "@/components/skeleton/skills/SkillSkeleton";
 
 const ViewLanguages = () => {
 
@@ -87,7 +88,37 @@ const ViewLanguages = () => {
 
 
   return (
-    <div>ViewLanguages</div>
+    <>
+      {loading ? (
+        <>
+          <SkillSkeleton />
+        </>
+      ) : (
+        ""
+      )}
+      <div>
+        {languages.map((language, index) => (
+          <div
+            id={"language_" + language.id}
+            key={index}
+            className={`flex gap-2 items-center mb-2 p-2 ${index % 2 === 0 ? "bg-white" : "bg-gray-200"
+              }`}
+          >
+            <div className="w-full">
+              <b>{language.name}</b> - {language.proficiency}
+            </div>
+            <div className="w-fit flex gap-2">
+              <button
+                className="btn btn-sm"
+                onClick={() => deleteLanguage(language.id)}
+              >
+                <i className="fi fi-rr-trash flaticon-offset"></i>
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </>
   )
 }
 
