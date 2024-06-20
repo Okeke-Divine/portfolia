@@ -142,5 +142,4 @@ model UserCertificate {
   name      String
   issuer    String
   issueDate DateTime
-  // Add more fields as needed
 }
