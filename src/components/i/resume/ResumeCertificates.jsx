@@ -17,7 +17,7 @@ const ResumeCertificates = async ({ userId }) => {
                     {certificates.map((certificate, index) => (
                         <div key={index} className="mb-2">
                             <div><b> {certificate.name}</b> - {certificate.issuer}</div>
-                            <div>{certificate.issueMonth} {certificate.issueYear}</div>
+                            <div className="text-gray-600 italic">{certificate.issueMonth} {certificate.issueYear}</div>
                         </div>
                     ))}
                 </div>
