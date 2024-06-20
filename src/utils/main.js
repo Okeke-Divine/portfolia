@@ -71,7 +71,7 @@ export function generateYearsArray(startYear = 1960) {
   const currentYear = new Date().getFullYear();
   const yearsArray = [];
   
-  for (let year = startYear; year <= currentYear; year++) {
+  for (let year = currentYear; year >= startYear; year--) {
     yearsArray.push(year);
   }
 
