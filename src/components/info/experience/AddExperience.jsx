@@ -61,6 +61,9 @@ const AddExperience = () => {
             />
           </div>
         </div>
+        <div className="grid gap-2 grid-cols-1 md:grid-cols-2 mb-3">
+
+        </div>
         {/* Description */}
         <div className="mb-3">
           <div>
