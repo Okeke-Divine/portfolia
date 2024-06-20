@@ -70,10 +70,27 @@ export function analysisTracker(username, actionType) {
 export function generateYearsArray(startYear = 1960) {
   const currentYear = new Date().getFullYear();
   const yearsArray = [];
-  
+
   for (let year = currentYear; year >= startYear; year--) {
     yearsArray.push(year);
   }
 
   return yearsArray;
+}
+
+export function generateMonthArray() {
+  return [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+  ];
 }
