@@ -10,7 +10,7 @@ const ResumeDownload = ({ name }) => {
         const element = document.getElementById("resumeContainer").cloneNode(true);
         const printWindow = window.open('', '', 'height=800,width=800');
     
-        printWindow.document.write('<html><head><title>Print Resume</title>');
+        printWindow.document.write(`<html><head><title>(Portfoliia) - ${name} - Resume</title>`);
     
         // Inject Tailwind CSS into the new window
         const stylesheets = Array.from(document.querySelectorAll('link[rel="stylesheet"], style'))
