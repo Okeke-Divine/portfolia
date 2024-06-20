@@ -38,9 +38,24 @@ const AddCertificate = () => {
                         <input
                             type="text"
                             className="grow"
-                            placeholder="Certificate name.."
+                            placeholder="Certificate name"
                             required
                             ref={nameRef}
+                        />
+                    </div>
+                </div>
+                {/* issuere */}
+                <div className="mb-3">
+                    <div>
+                        <label className="font-bold text-md">Issuer</label>
+                    </div>
+                    <div className="input input-bordered flex items-center gap-2 mt-1">
+                        <input
+                            type="text"
+                            className="grow"
+                            placeholder="Issuer"
+                            required
+                            ref={issuerRef}
                         />
                     </div>
                 </div>
