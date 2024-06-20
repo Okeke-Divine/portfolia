@@ -106,7 +106,7 @@ const AddEducation = () => {
                         className="w-full app-bg-primary duration-300 hover:app-bg-primary-dark btn btn-md text-white"
                         type="submit"
                         disabled={loading}
-                    >
+                    >a
                         {loading ? (
                             <>
                                 <span className="loading loading-dots loading-xs"></span>
