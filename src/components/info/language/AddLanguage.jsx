@@ -1,8 +1,16 @@
-import React from 'react'
+"use client"
+import { useRef, useState } from "react"
 
 const AddLanguage = () => {
+
+  function _addLanguage(e) {
+    e.preventDefault()
+  }
+
   return (
-    <div>AddLanguage</div>
+    <>
+      <form onSubmit={_addLanguage} className="form-control"></form>
+    </>
   )
 }
 
