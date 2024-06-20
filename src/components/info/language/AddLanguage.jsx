@@ -16,7 +16,20 @@ const AddLanguage = () => {
   return (
     <>
       <form onSubmit={_addLanguage} className="form-control">
-
+        {/* language */}
+        <div className="mb-3">
+          <div>
+            <label className="font-bold text-md">Language</label>
+          </div>
+          <div className="input input-bordered flex items-center gap-2 mt-1">
+            <input
+              type="text"
+              className="grow"
+              placeholder="Language"
+              ref={languageRef}
+            />
+          </div>
+        </div>
 
         {/* submit button */}
         <div>
