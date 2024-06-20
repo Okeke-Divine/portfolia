@@ -9,12 +9,12 @@ const ResumeDownload = ({ name }) => {
     const handlePrint = () => {
         const element = document.getElementById("resumeContainer").cloneNode(true);
         const printWindow = window.open('', '', 'height=800,width=800');
-    
-        // Inject Tailwind CSS and DaisyUI into the new window
+
+        // Inject Tailwind CSS into the new window
         const stylesheets = Array.from(document.querySelectorAll('link[rel="stylesheet"], style'))
             .map((node) => node.outerHTML)
             .join('\n');
-    
+
         printWindow.document.write(`
             <html>
             <head>
@@ -24,7 +24,6 @@ const ResumeDownload = ({ name }) => {
                     @page { margin: 0; }
                     body { margin: 0; }
                     img { max-width: 100%; }
-                    a { color: blue; text-decoration: underline; }
                 </style>
             </head>
             <body>
@@ -32,9 +31,9 @@ const ResumeDownload = ({ name }) => {
             </body>
             </html>
         `);
-    
+
         printWindow.document.close();
-    
+
         // Ensure stylesheets are fully loaded before printing
         printWindow.onload = () => {
             printWindow.focus();
@@ -42,7 +41,6 @@ const ResumeDownload = ({ name }) => {
             printWindow.close();
         };
     };
-    
 
     const handleDownloadPdf = async () => {
 
