@@ -97,7 +97,27 @@ const ViewCertificates = () => {
 
 
     return (
-        <div>{JSON.stringify(certificates)}</div>
+
+        <>
+            {loading ? (
+                <>
+                    <SkillSkeleton />
+                </>
+            ) : (
+                ""
+            )}
+            <div>
+                {certificates.map((certificate, index) => (
+                    <div
+                        id={"certificate_" + certificate.id}
+                        key={index}
+                        className={`flex gap-2 items-center mb-2 p-2 ${index % 2 === 0 ? "bg-white" : "bg-gray-200"
+                            }`}
+                    >
+                    </div>
+                ))}
+            </div>
+        </>
     )
 }
 
