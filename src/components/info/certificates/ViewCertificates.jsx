@@ -50,7 +50,7 @@ const ViewCertificates = () => {
                                 confirmButtonColor: app_color_primary,
                             });
                             const parent_container = document.getElementById(
-                                "certificate_" + language_id
+                                "certificate_" + certificate_id
                             );
                             parent_container.classList.add("hidden");
                         } else {
@@ -116,7 +116,7 @@ const ViewCertificates = () => {
                     >
                         <div className="w-full">
                             <div><b>{certificate.name}</b> - {certificate.issuer}</div>
-                            <div>{certificate.issueMonth} {certificate.issueYear}</div>
+                            <div className="text-gray-600 italic">{certificate.issueMonth} {certificate.issueYear}</div>
                         </div>
                         <div className="w-fit flex gap-2">
                             <button
