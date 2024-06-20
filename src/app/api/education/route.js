@@ -5,19 +5,20 @@ import { getUserId } from "@/utils/session";
 export const GET = async () => {
     try {
         const userId = await getUserId()
-        const certificates = await prisma.userEducation.findMany({
+        const educations = await prisma.userEducation.findMany({
             where: {
                 userId,
             },
             select: {
                 id: true,
-                name: true,
-                issuer: true,
-                issueMonth: true,
-                issueYear: true,
+                school: true,
+                degree: true,
+                fieldOfStudy: true,
+                startYear: true,
+                endYear: rue
             }
         }) || [];
-        return resourceLoaded(certificates)
+        return resourceLoaded(educations)
     } catch (e) {
         return internalServerError("")
     }
@@ -35,7 +36,7 @@ export const POST = async (req) => {
         const userId = await getUserId();
 
         // insert into the data base if social type doesn't exists
-        const inserted_certifcate = await prisma.userCertificate.create({
+        const inserted_certifcate = await prisma.userEducation.create({
             data: {
                 userId,
                 name,
