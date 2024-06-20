@@ -6,7 +6,7 @@ export const POST = async (req) => {
         const data = await req.json();
         const { experience_id } = data;
 
-        if (!education_id || !parseInt(experience_id)) {
+        if (!experience_id || !parseInt(experience_id)) {
             return badRequest("invalid experience_id")
         }
 
