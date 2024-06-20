@@ -1,7 +1,13 @@
+export const metadata = {
+  title: "Certificate | Info",
+};
+
 const CertificateInfo = () => {
   return (
-    <div>CertificateInfo</div>
-  )
+    <>
+    <div className="divider"></div>
+    </>
+    )
 }
 
 export default CertificateInfo
