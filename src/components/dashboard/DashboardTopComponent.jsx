@@ -24,7 +24,7 @@ const DashboardTopComponent = async ({ userAnalytics }) => {
                   <i className="fi fi-tr-overview text-4xl"></i>
                 </div>
                 <div className="stat-title">Page Views</div>
-                <div className="stat-value font-semibold">0</div>
+                <div className="stat-value font-semibold">{userAnalytics?.portfolioViewCount || 0}</div>
                 {/* <div className="stat-desc app-text-primary">
                   0% more than last month
                 </div> */}
