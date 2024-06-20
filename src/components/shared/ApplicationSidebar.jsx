@@ -147,6 +147,7 @@ export default function ApplicationSidedar() {
           </div>
         </div>
         {/* // */}
+        <div className="divider"></div>
         <div className="mt-2">
           {links.map((link, index) => (
             <Link
@@ -174,6 +175,7 @@ export default function ApplicationSidedar() {
             </Link>
           ))}
         </div>
+        <div className="divider"></div>
         <div className="">
           <button
             className="w-full btn text-white btn-ghost justify-start"
