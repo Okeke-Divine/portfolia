@@ -67,3 +67,13 @@ export function analysisTracker(username, actionType) {
   return;
 }
 
+export function generateYearsArray(startYear = 1960) {
+  const currentYear = new Date().getFullYear();
+  const yearsArray = [];
+  
+  for (let year = startYear; year <= currentYear; year++) {
+    yearsArray.push(year);
+  }
+
+  return yearsArray;
+}

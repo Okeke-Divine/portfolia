@@ -4,6 +4,7 @@ import axios from "axios";
 import { app_color_primary } from "@/constants/shared/color";
 import Swal from "sweetalert2";
 import SkillSkeleton from "@/components/skeleton/skills/SkillSkeleton";
+import { generateYearsArray } from "@/utils/main";
 
 const ViewLanguages = () => {
 
@@ -11,6 +12,8 @@ const ViewLanguages = () => {
   const [loading, setLoading] = useState(false);
 
   const channel = new BroadcastChannel("user-languages-channel");
+
+  console.log(generateYearsArray())
 
   function deleteLanguage(language_id) {
     Swal.fire({
