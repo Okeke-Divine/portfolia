@@ -27,6 +27,9 @@ const PortfolioAbout = async ({ user }) => {
           <div className="mt-2 app-text-light-2 app-portfolio-about-container">
             <p className="whitespace-pre-line">{user?.userDetails?.about}</p>
           </div>
+
+                
+
           {/* divider */}
           <div className="divider"></div>
           {/* profile */}
