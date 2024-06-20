@@ -28,7 +28,7 @@ const PortfolioAbout = async ({ user }) => {
             <p className="whitespace-pre-line">{user?.userDetails?.about}</p>
           </div>
 
-                
+          
 
           {/* divider */}
           <div className="divider"></div>
