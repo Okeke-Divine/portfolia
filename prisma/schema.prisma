@@ -116,14 +116,16 @@ model UserEducation {
 }
 
 model UserExperience {
-  id          Int       @id @default(autoincrement())
+  id          Int     @id @default(autoincrement())
   userId      Int
-  user        User      @relation(fields: [userId], references: [id])
+  user        User    @relation(fields: [userId], references: [id])
   company     String
   position    String
   description String?
-  startDate   DateTime
-  endDate     DateTime?
+  startMonth  String
+  startYear   Int
+  endMonth    String?
+  endYear     Int?
 }
 
 model UserLanguage {
