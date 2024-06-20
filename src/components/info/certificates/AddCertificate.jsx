@@ -29,6 +29,21 @@ const AddCertificate = () => {
     return (
         <>
             <form onSubmit={_addCertificate} className="form-control">
+                {/* name */}
+                <div className="mb-3">
+                    <div>
+                        <label className="font-bold text-md">Certificate Name</label>
+                    </div>
+                    <div className="input input-bordered flex items-center gap-2 mt-1">
+                        <input
+                            type="text"
+                            className="grow"
+                            placeholder="Certificate name.."
+                            required
+                            ref={nameRef}
+                        />
+                    </div>
+                </div>
                 {/* issue month */}
                 <div className="mb-2">
                     <select ref={issueMonth} required className="select input-bordered w-full">
