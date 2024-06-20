@@ -132,10 +132,10 @@ export default async function Resume({ params }) {
               <ResumeAbout user={user} />
               <ResumeSkills userId={user.id} />
               <ResumeProjects userId={user.id} />
-              <ResumeDownload username={user.username} />
             </div>
           </div>
         </div>
+        <ResumeDownload username={user.username} />
       </div>
     </>
   );
