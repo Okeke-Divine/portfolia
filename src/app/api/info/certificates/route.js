@@ -13,7 +13,8 @@ export const GET = async () => {
                 id: true,
                 name: true,
                 issuer: true,
-                issueDate: true
+                issueMonth: true,
+                issueYear: true,
             }
         }) || [];
         return resourceLoaded(certificates)
@@ -25,7 +26,7 @@ export const GET = async () => {
 export const POST = async (req) => {
     try {
         const data = await req.json();
-        const { language, proficiency } = data;
+        const { name, issuer, issueDate } = data;
 
         if (!language || !proficiency) {
             return badRequest("All fields are required");

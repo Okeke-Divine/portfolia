@@ -135,10 +135,11 @@ model UserLanguage {
 }
 
 model UserCertificate {
-  id        Int      @id @default(autoincrement())
-  userId    Int
-  user      User     @relation(fields: [userId], references: [id])
-  name      String
-  issuer    String
-  issueDate DateTime
+  id         Int    @id @default(autoincrement())
+  userId     Int
+  user       User   @relation(fields: [userId], references: [id])
+  name       String
+  issuer     String
+  issueMonth String
+  issueYear  Int
 }
