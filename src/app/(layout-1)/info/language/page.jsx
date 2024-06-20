@@ -4,8 +4,10 @@ export const metadata = {
 
 const LanguageInfo = () => {
   return (
-    <div>LanguageInfo</div>
-  )
+<>
+    
+</>
+    )
 }
 
 export default LanguageInfo
