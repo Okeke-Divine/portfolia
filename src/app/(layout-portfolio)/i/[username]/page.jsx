@@ -3,7 +3,7 @@ import prisma from "@/app/db";
 import NotFound from "@/app/not-found";
 import PortfolioAbout from "@/components/i/portfolio/PortfolioAbout";
 import PortfolioFooter from "@/components/i/portfolio/PortfolioFooter";
-// import PortfolioExpertise from "@/components/i/portfolio/PortfolioExpertise";
+import PortfolioExpertise from "@/components/i/portfolio/PortfolioExpertise";
 import PortfolioHero from "@/components/i/portfolio/PortfolioHero";
 import PortfolioNavbar from "@/components/i/portfolio/PortfolioNavbar";
 import PortfolioProjects from "@/components/i/portfolio/PortfolioProjects";
@@ -11,6 +11,7 @@ import AnalyticTracker from "@/components/shared/AnalyticTracker";
 import AnalyticWatcher from "@/components/shared/AnalyticWatcher";
 import { _ucfirst } from "@/utils/main";
 import Link from "next/link";
+import { defaultImgUrl2 } from "@/constants/shared/constant";
 
 
 export async function generateMetadata({ params }) {
@@ -117,7 +118,7 @@ export default async function PortFolio({ params }) {
       <PortfolioAbout user={user} />
       <PortfolioProjects user={user} />
       <PortfolioFooter user={user} />
-      {/* <PortfolioExpertise /> */}
+      <PortfolioExpertise />
       {/* powered by */}
       <Link href="/" target="_blank">
         <div className="fixed bottom-5 right-5 bg-white rounded-full flex gap-x-1 items-center duration-300 shadow-md hover:shadow-lg group">
