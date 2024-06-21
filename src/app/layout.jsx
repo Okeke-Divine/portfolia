@@ -6,7 +6,7 @@ import GoogleAnalytics from "@/components/shared/GoogleAnalytics";
 const application_font = Bricolage_Grotesque({ subsets: ["latin"], weight: '400' });
 
 const description = config.summary;
-const banner_url = "/images/banner-image.jpg";
+const banner_url = process.env.NEXT_PUBLIC_BASE_URL+"/images/banner-image.jpg";
 
 export const metadata = {
   title: {
@@ -60,6 +60,7 @@ export const metadata = {
     creator: "@okekedivine__",
     images: {
       url: banner_url,
+      alt: config.app_name + "'s logo",
     },
   },
 };
