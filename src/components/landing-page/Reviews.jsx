@@ -2,6 +2,12 @@ import config from "@/data/config.json"
 
 const reviews = [
   {
+    message: "This is absolutely incredible 😱The inbuilt analysis tool is fantastic. I could see exactly how many people viewed my resume and what actions they took, which helped me tweak my approach.",
+    name: "James Wilson",
+    username: "@jamesw",
+    img: "male (2).jpg"
+  },
+  {
     message: "This platform is a game-changer for job seekers. It automatically generated a stunning resume and portfolio for me, saving me countless hours of work.",
     name: "Alice Johnson",
     username: "@alicej",
@@ -42,12 +48,6 @@ const reviews = [
     name: "Emily Davis",
     username: "@emilyd",
     img: "female (3).jpg"
-  },
-  {
-    message: "This is absolutely incredible 😱The inbuilt analysis tool is fantastic. I could see exactly how many people viewed my resume and what actions they took, which helped me tweak my approach.",
-    name: "James Wilson",
-    username: "@jamesw",
-    img: "male (2).jpg"
   },
   {
     message: "Being able to download a professional PDF of my resume is so convenient. It looks great both online and offline, which is perfect for interviews.",
