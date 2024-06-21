@@ -5,7 +5,7 @@ const ResumeHeroSection = ({ user }) => {
     <>
       <div className="app-resume-padding">
         <div className="block md:flex gap-2 md:gap-5 items-center">
-          {user.profilePicture_url != "" ? (
+          {(user?.profilePicture_url != "" & user?.profilePicture_url != null) ? (
             <>
               <div className="w-fit mb-2 md:mb-0">
                 <div className="avatar">
