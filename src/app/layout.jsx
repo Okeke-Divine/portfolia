@@ -1,6 +1,7 @@
 import { Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 import config from "@/data/config.json";
+import GoogleAnalytics from "@/components/shared/GoogleAnalytics";
 
 const application_font = Bricolage_Grotesque({ subsets: ["latin"], weight: '400' });
 
@@ -67,6 +68,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <GoogleAnalytics />
         {/* flaticon */}
         <link
           rel="stylesheet"
