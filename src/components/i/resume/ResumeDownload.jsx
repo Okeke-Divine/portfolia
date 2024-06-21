@@ -71,19 +71,20 @@ const ResumeDownload = ({ name }) => {
 
     return (
         <>
-            <button
+            {/* <button
                 onClick={handleDownloadPdf}
                 className="fixed bottom-5 right-16 app-bg-primary hover:app-bg-primary-dark shadow-md hover:shadow-lg text-white duration-300 z-[100] rounded-full w-10 h-10 flex items-center justify-center downsifn"
                 title="Download static image"
             >
                 <i className="fi fi-tr-down-to-line text-xl flaticon-offset"></i>
-            </button>
+            </button> */}
             <button
                 onClick={handlePrint}
                 className="fixed bottom-5 right-5 app-bg-primary hover:app-bg-primary-dark shadow-md hover:shadow-lg text-white duration-300 z-[100] rounded-full w-10 h-10 flex items-center justify-center downsifn"
                 title="Print dynamic resume"
             >
-                <i className="fi fi-tr-print text-xl flaticon-offset"></i>
+                <i className="fi fi-tr-down-to-line text-xl flaticon-offset"></i>
+                {/* <i className="fi fi-tr-print text-xl flaticon-offset"></i> */}
             </button>
         </>
     );
