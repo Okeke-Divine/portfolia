@@ -18,7 +18,7 @@ const HeroSection = () => {
           </h1>
           <h2 class="badge badge-ghost font-medium mt-3">The #1 Portfolio + Resume Generator</h2>
           <p className="text-gray-600 lg:max-w-[400px] mt-3">
-            Portfoliia eliminates the hassle of building a portfolio and resume. Simply fill in your information, and let our platform instantly generate a professional, polished resume and portfolio for you. Save time and stress, and focus on landing your dream job.
+            {config.description}
           </p>
           <Link className="app-primary-button mt-3 w-fit" href="/signup">Get yours now → It's free</Link>
           <div className="divider"></div>
