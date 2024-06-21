@@ -23,19 +23,19 @@ const reviews = [
     message: "I love how user-friendly the platform is. I could track how many views and clicks my resume was getting, which really helped me understand its effectiveness.",
     name: "David Kim",
     username: "@davidk",
-    img: "https://makelanding.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftestimonial-wonji.96376f67.jpeg&w=48&q=75"
+    img: "male (1).jpg"
   },
   {
     message: "The Google indexing feature is a huge plus. My resume started appearing in search results within days, which boosted my visibility to recruiters.",
-    name: "Jessica Smith",
-    username: "@jessicas",
-    img: "https://makelanding.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftestimonial-wonji.96376f67.jpeg&w=48&q=75"
+    name: "Jessica",
+    username: "@thereal_jessy",
+    img: "female (2).jpg"
   },
   {
     message: "This platform made it so easy to update my resume and portfolio. I could make changes on the fly, and the live link reflected updates instantly.",
     name: "Robert Johnson",
     username: "@robertj",
-    img: "https://makelanding.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftestimonial-wonji.96376f67.jpeg&w=48&q=75"
+    img: "male (4).jpg"
   },
   {
     message: "Absolutely love this platform! It offers all the tools I need to create a professional online presence and share it effortlessly with potential employers.",
@@ -78,7 +78,7 @@ const Reviews = () => {
                 <div className="w-fit">
                   <div className="avatar">
                     <div className="w-10 rounded-xl">
-                      <img src={"/images/avatar/b/"+review.img} />
+                      <img src={"/images/avatar/b/" + review.img} />
                     </div>
                   </div>
                 </div>
