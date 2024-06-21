@@ -1,3 +1,5 @@
+import { defaultImgUrl } from "@/constants/shared/constant";
+
 const ResumeHeroSection = ({ user }) => {
   return (
     <>
