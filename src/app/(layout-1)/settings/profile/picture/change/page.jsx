@@ -26,7 +26,7 @@ const SettingsProfilePicture = () => {
             <strong>Recommended:</strong> Profile picture should be square
             dimensions.
             <br />
-            Profile picture must not be more than 3 MB.
+            Profile picture must not be larger than 3 MB.
           </p>
         </div>
         <div className="divider"></div>
