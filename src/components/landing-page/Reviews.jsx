@@ -26,7 +26,7 @@ const reviews = [
     img: "male (1).jpg"
   },
   {
-    message: "The Google indexing feature is a huge plus. My resume started appearing in search results within days, which boosted my visibility to recruiters.",
+    message: "The Google indexing feature is a huge plus🎯. My resume started appearing in search results within days, which boosted my visibility to recruiters.",
     name: "Jessica",
     username: "@thereal_jessy",
     img: "female (2).jpg"
