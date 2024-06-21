@@ -40,19 +40,19 @@ export async function generateMetadata({ params }) {
   }
 
   const title =
-    _ucfirst(user.userDetails.fullname) +
+    _ucfirst(user?.userDetails?.fullname) +
     " - " +
-    user.userDetails.profession +
+    user?.userDetails?.profession +
     " | Resume";
 
   const description =
-    user.userDetails.bio != ""
-      ? user.userDetails.bio
-      : user.userDetails.about != ""
-        ? user.userDetails.about
-        : _ucfirst(user.userDetails.fullname) +
+    user?.userDetails?.bio != ""
+      ? user?.userDetails?.bio
+      : user?.userDetails?.about != ""
+        ? user?.userDetails?.about
+        : _ucfirst(user?.userDetails?.fullname) +
         " - " +
-        user.userDetails.profession;
+        user?.userDetails?.profession;
 
   const img_url =
     user.profilePicture_url != "" ? user.profilePicture_url : defaultImgUrl2;
@@ -71,7 +71,7 @@ export async function generateMetadata({ params }) {
       creator: "@okekedivine__",
       images: {
         url: img_url,
-        alt: user.userDetails.fullname + "'s profile picture",
+        alt: user?.userDetails?.fullname + "'s profile picture",
       },
     },
     icons: {

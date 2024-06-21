@@ -39,7 +39,7 @@ export async function generateMetadata({ params }) {
     _ucfirst(user?.userDetails?.fullname) +
     " - " +
     user?.userDetails?.profession +
-    " | Resume";
+    " | Portfolio";
 
   const description =
     user?.userDetails?.bio != ""
