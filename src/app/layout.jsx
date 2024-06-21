@@ -88,6 +88,7 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
           href="https://cdn-uicons.flaticon.com/2.4.0/uicons-brands/css/uicons-brands.css"
         ></link>
+        <meta name="google-site-verification" content="O0THdygIatXpt8qvo529w2W-K7ptf3MkSQtjGcJgLA8" />
       </head>
       <body className={application_font.className}>{children}</body>
     </html>
