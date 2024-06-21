@@ -13,7 +13,7 @@ import ResumeSocialLink from "@/components/i/resume/ResumeSocialLink";
 import AnalyticTracker from "@/components/shared/AnalyticTracker";
 import AnalyticWatcher from "@/components/shared/AnalyticWatcher";
 import { defaultImgUrl2 } from "@/constants/shared/constant";
-import { _ucfirst, analysisTracker } from "@/utils/main";
+import { _ucfirst } from "@/utils/main";
 import Link from "next/link";
 
 // export async function generateMetadata({ params }) {
@@ -109,7 +109,7 @@ export async function generateMetadata({ params }) {
   const bio = user?.userDetails?.bio || "";
   const about = user?.userDetails?.about || "";
 
-  const title = `${_ucfirst(fullname)} - ${profession} | Portfolio`;
+  const title = `${_ucfirst(fullname)} - ${profession} | Resume`;
 
   const description = bio || about || `${_ucfirst(fullname)} - ${profession}`;
 

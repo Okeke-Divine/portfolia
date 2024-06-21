@@ -9,10 +9,67 @@ import PortfolioNavbar from "@/components/i/portfolio/PortfolioNavbar";
 import PortfolioProjects from "@/components/i/portfolio/PortfolioProjects";
 import AnalyticTracker from "@/components/shared/AnalyticTracker";
 import AnalyticWatcher from "@/components/shared/AnalyticWatcher";
-import { _ucfirst, analysisTracker } from "@/utils/main";
+import { _ucfirst } from "@/utils/main";
 import Link from "next/link";
 
 
+export async function generateMetadata({ params }) {
+  const username = params.username;
+  const user = await prisma.user.findFirst({
+    where: { username },
+    select: {
+      profilePicture_url: true,
+      userDetails: {
+        select: {
+          fullname: true,
+          heroTitle: true,
+          profession: true,
+          bio: true,
+          about: true,
+        },
+      },
+    },
+  });
+
+  if (!user) {
+    return {
+      title: "404 Not Found",
+    };
+  }
+
+  const fullname = user?.userDetails?.fullname || "Unknown User";
+  const profession = user?.userDetails?.profession || "Unknown Profession";
+  const bio = user?.userDetails?.bio || "";
+  const about = user?.userDetails?.about || "";
+
+  const title = `${_ucfirst(fullname)} - ${profession} | Portfolio`;
+
+  const description = bio || about || `${_ucfirst(fullname)} - ${profession}`;
+
+  const img_url = user.profilePicture_url || defaultImgUrl2;
+
+  return {
+    title: title,
+    description: description,
+    images: [img_url],
+    openGraph: {
+      images: [img_url],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: title,
+      description: description,
+      creator: "@okekedivine__",
+      images: {
+        url: img_url,
+        alt: `${fullname}'s profile picture`,
+      },
+    },
+    icons: {
+      icon: [{ url: img_url }],
+    },
+  };
+}
 
 
 export default async function PortFolio({ params }) {
