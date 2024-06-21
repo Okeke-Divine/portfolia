@@ -10,7 +10,7 @@ export async function middleware(req) {
 
     // If no token is found, redirect to the login page
     if (!token) {
-        const loginUrl = new URL(process.env.NEXT_PUBLIC_BASE_URL+'/api/auth/signin', req.url);
+        const loginUrl = new URL('/api/auth/signin', req.url);
         loginUrl.searchParams.set('callbackUrl', req.url);
         return NextResponse.redirect(loginUrl);
     }
