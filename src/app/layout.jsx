@@ -5,7 +5,7 @@ import GoogleAnalytics from "@/components/shared/GoogleAnalytics";
 
 const application_font = Bricolage_Grotesque({ subsets: ["latin"], weight: '400' });
 
-const description = config.description;
+const description = config.summary;
 const banner_url = "";
 
 export const metadata = {
