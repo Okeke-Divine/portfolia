@@ -5,4 +5,5 @@ Crawl-delay: 20
 User-agent: BingBot
 Crawl-delay: 20
 
-Sitemap: /sitemap.xml
+Sitemap: https://portfoliia.vercel.app/sitemap/sitemap.xml
+Sitemap: https://portfoliia.vercel.app/sitemap/portfolio/sitemap.xml
