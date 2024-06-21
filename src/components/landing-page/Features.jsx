@@ -2,7 +2,7 @@ const features = [
   {
     title: "Inbuilt Analysis",
     message: "Track your resume's performance with detailed analytics. Get insights into total views, clicks, and conversion rates, helping you understand how potential employers are interacting with your content.",
-    icon: "fi-ts-web-design"
+    icon: "fi-tr-analyse-alt"
   },
   {
     title: "SEO Optimization",
@@ -47,7 +47,7 @@ const Features = () => {
             <div key={index} className="p-5 bg-white rounded-lg">
               <div className="mb-2 flex justify-center">
                 <div className="flex justify-center items-center rounded-full w-14 h-14 bg-green-100 mb-2">
-                  <i className={`fi flaticon-offset ${feature.icon}`}></i>
+                  <i className={`fi flaticon-offset ${feature.icon} text-xl`}></i>
                 </div>
               </div>
               <div className="text-center text-xl font-bold mb-2">{feature.title}</div>
