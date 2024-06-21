@@ -3,7 +3,7 @@ import Link from "next/link"
 
 const platforms = [
   { image: "product-hunt.webp", url: "#" },
-  { image: "hackerNews.webp", url: "#" },
+  // { image: "hackerNews.webp", url: "#" },
   // { image: "reddit.webp", url: "#" },
   // { image: "twitter.webp", url: "#" },
 ]
