@@ -7,7 +7,7 @@ const features = [
   {
     title: "SEO Optimization",
     message: "Enhance your online visibility with our SEO optimization features. Our platform automatically optimizes your resume and portfolio for search engines, making it easier for potential employers to find you.",
-    icon: "fi-ts-web-design"
+    icon: "fi-tr-chart-line-up"
   },
   {
     title: "Google Indexing",
@@ -22,12 +22,12 @@ const features = [
   {
     title: "Live Links",
     message: "Share your resume and portfolio effortlessly with live links. Simply copy the link and share it with potential employers, allowing them to view your professional information online.",
-    icon: "fi-ts-web-design"
+    icon: "fi-tr-link-alt"
   },
   {
     title: "PDF Download",
     message: "Download your resume as a professionally formatted PDF. Our platform ensures your resume looks great in print and digital formats, making it easy to share in any context.",
-    icon: "fi-ts-web-design"
+    icon: "fi-tr-file-download"
   }
 ]
 
