@@ -49,7 +49,7 @@ const PortfolioHero = ({ user }) => {
                 <div className="mask mask-squircle bg-green-200 bg-opacity-20 w-52 lg:w-96">
                   <img
                     src={
-                      user?.profilePicture_url != ""
+                      (user.profilePicture_url != "" & user.profilePicture_url != null) != ""
                         ? user.profilePicture_url
                         : defaultImgUrl
                     }
