@@ -1,9 +1,9 @@
 
 const LowerCallToAction = () => {
 
-  function usernameRedirect(data){
+  async function usernameRedirect(data){
     "use server"
-    console.log(data)
+    const username = data.get("username");
   }
 
   return (
@@ -15,7 +15,7 @@ const LowerCallToAction = () => {
           <div className="join flex justify-center mt-1">
             <form action={usernameRedirect}>
               <input name="username" id="username" type="text" placeholder="Your username" className="join-item input input-bordered" />
-              <button className="join-item btn app-button-primary app-primary-button w-fit">Create my Portfolio</button>
+              <button type="submit" className="join-item btn app-button-primary app-primary-button w-fit">Create my Portfolio</button>
             </form>
           </div>
         </div>
