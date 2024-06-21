@@ -41,13 +41,13 @@ const reviews = [
     message: "Absolutely love this platform! It offers all the tools I need to create a professional online presence and share it effortlessly with potential employers.",
     name: "Emily Davis",
     username: "@emilyd",
-    img: "https://makelanding.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftestimonial-wonji.96376f67.jpeg&w=48&q=75"
+    img: "female (3).jpg"
   },
   {
-    message: "This is a came changer. The inbuilt analysis tool is fantastic. I could see exactly how many people viewed my resume and what actions they took, which helped me tweak my approach.",
+    message: "This is absolutely incredible 😱The inbuilt analysis tool is fantastic. I could see exactly how many people viewed my resume and what actions they took, which helped me tweak my approach.",
     name: "James Wilson",
     username: "@jamesw",
-    img: "https://makelanding.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftestimonial-wonji.96376f67.jpeg&w=48&q=75"
+    img: "male (2).jpg"
   },
   {
     message: "Being able to download a professional PDF of my resume is so convenient. It looks great both online and offline, which is perfect for interviews.",
