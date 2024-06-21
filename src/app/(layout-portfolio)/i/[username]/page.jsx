@@ -31,7 +31,7 @@ export async function generateMetadata({ params }) {
   });
   if (!user) {
     return {
-      title: "404 | Not Found",
+      title: "404 Not Found",
     };
   }
 
