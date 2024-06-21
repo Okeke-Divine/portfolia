@@ -33,7 +33,7 @@ const SignUpForm = () => {
 
   const searchParams = useSearchParams()
 
-  const usernameSearchParam = searchParams.get('username')
+  const usernameSearchParam = searchParams.get('username') || ""
 
   const [pswdVisible, setPswdVisible] = useState(false);
   function togglePswdVisible() {
