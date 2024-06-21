@@ -11,16 +11,18 @@ const Navbar = () => {
     <>
       <div className="navbar border-b-2 landingPagePadx fixed top-0 left-0 bg-white z-50">
         <div className="navbar-start">
-          <div className="flex gap-2 items-center">
-            <div>
-              <img
-                className="w-12 mb-2 rounded-full shadow-lg"
-                src="/images/logo/logo.png"
-                alt={config.app_name + "'s logo"}
-              />
+          <Link href="/">
+            <div className="flex gap-2 items-center">
+              <div>
+                <img
+                  className="w-12 mb-2 rounded-full shadow-lg"
+                  src="/images/logo/logo.png"
+                  alt={config.app_name + "'s logo"}
+                />
+              </div>
+              <div className="text-xl font-bold">{config.app_name}</div>
             </div>
-            <div className="text-xl font-bold">{config.app_name}</div>
-          </div>
+          </Link>
         </div>
         <div className="hidden md:flex navbar-center overflow-x-auto w-fit">
           <ul className="menu menu-horizontal px-1 gap-1 w-fit">
