@@ -44,7 +44,7 @@ const reviews = [
     img: "https://makelanding.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftestimonial-wonji.96376f67.jpeg&w=48&q=75"
   },
   {
-    message: "The inbuilt analysis tool is fantastic. I could see exactly how many people viewed my resume and what actions they took, which helped me tweak my approach.",
+    message: "This is a came changer. The inbuilt analysis tool is fantastic. I could see exactly how many people viewed my resume and what actions they took, which helped me tweak my approach.",
     name: "James Wilson",
     username: "@jamesw",
     img: "https://makelanding.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftestimonial-wonji.96376f67.jpeg&w=48&q=75"
