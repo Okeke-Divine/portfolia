@@ -41,7 +41,7 @@ const PortfolioAbout = async ({ user }) => {
               <div className="w-12 rounded-full ring ring-green-300">
                 <img
                   src={
-                    user?.profilePicture_url != ""
+                    (user.profilePicture_url != "" & user.profilePicture_url != null) != ""
                       ? user.profilePicture_url
                       : defaultImgUrl
                   }
