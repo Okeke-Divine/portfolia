@@ -4,7 +4,7 @@ import config from "@/data/config.json";
 
 const application_font = Bricolage_Grotesque({ subsets: ["latin"], weight: '400' });
 
-const description = "";
+const description = config.description;
 const banner_url = "";
 
 export const metadata = {
