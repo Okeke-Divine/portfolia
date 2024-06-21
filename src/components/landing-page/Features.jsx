@@ -12,7 +12,7 @@ const features = [
   {
     title: "Google Indexing",
     message: "Get your resume and portfolio indexed by Google with just a few clicks. Our platform ensures your content is searchable and ranks well on Google, increasing your chances of being noticed.",
-    icon: "fi-tr-file-download"
+    icon: "fi-tr-globe-pointer"
   },
   {
     title: "CMS Platform",
