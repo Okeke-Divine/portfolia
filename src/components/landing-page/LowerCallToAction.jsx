@@ -1,9 +1,11 @@
+import { redirect } from "next/navigation";
 
 const LowerCallToAction = () => {
 
-  async function usernameRedirect(data){
+  async function usernameRedirect(data) {
     "use server"
     const username = data.get("username");
+    redirect("/signup?username=" + username)
   }
 
   return (
