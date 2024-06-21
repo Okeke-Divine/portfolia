@@ -13,14 +13,14 @@ const UserProfilePictureComponent = () => {
     axios
       .get("/api/profile/picture")
       .then((result) => {
-        if (result.data.data.profilePicture_url !== "") {
+        if (result.data.data.profilePicture_url !== "" & result.data.data.profilePicture_url !== null) {
           localStorage.setItem(
             "user_imgUrl",
             result.data.data.profilePicture_url
           );
-        //   setImgUrl(result.data.data.profilePicture_url);
+          //   setImgUrl(result.data.data.profilePicture_url);
         } else {
-        //   setImgUrl(defaultImgUrl);
+          //   setImgUrl(defaultImgUrl);
           localStorage.setItem("user_imgUrl", defaultImgUrl);
         }
       })
