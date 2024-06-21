@@ -5,6 +5,7 @@ import Swal from "sweetalert2";
 import { signIn } from "next-auth/react";
 import { app_color_primary } from "@/constants/shared/color";
 import Link from "next/link";
+import { useSearchParams } from 'next/navigation'
 
 async function _signIn(email, password) {
   const login = await signIn("credentials", {
@@ -29,6 +30,10 @@ const SignUpForm = () => {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [regIsSuccessful, setRegIsSuccessful] = useState(false);
+
+  const searchParams = useSearchParams()
+
+  const usernameSearchParam = searchParams.get('username')
 
   const [pswdVisible, setPswdVisible] = useState(false);
   function togglePswdVisible() {
@@ -189,6 +194,7 @@ const SignUpForm = () => {
                   required
                   ref={usernameRef}
                   className="grow"
+                  defaultValue={usernameSearchParam}
                   placeholder="Enter Your Username"
                 />
               </div>
