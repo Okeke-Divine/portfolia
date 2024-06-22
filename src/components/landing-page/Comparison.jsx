@@ -1,15 +1,15 @@
 const Comparison = () => {
     return (
         <>
-            <div className="landingPagePadx">
+            <div className="landingPagePadx py-5 md:py-10">
                 <div className="text-center uppercase app-text-primary">Benefits</div>
                 <h2 className="text-center">Benefits</h2>
-                <div className="overflow-x-auto mt-2">
+                <div className="overflow-x-auto mt-5">
                     <table className="min-w-full bg-white border border-gray-200">
                         <thead className="bg-gray-50">
                             <tr>
-                                <th className="px-4 py-2 text-left text-2xl font-bold">With Portfolia</th>
-                                <th className="px-4 py-2 text-left text-2xl font-bold">Without Portfolia</th>
+                                <th className="px-4 py-2 text-left text-xl font-bold">With Portfolia</th>
+                                <th className="px-4 py-2 text-left text-xl font-bold">Without Portfolia</th>
                             </tr>
                         </thead>
                         <tbody className="bg-white divide-y divide-gray-200">
