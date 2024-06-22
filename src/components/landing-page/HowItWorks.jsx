@@ -57,7 +57,7 @@ const HowItWorks = () => {
             </div>
           </div>
           <div className="flex justify-center">
-            <Link className="btn btn-neutrual app-text-primary border-green-500 border-2" href="https://www.youtube.com/watch?v=mWDAljdhhKk" target="_blank">Demo</Link>
+            <Link className="btn btn-neutrual app-text-primary border-green-500 border-1 border-dotted" href="https://www.youtube.com/watch?v=mWDAljdhhKk" target="_blank">Demo</Link>
           </div>
         </div>
       </section>
