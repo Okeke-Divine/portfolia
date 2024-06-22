@@ -20,7 +20,10 @@ const HeroSection = () => {
           <p className="text-gray-600 lg:max-w-[400px] mt-3">
             {config.description}
           </p>
-          <Link className="app-primary-button mt-3 w-fit" href="/signup">Get yours now → It's free</Link>
+          <div className="flex gap-2 flex-wrap mt-3">
+          <Link className="app-primary-button w-fit" href="/signup">Get yours now → It's free</Link>
+          <Link className="btn btn-ghost" href="https://www.youtube.com/watch?v=mWDAljdhhKk" target="_blank">Demo</Link>
+          </div>
           <div className="divider"></div>
           <div className="md:block my-2 flex justify-center">
             <div className="w-fit">
