@@ -12,6 +12,7 @@ import ResumeSkills from "@/components/i/resume/ResumeSkills";
 import ResumeSocialLink from "@/components/i/resume/ResumeSocialLink";
 import AnalyticTracker from "@/components/shared/AnalyticTracker";
 import AnalyticWatcher from "@/components/shared/AnalyticWatcher";
+import PoweredBy from "@/components/shared/PoweredBy";
 import { defaultImgUrl2 } from "@/constants/shared/constant";
 import { _ucfirst } from "@/utils/main";
 import Link from "next/link";
@@ -201,6 +202,7 @@ export default async function Resume({ params }) {
             </div>
           </div>
         </div>
+        <PoweredBy />
         <ResumeDownload name={user.userDetails.fullname || user.fullname || user.username} />
       </div>
     </>
