@@ -22,7 +22,7 @@ const HeroSection = () => {
           </p>
           <div className="flex gap-2 flex-wrap mt-3">
           <Link className="app-primary-button w-fit" href="/signup">Get yours now → It's free</Link>
-          <Link className="btn btn-ghost" href="https://www.youtube.com/watch?v=mWDAljdhhKk" target="_blank">Demo</Link>
+          <Link className="btn btn-neutral" href="https://www.youtube.com/watch?v=mWDAljdhhKk" target="_blank">Demo</Link>
           </div>
           <div className="divider"></div>
           <div className="md:block my-2 flex justify-center">
