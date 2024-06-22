@@ -35,6 +35,12 @@ export const POST = async (req) => {
             return badRequest("All fields are required");
         }
 
+        if (endYear != null & endYear != "") {
+            if (parseInt(endYear) < parseInt(startYear)) {
+                return badRequest("End year cannot be less than start year");
+            }
+        }
+
         const userId = await getUserId();
 
         const inserted_experience = await prisma.userExperience.create({
