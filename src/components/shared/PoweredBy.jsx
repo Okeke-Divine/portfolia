@@ -1,12 +1,12 @@
 import config from "@/data/config.json"
 import Link from "next/link"
 
-const PoweredBy = () => {
+const PoweredBy = ({ variation }) => {
     return (
         <>
 
             <Link href="/" target="_blank">
-                <div className="fixed bottom-10 right-5 bg-white rounded-full flex gap-x-1 items-center duration-300 shadow-md hover:shadow-lg group">
+                <div className={`fixed ${variation == 0 ? "bottom-5" : "bottom-16"} right-5 bg-white rounded-full flex gap-x-1 items-center duration-300 shadow-md hover:shadow-lg group`}>
                     <div>
                         <img
                             className="w-10 rounded-full shadow-lg"

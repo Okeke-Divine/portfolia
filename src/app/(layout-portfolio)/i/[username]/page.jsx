@@ -120,7 +120,7 @@ export default async function PortFolio({ params }) {
       <PortfolioFooter user={user} />
 
       {/* powered by */}
-      <PoweredBy />
+      <PoweredBy variation={0} />
 
     </>
   );
