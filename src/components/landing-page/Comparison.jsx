@@ -6,8 +6,8 @@ const Comparison = () => {
                     <table className="min-w-full bg-white border border-gray-200">
                         <thead className="bg-gray-50">
                             <tr>
-                                <th className="px-4 py-2 text-left text-sm font-medium text-gray-600">With Portfolia</th>
-                                <th className="px-4 py-2 text-left text-sm font-medium text-gray-600">Without Portfolia</th>
+                                <th className="px-4 py-2 text-left text-2xl font-bold">With Portfolia</th>
+                                <th className="px-4 py-2 text-left text-2xl font-bold">Without Portfolia</th>
                             </tr>
                         </thead>
                         <tbody className="bg-white divide-y divide-gray-200">
