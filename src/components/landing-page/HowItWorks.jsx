@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const hiws = [
   {
     title: "Create Your Account",
@@ -54,6 +56,8 @@ const HowItWorks = () => {
               ))}
             </div>
           </div>
+          <Link className="btn btn-neutrual" href="https://www.youtube.com/watch?v=mWDAljdhhKk" target="_blank">Demo</Link>
+
         </div>
       </section>
     </>
