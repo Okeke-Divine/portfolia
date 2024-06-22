@@ -1,3 +1,4 @@
+import Comparison from "@/components/landing-page/Comparison";
 import FAQ from "@/components/landing-page/FAQ";
 import Features from "@/components/landing-page/Features";
 import HeroSection from "@/components/landing-page/HeroSection";
@@ -22,6 +23,7 @@ export default function Home() {
           style={{ width: '250px', height: '54px' }}  // Note the usage of double curly braces for style object
         />
       </a>
+      <Comparison />
       <HowItWorks />
       <Features />
       <Reviews />
