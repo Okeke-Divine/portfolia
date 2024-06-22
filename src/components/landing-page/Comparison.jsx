@@ -2,6 +2,8 @@ const Comparison = () => {
     return (
         <>
             <div className="landingPagePadx">
+                <div className="text-center uppercase app-text-primary">Benefits</div>
+                <h2 className="text-center">Benefits</h2>
                 <div className="overflow-x-auto">
                     <table className="min-w-full bg-white border border-gray-200">
                         <thead className="bg-gray-50">
