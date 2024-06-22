@@ -6,7 +6,7 @@ const PoweredBy = ({ variation }) => {
         <>
 
             <Link href="/" target="_blank">
-                <div className={`fixed ${variation == 0 ? "bottom-5" : "bottom-16"} right-5 bg-white rounded-full flex gap-x-1 items-center duration-300 shadow-md hover:shadow-lg group p-1`}>
+                <div className={`fixed ${variation == 0 ? "bottom-5" : "bottom-16"} right-5 bg-white rounded-full flex gap-x-1 items-center duration-300 shadow-md hover:shadow-lg group p-0 md:p-1`}>
                     <div>
                         <img
                             className="w-10 rounded-full shadow-lg"
