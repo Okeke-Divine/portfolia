@@ -18,13 +18,13 @@ const DashboardTopComponent = async ({ userAnalytics }) => {
             <i className="fi fi-tr-house-chimney titleIcon"></i> Welcome,{" "}
             <span className="capitalize">{session.user.name}</span>
           </h1>
-          {/* <p className="app-text-light">Summary of last 30 days</p> */}
         </div>
         {/* portfolio analytics */}
         <div className="divider"></div>
         <Link className="btn btn-neutrual" href="https://www.youtube.com/watch?v=mWDAljdhhKk" target="_blank">Demo</Link>
         <div className="divider"></div>
         <div>
+          <p className="app-text-light">Analytics (Resume / Portfolio)</p>
           <h3>Portfolio</h3>
           <div>
             <div className="join stats-vertical lg:stats-horizontal w-full stats shadow-md duration-100 hover:shadow-lg">
