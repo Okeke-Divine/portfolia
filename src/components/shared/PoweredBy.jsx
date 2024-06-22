@@ -4,7 +4,19 @@ import config from "@/data/config.json"
 const PoweredBy = () => {
     return (
         <>
-            <div className="pr-2 w-[0px] duration-300 hidden group-hover:w-full  group-hover:block">Powered  by <span className="font-bold"> {config.app_name}</span> </div>
+
+            <Link href="/" target="_blank">
+                <div className="fixed bottom-5 right-5 bg-white rounded-full flex gap-x-1 items-center duration-300 shadow-md hover:shadow-lg group">
+                    <div>
+                        <img
+                            className="w-10 rounded-full shadow-lg"
+                            src="/images/logo/logo.png"
+                            alt={config.app_name + "'s logo"}
+                        />
+                    </div>
+                    <div className="pr-2 w-[0px] duration-300 hidden group-hover:w-full  group-hover:block">Powered  by <span className="font-bold"> {config.app_name}</span> </div>
+                </div>
+            </Link>
         </>
     )
 }
