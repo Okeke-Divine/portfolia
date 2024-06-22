@@ -6,7 +6,7 @@ const PoweredBy = () => {
         <>
 
             <Link href="/" target="_blank">
-                <div className="fixed bottom-5 right-5 bg-white rounded-full flex gap-x-1 items-center duration-300 shadow-md hover:shadow-lg group">
+                <div className="fixed bottom-10 right-5 bg-white rounded-full flex gap-x-1 items-center duration-300 shadow-md hover:shadow-lg group">
                     <div>
                         <img
                             className="w-10 rounded-full shadow-lg"
