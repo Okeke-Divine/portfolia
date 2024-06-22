@@ -118,10 +118,9 @@ export default async function PortFolio({ params }) {
       <PortfolioAbout user={user} />
       <PortfolioProjects user={user} />
       <PortfolioFooter user={user} />
-      {/* powered by */}
-      
 
-          <PoweredBy />
+      {/* powered by */}
+      <PoweredBy />
 
     </>
   );

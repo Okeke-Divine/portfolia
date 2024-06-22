@@ -202,6 +202,8 @@ export default async function Resume({ params }) {
             </div>
           </div>
         </div>
+
+        {/* powered by */}
         <PoweredBy />
         <ResumeDownload name={user.userDetails.fullname || user.fullname || user.username} />
       </div>
