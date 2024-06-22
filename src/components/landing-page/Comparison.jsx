@@ -5,7 +5,7 @@ const Comparison = () => {
                 <div className="text-center uppercase app-text-primary">Benefits</div>
                 <h2 className="text-center">Benefits</h2>
                 <div className="overflow-x-auto mt-5">
-                    <table className="min-w-full bg-white border border-gray-200">
+                    <table className="min-w-full bg-white border border-gray-200 table table-zebra">
                         <thead className="bg-gray-50">
                             <tr>
                                 <th className="px-4 py-2 text-left text-xl font-bold">With Portfolia</th>
