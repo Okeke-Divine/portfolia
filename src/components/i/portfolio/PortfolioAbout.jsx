@@ -65,21 +65,20 @@ const PortfolioAbout = async ({ user }) => {
                 <div className="app-text-light-2 uppercase font-semibold tracking-wide text-xl mb-2">
                   Skills
                 </div>
-                <div 
-                // className="grid grid-cols-2 md:grid-cols-3 gap-5 lg:grid-cols-6 xl:grid-cols-8"
-                className=""
-                >
+                <div
+                  // className="grid grid-cols-2 md:grid-cols-3 gap-5 lg:grid-cols-6 xl:grid-cols-8"
+                  className="flex flex-wrap gap-x-2 md:gap-x-3 gap-y-2">
                   {skills.map((skill, index) => (
                     <>
-                      <div
+                      {/* <div
                         key={index}
                         // className="rounded-lg shadow-sm duration-300 hover:shadow-lg bg-white text-center p-5"
-                        className="badge bg-white text-black"
-                      >
-                        <div className="capitalize font-bold">
-                          {skill.skill_name}
-                        </div>
+                        className="bg-white text-black"
+                      > */}
+                      <div className="capitalize badge badge-outline badge-md font-bold">
+                        {skill.skill_name}
                       </div>
+                      {/* </div> */}
                     </>
                   ))}
                 </div>
