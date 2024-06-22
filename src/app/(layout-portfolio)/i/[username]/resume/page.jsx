@@ -204,7 +204,7 @@ export default async function Resume({ params }) {
         </div>
 
         {/* powered by */}
-        <PoweredBy variation={1} />
+        <PoweredBy variation={0} />
         <ResumeDownload name={user.userDetails.fullname || user.fullname || user.username} />
       </div>
     </>
