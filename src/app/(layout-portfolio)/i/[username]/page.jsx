@@ -11,6 +11,7 @@ import AnalyticWatcher from "@/components/shared/AnalyticWatcher";
 import { _ucfirst } from "@/utils/main";
 import Link from "next/link";
 import { defaultImgUrl2 } from "@/constants/shared/constant";
+import PoweredBy from "@/components/shared/PoweredBy";
 
 
 export async function generateMetadata({ params }) {
@@ -127,7 +128,9 @@ export default async function PortFolio({ params }) {
               alt={config.app_name + "'s logo"}
             />
           </div>
-          <div className="pr-2 w-[0px] duration-300 hidden group-hover:w-full  group-hover:block">Powered  by <span className="font-bold"> {config.app_name}</span> </div>
+
+          <PoweredBy />
+
         </div>
       </Link>
     </>
