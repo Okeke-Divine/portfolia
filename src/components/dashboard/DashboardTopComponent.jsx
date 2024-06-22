@@ -1,4 +1,5 @@
 import { getCurrentSession } from "@/utils/session";
+import Link from "next/link";
 
 const DashboardTopComponent = async ({ userAnalytics }) => {
   const session = await getCurrentSession();
