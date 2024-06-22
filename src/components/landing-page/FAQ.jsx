@@ -47,7 +47,7 @@ const FAQ = () => {
                 <div className="collapse-title text-xl font-medium">
                   {faq.title}
                 </div>
-                <div className="collapse-content">
+                <div className="collapse-content text-gray-600">
                   <p>{faq.description}</p>
                 </div>
               </div>
