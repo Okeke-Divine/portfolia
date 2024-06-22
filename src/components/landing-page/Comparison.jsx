@@ -3,7 +3,7 @@ const Comparison = () => {
         <>
             <div className="landingPagePadx py-5 md:py-10">
                 <div className="text-center uppercase app-text-primary">Benefits</div>
-                <h2 className="text-center">Portfolia vs Traditional Method</h2>
+                <h2 className="text-center">Why Choose Portfoliia?</h2>
                 <div className="overflow-x-auto mt-5">
                     <table className="min-w-full bg-white border border-gray-200 table table-zebra">
                         <thead className="bg-gray-50">
