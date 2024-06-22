@@ -202,9 +202,6 @@ export default async function Resume({ params }) {
           </div>
         </div>
         <ResumeDownload name={user.userDetails.fullname || user.fullname || user.username} />
-
-        {/* product hunt embered code */}
-        <a href="https://www.producthunt.com/posts/portfoliia?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-portfoliia" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=464931&theme=light" alt="Portfoliia - Create&#0032;a&#0032;Stunning&#0032;Portfolio&#0032;and&#0032;Resume&#0032;in&#0032;Minutes&#0044;&#0032;Not&#0032;Days | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
       </div>
     </>
   );
