@@ -62,9 +62,10 @@ const PortfolioAbout = async ({ user }) => {
               <div className="divider"></div>
               {/* skills */}
               <div>
-                <div className="app-text-light-2 uppercase font-semibold tracking-wide text-xl mb-2">
+                {/* <div className="app-text-light-2 uppercase font-semibold tracking-wide text-xl mb-2">
                   Skills
-                </div>
+                </div> */}
+                <h3 className="uppercase">Skills</h3>
                 <div
                   // className="grid grid-cols-2 md:grid-cols-3 gap-5 lg:grid-cols-6 xl:grid-cols-8"
                   className="flex flex-wrap gap-x-2 md:gap-x-3 gap-y-2">
