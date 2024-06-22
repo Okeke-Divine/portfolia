@@ -2,7 +2,7 @@ import config from "@/data/config.json"
 import Link from "next/link"
 
 const platforms = [
-  { image: "product-hunt.webp", url: "#" },
+  { image: "product-hunt.webp", url: "https://www.producthunt.com/products/portfoliia" },
   { image: "hackerNews.webp", url: "#" },
   // { image: "reddit.webp", url: "#" },
   // { image: "twitter.webp", url: "#" },
