@@ -75,7 +75,7 @@ const PortfolioAbout = async ({ user }) => {
                         // className="rounded-lg shadow-sm duration-300 hover:shadow-lg bg-white text-center p-5"
                         className="bg-white text-black"
                       > */}
-                      <div className="capitalize badge badge-outline badge-md font-bold">
+                      <div className="capitalize badge badge-outline badge-xl bg-white font-bold">
                         {skill.skill_name}
                       </div>
                       {/* </div> */}
