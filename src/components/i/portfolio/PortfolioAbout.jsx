@@ -74,7 +74,7 @@ const PortfolioAbout = async ({ user }) => {
                       <div
                         key={index}
                         // className="rounded-lg shadow-sm duration-300 hover:shadow-lg bg-white text-center p-5"
-                        className="badge"
+                        className="badge bg-white text-black"
                       >
                         <div className="capitalize font-bold">
                           {skill.skill_name}
