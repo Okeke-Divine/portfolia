@@ -20,8 +20,6 @@ export default function Home() {
           src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=464931&theme=light"
           alt="Portfoliia - Create a Stunning Portfolio and Resume in Minutes, Not Days | Product Hunt"
           style={{ width: '250px', height: '54px' }}  // Note the usage of double curly braces for style object
-          // width="250"
-          // height="54"
         />
       </a>
       <HowItWorks />
