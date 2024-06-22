@@ -21,7 +21,7 @@ const DashboardTopComponent = async ({ userAnalytics }) => {
         </div>
         {/* portfolio analytics */}
         <div className="divider"></div>
-        <Link className="btn btn-neutrual" href="https://www.youtube.com/watch?v=mWDAljdhhKk" target="_blank">Demo</Link>
+        <Link className="btn btn-neutrual" href="https://www.youtube.com/watch?v=mWDAljdhhKk" target="_blank">Watch A Demo</Link>
         <div className="divider"></div>
         <div>
           <p className="app-text-light">Analytics (Resume / Portfolio)</p>
