@@ -1,7 +1,8 @@
 const Comparison = () => {
     return (
         <>
-            g
+            <div className="landingPagePadx">
+            </div>
         </>
     )
 }
