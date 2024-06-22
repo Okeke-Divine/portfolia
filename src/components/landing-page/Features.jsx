@@ -52,7 +52,7 @@ const Features = () => {
               </div>
               <div className="text-center text-xl font-bold mb-2">{feature.title}</div>
               <div className="flex justify-center">
-                <div className="text-gray-600 text-center mb-2 md:max-w-[85%]">{feature.message}</div>
+                <div className="text-gray-600 text-center mb-2 md:max-w-[85%] leading-7">{feature.message}</div>
               </div>
             </div>
           ))}
