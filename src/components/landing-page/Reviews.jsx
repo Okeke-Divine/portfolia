@@ -65,7 +65,7 @@ const Reviews = () => {
         <div className="text-center uppercase app-text-primary">Reviews</div>
         <h2 className="text-center">Over {config.portfolio_count}+ portfolio's have been created</h2>
         <div className="flex justify-center mt-2">
-          <div className="text-center text-gray-600 max-w-[70%] md:max-w-[60%] lg:max-w-[40%]">You're in good company. Here's what our wonderful users have to say about us.</div>
+          <div className="text-center text-gray-600 max-w-[70%] md:max-w-[60%] lg:max-w-[30%]">You're in good company. Here's what our wonderful users have to say about us.</div>
         </div>
         <div className="grid gird-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mt-5 md:gap-5">
           {reviews.map((review, index) => (
