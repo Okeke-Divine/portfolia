@@ -4,7 +4,7 @@ const Comparison = () => {
             <div className="landingPagePadx">
                 <div className="text-center uppercase app-text-primary">Benefits</div>
                 <h2 className="text-center">Benefits</h2>
-                <div className="overflow-x-auto">
+                <div className="overflow-x-auto mt-2">
                     <table className="min-w-full bg-white border border-gray-200">
                         <thead className="bg-gray-50">
                             <tr>
