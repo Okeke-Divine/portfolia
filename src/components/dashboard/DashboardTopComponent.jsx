@@ -25,8 +25,11 @@ const DashboardTopComponent = async ({ userAnalytics }) => {
         <div className="text-black bg-green-100 p-5 rounded-md">
           <span className="text-2xl font-bold">Welcome to Portfoliia!</span><br />
           <span className="text-md">
-            You’re just a few clicks away from creating a stunning portfolio and resume.    </span>
-            <div className="divider"></div>
+            You’re just a few clicks away from creating a stunning portfolio and resume.    </span><br />
+          <span className="text-md">
+            All you need to do is enter your information, and your portfolio and resume will be generated with a live link.
+          </span>
+          <div className="divider"></div>
           <div className="flex items-center gap-2">
             <Link className="btn app-primary-button w-fit" href="/info">Get Started</Link>
             <Link className="btn btn-neutrual" href="https://www.youtube.com/watch?v=mWDAljdhhKk" target="_blank">Watch A Demo</Link>
