@@ -1,6 +1,14 @@
 import { getCurrentSession } from "@/utils/session";
 import Link from "next/link";
 
+function NoContent() {
+  return (
+    <>
+      -
+    </>
+  )
+}
+
 const DashboardTopComponent = async ({ userAnalytics }) => {
   const session = await getCurrentSession();
 
@@ -47,7 +55,9 @@ const DashboardTopComponent = async ({ userAnalytics }) => {
                   <i className="fi fi-tr-overview text-4xl"></i>
                 </div>
                 <div className="stat-title">Page Views</div>
-                <div className="stat-value font-semibold">{userAnalytics?.portfolioViewCount || 0}</div>
+                <div className="stat-value font-semibold">
+                  {(userAnalytics?.portfolioViewCount && userAnalytics?.portfolioViewCount != 0) ? userAnalytics?.portfolioViewCount : <NoContent />}
+                </div>
                 {/* <div className="stat-desc app-text-primary">
                   0% more than last month
                 </div> */}
@@ -57,7 +67,9 @@ const DashboardTopComponent = async ({ userAnalytics }) => {
                   <i className="fi fi-tr-bullseye-pointer text-4xl"></i>
                 </div>
                 <div className="stat-title">Page Clicks</div>
-                <div className="stat-value font-semibold">{userAnalytics?.portfolioClickCount || 0}</div>
+                <div className="stat-value font-semibold">
+                  {(userAnalytics?.portfolioClickCount && userAnalytics?.portfolioClickCount != 0) ? userAnalytics?.portfolioClickCount : <NoContent />}
+                </div>
               </div>
               <div className="join-item stat">
                 <div className="stat-figure">
@@ -90,21 +102,27 @@ const DashboardTopComponent = async ({ userAnalytics }) => {
                   <i className="fi fi-tr-overview text-4xl"></i>
                 </div>
                 <div className="stat-title">Views</div>
-                <div className="stat-value font-semibold">{userAnalytics?.resumeViewCount || 0}</div>
+                <div className="stat-value font-semibold">
+                  {(userAnalytics?.resumeViewCount && userAnalytics?.resumeViewCount != 0) ? userAnalytics?.resumeViewCount : <NoContent />}
+                </div>
               </div>
               <div className="join-item stat">
                 <div className="stat-figure">
                   <i className="fi fi-tr-bullseye-pointer text-4xl"></i>
                 </div>
                 <div className="stat-title">Clicks</div>
-                <div className="stat-value font-semibold">{userAnalytics?.resumeClickCount || 0}</div>
+                <div className="stat-value font-semibold">
+                  {(userAnalytics?.resumeClickCount && userAnalytics?.resumeClickCount != 0) ? userAnalytics?.resumeClickCount : <NoContent />}
+                </div>
               </div>
               <div className="join-item stat">
                 <div className="stat-figure">
                   <i className="fi fi-tr-cloud-download-alt text-4xl"></i>
                 </div>
                 <div className="stat-title">Downloads</div>
-                <div className="stat-value font-semibold">{userAnalytics?.resumeDownloadCount || 0}</div>
+                <div className="stat-value font-semibold">
+                  {(userAnalytics?.resumeDownloadCount && userAnalytics?.resumeDownloadCount != 0) ? userAnalytics?.resumeDownloadCount : <NoContent />}
+                </div>
               </div>
             </div>
           </div>
