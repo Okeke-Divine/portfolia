@@ -2,7 +2,7 @@ import DashboardTopSkeleton from "@/components/skeleton/dashboard/DashboardTopSk
 import { Suspense } from "react";
 import DashboardTopComponent from "@/components/dashboard/DashboardTopComponent";
 import prisma from "@/app/db";
-import { getUserId } from "@/utils/session";
+import { getCurrentSession, getUserId } from "@/utils/session";
 
 export const metadata = {
   title: "Dashboard",
@@ -18,10 +18,13 @@ const Dashboard = async () => {
     userId
   }})
 
+  const session = await getCurrentSession();
+
+
   return (
     <>
       <Suspense fallback={<DashboardTopSkeleton />}>
-        <DashboardTopComponent userAnalytics={userAnalytics} />
+        <DashboardTopComponent userAnalytics={userAnalytics} username={session.user.username} />
       </Suspense>
     </>
   );

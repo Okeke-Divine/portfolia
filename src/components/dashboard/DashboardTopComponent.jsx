@@ -10,7 +10,7 @@ function NoContent() {
   )
 }
 
-const DashboardTopComponent = async ({ userAnalytics }) => {
+const DashboardTopComponent = async ({ userAnalytics, username }) => {
   const session = await getCurrentSession();
 
   // Calculate conversion percentage
@@ -139,14 +139,14 @@ const DashboardTopComponent = async ({ userAnalytics }) => {
               <label className="font-bold text-md">
                 Your Portfolio Link:
               </label>
-              <CopyContent url="lol" />
+              <CopyContent url= {process.env.NEXT_PUBLIC_BASE_URL+"/i/"+username} />
             </div>
             {/* resume link */}
             <div className="mb-2">
               <label className="font-bold text-md">
                 Your Portfolio Link:
               </label>
-              <CopyContent url="lol" />
+              <CopyContent url= {process.env.NEXT_PUBLIC_BASE_URL+"/i/"+username+"/resume"} />
             </div>
           </div>
         </div>
