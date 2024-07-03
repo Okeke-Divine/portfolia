@@ -119,7 +119,7 @@ export default function ApplicationSidedar() {
       blank: true,
     },
     {
-      name: "Buy Me A Coffee",
+      name: "Donate",
       url: buyMeACoffeUrl,
       icon: <i className="fi fi-rs-cup-togo flaticon-offset"></i>,
       blank: true,
