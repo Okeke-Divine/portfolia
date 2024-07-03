@@ -3,6 +3,7 @@ import Link from "next/link"
 
 const platforms = [
   { image: "product-hunt.webp", url: "https://www.producthunt.com/products/portfoliia" },
+  {image: "Fazierlogo.webp", url:"https://fazier.com/launches/portfoliia"},
   // { image: "hackerNews.webp", url: "#" },
   // { image: "reddit.webp", url: "#" },
   // { image: "twitter.webp", url: "#" },
@@ -54,7 +55,7 @@ const HeroSection = () => {
           <div className="flex justify-center w-fit gap-x-5 gap-y-2 md:gap-x-10 md:gap-y-10 flex-wrap items-center">
             {platforms.map((platform, index) => (
               <div key={index}>
-                <Link href={platform.url} target="_blank"><img src={"/images/logo/" + platform.image} alt={platform.image} /></Link>
+                <Link href={platform.url} target="_blank"><img className="w-20" src={"/images/logo/" + platform.image} alt={"Platform image"} /></Link>
               </div>
             ))}
           </div>

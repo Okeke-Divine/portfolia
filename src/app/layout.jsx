@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react"
 import { Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 import config from "@/data/config.json";
@@ -6,7 +7,7 @@ import GoogleAnalytics from "@/components/shared/GoogleAnalytics";
 const application_font = Bricolage_Grotesque({ subsets: ["latin"], weight: '400' });
 
 const description = config.summary;
-const banner_url = process.env.NEXT_PUBLIC_BASE_URL+"/images/banner-image.jpg";
+const banner_url = process.env.NEXT_PUBLIC_BASE_URL + "/images/banner-image.jpg";
 
 export const metadata = {
   title: {
@@ -93,7 +94,10 @@ export default function RootLayout({ children }) {
         ></link>
         <meta name="google-site-verification" content="O0THdygIatXpt8qvo529w2W-K7ptf3MkSQtjGcJgLA8" />
       </head>
-      <body className={application_font.className}>{children}</body>
+      <body className={application_font.className}>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }

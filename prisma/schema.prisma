@@ -145,3 +145,9 @@ model UserCertificate {
   issueMonth String
   issueYear  Int
 }
+
+model Refferals {
+  id    Int    @id @default(autoincrement())
+  ref   String @unique
+  count Int    @default(0)
+}

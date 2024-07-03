@@ -8,7 +8,7 @@ export default function ApplicationNavbar() {
       <div className="navbar bg-base-200 px-5 md:px-10">
         <div className="navbar-start">
           <img
-            className="w-12 mb-2 rounded-full shadow-lg"
+            className="hidden md:block w-12 mb-2 rounded-full shadow-lg"
             src="/images/logo/logo.png"
             alt={config.app_name + "'s logo"}
           />
