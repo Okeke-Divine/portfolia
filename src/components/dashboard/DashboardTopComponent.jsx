@@ -1,5 +1,6 @@
 import { getCurrentSession } from "@/utils/session";
 import Link from "next/link";
+import CopyContent from "../shared/CopyContent";
 
 function NoContent() {
   return (
@@ -124,6 +125,28 @@ const DashboardTopComponent = async ({ userAnalytics }) => {
                   {(userAnalytics?.resumeDownloadCount && userAnalytics?.resumeDownloadCount != 0) ? userAnalytics?.resumeDownloadCount : <NoContent />}
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* copy links */}
+        <div className="divider"></div>
+        <div>
+          <h3>Live Links</h3>
+          <div className="mt-2">
+            {/* portfolio link */}
+            <div className="mb-2">
+              <label className="font-bold text-md">
+                Your Portfolio Link:
+              </label>
+              <CopyContent url="lol" />
+            </div>
+            {/* resume link */}
+            <div className="mb-2">
+              <label className="font-bold text-md">
+                Your Portfolio Link:
+              </label>
+              <CopyContent url="lol" />
             </div>
           </div>
         </div>
