@@ -11,7 +11,8 @@ const CopyContent = ({ url }) => {
                     readOnly
                     className="grow"
                 />
-                <i className="fi fi-tr-envelopes flaticon-offset"></i>
+                <i className="fi fi-tr-clone flaticon-offset"></i>
+                      <i className="fi fi-tr-arrow-up-right-from-square flaticon-offset"></i>
             </div></>
     )
 }
