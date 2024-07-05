@@ -1,7 +1,6 @@
 "use client";
 import { useRef, useState } from "react";
 import { signIn } from "next-auth/react";
-import Swal from "sweetalert2";
 
 const SignInForm = () => {
   const emailRef = useRef(null);

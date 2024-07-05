@@ -144,7 +144,7 @@ const DashboardTopComponent = async ({ userAnalytics, username }) => {
             {/* resume link */}
             <div className="mb-2">
               <label className="font-bold text-md">
-                Your Portfolio Link:
+                Your Resume Link:
               </label>
               <CopyContent url= {process.env.NEXT_PUBLIC_BASE_URL+"/i/"+username+"/resume"} />
             </div>

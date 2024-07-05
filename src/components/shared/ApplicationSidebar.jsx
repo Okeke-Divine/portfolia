@@ -6,7 +6,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { twitterAccUrl, buyMeACoffeUrl } from "@/constants/shared/constant";
 import { app_color_primary } from "@/constants/shared/color";
-import ComingSoonComponent from "./ComingSoonComponent";
 import { useState, useEffect } from "react";
 
 function confirmSignOut() {
