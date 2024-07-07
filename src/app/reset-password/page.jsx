@@ -1,12 +1,17 @@
 import Link from "next/link"
 import config from "@/data/config.json";
 import ResetPasswordForm from "@/components/reset-password/ResetPasswordForm"
+import { verifyResetToken } from "@/utils/main";
 
 export const metadata = {
     title: "Reset Password"
 }
 
 const ResetPassword = async () => {
+
+    const verifyToken = await verifyResetToken("lol");
+    console.log(verifyResetToken);
+
     return (
         <>
             <div className="bg-base-200 flex justify-center items-center min-h-[100vh]">

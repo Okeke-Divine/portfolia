@@ -1,6 +1,7 @@
 import { defaultImgUrl } from "@/constants/shared/constant";
 import axios from "axios"
 import { _console_log } from "./console";
+import prisma from "@/app/db";
 
 export function getIconClass(name) {
   switch (name) {
@@ -63,7 +64,7 @@ export function analysisTracker(username, actionType) {
   if (!username || !actionType) {
     return;
   }
-  axios.post(process.env.NEXT_PUBLIC_BASE_URL+"/api/outbound/tracker/analysis", { username, actionType }, { headers: { "Content-Type": "application/json" } })
+  axios.post(process.env.NEXT_PUBLIC_BASE_URL + "/api/outbound/tracker/analysis", { username, actionType }, { headers: { "Content-Type": "application/json" } })
   return;
 }
 
@@ -94,3 +95,32 @@ export function generateMonthArray() {
     "December"
   ];
 }
+
+export const verifyResetToken = async (token) => {
+  try {
+    const tokenRecord = await prisma.passwordResetToken.findUnique({
+      where: {
+        token: token,
+      },
+    });
+
+    if (!tokenRecord) {
+      return { valid: false, message: 'Invalid or expired reset link.' };
+    }
+
+    // Check if token is expired (5 minutes from creation time)
+    const expirationTime = new Date(tokenRecord.createdAt);
+    expirationTime.setMinutes(expirationTime.getMinutes() + 5);
+    const now = new Date();
+
+    if (now > expirationTime) {
+      return { valid: false, message: 'Reset link has expired.' };
+    }
+
+    // Token is valid
+    return { valid: true, userId: tokenRecord.userId }; // Optionally return userId or other relevant data
+  } catch (error) {
+    _console_log('Error verifying reset token:', error);
+    throw new Error('Error verifying reset token');
+  }
+};
