@@ -18,6 +18,16 @@ export const POST = async (req) => {
 
         const hashedPassword = await hashPassword(password);
 
+        //check if use name is valid
+        const usernameRegex = /^[a-zA-Z0-9]+$/;
+        if (!usernameRegex.test(username)) {
+            return badRequest("Username is invalid. Only letters and numbers are allowed");
+        }
+
+        if(username.length < 2){
+            return badRequest("Usernae must be at least 2 characters")
+        }
+
         // check if username exists
         const usernameExists = await prisma.user.count({
             where: {
@@ -43,7 +53,7 @@ export const POST = async (req) => {
                 userDetails: {
                     create: {
                         fullname,
-                        heroTitle: "Hey, I'm "+fullname
+                        heroTitle: "Hey, I'm " + fullname
                     }
                 }
             },
