@@ -5,6 +5,11 @@ import Link from "next/link";
 const ResumeBuilderPreview = ({ username, resumeIsViewable }) => {
   const [preview, setPreview] = useState("desktop");
 
+  function updateResumeView(event) {
+    const isChecked = event.target.checked;
+    console.log(isChecked);
+  }
+
   return (
     <>
 
@@ -28,7 +33,7 @@ const ResumeBuilderPreview = ({ username, resumeIsViewable }) => {
           </Link>
         </div>
         <div>
-          <input type="checkbox" className="toggle toggle-lg checked:toggle-success" defaultChecked={resumeIsViewable} />
+          <input type="checkbox" className="toggle toggle-lg checked:toggle-success" onChange={updateResumeView} defaultChecked={resumeIsViewable} />
         </div>
       </div>
 
