@@ -47,7 +47,11 @@ const ResetPasswordForm = ({ token }) => {
     }).catch((e) => {
       if (e) {
         setLoading(false);
-        SweetAlertError(error_msg)
+        if (e.response.status == 400) {
+          SweetAlertError(e.response.data.reason || error_msg)
+        } else {
+          SweetAlertError(error_msg)
+        }
       }
     })
   }
