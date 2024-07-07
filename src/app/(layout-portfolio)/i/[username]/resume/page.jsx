@@ -14,7 +14,7 @@ import AnalyticTracker from "@/components/shared/AnalyticTracker";
 import AnalyticWatcher from "@/components/shared/AnalyticWatcher";
 import PoweredBy from "@/components/shared/PoweredBy";
 import { defaultImgUrl2 } from "@/constants/shared/constant";
-import { _ucfirst } from "@/utils/main";
+import { _ucfirst, configToDefaultBoolean, retrieveUserConfig } from "@/utils/main";
 import Link from "next/link";
 
 // export async function generateMetadata({ params }) {
@@ -162,6 +162,18 @@ export default async function Resume({ params }) {
   });
 
   if (!user) {
+    return (
+      <>
+        <NotFound />
+      </>
+    );
+  }
+
+  const userId = user.id;
+  const _resumeIsViewable = await retrieveUserConfig('resumeIsViewable', { id_type: 'id', id_value: userId });
+  const resumeIsViewable = configToDefaultBoolean(_resumeIsViewable, true);
+
+  if (resumeIsViewable == false) {
     return (
       <>
         <NotFound />
