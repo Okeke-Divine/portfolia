@@ -11,10 +11,9 @@ const ResumeBuilder = async () => {
   const userId = await getUserId('force');
   const resumeIsViewable = await resumeIsViewable('resumeIsViewable', { id_type: 'id', id_value: userId });
 
-
   return (
     <>
-      <ResumeBuilderPreview username={session.user.username} />
+      <ResumeBuilderPreview username={session.user.username} resumeIsViewable={resumeIsViewable} />
     </>
   );
 };
