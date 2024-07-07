@@ -12,7 +12,6 @@ const ResumeBuilder = async () => {
   const userId = await getUserId('force');
   const _resumeIsViewable = await retrieveUserConfig('resumeIsViewable', { id_type: 'id', id_value: userId });
   const resumeIsViewable = (_resumeIsViewable == null) ? true : (_resumeIsViewable == "true") ? true : false;
-  console.log("resumeIsViewable: ", resumeIsViewable);
 
   return (
     <>
