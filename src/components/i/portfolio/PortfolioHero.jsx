@@ -32,14 +32,16 @@ const PortfolioHero = async ({ user }) => {
                 </Link>
               </div> */}
               <div>
-                <Link
-                  target="_blank"
-                  href={`/i/${user.username}/resume`}
-                  className="app-primary-button dmdomo"
-                >
-                  <i className="fi fi-tr-poll-h flaticon-offset"></i>
-                  My Resume
-                </Link>
+                {resumeIsViewable == true ? (<>
+                  <Link
+                    target="_blank"
+                    href={`/i/${user.username}/resume`}
+                    className="app-primary-button dmdomo"
+                  >
+                    <i className="fi fi-tr-poll-h flaticon-offset"></i>
+                    My Resume
+                  </Link>
+                </>) : ""}
               </div>
               <div className="divider"></div>
               {/* social links */}
