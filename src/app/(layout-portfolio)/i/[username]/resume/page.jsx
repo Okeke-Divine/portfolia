@@ -87,6 +87,7 @@ export async function generateMetadata({ params }) {
     where: { username },
     select: {
       profilePicture_url: true,
+      id: true,
       userDetails: {
         select: {
           fullname: true,
