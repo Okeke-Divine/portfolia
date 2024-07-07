@@ -28,7 +28,7 @@ const ResumeBuilderPreview = ({ username }) => {
           </Link>
         </div>
         <div>
-          <input type="text" className="toggle toggle-md" />
+          <input type="text" className="toggle toggle-md" defaultChecked={true} />
         </div>
       </div>
 
