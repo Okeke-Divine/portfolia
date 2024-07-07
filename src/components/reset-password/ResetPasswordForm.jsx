@@ -20,6 +20,30 @@ const ResetPasswordForm = () => {
   function update(e) {
     e.preventDefault();
     setLoading(true);
+
+    const email = emailRef.current.value;
+    const password = passwordRef.current.value;
+
+    if(!email || !password){
+        setLoading(false);
+      return;
+    }
+
+    axios.post("",{email,password},{headers:{
+      "Content-Type":"application/json"
+    }}).then((response) => {
+      if(response){
+        setLoading(false);
+        if(response.status == 200){
+
+        }
+      }
+    }).catch((e) => {
+      if(e){
+        setLoading(false);
+        SweetAlertError()
+      }
+    })
   }
 
   return (
