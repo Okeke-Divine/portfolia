@@ -16,7 +16,18 @@ const ForgotPassword = () => {
                             alt={config.app_name + "'s logo"}
                         />
                     </div>
-                    <h1>Reset Password!</h1>
+                    <h1>Forgot Password!</h1>
+                    <div className="mt-2">
+                        {/* form */}
+                        <p className="my-2 text-center">
+                            <Link
+                                href="/signin"
+                                className="app-text-primary duration-300 hover:app-text-primary-dark"
+                            >
+                                Sign In
+                            </Link>
+                        </p>
+                    </div>
                 </div>
             </div>
         </>
