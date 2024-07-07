@@ -15,12 +15,12 @@ const ResetPassword = async ({ params, searchParams }) => {
     const verifyToken = await verifyResetToken(token);
     console.log(verifyToken);
 
-    if (verifyResetToken.valid == false) {
+    if (verifyToken.valid == false) {
         return (
             <>
                 <div className="bg-base-200 flex justify-center items-center min-h-[100vh]">
-                    <div className="w-[80%] md:max-w-[400px] bg-white p-5 md:p-10 rounded-lg shadow-sm">
-                        {verifyResetToken.message}
+                    <div className="w-[80%] capitalize font-bold text-xl md:max-w-[400px] bg-white p-5 md:p-10 rounded-lg shadow-sm">
+                        {verifyToken.message}
                     </div>
                 </div>
             </>
