@@ -10,8 +10,11 @@ export const POST = async (req) => {
         const { name, value } = req.body; // Assuming the request body contains 'name' and 'value'
 
         if (!name || !value || !userId) {
-            return badRequest("Bad Request")
+            return badRequest("Bad Request");
         }
+
+        // Convert value to string if it's not already
+        const stringValue = String(value);
 
         // Check if there's an existing userConfig entry
         let userConfigEntry = await prisma.userConfig.findFirst({
@@ -25,14 +28,14 @@ export const POST = async (req) => {
         if (userConfigEntry) {
             userConfigEntry = await prisma.userConfig.update({
                 where: { id: userConfigEntry.id },
-                data: { value: value },
+                data: { value: stringValue }, // Ensure value is saved as string
             });
         } else {
             userConfigEntry = await prisma.userConfig.create({
                 data: {
                     userId: parseInt(userId),
                     name: name,
-                    value: value,
+                    value: stringValue, // Ensure value is saved as string
                 },
             });
         }

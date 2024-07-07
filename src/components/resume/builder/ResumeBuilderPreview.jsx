@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import axios from "axios";
 
 const ResumeBuilderPreview = ({ username, resumeIsViewable }) => {
   const [preview, setPreview] = useState("desktop");
