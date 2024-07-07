@@ -20,7 +20,12 @@ const ResetPassword = async ({ params, searchParams }) => {
             <>
                 <div className="bg-base-200 flex justify-center items-center min-h-[100vh]">
                     <div className="w-[80%] capitalize font-bold text-xl md:max-w-[400px] bg-white p-5 md:p-10 rounded-lg shadow-sm">
-                        {verifyToken.message}
+                        <div>
+                            {verifyToken.message}
+                        </div>
+                        <Link
+                            className="app-text-primary duration-300 hover:app-text-primary-dark"
+                            href="/">Home</Link>
                     </div>
                 </div>
             </>
