@@ -1,4 +1,5 @@
 import ResumeBuilderPreview from "@/components/resume/builder/ResumeBuilderPreview";
+import { retrieveUserConfig } from "@/utils/main";
 import { getCurrentSession, getUserId } from "@/utils/session";
 
 export const metadata = {
@@ -9,8 +10,8 @@ const ResumeBuilder = async () => {
   const session = await getCurrentSession();
 
   const userId = await getUserId('force');
-  const resumeIsViewable = await resumeIsViewable('resumeIsViewable', { id_type: 'id', id_value: userId });
-  console.log("resumeIsViewable: ",resumeIsViewable);
+  const resumeIsViewable = await retrieveUserConfig('resumeIsViewable', { id_type: 'id', id_value: userId });
+  console.log("resumeIsViewable: ", resumeIsViewable);
 
   return (
     <>
