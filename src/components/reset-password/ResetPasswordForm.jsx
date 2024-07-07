@@ -2,10 +2,11 @@
 import { error_msg } from "@/constants/shared/constant"
 import { SweetAlertError, SweetAlertSuccess } from "@/utils/customSweetAlertFunction"
 import axios from "axios"
+import { signOut } from "next-auth/react"
 import { useRef, useState } from "react"
 
 
-const ResetPasswordForm = ({token}) => {
+const ResetPasswordForm = ({ token }) => {
 
   const [loading, setLoading] = useState(false);
 
@@ -25,22 +26,26 @@ const ResetPasswordForm = ({token}) => {
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
 
-    if(!email || !password){
-        setLoading(false);
+    if (!email || !password) {
+      setLoading(false);
       return;
     }
 
-    axios.post("/api/reset-password",{email,password,token},{headers:{
-      "Content-Type":"application/json"
-    }}).then((response) => {
-      if(response){
+    axios.post("/api/reset-password", { email, password, token }, {
+      headers: {
+        "Content-Type": "application/json"
+      }
+    }).then((response) => {
+      if (response) {
         setLoading(false);
-        if(response.status == 200){
-
+        if (response.status == 200) {
+          signOut();
+          SweetAlertSuccess("Password reset successful. Now login to your account");
+          document.location = '/signin'
         }
       }
     }).catch((e) => {
-      if(e){
+      if (e) {
         setLoading(false);
         SweetAlertError(error_msg)
       }
