@@ -23,9 +23,14 @@ const ResetPassword = async ({ params, searchParams }) => {
                             {verifyToken.message}
                         </div>
                         <div className="divider"></div>
-                        <Link
-                            className="app-text-primary duration-300 hover:app-text-primary-dark"
-                            href="/">Home</Link>
+                        <div className="flex gap-3 flex-wrap">
+                            <Link
+                                className="app-text-primary duration-300 hover:app-text-primary-dark"
+                                href="/reset-password">Reset Password</Link>
+                            <Link
+                                className="app-text-primary duration-300 hover:app-text-primary-dark"
+                                href="/">Home</Link>
+                        </div>
                     </div>
                 </div>
             </>
