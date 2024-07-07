@@ -2,6 +2,7 @@
 import { useRef, useState } from "react";
 import { signIn } from "next-auth/react";
 import Link from "next/link";
+import Swal from "sweetalert2";
 
 const SignInForm = () => {
   const emailRef = useRef(null);

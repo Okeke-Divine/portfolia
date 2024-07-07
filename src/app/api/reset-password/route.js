@@ -39,18 +39,24 @@ export const POST = async (req) => {
         // Hash the new password
         const hashedPassword = await hashPassword(password);
 
-        // Update the user's password
-        const updatedUser = await prisma.user.update({
-            where: {
-                id: user.id,
-            },
-            data: {
-                password: hashedPassword,
-            },
-        });
+        const deleteToken = await prisma.passwordResetToken.delete({ where: { token } })
 
-        if (updatedUser) {
-            return resourceUpdated({}); // Password updated successfully
+        if (deleteToken) {
+            // Update the user's password
+            const updatedUser = await prisma.user.update({
+                where: {
+                    id: user.id,
+                },
+                data: {
+                    password: hashedPassword,
+                },
+            });
+
+            if (updatedUser) {
+                return resourceUpdated({}); // Password updated successfully
+            } else {
+                return internalServerError("Error while trying to change user password");
+            }
         } else {
             return internalServerError("Error while trying to change user password");
         }
