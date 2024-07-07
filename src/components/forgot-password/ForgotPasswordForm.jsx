@@ -20,7 +20,11 @@ const ForgotPasswordForm = () => {
         <>
             {sent ? (<>
                 <div className="text-white p-5 bg-green-500 rounded-lg">
-                    A password reset email has been sent to your email address. Please check your inbox and follow the instructions to reset your password. If you do not see the email, please check your spam or junk folder. The reset link will expire in 5 minutes.
+                    A password reset email has been sent to your email address. Please check your inbox and follow the instructions to reset your password.
+                    <br />-----<br />
+                    If you do not see the email, please check your spam or junk folder.
+                    <br />-----<br />
+                    The reset link will expire in 5 minutes.
                 </div>
             </>) : (<>
                 <form onSubmit={send} className="form-control">
