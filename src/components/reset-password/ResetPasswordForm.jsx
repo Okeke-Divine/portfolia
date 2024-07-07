@@ -1,4 +1,5 @@
 "use client"
+import { error_msg } from "@/constants/shared/constant"
 import { SweetAlertError, SweetAlertSuccess } from "@/utils/customSweetAlertFunction"
 import axios from "axios"
 import { useRef, useState } from "react"
@@ -29,7 +30,7 @@ const ResetPasswordForm = () => {
       return;
     }
 
-    axios.post("",{email,password},{headers:{
+    axios.post("/api/reset-password",{email,password},{headers:{
       "Content-Type":"application/json"
     }}).then((response) => {
       if(response){
@@ -41,7 +42,7 @@ const ResetPasswordForm = () => {
     }).catch((e) => {
       if(e){
         setLoading(false);
-        SweetAlertError()
+        SweetAlertError(error_msg)
       }
     })
   }
