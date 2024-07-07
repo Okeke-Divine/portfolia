@@ -1,4 +1,5 @@
 "use client"
+import { error_msg } from "@/constants/shared/constant"
 import { SweetAlertError, SweetAlertSuccess } from "@/utils/customSweetAlertFunction"
 import axios from "axios"
 import { useRef, useState } from "react"
@@ -14,6 +15,33 @@ const ForgotPasswordForm = () => {
     function send(e) {
         e.preventDefault();
         setLoading(true);
+
+        const email = emailRef.current.value;
+
+        if (!email || email.length < 1) {
+            setLoading(false);
+            return
+        }
+
+        axios.post("/api/forgot-password", { email }, { headers: { "Content-Type": "application/json" } }).then((response) => {
+            if (response) {
+                setLoading(false);
+                if (response.status == 201) {
+                    setSent(true);
+                    SweetAlertSuccess("A password reset email has been sent to your email address. ")
+                }
+            }
+        }).catch((e) => {
+            if (e) {
+                setLoading(false);
+                if (e.response.status == 400) {
+                    SweetAlertError(e.response.data.reason || error_msg)
+                } else {
+                    SweetAlertError(error_msg)
+                }
+            }
+        })
+
     }
 
     return (
