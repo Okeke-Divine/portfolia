@@ -1,23 +1,32 @@
-import { useRouter } from 'next/router';
 import Link from "next/link"
 import config from "@/data/config.json";
 import ResetPasswordForm from "@/components/reset-password/ResetPasswordForm"
 import { verifyResetToken } from "@/utils/main";
 
+
 export const metadata = {
     title: "Reset Password"
 }
 
-const ResetPassword = async () => {
-    const router = useRouter();
-    const { token } = router.query;
+const ResetPassword = async ({ params, searchParams }) => {
 
-    try {
-        const verifyToken = await verifyResetToken(token);
-        console.log(verifyToken);
-    } catch (error) {
-        console.error('Error verifying token:', error);
+    const token = searchParams?.token;
+
+    const verifyToken = await verifyResetToken(token);
+    console.log(verifyToken);
+
+    if (verifyResetToken.valid == false) {
+        return (
+            <>
+                <div className="bg-base-200 flex justify-center items-center min-h-[100vh]">
+                    <div className="w-[80%] md:max-w-[400px] bg-white p-5 md:p-10 rounded-lg shadow-sm">
+                        {verifyResetToken.message}
+                    </div>
+                </div>
+            </>
+        )
     }
+
 
     return (
         <>
