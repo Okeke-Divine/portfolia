@@ -13,7 +13,6 @@ const ResetPassword = async ({ params, searchParams }) => {
     const token = searchParams?.token;
 
     const verifyToken = await verifyResetToken(token);
-    console.log(verifyToken);
 
     if (verifyToken.valid == false) {
         return (
