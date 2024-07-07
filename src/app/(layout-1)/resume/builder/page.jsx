@@ -1,5 +1,5 @@
 import ResumeBuilderPreview from "@/components/resume/builder/ResumeBuilderPreview";
-import { getCurrentSession } from "@/utils/session";
+import { getCurrentSession, getUserId } from "@/utils/session";
 
 export const metadata = {
   title: "Resume Builder",
@@ -7,6 +7,11 @@ export const metadata = {
 
 const ResumeBuilder = async () => {
   const session = await getCurrentSession();
+
+  const userId = await getUserId('force');
+  const resumeIsViewable = await resumeIsViewable('resumeIsViewable', { id_type: 'id', id_value: userId });
+
+
   return (
     <>
       <ResumeBuilderPreview username={session.user.username} />
