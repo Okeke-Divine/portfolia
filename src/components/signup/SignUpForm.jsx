@@ -17,7 +17,6 @@ async function _signIn(email, password) {
     document.location = "/signin";
   } else {
     document.location = "/dashboard";
-    setLoading(false);
   }
 }
 
