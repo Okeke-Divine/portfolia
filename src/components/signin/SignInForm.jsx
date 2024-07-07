@@ -101,9 +101,9 @@ const SignInForm = () => {
           <div>
             <Link
               href="/forgot-password"
-              className="app-text-primary duration-300 hover:app-text-primary-dark"
+              className="app-text-primary duration-300 hover:app-text-primary-dark float-right py-2"
             >
-              Sign Up
+              Forgot Password?
             </Link>
           </div>
         </div>
