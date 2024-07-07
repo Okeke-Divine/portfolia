@@ -32,10 +32,10 @@ export const POST = async (req) => {
         });
 
         // Send email with the reset token (URL should contain the token)
-        const resetUrl = `https://yourapp.com/reset-password?token=${token}`;
+        const resetUrl = process.env.NEXT_PUBLIC_BASE_URL+`/reset-password?token=${token}`;
         await sendEmail({
             to: email,
-            subject: "Password Reset",
+            subject: "Password Reset | Portfoliia",
             html: `Click <a href="${resetUrl}">here</a> to reset your password. This link will expire in 5 minutes.`,
         });
 
