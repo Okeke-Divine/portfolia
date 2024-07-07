@@ -5,7 +5,7 @@ import axios from "axios"
 import { useRef, useState } from "react"
 
 
-const ResetPasswordForm = () => {
+const ResetPasswordForm = ({token}) => {
 
   const [loading, setLoading] = useState(false);
 
@@ -30,7 +30,7 @@ const ResetPasswordForm = () => {
       return;
     }
 
-    axios.post("/api/reset-password",{email,password},{headers:{
+    axios.post("/api/reset-password",{email,password,token},{headers:{
       "Content-Type":"application/json"
     }}).then((response) => {
       if(response){

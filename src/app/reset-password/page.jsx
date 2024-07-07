@@ -52,7 +52,7 @@ const ResetPassword = async ({ params, searchParams }) => {
                     <h1>Reset Password</h1>
                     <div className="mt-2">
                         {/* form */}
-                        <ResetPasswordForm />
+                        <ResetPasswordForm token={token} />
                         <p className="my-2 text-center">
                             <Link
                                 href="/signin"
