@@ -8,7 +8,7 @@ const ResumeBuilderPreview = ({ username }) => {
   return (
     <>
 
-      <div className="flex justify-between gap-2 flex-wrap">
+      <div className="flex justify-between gap-2 flex-wrap items-center">
         <div className="join border-2">
           <Link
             href="#desktop-preview"
