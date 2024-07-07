@@ -6,7 +6,7 @@ import { useRef, useState } from "react"
 const ForgotPasswordForm = () => {
 
     const [loading, setLoading] = useState(false);
-    const [sent, setSent] = useState(true);
+    const [sent, setSent] = useState(false);
 
     //refs
     const emailRef = useRef(null)
