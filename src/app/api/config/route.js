@@ -6,7 +6,7 @@ import { getUserId } from "@/utils/session";
 export const POST = async (req) => {
     try {
         const userId = await getUserId("force");
-        const { name, value } = req.json();
+        const { name, value } = await req.json();
 
         // Check if required fields are present
         if (!name || value === undefined || !userId) {
