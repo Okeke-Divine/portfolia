@@ -7,7 +7,9 @@ const ResumeBuilderPreview = ({ username, resumeIsViewable }) => {
 
   function updateResumeView(event) {
     const isChecked = event.target.checked;
-    console.log(isChecked);
+
+    axios.post("/api/config", { name: "resumeIsViewable", value: isChecked })
+
   }
 
   return (
