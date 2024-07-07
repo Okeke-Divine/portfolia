@@ -88,7 +88,9 @@ export const POST = async (req) => {
             <body>
                 <div class="container">
                     <div class="content">
-                        <p>To reset your password, please click the button below. This link will expire in 5 minutes.</p>
+                    <p>Hello,</p>
+                    <p>You recently requested to reset your password for your Portfoliia account. Click the button below to reset your password. Please note that this link will expire in 5 minutes. If you didn't make this request, you can safely ignore this email.</p>
+                    <p>To reset your password, please click the button below. This link will expire in 5 minutes.</p>
                         <a href="${resetUrl}">Reset Password</a>
                     </div>
                     <div class="footer">
