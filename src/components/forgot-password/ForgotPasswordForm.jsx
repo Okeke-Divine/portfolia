@@ -28,7 +28,7 @@ const ForgotPasswordForm = () => {
                 setLoading(false);
                 if (response.status == 201) {
                     setSent(true);
-                    SweetAlertSuccess("A password reset email has been sent to your email address. ")
+                    SweetAlertSuccess("A password reset email has been sent to your email address. If you do not see the email, please check your spam or junk folder.")
                 }
             }
         }).catch((e) => {

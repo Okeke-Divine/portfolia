@@ -32,14 +32,84 @@ export const POST = async (req) => {
         });
 
         // Send email with the reset token (URL should contain the token)
-        const resetUrl = process.env.NEXT_PUBLIC_BASE_URL+`/reset-password?token=${token}`;
+        const resetUrl = process.env.NEXT_PUBLIC_BASE_URL + `/reset-password?token=${token}`;
         await sendEmail({
             to: email,
             subject: "Password Reset | Portfoliia",
-            html: `Click <a href="${resetUrl}">here</a> to reset your password. This link will expire in 5 minutes.`,
+            // html: `Click <a href="${resetUrl}">here</a> to reset your password. This link will expire in 5 minutes.`,
+            html: `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Reset | Portfoliia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+        }
+        .header img {
+            max-width: 150px;
+            margin-bottom: 20px;
+        }
+        .content {
+            text-align: center;
+            padding: 20px;
+        }
+        .content p {
+            font-size: 16px;
+            color: #555;
+        }
+        .content a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 12px;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://portfoliia.vercel.app/images/logo/logo.png" alt="Portfoliia Logo">
+        </div>
+        <div class="content">
+            <p>To reset your password, please click the button below. This link will expire in 5 minutes.</p>
+            <a href="${resetUrl}">Reset Password</a>
+        </div>
+        <div class="footer">
+            <p>Portfoliia, a product of Skiyen</p>
+        </div>
+    </div>
+</body>
+</html>
+`
+
         });
 
-        return resourceCreated("Password reset email sent");
+        return resourceCreated({});
     } catch (e) {
         return internalServerError(e.message);
     }
