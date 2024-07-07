@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import Link from "next/link"
 import config from "@/data/config.json";
 import ResetPasswordForm from "@/components/reset-password/ResetPasswordForm"
@@ -8,9 +9,15 @@ export const metadata = {
 }
 
 const ResetPassword = async () => {
+    const router = useRouter();
+    const { token } = router.query;
 
-    const verifyToken = await verifyResetToken("lol");
-    console.log(verifyResetToken);
+    try {
+        const verifyToken = await verifyResetToken(token);
+        console.log(verifyToken);
+    } catch (error) {
+        console.error('Error verifying token:', error);
+    }
 
     return (
         <>
