@@ -48,7 +48,7 @@ const ResetPasswordForm = () => {
         <div className="mb-3">
           <div>
             <label htmlFor="password" className="font-bold text-md">
-              Your Password
+              New Password
             </label>
           </div>
           <div className="input border-2 border-gray-100 flex items-center gap-2 mt-1">
@@ -59,7 +59,7 @@ const ResetPasswordForm = () => {
               required
               ref={passwordRef}
               className="grow"
-              placeholder="Enter Your password"
+              placeholder="Enter Your New Password"
             />
             <i
               onClick={togglePswdVisible}
