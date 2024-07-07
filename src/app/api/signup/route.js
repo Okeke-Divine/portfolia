@@ -19,13 +19,13 @@ export const POST = async (req) => {
         const hashedPassword = await hashPassword(password);
 
         //check if use name is valid
-        const usernameRegex = /^[a-zA-Z0-9]+$/;
+        const usernameRegex = /^[a-zA-Z0-9_]+$/;
         if (!usernameRegex.test(username)) {
-            return badRequest("Username is invalid. Only letters and numbers are allowed");
+            return badRequest("Username is invalid. Only letters, numbers, and underscores are allowed");
         }
 
-        if(username.length < 2){
-            return badRequest("Usernae must be at least 2 characters")
+        if (username.length < 3) {
+            return badRequest("Usernae must be at least 3 characters")
         }
 
         // check if username exists

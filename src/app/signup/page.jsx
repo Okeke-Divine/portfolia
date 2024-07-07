@@ -15,7 +15,7 @@ export default function SignUp() {
       <div>
         <div className="grid grid-cols-1 md:grid-cols-2 px-0">
           <div className="min-h-[100vh] flex items-center justify-center bg-gray-100">
-            <div className="bg-white shadow-md hover:shadow-lg duration-100 px-5 py-10 md:px-[50px] md:py-[50px]  rounded-md">
+            <div className="bg-white shadow-md hover:shadow-lg duration-100 px-5 py-10 md:px-[50px] md:py-[50px]  rounded-md max-w-[500px]">
               <div className="flex justify-center">
                 <img
                   className="w-24 mb-2 rounded-full shadow-lg"
