@@ -19,6 +19,25 @@ const ForgotPasswordForm = () => {
     return (
         <>
             <form onSubmit={send} className="form-control">
+                {/* email */}
+                <div className="mb-3">
+                    <div>
+                        <label htmlFor="email" className="font-bold text-md">
+                            Your Email
+                        </label>
+                    </div>
+                    <div className="input border-2 border-gray-100 flex items-center gap-2 mt-1">
+                        <i className="fi fi-tr-envelopes flaticon-offset"></i>
+                        <input
+                            type="email"
+                            name="email"
+                            required
+                            ref={emailRef}
+                            className="grow"
+                            placeholder="Enter Your Email"
+                        />
+                    </div>
+                </div>
                 {/* submit button */}
                 <div>
                     <button

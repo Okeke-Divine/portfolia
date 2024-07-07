@@ -1,5 +1,6 @@
 import Link from "next/link"
 import config from "@/data/config.json";
+import ForgotPasswordForm from "@/components/forgot-password/ForgotPasswordForm";
 export const metadata = {
     title: "Forgot Password"
 }
@@ -20,6 +21,7 @@ const ForgotPassword = () => {
                     <h1>Forgot Password!</h1>
                     <div className="mt-2">
                         {/* form */}
+                        <ForgotPasswordForm />
                         <p className="my-2 text-center">
                             <Link
                                 href="/signin"
