@@ -7,25 +7,29 @@ const ResumeBuilderPreview = ({ username }) => {
 
   return (
     <>
-      <div className="join border-2">
-        <Link
-          href="#desktop-preview"
-          className={`btn btn-ghost hover:app-bg-primary-dark hover:text-white join-item ${
-            preview == "desktop" ? "app-bg-primary-dark text-white" : ""
-          }`}
-          onClick={() => setPreview("desktop")}
-        >
-          Desktop
-        </Link>
-        <Link
-          href="#mobile-preview"
-          className={`btn btn-ghost hover:app-bg-primary-dark hover:text-white join-item ${
-            preview == "mobile" ? "app-bg-primary-dark text-white" : ""
-          }`}
-          onClick={() => setPreview("mobile")}
-        >
-          Mobile
-        </Link>
+
+      <div className="flex justify-between gap-2 flex-wrap">
+        <div className="join border-2">
+          <Link
+            href="#desktop-preview"
+            className={`btn btn-ghost hover:app-bg-primary-dark hover:text-white join-item ${preview == "desktop" ? "app-bg-primary-dark text-white" : ""
+              }`}
+            onClick={() => setPreview("desktop")}
+          >
+            Desktop
+          </Link>
+          <Link
+            href="#mobile-preview"
+            className={`btn btn-ghost hover:app-bg-primary-dark hover:text-white join-item ${preview == "mobile" ? "app-bg-primary-dark text-white" : ""
+              }`}
+            onClick={() => setPreview("mobile")}
+          >
+            Mobile
+          </Link>
+        </div>
+        <div>
+          <input type="text" className="toggle toggle-md" />
+        </div>
       </div>
 
       <div className="divider"></div>
