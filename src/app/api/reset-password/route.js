@@ -1,7 +1,7 @@
 import { hashPassword } from "@/utils/hashPassword";
 import { badRequest, internalServerError, resourceUpdated } from "@/utils/prebuiltApiResponse";
 import prisma from "@/app/db";
-import { verifyResetToken } from "@/utils/main";
+import { deleteToken, verifyResetToken } from "@/utils/main";
 
 export const POST = async (req) => {
     try {
@@ -39,9 +39,9 @@ export const POST = async (req) => {
         // Hash the new password
         const hashedPassword = await hashPassword(password);
 
-        const deleteToken = await prisma.passwordResetToken.delete({ where: { token } })
+        const tokenDeleted = await deleteToken(token)
 
-        if (deleteToken) {
+        if (tokenDeleted) {
             // Update the user's password
             const updatedUser = await prisma.user.update({
                 where: {

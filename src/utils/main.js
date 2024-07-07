@@ -114,6 +114,7 @@ export const verifyResetToken = async (token) => {
     const now = new Date();
 
     if (now > expirationTime) {
+      await deleteToken(token)
       return { valid: false, message: 'Reset link has expired.' };
     }
 
@@ -121,6 +122,11 @@ export const verifyResetToken = async (token) => {
     return { valid: true, userId: tokenRecord.userId }; // Optionally return userId or other relevant data
   } catch (error) {
     _console_log('Error verifying reset token:', error);
-    throw new Error('Error verifying reset token');
+    return { valid: false, message: 'Reset link has expired.' };
+    // throw new Error('Error verifying reset token');
   }
 };
+
+export async function deleteToken(token) {
+  return await prisma.passwordResetToken.delete({ where: { token } })
+}
