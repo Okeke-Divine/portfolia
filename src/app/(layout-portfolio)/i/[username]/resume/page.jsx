@@ -105,6 +105,16 @@ export async function generateMetadata({ params }) {
     };
   }
 
+  const userId = user.id;
+  const _resumeIsViewable = await retrieveUserConfig('resumeIsViewable', { id_type: 'id', id_value: userId });
+  const resumeIsViewable = configToDefaultBoolean(_resumeIsViewable, true);
+
+  if (resumeIsViewable == false) {
+    return {
+      title: "404 Not Found",
+    };
+  }
+
   const fullname = user?.userDetails?.fullname || "Unknown User";
   const profession = user?.userDetails?.profession || "Unknown Profession";
   const bio = user?.userDetails?.bio || "";
