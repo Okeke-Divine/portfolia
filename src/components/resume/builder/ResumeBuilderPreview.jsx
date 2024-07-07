@@ -28,7 +28,7 @@ const ResumeBuilderPreview = ({ username, resumeIsViewable }) => {
           </Link>
         </div>
         <div>
-          <input type="checkbox" className="toggle toggle-lg checked:toggle-success" defaultChecked={true} />
+          <input type="checkbox" className="toggle toggle-lg checked:toggle-success" defaultChecked={resumeIsViewable} />
         </div>
       </div>
 
