@@ -1,3 +1,5 @@
+import Link from "next/link"
+import config from "@/data/config.json";
 import ResetPasswordForm from "@/components/reset-password/ResetPasswordForm"
 
 export const metadata = {
