@@ -1,32 +1,62 @@
 import { hashPassword } from "@/utils/hashPassword";
-import { badRequest, internalServerError, resourceUpdated } from "@/utils/prebuiltApiResponse"
+import { badRequest, internalServerError, resourceUpdated } from "@/utils/prebuiltApiResponse";
+import prisma from "@/app/db";
+import { verifyResetToken } from "@/utils/main";
 
 export const POST = async (req) => {
-    try{
-
+    try {
         const data = await req.json();
-        const {email,password,token}= data;
+        const { email, password, token } = data;
 
-        if(!email,password,token){
-            return badRequest("All fields are required")
+        // Validate input
+        if (!email || !password || !token) {
+            return badRequest("All fields are required");
         }
 
-        // check if the token is still validate (not expired)
+        // Verify the reset token
+        const tokenVerification = await verifyResetToken(token);
 
-        // check if the token.userId and the email userId match (same user)
+        if (!tokenVerification.valid) {
+            return badRequest(tokenVerification.message);
+        }
 
-        // hash the password
+        // Find user by email (assuming email is unique)
+        const user = await prisma.user.findUnique({
+            where: {
+                email: email.toLowerCase(), // Normalize email case
+            },
+        });
+
+        if (!user) {
+            return badRequest("User not found");
+        }
+
+        // Check if token.userId and user.id match (ensure same user)
+        if (tokenVerification.userId !== user.id) {
+            return badRequest("Invalid token for this user");
+        }
+
+        // Hash the new password
         const hashedPassword = await hashPassword(password);
 
-        // update the password
+        // Update the user's password
+        const updatedUser = await prisma.user.update({
+            where: {
+                id: user.id,
+            },
+            data: {
+                password: hashedPassword,
+            },
+        });
 
-        if(...){
-            return resourceUpdated({})
-        }else{
-            return internalServerError("Error while trying to change user password  ")
+        if (updatedUser) {
+            return resourceUpdated({}); // Password updated successfully
+        } else {
+            return internalServerError("Error while trying to change user password");
         }
 
-    }catch(e){
-        return internalServerError(e)
+    } catch (error) {
+        console.error("Error resetting password:", error);
+        return internalServerError("Internal server error");
     }
-}
+};
