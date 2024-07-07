@@ -1,8 +1,14 @@
 import Link from "next/link";
 import { defaultImgUrl } from "@/constants/shared/constant";
 import PortfolioSocialLink from "./PortfolioSocialLink";
+import { configToDefaultBoolean, retrieveUserConfig } from "@/utils/main";
 
-const PortfolioHero = ({ user }) => {
+const PortfolioHero = async ({ user }) => {
+
+  const userId = user.id;
+  const _resumeIsViewable = await retrieveUserConfig('resumeIsViewable', { id_type: 'id', id_value: userId });
+  const resumeIsViewable = configToDefaultBoolean(_resumeIsViewable, true);
+
   return (
     <>
       <div>
