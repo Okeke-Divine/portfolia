@@ -1,6 +1,7 @@
 "use client";
 import { useRef, useState } from "react";
 import { signIn } from "next-auth/react";
+import Link from "next/link";
 
 const SignInForm = () => {
   const emailRef = useRef(null);
@@ -96,6 +97,14 @@ const SignInForm = () => {
               className={`${pswdVisible ? "fi fi-rr-eye-crossed" : "fi fi-rr-eye"
                 } cursor-pointer flaticon-offset`}
             ></i>
+          </div>
+          <div>
+            <Link
+              href="/forgot-password"
+              className="app-text-primary duration-300 hover:app-text-primary-dark"
+            >
+              Sign Up
+            </Link>
           </div>
         </div>
         {/* submit button */}
