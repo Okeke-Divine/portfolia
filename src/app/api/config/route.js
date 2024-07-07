@@ -1,5 +1,6 @@
 // Assuming this is your API route handler
 import prisma from "@/app/db";
+import { _console_log } from "@/utils/console";
 import { badRequest, internalServerError, resourceCreated } from "@/utils/prebuiltApiResponse"; // Adjust imports as per your project structure
 import { getUserId } from "@/utils/session";
 
@@ -38,9 +39,7 @@ export const POST = async (req) => {
 
         return resourceCreated(userConfigEntry); // Return the updated or created userConfig entry
     } catch (e) {
-        console.error("Error processing user config update:", e);
+        _console_log("Error processing user config update:", e);
         return internalServerError(e); // Handle errors appropriately
-    } finally {
-        await prisma.$disconnect(); // Disconnect Prisma client
     }
 };
