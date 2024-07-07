@@ -80,7 +80,7 @@ const Reviews = () => {
             {
               review.platform ? (<>
                 <iframe
-                  className="border-none w-full h-[300px] rounded"
+                  className="border-none w-full h-[350px] rounded"
                   src={review.comment_prev_url}
                   frameBorder="0"
                   scrolling="no"
