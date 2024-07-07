@@ -23,7 +23,7 @@ const ResetPassword = async ({ params, searchParams }) => {
                             {verifyToken.message}
                         </div>
                         <div className="divider"></div>
-                        <div className="flex gap-3 flex-wrap">
+                        <div className="flex gap-3 flex-wrap justify-center">
                             <Link
                                 className="app-text-primary duration-300 hover:app-text-primary-dark"
                                 href="/reset-password">Reset Password</Link>
