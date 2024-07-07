@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 
-const ResumeBuilderPreview = ({ username }) => {
+const ResumeBuilderPreview = ({ username, resumeIsViewable }) => {
   const [preview, setPreview] = useState("desktop");
 
   return (
