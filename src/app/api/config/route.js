@@ -9,7 +9,7 @@ export const POST = async (req) => {
         const userId = await getUserId("force"); // Assuming getUserId retrieves the userId
         const { name, value } = req.body; // Assuming the request body contains 'name' and 'value'
 
-        if (!name || !value || !userId) {
+        if (!name || !value || !userId || value == undefined) {
             return badRequest("Bad Request");
         }
 
