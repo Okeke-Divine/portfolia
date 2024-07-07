@@ -1,11 +1,10 @@
-import Link from "next/link"
-import config from "@/data/config.json";
-import ForgotPasswordForm from "@/components/forgot-password/ForgotPasswordForm";
+import ResetPasswordForm from "@/components/reset-password/ResetPasswordForm"
+
 export const metadata = {
-    title: "Forgot Password"
+    title: "Reset Password"
 }
 
-const ForgotPassword = () => {
+const ResetPassword = async () => {
     return (
         <>
             <div className="bg-base-200 flex justify-center items-center min-h-[100vh]">
@@ -17,10 +16,10 @@ const ForgotPassword = () => {
                             alt={config.app_name + "'s logo"}
                         />
                     </div>
-                    <h1>Forgot Password?</h1>
+                    <h1>Reset Password</h1>
                     <div className="mt-2">
                         {/* form */}
-                        <ForgotPasswordForm />
+                        <ResetPasswordForm />
                         <p className="my-2 text-center">
                             <Link
                                 href="/signin"
@@ -36,4 +35,4 @@ const ForgotPassword = () => {
     )
 }
 
-export default ForgotPassword
+export default ResetPassword
