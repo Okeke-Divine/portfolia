@@ -10,7 +10,7 @@ export const metadata = {
 
 const ResetPassword = async ({ params, searchParams }) => {
 
-    const token = searchParams?.token;
+    const token = searchParams.token ? searchParams.token : "";
 
     const verifyToken = await verifyResetToken(token);
 
@@ -26,7 +26,7 @@ const ResetPassword = async ({ params, searchParams }) => {
                         <div className="flex gap-3 flex-wrap justify-center">
                             <Link
                                 className="app-text-primary duration-300 hover:app-text-primary-dark"
-                                href="/reset-password">Reset Password</Link>
+                                href="/forgot-password">Reset Password</Link>
                             <Link
                                 className="app-text-primary duration-300 hover:app-text-primary-dark"
                                 href="/">Home</Link>
