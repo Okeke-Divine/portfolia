@@ -162,3 +162,8 @@ export async function retrieveUserConfig(name, { id_type, id_value }) {
     throw error;
   }
 }
+
+
+export function configToDefaultBoolean(value, _default) {
+  return (value == null) ? _default : (_resumeIsViewable == "true") ? true : false
+}
