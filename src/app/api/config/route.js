@@ -1,12 +1,16 @@
 // Assuming this is your API route handler
 import prisma from "@/app/db";
-import { internalServerError, resourceCreated } from "@/utils/prebuiltApiResponse"; // Adjust imports as per your project structure
+import { badRequest, internalServerError, resourceCreated } from "@/utils/prebuiltApiResponse"; // Adjust imports as per your project structure
 import { getUserId } from "@/utils/session";
 
 export const POST = async (req) => {
     try {
         const userId = await getUserId("force"); // Assuming getUserId retrieves the userId
         const { name, value } = req.body; // Assuming the request body contains 'name' and 'value'
+
+        if (!name || !value || !userId) {
+            return badRequest("Bad Request")
+        }
 
         // Check if there's an existing userConfig entry
         let userConfigEntry = await prisma.userConfig.findFirst({
