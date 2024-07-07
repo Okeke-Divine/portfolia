@@ -60,15 +60,6 @@ export const POST = async (req) => {
                     .header {
                         text-align: center;
                     }
-                    .header img {
-                        max-width: 150px;
-                        margin-bottom: 20px;
-                    }
-                    .header h1 {
-                        font-size: 24px;
-                        color: #333;
-                        margin-bottom: 10px;
-                    }
                     .content {
                         text-align: center;
                         padding: 20px;
@@ -96,10 +87,6 @@ export const POST = async (req) => {
             </head>
             <body>
                 <div class="container">
-                    <div class="header">
-                        <img src="https://portfoliia.vercel.app/images/logo/logo.png" alt="Portfoliia Logo">
-                        <h1>Password Reset</h1>
-                    </div>
                     <div class="content">
                         <p>To reset your password, please click the button below. This link will expire in 5 minutes.</p>
                         <a href="${resetUrl}">Reset Password</a>
